@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Aug  9 18:40:56 2023
+# Process ID: 5590
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1
+# Command line: vivado -log design_1_util_reduced_logic_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_util_reduced_logic_0_2.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/design_1_util_reduced_logic_0_2.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4442.506 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source design_1_util_reduced_logic_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1840.590 ; gain = 90.984 ; free physical = 12335 ; free virtual = 13870
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/axis_jtag'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_util_reduced_logic_0_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry e3681adc6b6de0c9 to dir: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/e/3/e3681adc6b6de0c9/design_1_util_reduced_logic_0_0.dcp to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/design_1_util_reduced_logic_0_2.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/e/3/e3681adc6b6de0c9/design_1_util_reduced_logic_0_0_sim_netlist.vhdl to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/design_1_util_reduced_logic_0_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/e/3/e3681adc6b6de0c9/design_1_util_reduced_logic_0_0_sim_netlist.v to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/design_1_util_reduced_logic_0_2_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/e/3/e3681adc6b6de0c9/design_1_util_reduced_logic_0_0_stub.v to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/design_1_util_reduced_logic_0_2_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/e/3/e3681adc6b6de0c9/design_1_util_reduced_logic_0_0_stub.vhdl to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1/design_1_util_reduced_logic_0_2_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_util_reduced_logic_0_2, cache-ID = e3681adc6b6de0c9.
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  9 18:41:09 2023...

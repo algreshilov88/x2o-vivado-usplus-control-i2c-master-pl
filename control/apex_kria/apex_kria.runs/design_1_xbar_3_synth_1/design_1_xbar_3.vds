@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri Oct 27 10:25:00 2023
+# Process ID: 8868
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1
+# Command line: vivado -log design_1_xbar_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_3.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/design_1_xbar_3.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4276.537 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source design_1_xbar_3.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1840.383 ; gain = 88.016 ; free physical = 266 ; free virtual = 6463
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/axis_jtag'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xbar_3
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry b040c1f28c961276 to dir: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/b/0/b040c1f28c961276/design_1_xbar_3.dcp to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/design_1_xbar_3.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/b/0/b040c1f28c961276/design_1_xbar_3_stub.v to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/design_1_xbar_3_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/b/0/b040c1f28c961276/design_1_xbar_3_sim_netlist.v to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/design_1_xbar_3_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/b/0/b040c1f28c961276/design_1_xbar_3_stub.vhdl to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/design_1_xbar_3_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/b/0/b040c1f28c961276/design_1_xbar_3_sim_netlist.vhdl to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1/design_1_xbar_3_sim_netlist.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_xbar_3, cache-ID = b040c1f28c961276.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 10:25:12 2023...

@@ -1,0 +1,16 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Wed Aug  9 18:30:22 2023
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_jtag_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_axi_jtag_0_0 (xilinx.com:module_ref:axi_jtag_v1_0:1.0 (Rev. 1)) to Vivado generation flows.
+

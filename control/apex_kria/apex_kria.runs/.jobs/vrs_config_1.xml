@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="c2c_gth_7p8125g_vio_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/c2c_gth_7p8125g_vio_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="c2c_gth_7p8125g_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/c2c_gth_7p8125g_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_csum_rx_rss_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_csum_rx_rss_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_mcdma_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_mcdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_tx_csum_0_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_tx_csum_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_jtag_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_jtag_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axisafety_2_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axisafety_2_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_proc_sys_reset_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_0_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_proc_sys_reset_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_2_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_proc_sys_reset_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_proc_sys_reset_0_2_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_bram_ctrl_0_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_bram_ctrl_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_4_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_5_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_jtag_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_jtag_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_cntrl_strm_rd_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_cntrl_strm_rd_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_pkt_overflow_logic_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_pkt_overflow_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_0_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_proc_sys_reset_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_tdest_align_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_tdest_align_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_tdest_mapper_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_tdest_mapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_util_reduced_logic_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_util_reduced_logic_0_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_util_reduced_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_util_reduced_logic_0_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_util_reduced_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_util_reduced_logic_2_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_util_reduced_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_util_reduced_logic_3_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_reduced_logic_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_util_vector_logic_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_util_vector_logic_1_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_util_vector_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_util_vector_logic_1_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_util_vector_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_util_vector_logic_1_3_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_util_vector_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_data_fifo_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_data_fifo_2_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_data_fifo_3_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_data_fifo_4_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_data_fifo_3_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_data_fifo_5_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_0_3_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_proc_sys_reset_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_dma_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_3_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xbar_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_data_fifo_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_clk_wiz_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_system_ila_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_system_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_system_ila_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_system_ila_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xxv_ethernet_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_jtag_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_jtag_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_i2cSlave_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2cSlave_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_i2cSlave_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2cSlave_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_gpio_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_bram_ctrl_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_bram_ctrl_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_i2c_switch_dual_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2c_switch_dual_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axisafety_2_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axisafety_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axisafety_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axisafety_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_chip2chip_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_chip2chip_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_chip2chip_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_chip2chip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_chip2chip_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_system_management_wiz_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_system_management_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_debug_bridge_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_debug_bridge_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_c443_bsip_0_synth_1"/>
+		<Parent Id="bd_c443_bs_switch_1_0_synth_1"/>
+		<Parent Id="bd_c443_axi_jtag_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_debug_bridge_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_debug_bridge_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_0412_lut_buffer_0_synth_1"/>
+		<Parent Id="bd_0412_xsdbm_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_iic_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_iic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_iic_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_iic_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_iic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_iic_2_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_iic_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_iic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_iic_3_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_iic_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_iic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_iic_3_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_iic_3_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_iic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_ila_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_pok_alarm_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_pok_alarm_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_reg_bank_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_reg_bank_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_gpio_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_jtag_logic_0_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_jtag_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_jtag_logic_0_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_jtag_logic_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_m02_regslice_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_m02_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_ds_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_ds_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_m00_regslice_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_m00_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_regslice_4_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_regslice_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_data_fifo_4_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_data_fifo_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_us_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_cc_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_ds_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_data_fifo_5_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_data_fifo_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_cc_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_cc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_4_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_cc_3_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_cc_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_cc_2_synth_1"/>
+	</Run>
+	<Run Id="design_1_m03_regslice_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_m03_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_3_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_4_synth_1"/>
+	</Run>
+	<Run Id="design_1_s00_regslice_5_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_regslice_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s01_data_fifo_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s01_data_fifo_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s01_regslice_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s01_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_data_fifo_7_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_data_fifo_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_regslice_6_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_regslice_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_data_fifo_6_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_data_fifo_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_cc_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_cc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_regslice_7_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_s00_regslice_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_ds_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_ds_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_m01_regslice_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_m01_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_0412_lut_buffer_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/bd_0412_lut_buffer_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_5_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="design_1_auto_pc_7_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="bd_c443_bsip_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/bd_c443_bsip_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_9_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="design_1_auto_us_3_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_us_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_us_2_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_us_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_us_1_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_us_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_0412_xsdbm_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/bd_0412_xsdbm_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_c443_bs_switch_1_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/bd_c443_bs_switch_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_11_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_11_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_c443_axi_jtag_0_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/bd_c443_axi_jtag_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_10_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="design_1_auto_pc_8_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="design_1_auto_pc_6_synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_auto_pc_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="c2c_gth_7p8125g_vio_0_synth_1"/>
+		<Parent Id="c2c_gth_7p8125g_synth_1"/>
+		<Parent Id="design_1_csum_rx_rss_0_0_synth_1"/>
+		<Parent Id="design_1_axi_mcdma_0_0_synth_1"/>
+		<Parent Id="design_1_tx_csum_0_1_synth_1"/>
+		<Parent Id="design_1_axi_jtag_1_0_synth_1"/>
+		<Parent Id="design_1_axisafety_2_1_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_2_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_2_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_1_synth_1"/>
+		<Parent Id="design_1_xbar_4_synth_1"/>
+		<Parent Id="design_1_xbar_5_synth_1"/>
+		<Parent Id="design_1_axis_jtag_0_0_synth_1"/>
+		<Parent Id="design_1_cntrl_strm_rd_0_0_synth_1"/>
+		<Parent Id="design_1_pkt_overflow_logic_0_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_1_synth_1"/>
+		<Parent Id="design_1_tdest_align_0_0_synth_1"/>
+		<Parent Id="design_1_tdest_mapper_0_0_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_0_0_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_0_1_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_0_2_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_2_0_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_3_0_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_0_0_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_1_1_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_1_2_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_1_3_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_1_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_2_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_3_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_4_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_5_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_3_synth_1"/>
+		<Parent Id="design_1_axi_dma_0_0_synth_1"/>
+		<Parent Id="design_1_xbar_3_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_0_0_synth_1"/>
+		<Parent Id="design_1_clk_wiz_0_0_synth_1"/>
+		<Parent Id="design_1_system_ila_0_0_synth_1"/>
+		<Parent Id="design_1_system_ila_1_0_synth_1"/>
+		<Parent Id="design_1_xxv_ethernet_0_0_synth_1"/>
+		<Parent Id="design_1_axi_jtag_0_0_synth_1"/>
+		<Parent Id="design_1_i2cSlave_1_0_synth_1"/>
+		<Parent Id="design_1_i2cSlave_0_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_1_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_1_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="design_1_i2c_switch_dual_0_0_synth_1"/>
+		<Parent Id="design_1_axisafety_2_0_synth_1"/>
+		<Parent Id="design_1_axisafety_1_0_synth_1"/>
+		<Parent Id="design_1_axi_chip2chip_1_0_synth_1"/>
+		<Parent Id="design_1_axi_chip2chip_0_0_synth_1"/>
+		<Parent Id="design_1_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="design_1_system_management_wiz_0_0_synth_1"/>
+		<Parent Id="design_1_debug_bridge_0_0_synth_1"/>
+		<Parent Id="design_1_debug_bridge_1_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_0_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_1_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_2_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_3_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_3_1_synth_1"/>
+		<Parent Id="design_1_ila_0_0_synth_1"/>
+		<Parent Id="design_1_pok_alarm_0_0_synth_1"/>
+		<Parent Id="design_1_reg_bank_0_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_0_0_synth_1"/>
+		<Parent Id="design_1_jtag_logic_0_0_synth_1"/>
+		<Parent Id="design_1_jtag_logic_0_1_synth_1"/>
+		<Parent Id="design_1_m02_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_2_synth_1"/>
+		<Parent Id="design_1_m00_regslice_0_synth_1"/>
+		<Parent Id="design_1_s00_regslice_4_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_4_synth_1"/>
+		<Parent Id="design_1_auto_us_0_synth_1"/>
+		<Parent Id="design_1_auto_cc_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_0_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_5_synth_1"/>
+		<Parent Id="design_1_auto_cc_2_synth_1"/>
+		<Parent Id="design_1_auto_pc_1_synth_1"/>
+		<Parent Id="design_1_auto_pc_4_synth_1"/>
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+		<Parent Id="design_1_auto_cc_3_synth_1"/>
+		<Parent Id="design_1_m03_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_3_synth_1"/>
+		<Parent Id="design_1_s00_regslice_5_synth_1"/>
+		<Parent Id="design_1_s01_data_fifo_0_synth_1"/>
+		<Parent Id="design_1_s01_regslice_0_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_7_synth_1"/>
+		<Parent Id="design_1_s00_regslice_6_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_6_synth_1"/>
+		<Parent Id="design_1_auto_cc_1_synth_1"/>
+		<Parent Id="design_1_s00_regslice_7_synth_1"/>
+		<Parent Id="design_1_auto_ds_1_synth_1"/>
+		<Parent Id="design_1_m01_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_5_synth_1"/>
+		<Parent Id="design_1_auto_pc_7_synth_1"/>
+		<Parent Id="design_1_auto_pc_9_synth_1"/>
+		<Parent Id="design_1_auto_us_3_synth_1"/>
+		<Parent Id="design_1_auto_us_2_synth_1"/>
+		<Parent Id="design_1_auto_us_1_synth_1"/>
+		<Parent Id="design_1_auto_pc_11_synth_1"/>
+		<Parent Id="design_1_auto_pc_10_synth_1"/>
+		<Parent Id="design_1_auto_pc_8_synth_1"/>
+		<Parent Id="design_1_auto_pc_6_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="c2c_gth_7p8125g_vio_0_synth_1"/>
+		<Parent Id="c2c_gth_7p8125g_synth_1"/>
+		<Parent Id="design_1_csum_rx_rss_0_0_synth_1"/>
+		<Parent Id="design_1_axi_mcdma_0_0_synth_1"/>
+		<Parent Id="design_1_tx_csum_0_1_synth_1"/>
+		<Parent Id="design_1_axi_jtag_1_0_synth_1"/>
+		<Parent Id="design_1_axisafety_2_1_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_2_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_2_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_1_synth_1"/>
+		<Parent Id="design_1_xbar_4_synth_1"/>
+		<Parent Id="design_1_xbar_5_synth_1"/>
+		<Parent Id="design_1_axis_jtag_0_0_synth_1"/>
+		<Parent Id="design_1_cntrl_strm_rd_0_0_synth_1"/>
+		<Parent Id="design_1_pkt_overflow_logic_0_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_1_synth_1"/>
+		<Parent Id="design_1_tdest_align_0_0_synth_1"/>
+		<Parent Id="design_1_tdest_mapper_0_0_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_0_0_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_0_1_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_0_2_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_2_0_synth_1"/>
+		<Parent Id="design_1_util_reduced_logic_3_0_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_0_0_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_1_1_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_1_2_synth_1"/>
+		<Parent Id="design_1_util_vector_logic_1_3_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_1_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_2_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_3_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_4_0_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_5_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_0_3_synth_1"/>
+		<Parent Id="design_1_axi_dma_0_0_synth_1"/>
+		<Parent Id="design_1_xbar_3_synth_1"/>
+		<Parent Id="design_1_axis_data_fifo_0_0_synth_1"/>
+		<Parent Id="design_1_clk_wiz_0_0_synth_1"/>
+		<Parent Id="design_1_system_ila_0_0_synth_1"/>
+		<Parent Id="design_1_system_ila_1_0_synth_1"/>
+		<Parent Id="design_1_xxv_ethernet_0_0_synth_1"/>
+		<Parent Id="design_1_axi_jtag_0_0_synth_1"/>
+		<Parent Id="design_1_i2cSlave_1_0_synth_1"/>
+		<Parent Id="design_1_i2cSlave_0_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_1_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_1_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="design_1_i2c_switch_dual_0_0_synth_1"/>
+		<Parent Id="design_1_axisafety_2_0_synth_1"/>
+		<Parent Id="design_1_axisafety_1_0_synth_1"/>
+		<Parent Id="design_1_axi_chip2chip_1_0_synth_1"/>
+		<Parent Id="design_1_axi_chip2chip_0_0_synth_1"/>
+		<Parent Id="design_1_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="design_1_system_management_wiz_0_0_synth_1"/>
+		<Parent Id="design_1_debug_bridge_0_0_synth_1"/>
+		<Parent Id="design_1_debug_bridge_1_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_0_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_1_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_2_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_3_0_synth_1"/>
+		<Parent Id="design_1_axi_iic_3_1_synth_1"/>
+		<Parent Id="design_1_ila_0_0_synth_1"/>
+		<Parent Id="design_1_pok_alarm_0_0_synth_1"/>
+		<Parent Id="design_1_reg_bank_0_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_0_0_synth_1"/>
+		<Parent Id="design_1_jtag_logic_0_0_synth_1"/>
+		<Parent Id="design_1_jtag_logic_0_1_synth_1"/>
+		<Parent Id="design_1_m02_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_2_synth_1"/>
+		<Parent Id="design_1_m00_regslice_0_synth_1"/>
+		<Parent Id="design_1_s00_regslice_4_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_4_synth_1"/>
+		<Parent Id="design_1_auto_us_0_synth_1"/>
+		<Parent Id="design_1_auto_cc_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_0_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_5_synth_1"/>
+		<Parent Id="design_1_auto_cc_2_synth_1"/>
+		<Parent Id="design_1_auto_pc_1_synth_1"/>
+		<Parent Id="design_1_auto_pc_4_synth_1"/>
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+		<Parent Id="design_1_auto_cc_3_synth_1"/>
+		<Parent Id="design_1_m03_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_3_synth_1"/>
+		<Parent Id="design_1_s00_regslice_5_synth_1"/>
+		<Parent Id="design_1_s01_data_fifo_0_synth_1"/>
+		<Parent Id="design_1_s01_regslice_0_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_7_synth_1"/>
+		<Parent Id="design_1_s00_regslice_6_synth_1"/>
+		<Parent Id="design_1_s00_data_fifo_6_synth_1"/>
+		<Parent Id="design_1_auto_cc_1_synth_1"/>
+		<Parent Id="design_1_s00_regslice_7_synth_1"/>
+		<Parent Id="design_1_auto_ds_1_synth_1"/>
+		<Parent Id="design_1_m01_regslice_0_synth_1"/>
+		<Parent Id="bd_0412_lut_buffer_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_5_synth_1"/>
+		<Parent Id="design_1_auto_pc_7_synth_1"/>
+		<Parent Id="bd_c443_bsip_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_9_synth_1"/>
+		<Parent Id="design_1_auto_us_3_synth_1"/>
+		<Parent Id="design_1_auto_us_2_synth_1"/>
+		<Parent Id="design_1_auto_us_1_synth_1"/>
+		<Parent Id="bd_0412_xsdbm_0_synth_1"/>
+		<Parent Id="bd_c443_bs_switch_1_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_11_synth_1"/>
+		<Parent Id="bd_c443_axi_jtag_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_10_synth_1"/>
+		<Parent Id="design_1_auto_pc_8_synth_1"/>
+		<Parent Id="design_1_auto_pc_6_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

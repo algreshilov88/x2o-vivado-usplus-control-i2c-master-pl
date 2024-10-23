@@ -1,0 +1,823 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Aug  9 18:44:06 2023
+# Process ID: 8855
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1
+# Command line: vivado -log design_1_xxv_ethernet_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xxv_ethernet_0_0.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/design_1_xxv_ethernet_0_0.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4039.851 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source design_1_xxv_ethernet_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1839.695 ; gain = 89.980 ; free physical = 14820 ; free virtual = 16520
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/axis_jtag'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xxv_ethernet_0_0
+Command: synth_design -top design_1_xxv_ethernet_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9416
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2stats_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:12968]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:12981]
+INFO: [Synth 8-11241] undeclared symbol 'fcs_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:15114]
+INFO: [Synth 8-11241] undeclared symbol 'rx_reset_comb', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:17829]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:32429]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2stats_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:32615]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2gmii_ptp_2step', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:32623]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:32822]
+INFO: [Synth 8-11241] undeclared symbol 'tx_axis_e_tready_i', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:41082]
+INFO: [Synth 8-11241] undeclared symbol 'tx_axis_p_tready_i', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:41083]
+INFO: [Synth 8-11241] undeclared symbol 'rx_axis_mac_tvalid_re', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:41977]
+INFO: [Synth 8-11241] undeclared symbol 'rx_sop_in', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:41978]
+INFO: [Synth 8-11241] undeclared symbol 'bram_addr_no_rollover', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:44142]
+INFO: [Synth 8-11241] undeclared symbol 'bram_empty', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:44143]
+INFO: [Synth 8-11241] undeclared symbol 'decoder2comp_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:45711]
+INFO: [Synth 8-11241] undeclared symbol 'enaout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:45755]
+INFO: [Synth 8-11241] undeclared symbol 'tx_serdes_seq0', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:49559]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:49620]
+INFO: [Synth 8-11241] undeclared symbol 'decoder2comp_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:54708]
+INFO: [Synth 8-11241] undeclared symbol 'enaout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:54752]
+INFO: [Synth 8-11241] undeclared symbol 'tx_serdes_seq0', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:58572]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:58640]
+INFO: [Synth 8-11241] undeclared symbol 'tx_mii_reset_clk_comp', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:58879]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:81576]
+INFO: [Synth 8-11241] undeclared symbol 'lba2encod_fcsena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:81979]
+INFO: [Synth 8-11241] undeclared symbol 'lba2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:81993]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:81994]
+INFO: [Synth 8-11241] undeclared symbol 'fcs_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:85521]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:105752]
+INFO: [Synth 8-11241] undeclared symbol 'mframer2lba_alignmarker', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:106170]
+INFO: [Synth 8-11241] undeclared symbol 'lba2encod_fcsena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:106227]
+INFO: [Synth 8-11241] undeclared symbol 'lba2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:106241]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:106242]
+INFO: [Synth 8-11241] undeclared symbol 'fcs_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:109847]
+INFO: [Synth 8-11241] undeclared symbol 'ctl_data_rate', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:125226]
+INFO: [Synth 8-11241] undeclared symbol 'lba2encod_fcsena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:125671]
+INFO: [Synth 8-11241] undeclared symbol 'lba2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:125680]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:125681]
+INFO: [Synth 8-11241] undeclared symbol 'fcs_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:128965]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:147490]
+INFO: [Synth 8-11241] undeclared symbol 'mframer2lba_alignmarker', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:147915]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:147987]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2stats_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:148132]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:175311]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:175736]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2stats_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:175881]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:196998]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:197350]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2stats_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:197494]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:218190]
+INFO: [Synth 8-11241] undeclared symbol 'lba2encod_fcsena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:218524]
+INFO: [Synth 8-11241] undeclared symbol 'lba2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:218534]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:218535]
+INFO: [Synth 8-11241] undeclared symbol 'fcs_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:222003]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:237596]
+INFO: [Synth 8-11241] undeclared symbol 'mframer2lba_alignmarker', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:237977]
+INFO: [Synth 8-11241] undeclared symbol 'lba2encod_fcsena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:238003]
+INFO: [Synth 8-11241] undeclared symbol 'lba2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:238013]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:238014]
+INFO: [Synth 8-11241] undeclared symbol 'fcs_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:241562]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:258131]
+INFO: [Synth 8-11241] undeclared symbol 'mframer2lba_alignmarker', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:258519]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:258557]
+INFO: [Synth 8-11241] undeclared symbol 'fcs2stats_ena', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:258701]
+INFO: [Synth 8-11241] undeclared symbol 'ability_match', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270815]
+INFO: [Synth 8-11241] undeclared symbol 'acknowledge_match', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270816]
+WARNING: [Synth 8-11065] parameter 'S0' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270987]
+WARNING: [Synth 8-11065] parameter 'S1' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270988]
+WARNING: [Synth 8-11065] parameter 'S2' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270989]
+WARNING: [Synth 8-11065] parameter 'S3' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270990]
+WARNING: [Synth 8-11065] parameter 'S4' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270991]
+WARNING: [Synth 8-11065] parameter 'S5' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270992]
+WARNING: [Synth 8-11065] parameter 'S6' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270993]
+WARNING: [Synth 8-11065] parameter 'S7' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270994]
+WARNING: [Synth 8-11065] parameter 'S8' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270995]
+WARNING: [Synth 8-11065] parameter 'S9' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270996]
+WARNING: [Synth 8-11065] parameter 'S10' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270997]
+WARNING: [Synth 8-11065] parameter 'S11' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270998]
+WARNING: [Synth 8-11065] parameter 'S12' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:270999]
+WARNING: [Synth 8-11065] parameter 'S13' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271000]
+WARNING: [Synth 8-11065] parameter 'S14' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271001]
+WARNING: [Synth 8-11065] parameter 'S15' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271002]
+WARNING: [Synth 8-11065] parameter 'SELECTOR' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271021]
+WARNING: [Synth 8-11065] parameter 'LINK_DISABLE' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271022]
+WARNING: [Synth 8-11065] parameter 'SCAN_FOR_CARRIER' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271023]
+WARNING: [Synth 8-11065] parameter 'LINK_ENABLE' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:271024]
+INFO: [Synth 8-11241] undeclared symbol 'ability_match', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274624]
+INFO: [Synth 8-11241] undeclared symbol 'acknowledge_match', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274625]
+WARNING: [Synth 8-11065] parameter 'S0' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274796]
+WARNING: [Synth 8-11065] parameter 'S1' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274797]
+WARNING: [Synth 8-11065] parameter 'S2' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274798]
+WARNING: [Synth 8-11065] parameter 'S3' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274799]
+WARNING: [Synth 8-11065] parameter 'S4' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274800]
+WARNING: [Synth 8-11065] parameter 'S5' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274801]
+WARNING: [Synth 8-11065] parameter 'S6' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274802]
+WARNING: [Synth 8-11065] parameter 'S7' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274803]
+WARNING: [Synth 8-11065] parameter 'S8' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274804]
+WARNING: [Synth 8-11065] parameter 'S9' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274805]
+WARNING: [Synth 8-11065] parameter 'S10' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274806]
+WARNING: [Synth 8-11065] parameter 'S11' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274807]
+WARNING: [Synth 8-11065] parameter 'S12' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274808]
+WARNING: [Synth 8-11065] parameter 'S13' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274809]
+WARNING: [Synth 8-11065] parameter 'S14' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274810]
+WARNING: [Synth 8-11065] parameter 'S15' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274811]
+WARNING: [Synth 8-11065] parameter 'SELECTOR' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274830]
+WARNING: [Synth 8-11065] parameter 'LINK_DISABLE' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274831]
+WARNING: [Synth 8-11065] parameter 'SCAN_FOR_CARRIER' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274832]
+WARNING: [Synth 8-11065] parameter 'LINK_ENABLE' becomes localparam in 'xxv_ethernet_v4_1_3_cl73autoneg_10G_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:274833]
+INFO: [Synth 8-11241] undeclared symbol 'descrambler2decoder_headervalid', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:278425]
+WARNING: [Synth 8-11014] non-net output port 'gearbox_fifo_latency_in_ns_q10_16' cannot be initialized at declaration in SystemVerilog mode [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:286250]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:287598]
+INFO: [Synth 8-11241] undeclared symbol 'ctl_fcs_insert_pause', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:288126]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:288170]
+INFO: [Synth 8-11241] undeclared symbol 'stat_tx_local_fault', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:288185]
+INFO: [Synth 8-11241] undeclared symbol 'lba2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:288186]
+INFO: [Synth 8-11241] undeclared symbol 'descrambler2decoder_headervalid', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:293877]
+WARNING: [Synth 8-11014] non-net output port 'gearbox_fifo_latency_in_ns_q10_16' cannot be initialized at declaration in SystemVerilog mode [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:301703]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:303071]
+INFO: [Synth 8-11241] undeclared symbol 'ctl_fcs_insert_pause', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:303613]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ovfout', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:303657]
+INFO: [Synth 8-11241] undeclared symbol 'stat_tx_local_fault', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:303672]
+INFO: [Synth 8-11241] undeclared symbol 'its2stats_fcserr', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:303673]
+INFO: [Synth 8-11241] undeclared symbol 'ability_match', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:308938]
+INFO: [Synth 8-11241] undeclared symbol 'acknowledge_match', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:308939]
+WARNING: [Synth 8-11065] parameter 'S0' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309093]
+WARNING: [Synth 8-11065] parameter 'S1' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309094]
+WARNING: [Synth 8-11065] parameter 'S2' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309095]
+WARNING: [Synth 8-11065] parameter 'S3' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309096]
+WARNING: [Synth 8-11065] parameter 'S4' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309097]
+WARNING: [Synth 8-11065] parameter 'S5' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309098]
+WARNING: [Synth 8-11065] parameter 'S6' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309099]
+WARNING: [Synth 8-11065] parameter 'S7' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309100]
+WARNING: [Synth 8-11065] parameter 'S8' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309101]
+WARNING: [Synth 8-11065] parameter 'S9' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309102]
+WARNING: [Synth 8-11065] parameter 'S10' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309103]
+WARNING: [Synth 8-11065] parameter 'S11' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309104]
+WARNING: [Synth 8-11065] parameter 'S12' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309105]
+WARNING: [Synth 8-11065] parameter 'S13' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309106]
+WARNING: [Synth 8-11065] parameter 'S14' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309107]
+WARNING: [Synth 8-11065] parameter 'S15' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309108]
+WARNING: [Synth 8-11065] parameter 'SELECTOR' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309125]
+WARNING: [Synth 8-11065] parameter 'LINK_DISABLE' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309126]
+WARNING: [Synth 8-11065] parameter 'SCAN_FOR_CARRIER' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309127]
+WARNING: [Synth 8-11065] parameter 'LINK_ENABLE' becomes localparam in 'xxv_ethernet_v4_1_3_32b_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:309128]
+INFO: [Synth 8-11241] undeclared symbol 'test_pattern_mismatch', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:313690]
+WARNING: [Synth 8-11014] non-net output port 'gearbox_fifo_latency_in_ns_q10_16' cannot be initialized at declaration in SystemVerilog mode [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:313701]
+INFO: [Synth 8-11241] undeclared symbol 'tx_serdes_seq0', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:314581]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:314641]
+INFO: [Synth 8-11241] undeclared symbol 'encod2scrambler_ena_msb', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:314802]
+INFO: [Synth 8-11241] undeclared symbol 'encod2scrambler_ena_lsb', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:314803]
+INFO: [Synth 8-11241] undeclared symbol 'encod2scrambler_ctrl', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:314805]
+INFO: [Synth 8-11241] undeclared symbol 'test_pattern_mismatch', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:320050]
+WARNING: [Synth 8-11014] non-net output port 'gearbox_fifo_latency_in_ns_q10_16' cannot be initialized at declaration in SystemVerilog mode [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:320061]
+INFO: [Synth 8-11241] undeclared symbol 'tx_serdes_seq0', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:320941]
+INFO: [Synth 8-11241] undeclared symbol 'tx_ptp_pcslane_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:321001]
+INFO: [Synth 8-11241] undeclared symbol 'encod2scrambler_ena_msb', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:321162]
+INFO: [Synth 8-11241] undeclared symbol 'encod2scrambler_ena_lsb', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:321163]
+INFO: [Synth 8-11241] undeclared symbol 'encod2scrambler_ctrl', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:321165]
+WARNING: [Synth 8-10507] attribute 'DowngradeIPIdentifiedWarnings' is already specified; last one will take precedence [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:323538]
+INFO: [Synth 8-11241] undeclared symbol 'tx_axis_e_tready_i', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:325552]
+INFO: [Synth 8-11241] undeclared symbol 'tx_axis_p_tready_i', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:325553]
+INFO: [Synth 8-11241] undeclared symbol 'rx_axis_mac_tvalid_re', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:326417]
+INFO: [Synth 8-11241] undeclared symbol 'rx_sop_in', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:326418]
+INFO: [Synth 8-11241] undeclared symbol 'ctl_rx_max_packet_len_out', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:327770]
+INFO: [Common 17-14] Message 'Synth 8-11241' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-11065] parameter 'S0' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363251]
+WARNING: [Synth 8-11065] parameter 'S1' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363252]
+WARNING: [Synth 8-11065] parameter 'S2' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363253]
+WARNING: [Synth 8-11065] parameter 'S3' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363254]
+WARNING: [Synth 8-11065] parameter 'S4' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363255]
+WARNING: [Synth 8-11065] parameter 'S5' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363256]
+WARNING: [Synth 8-11065] parameter 'S6' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363257]
+WARNING: [Synth 8-11065] parameter 'S7' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363258]
+WARNING: [Synth 8-11065] parameter 'S8' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363259]
+WARNING: [Synth 8-11065] parameter 'S9' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363260]
+WARNING: [Synth 8-11065] parameter 'S10' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363261]
+WARNING: [Synth 8-11065] parameter 'S11' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363262]
+WARNING: [Synth 8-11065] parameter 'S12' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363263]
+WARNING: [Synth 8-11065] parameter 'S13' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363264]
+WARNING: [Synth 8-11065] parameter 'S14' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363265]
+WARNING: [Synth 8-11065] parameter 'S15' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363266]
+WARNING: [Synth 8-11065] parameter 'SELECTOR' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363274]
+WARNING: [Synth 8-11065] parameter 'LINK_DISABLE' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363275]
+WARNING: [Synth 8-11065] parameter 'SCAN_FOR_CARRIER' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363276]
+WARNING: [Synth 8-11065] parameter 'LINK_ENABLE' becomes localparam in 'xxv_ethernet_v1_0_xilinx_cl73autoneg_an_pcontrol' with formal parameter declaration list [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/3d2b/hdl/xxv_ethernet_v4_1_vl_rfs.sv:363277]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3348.816 ; gain = 478.828 ; free physical = 11239 ; free virtual = 13024
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 144.484
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4354.590; parent = 3372.633; children = 981.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0.v:63]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_wrapper' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:63]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71527]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71527]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_common_wrapper' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_common_wrapper.v:61]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_gt_gthe4_common_wrapper' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0_gt_gthe4_common_wrapper.v:4]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_gthe4_common' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0/gtwizard_ultrascale_v1_7_gthe4_common.v:55]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_COMMON' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:44340]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_COMMON' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:44340]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_gthe4_common' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0/gtwizard_ultrascale_v1_7_gthe4_common.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_gt_gthe4_common_wrapper' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0_gt_gthe4_common_wrapper.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_common_wrapper' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_common_wrapper.v:61]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1258]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1258]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_cdc_sync' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1010]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_cdc_sync' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1010]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_ultrascale_tx_userclk' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_ultrascale_tx_userclk.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_ultrascale_tx_userclk' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_ultrascale_tx_userclk.v:71]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_ultrascale_rx_userclk' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_ultrascale_rx_userclk.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_ultrascale_rx_userclk' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_ultrascale_rx_userclk.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_gt' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_gt_gtwizard_top' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt_gtwizard_top.v:175]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4.v:143]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_gt_gthe4_channel_wrapper' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_gthe4_channel' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:55]
+INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:43148]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE4_CHANNEL' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:43148]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_gthe4_channel' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe4_channel.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_gt_gthe4_channel_wrapper' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt_gthe4_channel_wrapper.v:56]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_gthe4_delay_powergood' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:55]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_gthe4_delay_powergood' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v:55]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_bit_synchronizer' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_bit_synchronizer' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_bit_sync.v:55]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:55]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_reset_synchronizer' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_reset_synchronizer' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_reset_sync.v:55]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:164]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_15_reset_inv_synchronizer' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_reset_inv_synchronizer' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/6e4b/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_gt_gtwizard_top' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt_gtwizard_top.v:175]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_gt' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_retiming_sync' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1076]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_retiming_sync' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1076]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_retiming_sync__parameterized0' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1076]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_retiming_sync__parameterized0' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1076]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_retiming_sync__parameterized1' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1076]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_retiming_sync__parameterized1' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:1076]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_top' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:63]
+INFO: [Synth 8-6157] synthesizing module 'RAM32M' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:123711]
+INFO: [Synth 8-6155] done synthesizing module 'RAM32M' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:123711]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_reset' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_reset' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:61]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_axi_if_top' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:6014]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pif_registers' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:659]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized0' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized0' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized1' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized1' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized2' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized2' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized3' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized3' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized4' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized4' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:1693]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg__parameterized0' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg__parameterized0' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_pulse_no_syncer_reset' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:391]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized5' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_level__parameterized5' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_pulse_no_syncer_reset' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:391]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg__parameterized1' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg__parameterized1' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg__parameterized2' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pmtick_statsreg__parameterized2' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:490]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:3215]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_reset_flop' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_reset_flop' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:106]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_pulse' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:246]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_syncer_pulse' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:246]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_pif_registers' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:659]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_axi_slave_2_ipif' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:5505]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_axi_slave_2_ipif' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:5505]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_mac_baser_axis_axi_if_top' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:6014]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_top' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0_wrapper' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_wrapper.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xxv_ethernet_0_0' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0.v:63]
+WARNING: [Synth 8-6014] Unused sequential element Bus2IP_RdCE_reg_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:825]
+WARNING: [Synth 8-6014] Unused sequential element Bus2IP_WrCE_reg_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:826]
+WARNING: [Synth 8-6014] Unused sequential element IP2Bus_WrAck_d1_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:1627]
+WARNING: [Synth 8-6014] Unused sequential element write_data_r_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:1631]
+WARNING: [Synth 8-6014] Unused sequential element rx_clk_tick_retimed_d1_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:5277]
+WARNING: [Synth 8-6014] Unused sequential element tx_clk_tick_retimed_d1_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_axi4_lite_if_wrapper.v:5300]
+WARNING: [Synth 8-6014] Unused sequential element start_count_5K_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:692]
+WARNING: [Synth 8-6014] Unused sequential element rx_clk_count_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:693]
+WARNING: [Synth 8-6014] Unused sequential element rx_clk_noctrlcode_count_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:722]
+WARNING: [Synth 8-6014] Unused sequential element stat_rx_valid_ctrl_code_5K_reg was removed.  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:737]
+WARNING: [Synth 8-3848] Net ctl_ptp_transpclk_mode in module/entity design_1_xxv_ethernet_0_0_top does not have driver. [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:366]
+WARNING: [Synth 8-3848] Net tx_period_ns in module/entity design_1_xxv_ethernet_0_0_top does not have driver. [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:277]
+WARNING: [Synth 8-3848] Net rx_period_ns in module/entity design_1_xxv_ethernet_0_0_top does not have driver. [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/xxv_ethernet_v4_1_3/design_1_xxv_ethernet_0_0_top.v:278]
+WARNING: [Synth 8-7129] Port stat_rx_truncated in module design_1_xxv_ethernet_0_0_mac_baser_axis_pif_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_RdCE in module design_1_xxv_ethernet_0_0_mac_baser_axis_pif_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_WrCE in module design_1_xxv_ethernet_0_0_mac_baser_axis_pif_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_sop in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_axis_adapter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rlane_fifo_RAM_C2_P1_W214_D8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port is_pause in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port is_user_pause in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_sop in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_fcs_64_full is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_ignore_fcs in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_64b66b_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_rx_line_rate in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_core_destriper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port albuf_alignmarker in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_core_destriper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port serdes_headervalidin in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_ptp_tag_fifo_RAM_C1_P1_W16_D16_FL is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[14] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[13] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[12] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[11] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[10] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[9] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[8] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[7] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[6] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[5] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[4] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[3] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[2] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[1] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_max_packet_len[0] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[7] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[6] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[5] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[4] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[3] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[2] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[1] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ctl_rx_min_packet_len[0] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fcsstompedin in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[15] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[14] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[13] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[12] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[11] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[10] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[9] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[8] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[7] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[6] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[5] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[4] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[3] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[2] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[1] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port length_field[0] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inrange_packet in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port is_pause in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port is_user_pause in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_stats is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sopin[0] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_64b66b_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_parity_checker is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_serdes_refclk in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_serdes_refclk_reset in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ena0in in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_gearbox_seq_e1[5] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_gearbox_seq_e1[4] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_gearbox_seq_e1[3] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_gearbox_seq_e1[2] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_gearbox_seq_e1[1] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_gearbox_seq_e1[0] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_core_lane is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[63] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[62] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[61] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[60] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[59] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[58] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[57] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[56] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[55] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[54] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[53] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[52] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[51] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[50] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[49] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[48] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[47] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[46] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[45] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[44] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[43] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[42] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[41] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[40] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[39] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[38] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[37] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[36] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[35] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[34] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[33] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[32] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_period_ns[31] in module xxv_ethernet_v4_1_3_mac_baser_axis_nopause_hsec_cores is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3580.168 ; gain = 710.180 ; free physical = 13398 ; free virtual = 15182
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4562.129; parent = 3580.172; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3580.168 ; gain = 710.180 ; free physical = 13205 ; free virtual = 14993
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4562.129; parent = 3580.172; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3580.168 ; gain = 710.180 ; free physical = 13188 ; free virtual = 14973
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4562.129; parent = 3580.172; children = 981.957
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.33 . Memory (MB): peak = 3580.168 ; gain = 0.000 ; free physical = 12911 ; free virtual = 14704
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3644.199 ; gain = 0.000 ; free physical = 11865 ; free virtual = 13660
+Finished Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0_ooc.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0_ooc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt.xdc] for cell 'inst/i_design_1_xxv_ethernet_0_0_gt/inst'
+Finished Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt.xdc] for cell 'inst/i_design_1_xxv_ethernet_0_0_gt/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/ip_0/synth/design_1_xxv_ethernet_0_0_gt.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0_board.xdc] for cell 'inst'
+Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc] for cell 'inst'
+WARNING: [Constraints 18-619] A clock with name 'gt_refclk_p[0]' already exists, overwriting the previous clock with the same name. [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc:65]
+Finished Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Timing 38-277] The instance 'inst/i_design_1_xxv_ethernet_0_0_gt/inst/gen_gtwizard_gthe4_top.design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has RXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/i_design_1_xxv_ethernet_0_0_gt/inst/gen_gtwizard_gthe4_top.design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has TXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/i_design_1_xxv_ethernet_0_0_gt/inst/gen_gtwizard_gthe4_top.design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has RXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'inst/i_design_1_xxv_ethernet_0_0_gt/inst/gen_gtwizard_gthe4_top.design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST' has TXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_xxv_ethernet_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3644.199 ; gain = 0.000 ; free physical = 11754 ; free virtual = 13549
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 39 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 39 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3644.199 ; gain = 0.000 ; free physical = 11713 ; free virtual = 13509
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 3644.199 ; gain = 774.211 ; free physical = 10989 ; free virtual = 12814
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4626.160; parent = 3644.203; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 3644.199 ; gain = 774.211 ; free physical = 10967 ; free virtual = 12792
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4626.160; parent = 3644.203; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_araddr_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 85).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property DONT_TOUCH = true for inst/i_design_1_xxv_ethernet_0_0_top_0/i_design_1_xxv_ethernet_0_0_axi_if_top/i_axi_slave_2_ipif/axi_rdata_reg. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_xxv_ethernet_0_0/synth/design_1_xxv_ethernet_0_0.xdc, line 86).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/i_design_1_xxv_ethernet_0_0_gt/inst. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/dont_touch.xdc, line 13).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/dont_touch.xdc, line 17).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/i_design_1_xxv_ethernet_0_0_gt. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 3644.199 ; gain = 774.211 ; free physical = 10936 ; free virtual = 12761
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4626.160; parent = 3644.203; children = 981.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_all_reg' in module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_tx_reg' in module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_rx_reg' in module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_xgmii_scrambler'
+INFO: [Synth 8-802] inferred FSM for state register 'rx_decoder_state_d3_reg' in module 'xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_64b66b_decoder'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'rlane_fifo_waddr_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'rlane_fifo_raddr_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      ST_RESET_TX_BRANCH |                              000 |                              000
+         ST_RESET_TX_PLL |                              001 |                              001
+    ST_RESET_TX_DATAPATH |                              010 |                              010
+   ST_RESET_TX_WAIT_LOCK |                              011 |                              011
+ST_RESET_TX_WAIT_USERRDY |                              100 |                              100
+ST_RESET_TX_WAIT_RESETDONE |                              101 |                              101
+        ST_RESET_TX_IDLE |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_tx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      ST_RESET_RX_BRANCH |                              000 |                              000
+         ST_RESET_RX_PLL |                              001 |                              001
+    ST_RESET_RX_DATAPATH |                              010 |                              010
+   ST_RESET_RX_WAIT_LOCK |                              011 |                              011
+    ST_RESET_RX_WAIT_CDR |                              100 |                              100
+ST_RESET_RX_WAIT_USERRDY |                              101 |                              101
+ST_RESET_RX_WAIT_RESETDONE |                              110 |                              110
+        ST_RESET_RX_IDLE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_rx_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+     ST_RESET_ALL_BRANCH |                              000 |                              001
+     ST_RESET_ALL_TX_PLL |                              001 |                              010
+ST_RESET_ALL_TX_PLL_WAIT |                              010 |                              011
+      ST_RESET_ALL_RX_DP |                              011 |                              100
+     ST_RESET_ALL_RX_PLL |                              100 |                              101
+    ST_RESET_ALL_RX_WAIT |                              101 |                              110
+                  iSTATE |                              110 |                              111
+       ST_RESET_ALL_INIT |                              111 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_15_gtwiz_reset'
+INFO: [Synth 8-6904] The RAM "xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_lbus_adapter:/tx_1588_fifo_r_reg" of size (depth=40 x width=2) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               11
+*
+                      S0 |                               01 |                               00
+                      S1 |                               10 |                               01
+                      S2 |                               11 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'xxv_ethernet_v4_1_3_mac_baser_axis_nopause_tx_xgmii_scrambler'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RX_INIT |                               01 |                               00
+                    RX_E |                               00 |                               11
+                    RX_T |                               11 |                               10
+                    RX_D |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_decoder_state_d3_reg' using encoding 'sequential' in module 'xxv_ethernet_v4_1_3_mac_baser_axis_nopause_rx_64b66b_decoder'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3644.199 ; gain = 774.211 ; free physical = 10071 ; free virtual = 11891
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 146.133
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4626.160; parent = 3644.203; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-6904] The RAM "inst/i_design_1_xxv_ethernet_0_0_top_0i_4/i_design_1_xxv_ethernet_0_0_CORE/\i_TX_TOP/i_TX_CORE/i_TX_CORE_STRIPER /i_TX_LBUS_ADAPTER/tx_1588_fifo_r_reg" of size (depth=40 x width=2) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "inst/i_design_1_xxv_ethernet_0_0_top_0i_4/i_design_1_xxv_ethernet_0_0_CORE/\i_TX_TOP/i_TX_CORE/i_TX_CORE_STRIPER/i_TX_LBUS_ADAPTER /tx_1588_fifo_r_reg" of size (depth=40 x width=2) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 3644.199 ; gain = 774.211 ; free physical = 14504 ; free virtual = 16372
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2561.327; parent = 2416.843; children = 148.217
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4626.160; parent = 3644.203; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'gt_refclk_p[0]'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:09 ; elapsed = 00:02:15 . Memory (MB): peak = 3829.941 ; gain = 959.953 ; free physical = 10102 ; free virtual = 11972
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2932.016; parent = 2791.722; children = 148.217
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4811.902; parent = 3829.945; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:43 ; elapsed = 00:05:51 . Memory (MB): peak = 4156.551 ; gain = 1286.562 ; free physical = 9965 ; free virtual = 11917
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5138.512; parent = 4156.555; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:53 ; elapsed = 00:06:02 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 9385 ; free virtual = 11365
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:57 ; elapsed = 00:06:07 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 11200 ; free virtual = 13166
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:57 ; elapsed = 00:06:07 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 11222 ; free virtual = 13189
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:00 ; elapsed = 00:06:10 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 10775 ; free virtual = 12747
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:00 ; elapsed = 00:06:10 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 10763 ; free virtual = 12735
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:01 ; elapsed = 00:06:11 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 10329 ; free virtual = 12300
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:02 ; elapsed = 00:06:11 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 10218 ; free virtual = 12190
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BUFG_GT       |     5|
+|2     |CARRY8        |   624|
+|3     |GTHE4_CHANNEL |     1|
+|4     |GTHE4_COMMON  |     1|
+|5     |IBUFDS_GTE4   |     1|
+|6     |LUT1          |   123|
+|7     |LUT2          |  3956|
+|8     |LUT3          |   695|
+|9     |LUT4          |   910|
+|10    |LUT5          |  1259|
+|11    |LUT6          |  4150|
+|12    |MUXF7         |    66|
+|13    |RAM32M        |    22|
+|14    |RAM64M        |     1|
+|15    |SRL16E        |   164|
+|16    |FDCE          |    18|
+|17    |FDPE          |    91|
+|18    |FDRE          | 14831|
+|19    |FDSE          |  1635|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:02 ; elapsed = 00:06:11 . Memory (MB): peak = 4168.559 ; gain = 1298.570 ; free physical = 10113 ; free virtual = 12085
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3221.548; parent = 3069.340; children = 152.208
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5150.520; parent = 4168.562; children = 981.957
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:47 ; elapsed = 00:05:59 . Memory (MB): peak = 4168.559 ; gain = 1234.539 ; free physical = 10056 ; free virtual = 12027
+Synthesis Optimization Complete : Time (s): cpu = 00:06:02 ; elapsed = 00:06:12 . Memory (MB): peak = 4168.566 ; gain = 1298.570 ; free physical = 10049 ; free virtual = 12020
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4168.566 ; gain = 0.000 ; free physical = 10010 ; free virtual = 11982
+INFO: [Netlist 29-17] Analyzing 713 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/BUFG_GT_SYNC for BUFG_GT inst/refclk_bufg_gt_i
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/i_design_1_xxv_ethernet_0_0_gt/inst/gen_gtwizard_gthe4_top.design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC for BUFG_GT inst/i_core_gtwiz_userclk_rx_inst_0/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk2_inst
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/i_design_1_xxv_ethernet_0_0_gt/inst/gen_gtwizard_gthe4_top.design_1_xxv_ethernet_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1 for BUFG_GT inst/i_core_gtwiz_userclk_tx_inst_0/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk2_inst
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4207.414 ; gain = 0.000 ; free physical = 10136 ; free virtual = 12103
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 23 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 22 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 1 instance 
+
+Synth Design complete, checksum: 15d654fc
+INFO: [Common 17-83] Releasing license: Synthesis
+241 Infos, 205 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:06:17 ; elapsed = 00:06:23 . Memory (MB): peak = 4207.414 ; gain = 2263.598 ; free physical = 10375 ; free virtual = 12337
+INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/design_1_xxv_ethernet_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xxv_ethernet_0_0, cache-ID = d612a4e8a295385b
+INFO: [Coretcl 2-1174] Renamed 90 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_xxv_ethernet_0_0_synth_1/design_1_xxv_ethernet_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_xxv_ethernet_0_0_utilization_synth.rpt -pb design_1_xxv_ethernet_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  9 18:50:57 2023...

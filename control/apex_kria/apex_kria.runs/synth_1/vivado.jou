@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Oct 23 01:00:03 2024
+# Process ID: 21577
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/synth_1
+# Command line: vivado -log apex_control_mgt_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source apex_control_mgt_top.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/synth_1/apex_control_mgt_top.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4571.688 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source apex_control_mgt_top.tcl -notrace

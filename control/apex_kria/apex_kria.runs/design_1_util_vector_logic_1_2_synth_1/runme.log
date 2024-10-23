@@ -1,0 +1,23 @@
+
+*** Running vivado
+    with args -log design_1_util_vector_logic_1_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_util_vector_logic_1_2.tcl
+
+
+****** Vivado v2022.2.2 (64-bit)
+  **** SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source design_1_util_vector_logic_1_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/axis_jtag'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_util_vector_logic_1_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 0d7014c46da57ce1 to dir: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/0/d/0d7014c46da57ce1/design_1_util_vector_logic_0_0.dcp to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1/design_1_util_vector_logic_1_2.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/0/d/0d7014c46da57ce1/design_1_util_vector_logic_0_0_sim_netlist.vhdl to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1/design_1_util_vector_logic_1_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/0/d/0d7014c46da57ce1/design_1_util_vector_logic_0_0_stub.v to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1/design_1_util_vector_logic_1_2_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/0/d/0d7014c46da57ce1/design_1_util_vector_logic_0_0_stub.vhdl to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1/design_1_util_vector_logic_1_2_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip/2022.2.2/0/d/0d7014c46da57ce1/design_1_util_vector_logic_0_0_sim_netlist.v to /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_util_vector_logic_1_2_synth_1/design_1_util_vector_logic_1_2_sim_netlist.v.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_util_vector_logic_1_2, cache-ID = 0d7014c46da57ce1.
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  9 18:42:52 2023...

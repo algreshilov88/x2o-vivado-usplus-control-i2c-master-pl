@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Aug  9 18:33:38 2023
+# Process ID: 29991
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/c2c_gth_7p8125g_synth_1
+# Command line: vivado -log c2c_gth_7p8125g.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source c2c_gth_7p8125g.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/c2c_gth_7p8125g_synth_1/c2c_gth_7p8125g.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/c2c_gth_7p8125g_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4250.726 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source c2c_gth_7p8125g.tcl -notrace

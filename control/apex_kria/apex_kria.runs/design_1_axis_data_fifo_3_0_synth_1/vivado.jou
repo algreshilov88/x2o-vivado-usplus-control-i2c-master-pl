@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Aug  9 18:41:51 2023
+# Process ID: 6598
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_3_0_synth_1
+# Command line: vivado -log design_1_axis_data_fifo_3_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_data_fifo_3_0.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_3_0_synth_1/design_1_axis_data_fifo_3_0.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_axis_data_fifo_3_0_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4257.049 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source design_1_axis_data_fifo_3_0.tcl -notrace

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Aug  9 18:49:44 2023
+# Process ID: 15803
+# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_jtag_logic_0_1_synth_1
+# Command line: vivado -log design_1_jtag_logic_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_jtag_logic_0_1.tcl
+# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_jtag_logic_0_1_synth_1/design_1_jtag_logic_0_1.vds
+# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_jtag_logic_0_1_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 3182.519 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+#-----------------------------------------------------------
+source design_1_jtag_logic_0_1.tcl -notrace
