@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Wed Oct 23 01:01:14 2024
-# Process ID: 22356
-# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/impl_1
+# Start of session at: Thu Oct 31 16:34:05 2024
+# Process ID: 26737
+# Current directory: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/impl_1
 # Command line: vivado -log apex_control_mgt_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source apex_control_mgt_top.tcl -notrace
-# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/impl_1/apex_control_mgt_top.vdi
-# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/impl_1/vivado.jou
-# Running On: uftrig01, OS: Linux, CPU Frequency: 4458.917 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+# Log file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/impl_1/apex_control_mgt_top.vdi
+# Journal file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/impl_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4425.880 MHz, CPU Physical cores: 6, Host memory: 33506 MB
 #-----------------------------------------------------------
 source apex_control_mgt_top.tcl -notrace

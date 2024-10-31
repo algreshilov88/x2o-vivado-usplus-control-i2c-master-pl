@@ -9,14 +9,14 @@
 
 # XDC: imports/new/debug.xdc
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/xdc/async.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/xdc/async.xdc
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/xdc/top.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/xdc/top.xdc
 
-# IP: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/iprepo/csum_tx/src/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xci
+# IP: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/iprepo/csum_tx/src/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==csum_fifo_fifo_generator_0_0 || ORIG_REF_NAME==csum_fifo_fifo_generator_0_0} -quiet] -quiet
 
-# IP: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/iprepo/csum_tx/src/data_fifo_axis_data_fifo_0_0/data_fifo_axis_data_fifo_0_0.xci
+# IP: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/iprepo/csum_tx/src/data_fifo_axis_data_fifo_0_0/data_fifo_axis_data_fifo_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==data_fifo_axis_data_fifo_0_0 || ORIG_REF_NAME==data_fifo_axis_data_fifo_0_0} -quiet] -quiet
 
 # Block Designs: bd/design_1/design_1.bd
@@ -253,10 +253,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_tx_csum_0_1/design_1_tx_csum_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tx_csum_0_1 || ORIG_REF_NAME==design_1_tx_csum_0_1} -quiet] -quiet
 
-# IP: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/iprepo/csum_tx/src/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xci
+# IP: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/iprepo/csum_tx/src/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==csum_fifo_fifo_generator_0_0 || ORIG_REF_NAME==csum_fifo_fifo_generator_0_0} -quiet] -quiet
 
-# IP: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/iprepo/csum_tx/src/data_fifo_axis_data_fifo_0_0/data_fifo_axis_data_fifo_0_0.xci
+# IP: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/iprepo/csum_tx/src/data_fifo_axis_data_fifo_0_0/data_fifo_axis_data_fifo_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==data_fifo_axis_data_fifo_0_0 || ORIG_REF_NAME==data_fifo_axis_data_fifo_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_proc_sys_reset_0_3/design_1_proc_sys_reset_0_3.xci
@@ -292,17 +292,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xl
 # IP: bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xxv_ethernet_0_0 || ORIG_REF_NAME==design_1_xxv_ethernet_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_304/design_1_s00_regslice_304.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_304 || ORIG_REF_NAME==design_1_s00_regslice_304} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_312/design_1_s00_regslice_312.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_312 || ORIG_REF_NAME==design_1_s00_regslice_312} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_304/design_1_s00_data_fifo_304.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_304 || ORIG_REF_NAME==design_1_s00_data_fifo_304} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_312/design_1_s00_data_fifo_312.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_312 || ORIG_REF_NAME==design_1_s00_data_fifo_312} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_305/design_1_s00_regslice_305.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_305 || ORIG_REF_NAME==design_1_s00_regslice_305} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_313/design_1_s00_regslice_313.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_313 || ORIG_REF_NAME==design_1_s00_regslice_313} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_305/design_1_s00_data_fifo_305.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_305 || ORIG_REF_NAME==design_1_s00_data_fifo_305} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_313/design_1_s00_data_fifo_313.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_313 || ORIG_REF_NAME==design_1_s00_data_fifo_313} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_0 || ORIG_REF_NAME==design_1_auto_us_0} -quiet] -quiet
@@ -325,20 +325,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_cc_3/design_1_auto_cc_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_3 || ORIG_REF_NAME==design_1_auto_cc_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_306/design_1_s00_regslice_306.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_306 || ORIG_REF_NAME==design_1_s00_regslice_306} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_314/design_1_s00_regslice_314.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_314 || ORIG_REF_NAME==design_1_s00_regslice_314} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_306/design_1_s00_data_fifo_306.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_306 || ORIG_REF_NAME==design_1_s00_data_fifo_306} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_314/design_1_s00_data_fifo_314.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_314 || ORIG_REF_NAME==design_1_s00_data_fifo_314} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_1 || ORIG_REF_NAME==design_1_auto_ds_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_307/design_1_s00_regslice_307.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_307 || ORIG_REF_NAME==design_1_s00_regslice_307} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_315/design_1_s00_regslice_315.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_315 || ORIG_REF_NAME==design_1_s00_regslice_315} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_307/design_1_s00_data_fifo_307.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_307 || ORIG_REF_NAME==design_1_s00_data_fifo_307} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_315/design_1_s00_data_fifo_315.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_315 || ORIG_REF_NAME==design_1_s00_data_fifo_315} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_2 || ORIG_REF_NAME==design_1_auto_ds_2} -quiet] -quiet
@@ -409,16 +409,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_3 || ORIG_REF_NAME==design_1_auto_us_3} -quiet] -quiet
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==csum_fifo_fifo_generator_0_0 || ORIG_REF_NAME==csum_fifo_fifo_generator_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0_clocks.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==csum_fifo_fifo_generator_0_0 || ORIG_REF_NAME==csum_fifo_fifo_generator_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==csum_fifo_fifo_generator_0_0 || ORIG_REF_NAME==csum_fifo_fifo_generator_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0_clocks.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/tmp_edit_project.gen/sources_1/ip/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==csum_fifo_fifo_generator_0_0 || ORIG_REF_NAME==csum_fifo_fifo_generator_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/design_1_ooc.xdc

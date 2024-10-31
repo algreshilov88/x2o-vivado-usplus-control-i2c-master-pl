@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/impl_1/apex_control_mgt_top.tcl"
+  variable script "/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/impl_1/apex_control_mgt_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -124,7 +124,11 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.enableLutRouteBelPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableUnconnectedCarry8PinPower 1
   set_param chipscope.maxJobs 3
+  set_param power.BramSDPPropagationFix 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xck26-sfvc784-2LV-c
   set_property board_part xilinx.com:k26c:part0:1.3 [current_project]
@@ -132,42 +136,42 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/wt [current_project]
-  set_property parent.project_path /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.xpr [current_project]
+  set_property webtalk.parent_dir /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.cache/wt [current_project]
+  set_property parent.project_path /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.xpr [current_project]
   set_property ip_repo_paths {
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0
-  /home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/axis_jtag
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_buf_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_buf_1_0
+  /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/axis_jtag
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.cache/ip [current_project]
+  set_property ip_output_repo /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/synth_1/apex_control_mgt_top.dcp
+  add_files -quiet /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/synth_1/apex_control_mgt_top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  read_ip -quiet /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/iprepo/csum_tx/src/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xci
-  read_ip -quiet /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/iprepo/csum_tx/src/data_fifo_axis_data_fifo_0_0/data_fifo_axis_data_fifo_0_0.xci
-  add_files /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/sources_1/bd/design_1/design_1.bd
-  read_ip -quiet /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/sources_1/ip/c2c_gth_7p8125g_vio_0/c2c_gth_7p8125g_vio_0.xci
-  read_ip -quiet /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/sources_1/ip/c2c_gth_7p8125g/c2c_gth_7p8125g.xci
+  read_ip -quiet /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/iprepo/csum_tx/src/csum_fifo_fifo_generator_0_0/csum_fifo_fifo_generator_0_0.xci
+  read_ip -quiet /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/iprepo/csum_tx/src/data_fifo_axis_data_fifo_0_0/data_fifo_axis_data_fifo_0_0.xci
+  add_files /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/sources_1/bd/design_1/design_1.bd
+  read_ip -quiet /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/sources_1/ip/c2c_gth_7p8125g_vio_0/c2c_gth_7p8125g_vio_0.xci
+  read_ip -quiet /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/sources_1/ip/c2c_gth_7p8125g/c2c_gth_7p8125g.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/7015_primary.xdc
-  read_xdc /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/Kria_K26_SOM_Rev1.xdc
-  read_xdc /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/c2c_mgt.xdc
-  read_xdc /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/debug.xdc
-  read_xdc /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/xdc/async.xdc
-  read_xdc /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/xdc/top.xdc
+  read_xdc /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/7015_primary.xdc
+  read_xdc /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/Kria_K26_SOM_Rev1.xdc
+  read_xdc /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/c2c_mgt.xdc
+  read_xdc /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/constrs_1/imports/new/debug.xdc
+  read_xdc /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/xdc/async.xdc
+  read_xdc /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/xdc/top.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -179,17 +183,17 @@ OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
 OPTRACE "Design Initialization: post hook" START { }
   set src_rc [catch { 
-    puts "source /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl"
-    source /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl
+    puts "source /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl"
+    source /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.srcs/utils_1/imports/apex_kria.srcs/sources_1/tcl/c2c_gt_refclk.tcl failed"
     }
     return -code error
   }

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/impl_1'
+HD_PWD='/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

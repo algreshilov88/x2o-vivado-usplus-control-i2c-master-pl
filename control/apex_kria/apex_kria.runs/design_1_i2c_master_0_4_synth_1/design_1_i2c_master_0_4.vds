@@ -2,37 +2,37 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Tue Oct 22 23:55:17 2024
-# Process ID: 12546
-# Current directory: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1
+# Start of session at: Thu Oct 31 14:34:19 2024
+# Process ID: 25988
+# Current directory: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1
 # Command line: vivado -log design_1_i2c_master_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_i2c_master_0_4.tcl
-# Log file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.vds
-# Journal file: /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/vivado.jou
-# Running On: uftrig01, OS: Linux, CPU Frequency: 4385.482 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+# Log file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.vds
+# Journal file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/vivado.jou
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4493.864 MHz, CPU Physical cores: 6, Host memory: 33506 MB
 #-----------------------------------------------------------
 source design_1_i2c_master_0_4.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0'; Can't find the specified path.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0'; Can't find the specified path.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/myip_1_0'; Can't find the specified path.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/myip_1_0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
-WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
-WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_1_0'.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0'; Can't find the specified path.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_buf_1_0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0' already exists; ignoring attempt to add it again.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/i2c_master_buf_1_0'; Can't find the specified path.
+WARNING: [IP_Flow 19-2207] Repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_buf_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/i2c_master_buf_1_0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/ip_repo/axis_jtag'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/ip_repo/axis_jtag'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_i2c_master_0_4
 Command: synth_design -top design_1_i2c_master_0_4 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
@@ -42,36 +42,39 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12627
+INFO: [Synth 8-7075] Helper process launched with PID 26223
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'i2c_busy', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:249]
-INFO: [Synth 8-11241] undeclared symbol 'i2c_alost', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:250]
-INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0_S00_AXI.v:616]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_busy', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:251]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_alost', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:252]
+INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0_S00_AXI.v:622]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3059.156 ; gain = 235.742 ; free physical = 4818 ; free virtual = 17168
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4082.961; parent = 3065.098; children = 1017.863
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3059.887 ; gain = 236.742 ; free physical = 5136 ; free virtual = 10798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4083.691; parent = 3065.828; children = 1017.863
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_i2c_master_0_4' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/synth/design_1_i2c_master_0_4.v:53]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0_S00_AXI' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0_S00_AXI.v:328]
-INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0_S00_AXI.v:567]
-INFO: [Synth 8-6157] synthesizing module 'i2c_config' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:3]
-WARNING: [Synth 8-151] case item 8'b00111010 is unreachable [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:102]
-INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:176]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_top' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_master_top.v:1]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_byte_ctrl' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_master_byte_ctrl.v:75]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_bit_ctrl' [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_master_bit_ctrl.v:143]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_bit_ctrl' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_master_bit_ctrl.v:143]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_byte_ctrl' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_master_byte_ctrl.v:75]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_top' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_master_top.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_config' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0_S00_AXI' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/hdl/i2c_master_v1_0.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_i2c_master_0_4' (0#1) [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/synth/design_1_i2c_master_0_4.v:53]
-WARNING: [Synth 8-7137] Register i2c_write_req_reg in module i2c_config has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:185]
-WARNING: [Synth 8-3848] Net i2c_read_req in module/entity i2c_config does not have driver. [/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/bb03/src/i2c_config.v:81]
+INFO: [Synth 8-6157] synthesizing module 'design_1_i2c_master_0_4' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/synth/design_1_i2c_master_0_4.v:53]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0_S00_AXI' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0_S00_AXI.v:332]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0_S00_AXI.v:571]
+INFO: [Synth 8-6157] synthesizing module 'i2c_config' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:3]
+WARNING: [Synth 8-151] case item 8'b00111010 is unreachable [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:104]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:178]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_top' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_master_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_byte_ctrl' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_master_byte_ctrl.v:75]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_bit_ctrl' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_master_bit_ctrl.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_bit_ctrl' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_master_bit_ctrl.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_byte_ctrl' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_master_byte_ctrl.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_top' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_master_top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_config' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0_S00_AXI' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0_S00_AXI.v:3]
+WARNING: [Synth 8-7071] port 'chang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0.v:86]
+WARNING: [Synth 8-7071] port 'mhang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0.v:86]
+WARNING: [Synth 8-7023] instance 'i2c_master_v1_0_S00_AXI_inst' of module 'i2c_master_v1_0_S00_AXI' has 37 connections declared, but only 35 given [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0.v:86]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/hdl/i2c_master_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_i2c_master_0_4' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/synth/design_1_i2c_master_0_4.v:53]
+WARNING: [Synth 8-7137] Register i2c_write_req_reg in module i2c_config has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:187]
+WARNING: [Synth 8-3848] Net i2c_read_req in module/entity i2c_config does not have driver. [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/8310/src/i2c_config.v:83]
 WARNING: [Synth 8-7129] Port i2c_slave_dev_addr[0] in module i2c_master_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port slv_reg0[31] in module i2c_config is either unconnected or has no load
 WARNING: [Synth 8-7129] Port slv_reg0[30] in module i2c_config is either unconnected or has no load
@@ -120,41 +123,41 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module i2c_master_v1_0_S00_AXI i
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module i2c_master_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module i2c_master_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3144.062 ; gain = 320.648 ; free physical = 4895 ; free virtual = 17246
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4161.930; parent = 3144.066; children = 1017.863
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3144.793 ; gain = 321.648 ; free physical = 5216 ; free virtual = 10880
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4162.660; parent = 3144.797; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3161.875 ; gain = 338.461 ; free physical = 4895 ; free virtual = 17246
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4179.742; parent = 3161.879; children = 1017.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3162.605 ; gain = 339.461 ; free physical = 5216 ; free virtual = 10879
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4180.473; parent = 3162.609; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3161.875 ; gain = 338.461 ; free physical = 4895 ; free virtual = 17246
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4179.742; parent = 3161.879; children = 1017.863
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3162.605 ; gain = 339.461 ; free physical = 5216 ; free virtual = 10879
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4180.473; parent = 3162.609; children = 1017.863
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3161.875 ; gain = 0.000 ; free physical = 4888 ; free virtual = 17239
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3162.605 ; gain = 0.000 ; free physical = 5209 ; free virtual = 10873
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3308.781 ; gain = 0.000 ; free physical = 4814 ; free virtual = 17165
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3311.512 ; gain = 0.000 ; free physical = 5144 ; free virtual = 10807
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3332.594 ; gain = 23.812 ; free physical = 4813 ; free virtual = 17164
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3334.324 ; gain = 22.812 ; free physical = 5143 ; free virtual = 10807
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3332.594 ; gain = 509.180 ; free physical = 4859 ; free virtual = 17210
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.445; parent = 3300.582; children = 1017.863
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3334.324 ; gain = 511.180 ; free physical = 5190 ; free virtual = 10854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4320.176; parent = 3302.312; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -162,17 +165,17 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3332.594 ; gain = 509.180 ; free physical = 4859 ; free virtual = 17210
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.445; parent = 3300.582; children = 1017.863
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3334.324 ; gain = 511.180 ; free physical = 5190 ; free virtual = 10854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4320.176; parent = 3302.312; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3332.594 ; gain = 509.180 ; free physical = 4859 ; free virtual = 17210
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.445; parent = 3300.582; children = 1017.863
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3334.324 ; gain = 511.180 ; free physical = 5190 ; free virtual = 10854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4320.176; parent = 3302.312; children = 1017.863
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'i2c_master_bit_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'i2c_master_byte_ctrl'
@@ -239,9 +242,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'i2c_config'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3332.594 ; gain = 509.180 ; free physical = 4852 ; free virtual = 17204
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.445; parent = 3300.582; children = 1017.863
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3334.324 ; gain = 511.180 ; free physical = 5184 ; free virtual = 10848
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4320.176; parent = 3302.312; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -249,12 +252,13 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 2     
+	   2 Input   21 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 1     
 	   2 Input   14 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 17    
+	               32 Bit    Registers := 18    
 	               16 Bit    Registers := 1     
 	               14 Bit    Registers := 1     
 	                8 Bit    Registers := 5     
@@ -262,9 +266,9 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 39    
+	                1 Bit    Registers := 41    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 34    
+	   2 Input   32 Bit        Muxes := 35    
 	  16 Input   32 Bit        Muxes := 17    
 	   2 Input   24 Bit        Muxes := 1     
 	  24 Input   18 Bit        Muxes := 1     
@@ -281,7 +285,7 @@ Detailed RTL Component Info :
 	  15 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 2     
 	  10 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 42    
+	   2 Input    1 Bit        Muxes := 43    
 	  18 Input    1 Bit        Muxes := 5     
 	   6 Input    1 Bit        Muxes := 6     
 	   3 Input    1 Bit        Muxes := 1     
@@ -357,33 +361,33 @@ WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/FSM_onehot_state_r
 WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/FSM_onehot_state_reg[6]) is unused and will be removed from module i2c_config.
 WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/FSM_onehot_state_reg[4]) is unused and will be removed from module i2c_config.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3332.594 ; gain = 509.180 ; free physical = 4824 ; free virtual = 17181
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2384.972; parent = 2196.307; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.445; parent = 3300.582; children = 1017.863
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3334.324 ; gain = 511.180 ; free physical = 5156 ; free virtual = 10826
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2340.623; parent = 2168.824; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4320.176; parent = 3302.312; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3697.984 ; gain = 874.570 ; free physical = 4253 ; free virtual = 16610
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2961.607; parent = 2773.658; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4715.852; parent = 3697.988; children = 1017.863
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3697.012 ; gain = 873.867 ; free physical = 4593 ; free virtual = 10263
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2903.696; parent = 2732.167; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4714.879; parent = 3697.016; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3698.984 ; gain = 875.570 ; free physical = 4253 ; free virtual = 16610
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2962.443; parent = 2774.494; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4716.852; parent = 3698.988; children = 1017.863
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3698.012 ; gain = 874.867 ; free physical = 4592 ; free virtual = 10262
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2904.610; parent = 2733.081; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4715.879; parent = 3698.016; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16606
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.389; parent = 2777.439; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4588 ; free virtual = 10258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.302; parent = 2735.772; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -401,49 +405,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.736; parent = 2777.787; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4588 ; free virtual = 10258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.657; parent = 2736.128; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.752; parent = 2777.803; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4588 ; free virtual = 10258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.720; parent = 2736.190; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.955; parent = 2778.006; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4588 ; free virtual = 10258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.931; parent = 2736.401; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.955; parent = 2778.006; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4588 ; free virtual = 10258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.931; parent = 2736.401; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.955; parent = 2778.006; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4589 ; free virtual = 10259
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.931; parent = 2736.401; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.955; parent = 2778.006; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4589 ; free virtual = 10259
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.931; parent = 2736.401; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -459,46 +463,46 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY8 |     4|
-|2     |LUT1   |     2|
-|3     |LUT2   |    65|
-|4     |LUT3   |    59|
-|5     |LUT4   |    34|
-|6     |LUT5   |   102|
-|7     |LUT6   |   357|
-|8     |MUXF7  |   128|
+|1     |CARRY8 |    10|
+|2     |LUT1   |     7|
+|3     |LUT2   |    75|
+|4     |LUT3   |    83|
+|5     |LUT4   |    44|
+|6     |LUT5   |    90|
+|7     |LUT6   |   353|
+|8     |MUXF7  |   120|
 |9     |MUXF8  |    32|
-|10    |FDCE   |   549|
+|10    |FDCE   |   574|
 |11    |FDPE   |     1|
-|12    |FDRE   |   130|
-|13    |FDSE   |    15|
+|12    |FDRE   |   155|
+|13    |FDSE   |     9|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.031 ; gain = 904.617 ; free physical = 4248 ; free virtual = 16605
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2965.975; parent = 2778.025; children = 188.665
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.898; parent = 3728.035; children = 1017.863
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.059 ; gain = 903.914 ; free physical = 4589 ; free virtual = 10259
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2907.931; parent = 2736.401; children = 171.799
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4744.926; parent = 3727.062; children = 1017.863
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 54 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3728.031 ; gain = 733.898 ; free physical = 4286 ; free virtual = 16643
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.039 ; gain = 904.617 ; free physical = 4286 ; free virtual = 16643
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3727.059 ; gain = 732.195 ; free physical = 4627 ; free virtual = 10297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.066 ; gain = 903.914 ; free physical = 4627 ; free virtual = 10297
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3739.000 ; gain = 0.000 ; free physical = 4392 ; free virtual = 16749
-INFO: [Netlist 29-17] Analyzing 164 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3738.027 ; gain = 0.000 ; free physical = 4731 ; free virtual = 10401
+INFO: [Netlist 29-17] Analyzing 162 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3779.855 ; gain = 0.000 ; free physical = 4331 ; free virtual = 16688
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3780.852 ; gain = 0.000 ; free physical = 4669 ; free virtual = 10339
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 94f322d4
+Synth Design complete, checksum: 8557a754
 INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 3779.855 ; gain = 1869.734 ; free physical = 4546 ; free virtual = 16903
-INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_i2c_master_0_4, cache-ID = b19fe8a086f29d43
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 3780.852 ; gain = 1871.062 ; free physical = 4884 ; free virtual = 10553
+INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_i2c_master_0_4, cache-ID = 834c326c3bf7fe66
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_i2c_master_0_4_utilization_synth.rpt -pb design_1_i2c_master_0_4_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 22 23:55:58 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 31 14:35:01 2024...

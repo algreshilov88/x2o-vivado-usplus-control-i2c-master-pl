@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/xdc/async.xdc rfile:../../../xdc/async.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/xdc/top.xdc rfile:../../../xdc/top.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/xdc/async.xdc rfile:../../../xdc/async.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/xdc/top.xdc rfile:../../../xdc/top.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]
 set_clock_groups -name clk_async0 -asynchronous -group [get_clocks clk_out1_design_1_clk_wiz_0_0] -group [get_clocks xxv_ethernet_0_tx_clk_out_0]
 set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ} [current_design]
@@ -35,4 +35,4 @@ set_max_delay -datapath_only -from [get_clocks clk_pl_1] -to [get_clocks -of_obj
 set_property src_info {type:XDC file:2 line:91 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay -datapath_only -from [get_clocks clk_pl_1] -to [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ */channel_inst/*_CHANNEL_PRIM_INST/RXOUTCLK}]] 10.000
 set_property src_info {type:XDC file:2 line:96 export:INPUT save:INPUT read:READ} [current_design]
-set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.299
+set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.298
