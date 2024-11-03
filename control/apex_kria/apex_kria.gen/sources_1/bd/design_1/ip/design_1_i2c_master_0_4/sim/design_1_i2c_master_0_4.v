@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:i2c_master:1.0
-// IP Revision: 83
+// IP Revision: 84
 
 `timescale 1ns/1ps
 

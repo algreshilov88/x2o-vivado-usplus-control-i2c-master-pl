@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Thu Oct 31 14:35:01 2024
+| Date         : Sat Nov  2 16:41:52 2024
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file design_1_i2c_master_0_4_utilization_synth.rpt -pb design_1_i2c_master_0_4_utilization_synth.pb
 | Design       : design_1_i2c_master_0_4
@@ -39,7 +39,7 @@ Table of Contents
 |   Register as Flip Flop |  739 |     0 |          0 |    234240 |  0.32 |
 |   Register as Latch     |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                  |   10 |     0 |          0 |     14640 |  0.07 |
-| F7 Muxes                |  120 |     0 |          0 |     58560 |  0.20 |
+| F7 Muxes                |  128 |     0 |          0 |     58560 |  0.22 |
 | F8 Muxes                |   32 |     0 |          0 |     29280 |  0.11 |
 | F9 Muxes                |    0 |     0 |          0 |     14640 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -60,9 +60,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 574   |          Yes |           - |        Reset |
-| 9     |          Yes |         Set |            - |
-| 155   |          Yes |       Reset |            - |
+| 573   |          Yes |           - |        Reset |
+| 15    |          Yes |         Set |            - |
+| 150   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -157,18 +157,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |  574 |            Register |
-| LUT6     |  353 |                 CLB |
-| FDRE     |  155 |            Register |
-| MUXF7    |  120 |                 CLB |
-| LUT5     |   90 |                 CLB |
-| LUT3     |   83 |                 CLB |
-| LUT2     |   75 |                 CLB |
-| LUT4     |   44 |                 CLB |
+| FDCE     |  573 |            Register |
+| LUT6     |  362 |                 CLB |
+| FDRE     |  150 |            Register |
+| MUXF7    |  128 |                 CLB |
+| LUT5     |  103 |                 CLB |
+| LUT2     |   86 |                 CLB |
+| LUT3     |   61 |                 CLB |
+| LUT4     |   36 |                 CLB |
 | MUXF8    |   32 |                 CLB |
+| FDSE     |   15 |            Register |
 | CARRY8   |   10 |                 CLB |
-| FDSE     |    9 |            Register |
-| LUT1     |    7 |                 CLB |
+| LUT1     |    3 |                 CLB |
 | FDPE     |    1 |            Register |
 +----------+------+---------------------+
 

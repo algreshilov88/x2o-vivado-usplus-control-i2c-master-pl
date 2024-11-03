@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Thu Oct 31 16:33:59 2024
+| Date         : Sat Nov  2 16:43:01 2024
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file apex_control_mgt_top_utilization_synth.rpt -pb apex_control_mgt_top_utilization_synth.pb
 | Design       : apex_control_mgt_top
@@ -201,14 +201,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_system_ila_0_0            |    1 |
 | design_1_s01_regslice_0            |    1 |
 | design_1_s01_data_fifo_0           |    1 |
-| design_1_s00_regslice_315          |    1 |
-| design_1_s00_regslice_314          |    1 |
-| design_1_s00_regslice_313          |    1 |
-| design_1_s00_regslice_312          |    1 |
-| design_1_s00_data_fifo_315         |    1 |
-| design_1_s00_data_fifo_314         |    1 |
-| design_1_s00_data_fifo_313         |    1 |
-| design_1_s00_data_fifo_312         |    1 |
+| design_1_s00_regslice_319          |    1 |
+| design_1_s00_regslice_318          |    1 |
+| design_1_s00_regslice_317          |    1 |
+| design_1_s00_regslice_316          |    1 |
+| design_1_s00_data_fifo_319         |    1 |
+| design_1_s00_data_fifo_318         |    1 |
+| design_1_s00_data_fifo_317         |    1 |
+| design_1_s00_data_fifo_316         |    1 |
 | design_1_reg_bank_0_0              |    1 |
 | design_1_proc_sys_reset_2_0        |    1 |
 | design_1_proc_sys_reset_1_0        |    1 |
