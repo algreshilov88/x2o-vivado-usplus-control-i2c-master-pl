@@ -1,6 +1,153 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Thu Nov  7 10:22:56 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 90) to (Rev. 91)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Wed Nov  6 17:36:49 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 89) to (Rev. 90)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Wed Nov  6 17:22:30 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 88) to (Rev. 89)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Wed Nov  6 04:32:24 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 87) to (Rev. 88)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Tue Nov  5 17:55:27 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 86) to (Rev. 87)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Tue Nov  5 10:24:11 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 85) to (Rev. 86)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Mon Nov  4 05:09:53 2024
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 84) to (Rev. 85)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
 | Date         : Sat Nov  2 16:36:59 2024
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip

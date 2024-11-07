@@ -1,7 +1,7 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Sat Nov  2 16:41:53 2024
+-- Date        : Thu Nov  7 10:31:30 2024
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/design_1_i2c_master_0_4_sim_netlist.vhdl
@@ -17,13 +17,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_i2c_master_0_4_i2c_master_bit_ctrl is
   port (
     scl_oen_reg_0 : out STD_LOGIC;
-    busy_reg_0 : out STD_LOGIC;
     i2c_alost : out STD_LOGIC;
+    busy_reg_0 : out STD_LOGIC;
     i2c_sda_t : out STD_LOGIC;
     \FSM_sequential_c_state_reg[0]\ : out STD_LOGIC;
     rst_reg : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \lut_index_reg[7]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    i2c_write_req_reg : out STD_LOGIC_VECTOR ( 1 downto 0 );
     al_reg_0 : out STD_LOGIC;
     al_reg_1 : out STD_LOGIC;
     chang_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -41,15 +41,16 @@ entity design_1_i2c_master_0_4_i2c_master_bit_ctrl is
     al_reg_3 : out STD_LOGIC;
     \FSM_sequential_state_reg[1]\ : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
-    dSDA_reg_0 : in STD_LOGIC;
+    slave_wait_reg_inv_0 : in STD_LOGIC;
     cnt_done0 : in STD_LOGIC;
     \c_state__0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     ld_reg : in STD_LOGIC;
+    \lut_index_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \lut_index_reg[7]_0\ : in STD_LOGIC;
+    \lut_index_reg[5]\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \FSM_onehot_state_reg[7]\ : in STD_LOGIC;
-    \lut_index_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \lut_index_reg[7]_1\ : in STD_LOGIC;
-    \lut_index_reg[5]\ : in STD_LOGIC;
+    done : in STD_LOGIC;
     \core_cmd_reg[0]\ : in STD_LOGIC;
     cmd_stop_reg_0 : in STD_LOGIC;
     cmd_stop_reg_1 : in STD_LOGIC;
@@ -62,8 +63,7 @@ entity design_1_i2c_master_0_4_i2c_master_bit_ctrl is
     ack_in : in STD_LOGIC;
     rxr : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_data_stop_reg : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    done : in STD_LOGIC;
-    i2c_write_req_reg : in STD_LOGIC;
+    i2c_write_req_reg_0 : in STD_LOGIC;
     \FSM_sequential_state_reg[0]\ : in STD_LOGIC;
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     i2c_write_req_ack : in STD_LOGIC;
@@ -75,7 +75,7 @@ entity design_1_i2c_master_0_4_i2c_master_bit_ctrl is
     irxack : in STD_LOGIC;
     wr_data_stop_reg_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_data_stop_reg_1 : in STD_LOGIC;
-    i2c_write_req_reg_0 : in STD_LOGIC;
+    i2c_write_req_reg_1 : in STD_LOGIC;
     i2c_scl_i : in STD_LOGIC;
     i2c_sda_i : in STD_LOGIC
   );
@@ -261,6 +261,8 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_bit_ctrl is
   signal \filter_cnt[8]_i_1_n_0\ : STD_LOGIC;
   signal \filter_cnt[9]_i_1_n_0\ : STD_LOGIC;
   signal \filter_cnt[9]_i_2_n_0\ : STD_LOGIC;
+  signal first_sto : STD_LOGIC;
+  signal first_sto_i_1_n_0 : STD_LOGIC;
   signal \^i2c_alost\ : STD_LOGIC;
   signal \^i2c_sda_t\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 1 to 1 );
@@ -288,22 +290,21 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_bit_ctrl is
   signal sda_oen_i_3_n_0 : STD_LOGIC;
   signal sda_oen_i_4_n_0 : STD_LOGIC;
   signal sda_oen_i_5_n_0 : STD_LOGIC;
-  signal slave_wait : STD_LOGIC;
   signal slave_wait0 : STD_LOGIC;
+  signal slave_wait_reg_inv_n_0 : STD_LOGIC;
   signal sta_condition : STD_LOGIC;
-  signal sta_condition_reg_n_0 : STD_LOGIC;
+  signal sta_condition0 : STD_LOGIC;
   signal sto_condition : STD_LOGIC;
-  signal sto_condition_reg_n_0 : STD_LOGIC;
+  signal sto_condition0 : STD_LOGIC;
   signal \NLW_clk_wait_cnt_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   signal \NLW_clk_wait_cnt_reg[16]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[0]_i_6\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[11]_i_2\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[12]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \FSM_onehot_c_state[12]_i_3\ : label is "soft_lutpair27";
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[13]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \FSM_onehot_c_state[15]_i_2\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \FSM_onehot_c_state[15]_i_3\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \FSM_onehot_c_state[15]_i_2\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \FSM_onehot_c_state[15]_i_3\ : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[15]_i_4\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[16]_i_2\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \FSM_onehot_c_state[2]_i_1\ : label is "soft_lutpair0";
@@ -328,13 +329,12 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_bit_ctrl is
   attribute FSM_ENCODED_STATES of \FSM_onehot_c_state_reg[7]\ : label is "wr_b:000000100000000000,start_d:000000000000010000,start_c:000000000000001000,wr_a:000000010000000000,rd_a:000100000000000000,wr_d:000010000000000000,stop_a:000000000001000000,stop_d:000000001000000000,stop_c:000000000100000000,rd_b:001000000000000000,start_b:000000000000000100,rd_d:100000000000000000,wr_c:000001000000000000,start_e:000000000000100000,stop_b:000000000010000000,start_a:000000000000000010,rd_c:010000000000000000,idle:000000000000000001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_c_state_reg[8]\ : label is "wr_b:000000100000000000,start_d:000000000000010000,start_c:000000000000001000,wr_a:000000010000000000,rd_a:000100000000000000,wr_d:000010000000000000,stop_a:000000000001000000,stop_d:000000001000000000,stop_c:000000000100000000,rd_b:001000000000000000,start_b:000000000000000100,rd_d:100000000000000000,wr_c:000001000000000000,start_e:000000000000100000,stop_b:000000000010000000,start_a:000000000000000010,rd_c:010000000000000000,idle:000000000000000001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_c_state_reg[9]\ : label is "wr_b:000000100000000000,start_d:000000000000010000,start_c:000000000000001000,wr_a:000000010000000000,rd_a:000100000000000000,wr_d:000010000000000000,stop_a:000000000001000000,stop_d:000000001000000000,stop_c:000000000100000000,rd_b:001000000000000000,start_b:000000000000000100,rd_d:100000000000000000,wr_c:000001000000000000,start_e:000000000000100000,stop_b:000000000010000000,start_a:000000000000000010,rd_c:010000000000000000,idle:000000000000000001";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_2\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[5]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[7]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_2\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[5]_i_1\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of al_i_4 : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of al_i_5 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of al_i_6 : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of alost_i_1 : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of al_i_6 : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of alost_i_1 : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of chang_i_1 : label is "soft_lutpair17";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \clk_wait_cnt_reg[0]_i_2\ : label is 16;
@@ -343,15 +343,16 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_bit_ctrl is
   attribute SOFT_HLUTNM of \cnt[13]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \cnt[14]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \cnt[15]_i_4\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \cnt[15]_i_7\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \cnt[1]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \cnt[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \cnt[3]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \cnt[15]_i_7\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \cnt[1]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \cnt[2]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \cnt[3]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \cnt[4]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \cnt[6]_i_2\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \cnt[7]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \cnt[6]_i_2\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \cnt[7]_i_1\ : label is "soft_lutpair20";
   attribute SOFT_HLUTNM of \cnt[8]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \cnt[9]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of dout_i_1 : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \filter_cnt[0]_i_1\ : label is "soft_lutpair26";
   attribute SOFT_HLUTNM of \filter_cnt[11]_i_1\ : label is "soft_lutpair25";
   attribute SOFT_HLUTNM of \filter_cnt[12]_i_1\ : label is "soft_lutpair6";
@@ -367,19 +368,18 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_bit_ctrl is
   attribute SOFT_HLUTNM of \lut_index[2]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \lut_index[3]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \lut_index[5]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \lut_index[6]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \lut_index[7]_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \lut_index[6]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \lut_index[7]_i_2\ : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of scl_oen_i_4 : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of scl_oen_i_5 : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of scl_oen_i_7 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of sda_chk_i_1 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of sda_chk_i_1 : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of sda_oen_i_4 : label is "soft_lutpair11";
   attribute SOFT_HLUTNM of sda_oen_i_5 : label is "soft_lutpair18";
   attribute inverted : string;
   attribute inverted of slave_wait_reg_inv : label is "yes";
   attribute SOFT_HLUTNM of \slv_reg0[4]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of sta_condition_i_1 : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of sto_condition_i_1 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of sto_condition_i_1 : label is "soft_lutpair22";
 begin
   busy_reg_0 <= \^busy_reg_0\;
   i2c_alost <= \^i2c_alost\;
@@ -517,7 +517,7 @@ begin
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => dSDA_reg_0,
+      I0 => slave_wait_reg_inv_0,
       I1 => \^i2c_alost\,
       I2 => \FSM_onehot_c_state_reg_n_0_[17]\,
       I3 => \FSM_onehot_c_state_reg_n_0_[15]\,
@@ -553,7 +553,7 @@ begin
         port map (
       I0 => \FSM_onehot_c_state_reg_n_0_[17]\,
       I1 => \^i2c_alost\,
-      I2 => dSDA_reg_0,
+      I2 => slave_wait_reg_inv_0,
       O => \FSM_onehot_c_state[13]_i_2_n_0\
     );
 \FSM_onehot_c_state[13]_i_3\: unisim.vcomponents.LUT6
@@ -602,7 +602,7 @@ begin
         port map (
       I0 => c_state_0(0),
       I1 => \^i2c_alost\,
-      I2 => dSDA_reg_0,
+      I2 => slave_wait_reg_inv_0,
       O => \FSM_onehot_c_state[15]_i_2_n_0\
     );
 \FSM_onehot_c_state[15]_i_3\: unisim.vcomponents.LUT2
@@ -654,7 +654,7 @@ begin
     )
         port map (
       I0 => \^i2c_alost\,
-      I1 => dSDA_reg_0,
+      I1 => slave_wait_reg_inv_0,
       I2 => clk_en,
       O => \FSM_onehot_c_state[17]_i_1_n_0\
     );
@@ -714,7 +714,7 @@ begin
     )
         port map (
       I0 => \FSM_onehot_c_state_reg_n_0_[1]\,
-      I1 => dSDA_reg_0,
+      I1 => slave_wait_reg_inv_0,
       I2 => \^i2c_alost\,
       I3 => c_state_0(0),
       O => \FSM_onehot_c_state[2]_i_1_n_0\
@@ -724,7 +724,7 @@ begin
       INIT => X"00000100"
     )
         port map (
-      I0 => dSDA_reg_0,
+      I0 => slave_wait_reg_inv_0,
       I1 => \^i2c_alost\,
       I2 => c_state_0(0),
       I3 => \FSM_onehot_c_state_reg_n_0_[2]\,
@@ -741,7 +741,7 @@ begin
       I2 => \FSM_onehot_c_state_reg_n_0_[1]\,
       I3 => c_state_0(0),
       I4 => \^i2c_alost\,
-      I5 => dSDA_reg_0,
+      I5 => slave_wait_reg_inv_0,
       O => \FSM_onehot_c_state[4]_i_1_n_0\
     );
 \FSM_onehot_c_state[5]_i_1\: unisim.vcomponents.LUT6
@@ -1023,31 +1023,33 @@ begin
       INIT => X"E"
     )
         port map (
-      I0 => dSDA_reg_0,
+      I0 => slave_wait_reg_inv_0,
       I1 => \^i2c_alost\,
       O => \^rst_reg\
     );
-\FSM_onehot_state[5]_i_1\: unisim.vcomponents.LUT3
+\FSM_onehot_state[5]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8A"
+      INIT => X"A2AA"
     )
         port map (
       I0 => Q(2),
-      I1 => \^busy_reg_0\,
-      I2 => \FSM_onehot_state_reg[7]\,
-      O => D(0)
+      I1 => first_sto,
+      I2 => \^busy_reg_0\,
+      I3 => \FSM_onehot_state_reg[7]\,
+      O => i2c_write_req_reg(0)
     );
-\FSM_onehot_state[7]_i_1\: unisim.vcomponents.LUT5
+\FSM_onehot_state[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"20FF2020"
+      INIT => X"2000FFFF20002000"
     )
         port map (
       I0 => \FSM_onehot_state_reg[7]\,
       I1 => \^busy_reg_0\,
-      I2 => Q(2),
-      I3 => done,
-      I4 => Q(3),
-      O => D(1)
+      I2 => first_sto,
+      I3 => Q(2),
+      I4 => done,
+      I5 => Q(3),
+      O => i2c_write_req_reg(1)
     );
 \FSM_sequential_c_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1094,7 +1096,7 @@ begin
     )
         port map (
       I0 => \c_state__0\(0),
-      I1 => dSDA_reg_0,
+      I1 => slave_wait_reg_inv_0,
       I2 => \^i2c_alost\,
       I3 => \FSM_sequential_c_state_reg[2]_0\,
       I4 => \c_state__0\(1),
@@ -1107,7 +1109,7 @@ begin
     )
         port map (
       I0 => wr_data_stop_reg(0),
-      I1 => i2c_write_req_reg,
+      I1 => i2c_write_req_reg_0,
       I2 => wr_data_stop_reg(1),
       I3 => \^i2c_alost\,
       I4 => \FSM_sequential_state_reg[0]\,
@@ -1144,12 +1146,12 @@ al_i_1: unisim.vcomponents.LUT6
       INIT => X"2020FF2020202020"
     )
         port map (
-      I0 => sda_chk_reg_n_0,
+      I0 => \^i2c_sda_t\,
       I1 => sSDA,
-      I2 => \^i2c_sda_t\,
+      I2 => sda_chk_reg_n_0,
       I3 => \al3__14\,
       I4 => cmd_stop_reg_n_0,
-      I5 => sto_condition_reg_n_0,
+      I5 => sto_condition,
       O => al0
     );
 al_i_2: unisim.vcomponents.LUT6
@@ -1214,7 +1216,7 @@ al_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => al0,
       Q => \^i2c_alost\,
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 alost_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -1225,15 +1227,14 @@ alost_i_1: unisim.vcomponents.LUT2
       I1 => Q(2),
       O => al_reg_0
     );
-\busy_i_1__0\: unisim.vcomponents.LUT4
+\busy_i_1__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0054"
+      INIT => X"0E"
     )
         port map (
-      I0 => dSDA_reg_0,
-      I1 => sta_condition_reg_n_0,
-      I2 => \^busy_reg_0\,
-      I3 => sto_condition_reg_n_0,
+      I0 => \^busy_reg_0\,
+      I1 => sta_condition,
+      I2 => sto_condition,
       O => \busy_i_1__0_n_0\
     );
 busy_reg: unisim.vcomponents.FDRE
@@ -1242,7 +1243,7 @@ busy_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \busy_i_1__0_n_0\,
       Q => \^busy_reg_0\,
-      R => '0'
+      R => slave_wait_reg_inv_0
     );
 \cSCL_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -1250,7 +1251,7 @@ busy_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => i2c_scl_i,
       Q => p_0_in(1),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \cSCL_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -1258,7 +1259,7 @@ busy_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => p_0_in(1),
       Q => \p_0_in__1\(0),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \cSDA_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -1266,7 +1267,7 @@ busy_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => i2c_sda_i,
       Q => \p_0_in__0\(1),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \cSDA_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -1274,7 +1275,7 @@ busy_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \p_0_in__0\(1),
       Q => \cSDA_reg_n_0_[1]\,
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 chang_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -1283,8 +1284,8 @@ chang_i_1: unisim.vcomponents.LUT4
         port map (
       I0 => chang_reg_n_0,
       I1 => \clk_wait_cnt[0]_i_3_n_0\,
-      I2 => slave_wait,
-      I3 => dSDA_reg_0,
+      I2 => slave_wait_reg_inv_n_0,
+      I3 => slave_wait_reg_inv_0,
       O => chang_i_1_n_0
     );
 chang_reg: unisim.vcomponents.FDRE
@@ -1303,7 +1304,7 @@ clk_en_i_1: unisim.vcomponents.LUT6
       I0 => sSCL,
       I1 => \^scl_oen_reg_0\,
       I2 => dSCL,
-      I3 => dSDA_reg_0,
+      I3 => slave_wait_reg_inv_0,
       I4 => \cnt[15]_i_3_n_0\,
       I5 => \cnt[15]_i_4_n_0\,
       O => cnt1
@@ -1321,8 +1322,8 @@ clk_en_reg: unisim.vcomponents.FDRE
       INIT => X"FE"
     )
         port map (
-      I0 => slave_wait,
-      I1 => dSDA_reg_0,
+      I0 => slave_wait_reg_inv_n_0,
+      I1 => slave_wait_reg_inv_0,
       I2 => \clk_wait_cnt[0]_i_3_n_0\,
       O => \clk_wait_cnt[0]_i_1_n_0\
     );
@@ -1630,7 +1631,7 @@ cmd_stop_i_1: unisim.vcomponents.LUT6
       I0 => cmd_stop_reg_1,
       I1 => cmd_stop_reg_0,
       I2 => cmd_stop_i_2_n_0,
-      I3 => dSDA_reg_0,
+      I3 => slave_wait_reg_inv_0,
       I4 => clk_en,
       I5 => cmd_stop_reg_n_0,
       O => cmd_stop_i_1_n_0
@@ -1753,7 +1754,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
       I0 => sSCL,
       I1 => \^scl_oen_reg_0\,
       I2 => dSCL,
-      I3 => dSDA_reg_0,
+      I3 => slave_wait_reg_inv_0,
       I4 => \cnt[15]_i_3_n_0\,
       I5 => \cnt[15]_i_4_n_0\,
       O => \cnt[15]_i_1_n_0\
@@ -1943,7 +1944,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => cnt0(0),
       Q => cnt(0),
       R => \cnt[15]_i_1_n_0\
@@ -1951,7 +1952,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[10]_i_1_n_0\,
       Q => cnt(10),
       R => \cnt[15]_i_1_n_0\
@@ -1959,7 +1960,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[11]_i_1_n_0\,
       Q => cnt(11),
       R => \cnt[15]_i_1_n_0\
@@ -1967,7 +1968,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[12]_i_1_n_0\,
       Q => cnt(12),
       R => \cnt[15]_i_1_n_0\
@@ -1975,7 +1976,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[13]_i_1_n_0\,
       Q => cnt(13),
       R => \cnt[15]_i_1_n_0\
@@ -1983,7 +1984,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[14]_i_1_n_0\,
       Q => cnt(14),
       R => \cnt[15]_i_1_n_0\
@@ -1991,7 +1992,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[15]_i_2_n_0\,
       Q => cnt(15),
       R => \cnt[15]_i_1_n_0\
@@ -1999,7 +2000,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[1]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[1]_i_1_n_0\,
       Q => cnt(1),
       S => \cnt[15]_i_1_n_0\
@@ -2007,7 +2008,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[2]_i_1_n_0\,
       Q => cnt(2),
       R => \cnt[15]_i_1_n_0\
@@ -2015,39 +2016,39 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[3]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[3]_i_1_n_0\,
       Q => cnt(3),
       S => \cnt[15]_i_1_n_0\
     );
-\cnt_reg[4]\: unisim.vcomponents.FDRE
+\cnt_reg[4]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[4]_i_1_n_0\,
       Q => cnt(4),
-      R => \cnt[15]_i_1_n_0\
+      S => \cnt[15]_i_1_n_0\
     );
 \cnt_reg[5]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[5]_i_1_n_0\,
       Q => cnt(5),
       S => \cnt[15]_i_1_n_0\
     );
-\cnt_reg[6]\: unisim.vcomponents.FDRE
+\cnt_reg[6]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[6]_i_1_n_0\,
       Q => cnt(6),
-      R => \cnt[15]_i_1_n_0\
+      S => \cnt[15]_i_1_n_0\
     );
 \cnt_reg[7]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[7]_i_1_n_0\,
       Q => cnt(7),
       S => \cnt[15]_i_1_n_0\
@@ -2055,7 +2056,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[8]_i_1_n_0\,
       Q => cnt(8),
       R => \cnt[15]_i_1_n_0\
@@ -2063,7 +2064,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
 \cnt_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => slave_wait,
+      CE => slave_wait_reg_inv_n_0,
       D => \cnt[9]_i_1_n_0\,
       Q => cnt(9),
       R => \cnt[15]_i_1_n_0\
@@ -2074,7 +2075,7 @@ cmd_stop_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \^i2c_alost\,
-      I1 => dSDA_reg_0,
+      I1 => slave_wait_reg_inv_0,
       I2 => \c_state__0\(1),
       I3 => \core_cmd_reg[0]\,
       I4 => \c_state__0\(0),
@@ -2100,7 +2101,7 @@ dSCL_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => sSCL,
       Q => dSCL,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 dSDA_reg: unisim.vcomponents.FDSE
      port map (
@@ -2108,7 +2109,7 @@ dSDA_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => sSDA,
       Q => dSDA,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 dout_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -2142,7 +2143,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       INIT => X"E"
     )
         port map (
-      I0 => dSDA_reg_0,
+      I0 => slave_wait_reg_inv_0,
       I1 => \filter_cnt[13]_i_3_n_0\,
       O => fSDA
     );
@@ -2152,7 +2153,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => fSDA,
       D => \p_0_in__1\(0),
       Q => \p_0_in__1\(1),
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 \fSCL_reg[1]\: unisim.vcomponents.FDSE
      port map (
@@ -2160,7 +2161,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => fSDA,
       D => \p_0_in__1\(1),
       Q => \p_0_in__1\(2),
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 \fSCL_reg[2]\: unisim.vcomponents.FDSE
      port map (
@@ -2168,7 +2169,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => fSDA,
       D => \p_0_in__1\(2),
       Q => \fSCL_reg_n_0_[2]\,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 \fSDA_reg[0]\: unisim.vcomponents.FDSE
      port map (
@@ -2176,7 +2177,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => fSDA,
       D => \cSDA_reg_n_0_[1]\,
       Q => \fSDA_reg_n_0_[0]\,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 \fSDA_reg[1]\: unisim.vcomponents.FDSE
      port map (
@@ -2184,7 +2185,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => fSDA,
       D => \fSDA_reg_n_0_[0]\,
       Q => \fSDA_reg_n_0_[1]\,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 \fSDA_reg[2]\: unisim.vcomponents.FDSE
      port map (
@@ -2192,7 +2193,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => fSDA,
       D => \fSDA_reg_n_0_[1]\,
       Q => \fSDA_reg_n_0_[2]\,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 \filter_cnt[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2324,13 +2325,13 @@ dscl_oen_reg: unisim.vcomponents.FDRE
     );
 \filter_cnt[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00A9"
+      INIT => X"EEEB"
     )
         port map (
-      I0 => filter_cnt(2),
-      I1 => filter_cnt(0),
-      I2 => filter_cnt(1),
-      I3 => \filter_cnt[13]_i_3_n_0\,
+      I0 => \filter_cnt[13]_i_3_n_0\,
+      I1 => filter_cnt(2),
+      I2 => filter_cnt(0),
+      I3 => filter_cnt(1),
       O => \filter_cnt[2]_i_1_n_0\
     );
 \filter_cnt[3]_i_1\: unisim.vcomponents.LUT5
@@ -2347,15 +2348,15 @@ dscl_oen_reg: unisim.vcomponents.FDRE
     );
 \filter_cnt[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000AAAAAAA9"
+      INIT => X"EEEEEEEEEEEEEEEB"
     )
         port map (
-      I0 => filter_cnt(4),
-      I1 => filter_cnt(2),
-      I2 => filter_cnt(0),
-      I3 => filter_cnt(1),
-      I4 => filter_cnt(3),
-      I5 => \filter_cnt[13]_i_3_n_0\,
+      I0 => \filter_cnt[13]_i_3_n_0\,
+      I1 => filter_cnt(4),
+      I2 => filter_cnt(2),
+      I3 => filter_cnt(0),
+      I4 => filter_cnt(1),
+      I5 => filter_cnt(3),
       O => \filter_cnt[4]_i_1_n_0\
     );
 \filter_cnt[5]_i_1\: unisim.vcomponents.LUT6
@@ -2445,7 +2446,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[0]_i_1_n_0\,
       Q => filter_cnt(0),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -2453,7 +2454,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[10]_i_1_n_0\,
       Q => filter_cnt(10),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -2461,7 +2462,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[11]_i_1_n_0\,
       Q => filter_cnt(11),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -2469,7 +2470,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[12]_i_1_n_0\,
       Q => filter_cnt(12),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -2477,7 +2478,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[13]_i_1_n_0\,
       Q => filter_cnt(13),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2485,7 +2486,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[1]_i_1_n_0\,
       Q => filter_cnt(1),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2493,7 +2494,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[2]_i_1_n_0\,
       Q => filter_cnt(2),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -2501,7 +2502,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[3]_i_1_n_0\,
       Q => filter_cnt(3),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2509,7 +2510,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[4]_i_1_n_0\,
       Q => filter_cnt(4),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -2517,7 +2518,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[5]_i_1_n_0\,
       Q => filter_cnt(5),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -2525,7 +2526,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[6]_i_1_n_0\,
       Q => filter_cnt(6),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -2533,7 +2534,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[7]_i_1_n_0\,
       Q => filter_cnt(7),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2541,7 +2542,7 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[8]_i_1_n_0\,
       Q => filter_cnt(8),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
     );
 \filter_cnt_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -2549,18 +2550,38 @@ dscl_oen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \filter_cnt[9]_i_1_n_0\,
       Q => filter_cnt(9),
-      R => dSDA_reg_0
+      R => slave_wait_reg_inv_0
+    );
+first_sto_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => first_sto,
+      I1 => sto_condition,
+      O => first_sto_i_1_n_0
+    );
+first_sto_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => first_sto_i_1_n_0,
+      Q => first_sto,
+      R => '0'
     );
 i2c_write_req_i_1: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFF2FF00000200"
     )
         port map (
-      I0 => i2c_write_req_reg,
+      I0 => i2c_write_req_reg_0,
       I1 => wr_data_stop_reg(1),
       I2 => \^i2c_alost\,
-      I3 => i2c_write_req_reg_0,
-      I4 => dSDA_reg_0,
+      I3 => i2c_write_req_reg_1,
+      I4 => slave_wait_reg_inv_0,
       I5 => \FSM_onehot_state_reg[7]\,
       O => \FSM_sequential_state_reg[1]\
     );
@@ -2582,75 +2603,75 @@ ld_i_1: unisim.vcomponents.LUT6
       INIT => X"1"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(0),
+      I0 => \lut_index_reg[7]\(0),
       I1 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(0)
+      O => D(0)
     );
 \lut_index[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"06"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(1),
-      I1 => \lut_index_reg[7]_0\(0),
+      I0 => \lut_index_reg[7]\(1),
+      I1 => \lut_index_reg[7]\(0),
       I2 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(1)
+      O => D(1)
     );
 \lut_index[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"006A"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(2),
-      I1 => \lut_index_reg[7]_0\(1),
-      I2 => \lut_index_reg[7]_0\(0),
+      I0 => \lut_index_reg[7]\(2),
+      I1 => \lut_index_reg[7]\(1),
+      I2 => \lut_index_reg[7]\(0),
       I3 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(2)
+      O => D(2)
     );
 \lut_index[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00006AAA"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(3),
-      I1 => \lut_index_reg[7]_0\(2),
-      I2 => \lut_index_reg[7]_0\(0),
-      I3 => \lut_index_reg[7]_0\(1),
+      I0 => \lut_index_reg[7]\(3),
+      I1 => \lut_index_reg[7]\(2),
+      I2 => \lut_index_reg[7]\(0),
+      I3 => \lut_index_reg[7]\(1),
       I4 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(3)
+      O => D(3)
     );
 \lut_index[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"000000006AAAAAAA"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(4),
-      I1 => \lut_index_reg[7]_0\(3),
-      I2 => \lut_index_reg[7]_0\(1),
-      I3 => \lut_index_reg[7]_0\(0),
-      I4 => \lut_index_reg[7]_0\(2),
+      I0 => \lut_index_reg[7]\(4),
+      I1 => \lut_index_reg[7]\(3),
+      I2 => \lut_index_reg[7]\(1),
+      I3 => \lut_index_reg[7]\(0),
+      I4 => \lut_index_reg[7]\(2),
       I5 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(4)
+      O => D(4)
     );
 \lut_index[5]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"06"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(5),
+      I0 => \lut_index_reg[7]\(5),
       I1 => \lut_index_reg[5]\,
       I2 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(5)
+      O => D(5)
     );
 \lut_index[6]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"06"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(6),
-      I1 => \lut_index_reg[7]_1\,
+      I0 => \lut_index_reg[7]\(6),
+      I1 => \lut_index_reg[7]_0\,
       I2 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(6)
+      O => D(6)
     );
 \lut_index[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -2669,11 +2690,11 @@ ld_i_1: unisim.vcomponents.LUT6
       INIT => X"006A"
     )
         port map (
-      I0 => \lut_index_reg[7]_0\(7),
-      I1 => \lut_index_reg[7]_0\(6),
-      I2 => \lut_index_reg[7]_1\,
+      I0 => \lut_index_reg[7]\(7),
+      I1 => \lut_index_reg[7]\(6),
+      I2 => \lut_index_reg[7]_0\,
       I3 => \^i2c_alost\,
-      O => \lut_index_reg[7]\(7)
+      O => D(7)
     );
 sSCL_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -2691,7 +2712,7 @@ sSCL_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => \sSCL0__2\,
       Q => sSCL,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 sSDA_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -2709,7 +2730,7 @@ sSDA_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => \sSDA0__2\,
       Q => sSDA,
-      S => dSDA_reg_0
+      S => slave_wait_reg_inv_0
     );
 scl_oen_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -2739,15 +2760,15 @@ scl_oen_i_2: unisim.vcomponents.LUT6
     );
 scl_oen_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"AAAAAAAAAAAAAAA8"
     )
         port map (
-      I0 => scl_oen_i_4_n_0,
-      I1 => \FSM_onehot_c_state[15]_i_3_n_0\,
-      I2 => \FSM_onehot_c_state[15]_i_4_n_0\,
-      I3 => scl_oen_i_5_n_0,
-      I4 => scl_oen_i_6_n_0,
-      I5 => clk_en,
+      I0 => clk_en,
+      I1 => scl_oen_i_4_n_0,
+      I2 => \FSM_onehot_c_state[15]_i_3_n_0\,
+      I3 => \FSM_onehot_c_state[15]_i_4_n_0\,
+      I4 => scl_oen_i_5_n_0,
+      I5 => scl_oen_i_6_n_0,
       O => \scl_oen6_out__0\
     );
 scl_oen_i_4: unisim.vcomponents.LUT2
@@ -2814,7 +2835,7 @@ sda_chk_i_1: unisim.vcomponents.LUT5
         port map (
       I0 => sda_chk,
       I1 => \^i2c_alost\,
-      I2 => dSDA_reg_0,
+      I2 => slave_wait_reg_inv_0,
       I3 => clk_en,
       I4 => sda_chk_reg_n_0,
       O => sda_chk_i_1_n_0
@@ -2829,14 +2850,14 @@ sda_chk_reg: unisim.vcomponents.FDRE
     );
 sda_oen_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFEFEFFFECECECCC"
+      INIT => X"EEEFFFFFEEECCCCC"
     )
         port map (
       I0 => sda_oen_i_2_n_0,
       I1 => \^rst_reg\,
-      I2 => clk_en,
-      I3 => \FSM_onehot_c_state_reg_n_0_[16]\,
-      I4 => sda_oen_i_3_n_0,
+      I2 => \FSM_onehot_c_state_reg_n_0_[16]\,
+      I3 => sda_oen_i_3_n_0,
+      I4 => clk_en,
       I5 => \^i2c_sda_t\,
       O => sda_oen_i_1_n_0
     );
@@ -2916,19 +2937,16 @@ slave_wait_inv_i_1: unisim.vcomponents.LUT4
       I0 => dscl_oen,
       I1 => \^scl_oen_reg_0\,
       I2 => sSCL,
-      I3 => slave_wait,
+      I3 => slave_wait_reg_inv_n_0,
       O => slave_wait0
     );
-slave_wait_reg_inv: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
+slave_wait_reg_inv: unisim.vcomponents.FDSE
+     port map (
       C => s00_axi_aclk,
       CE => '1',
       D => slave_wait0,
-      Q => slave_wait,
-      R => '0'
+      Q => slave_wait_reg_inv_n_0,
+      S => slave_wait_reg_inv_0
     );
 \slv_reg0[4]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2936,7 +2954,7 @@ slave_wait_reg_inv: unisim.vcomponents.FDRE
     )
         port map (
       I0 => chang_reg_n_0,
-      I1 => dSDA_reg_0,
+      I1 => slave_wait_reg_inv_0,
       O => chang_reg_0(0)
     );
 \sr[0]_i_1\: unisim.vcomponents.LUT3
@@ -2949,42 +2967,46 @@ slave_wait_reg_inv: unisim.vcomponents.FDRE
       I2 => core_rxd,
       O => \txr_reg[0]\
     );
-sta_condition_i_1: unisim.vcomponents.LUT4
+sta_condition_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0400"
+      INIT => X"20"
     )
         port map (
-      I0 => dSDA_reg_0,
-      I1 => sSCL,
-      I2 => sSDA,
-      I3 => dSDA,
-      O => sta_condition
+      I0 => dSDA,
+      I1 => sSDA,
+      I2 => sSCL,
+      O => sta_condition0
     );
 sta_condition_reg: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => '1',
-      D => sta_condition,
-      Q => sta_condition_reg_n_0,
-      R => '0'
-    );
-sto_condition_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0400"
+      INIT => '0'
     )
         port map (
-      I0 => dSDA_reg_0,
-      I1 => sSCL,
-      I2 => dSDA,
-      I3 => sSDA,
-      O => sto_condition
-    );
-sto_condition_reg: unisim.vcomponents.FDRE
-     port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => sto_condition,
-      Q => sto_condition_reg_n_0,
+      D => sta_condition0,
+      Q => sta_condition,
+      R => '0'
+    );
+sto_condition_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => sSDA,
+      I1 => dSDA,
+      I2 => sSCL,
+      O => sto_condition0
+    );
+sto_condition_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => sto_condition0,
+      Q => sto_condition,
       R => '0'
     );
 wr_data_stop_i_1: unisim.vcomponents.LUT6
@@ -3011,8 +3033,8 @@ entity design_1_i2c_master_0_4_i2c_master_byte_ctrl is
     busy_reg : out STD_LOGIC;
     state0 : out STD_LOGIC;
     i2c_sda_t : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \lut_index_reg[7]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \FSM_onehot_state_reg[7]\ : out STD_LOGIC_VECTOR ( 5 downto 0 );
     al_reg : out STD_LOGIC;
     chang_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3024,17 +3046,17 @@ entity design_1_i2c_master_0_4_i2c_master_byte_ctrl is
     al_reg_1 : out STD_LOGIC;
     \FSM_sequential_state_reg[1]\ : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
-    dSDA_reg : in STD_LOGIC;
+    slave_wait_reg_inv : in STD_LOGIC;
     ld_reg_0 : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    \FSM_onehot_state_reg[7]\ : in STD_LOGIC;
     i2c_write_req_reg : in STD_LOGIC;
     wr_data_stop_reg : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \lut_index_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \lut_index_reg[7]_1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    \lut_index_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \lut_index_reg[7]_0\ : in STD_LOGIC;
     \lut_index_reg[5]\ : in STD_LOGIC;
     ld_reg_1 : in STD_LOGIC;
     \core_cmd_reg[0]_0\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[7]_0\ : in STD_LOGIC;
     ack_in : in STD_LOGIC;
     wr_data_stop_reg_0 : in STD_LOGIC;
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3101,32 +3123,32 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_byte_ctrl is
   signal \sr[7]_i_1_n_0\ : STD_LOGIC;
   signal \^state0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[1]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[2]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[8]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \FSM_sequential_c_state[2]_i_3\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \FSM_sequential_c_state[2]_i_4\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \FSM_sequential_c_state[2]_i_5\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[1]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[2]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[8]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \FSM_sequential_c_state[2]_i_3\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \FSM_sequential_c_state[2]_i_4\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \FSM_sequential_c_state[2]_i_5\ : label is "soft_lutpair33";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_c_state_reg[0]\ : label is "ST_START:001,ST_WRITE:011,ST_READ:010,ST_ACK:100,ST_IDLE:000,ST_STOP:101";
   attribute FSM_ENCODED_STATES of \FSM_sequential_c_state_reg[1]\ : label is "ST_START:001,ST_WRITE:011,ST_READ:010,ST_ACK:100,ST_IDLE:000,ST_STOP:101";
   attribute FSM_ENCODED_STATES of \FSM_sequential_c_state_reg[2]\ : label is "ST_START:001,ST_WRITE:011,ST_READ:010,ST_ACK:100,ST_IDLE:000,ST_STOP:101";
-  attribute SOFT_HLUTNM of ack_out_i_2 : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \dcnt[0]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \dcnt[1]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \dcnt[2]_i_2\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of i2c_write_req_ack_INST_0 : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of ld_i_2 : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \sr[1]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \sr[2]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \sr[3]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \sr[4]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \sr[5]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \sr[6]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of start_i_1 : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of stop_i_1 : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of write_i_1 : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of ack_out_i_2 : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \dcnt[0]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \dcnt[1]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \dcnt[2]_i_2\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of i2c_write_req_ack_INST_0 : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of ld_i_2 : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \sr[1]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \sr[2]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \sr[3]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \sr[4]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \sr[5]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \sr[6]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of start_i_1 : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of stop_i_1 : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of write_i_1 : label is "soft_lutpair32";
 begin
   i2c_write_req_ack <= \^i2c_write_req_ack\;
   state0 <= \^state0\;
@@ -3140,7 +3162,7 @@ begin
       I2 => irxack,
       I3 => done,
       I4 => Q(4),
-      O => D(0)
+      O => \FSM_onehot_state_reg[7]\(0)
     );
 \FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -3152,7 +3174,7 @@ begin
       I2 => wr_data_stop_reg_0,
       I3 => done,
       I4 => Q(1),
-      O => D(1)
+      O => \FSM_onehot_state_reg[7]\(1)
     );
 \FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -3161,7 +3183,7 @@ begin
         port map (
       I0 => Q(1),
       I1 => done,
-      O => D(2)
+      O => \FSM_onehot_state_reg[7]\(2)
     );
 \FSM_onehot_state[8]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -3171,7 +3193,7 @@ begin
       I0 => Q(4),
       I1 => irxack,
       I2 => done,
-      O => D(5)
+      O => \FSM_onehot_state_reg[7]\(5)
     );
 \FSM_sequential_c_state[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -3274,11 +3296,11 @@ ack_out_reg: unisim.vcomponents.FDRE
 bit_controller: entity work.design_1_i2c_master_0_4_i2c_master_bit_ctrl
      port map (
       CO(0) => CO(0),
-      D(1 downto 0) => D(4 downto 3),
+      D(7 downto 0) => D(7 downto 0),
       E(0) => E(0),
       \FSM_onehot_c_state_reg[1]_0\ => \core_cmd_reg_n_0_[3]\,
       \FSM_onehot_c_state_reg[1]_1\ => \core_cmd_reg_n_0_[2]\,
-      \FSM_onehot_state_reg[7]\ => \FSM_onehot_state_reg[7]\,
+      \FSM_onehot_state_reg[7]\ => \FSM_onehot_state_reg[7]_0\,
       \FSM_sequential_c_state_reg[0]\ => bit_controller_n_4,
       \FSM_sequential_c_state_reg[0]_0\ => bit_controller_n_20,
       \FSM_sequential_c_state_reg[1]\ => bit_controller_n_23,
@@ -3304,7 +3326,6 @@ bit_controller: entity work.design_1_i2c_master_0_4_i2c_master_bit_ctrl
       cnt_done0 => cnt_done0,
       \core_cmd_reg[0]\ => \core_cmd_reg[0]_0\,
       \core_txd__0\ => \core_txd__0\,
-      dSDA_reg_0 => dSDA_reg,
       done => done,
       dout_reg_0 => bit_controller_n_30,
       \go__1\ => \go__1\,
@@ -3313,8 +3334,9 @@ bit_controller: entity work.design_1_i2c_master_0_4_i2c_master_bit_ctrl
       i2c_sda_i => i2c_sda_i,
       i2c_sda_t => i2c_sda_t,
       i2c_write_req_ack => \^i2c_write_req_ack\,
-      i2c_write_req_reg => i2c_write_req_reg,
-      i2c_write_req_reg_0 => i2c_write_req_i_3_n_0,
+      i2c_write_req_reg(1 downto 0) => \FSM_onehot_state_reg[7]\(4 downto 3),
+      i2c_write_req_reg_0 => i2c_write_req_reg,
+      i2c_write_req_reg_1 => i2c_write_req_i_3_n_0,
       irxack => irxack,
       ld => ld,
       ld_reg => ld_reg_0,
@@ -3322,14 +3344,14 @@ bit_controller: entity work.design_1_i2c_master_0_4_i2c_master_bit_ctrl
       ld_reg_1 => ld_i_2_n_0,
       \lut_index_reg[5]\ => \lut_index_reg[5]\,
       \lut_index_reg[7]\(7 downto 0) => \lut_index_reg[7]\(7 downto 0),
-      \lut_index_reg[7]_0\(7 downto 0) => \lut_index_reg[7]_0\(7 downto 0),
-      \lut_index_reg[7]_1\ => \lut_index_reg[7]_1\,
+      \lut_index_reg[7]_0\ => \lut_index_reg[7]_0\,
       rst_reg => \^state0\,
       rxr(0) => rxr(7),
       s00_axi_aclk => s00_axi_aclk,
       scl_oen_reg_0 => scl_oen_reg,
       sda_oen_i_2_0 => core_txd_reg_n_0,
       shift => shift,
+      slave_wait_reg_inv_0 => slave_wait_reg_inv,
       \sr_reg[0]\(0) => \sr_reg[7]_0\(0),
       \sr_reg[0]_0\ => ld_reg_n_0,
       \txr_reg[0]\ => bit_controller_n_29,
@@ -3377,7 +3399,7 @@ cmd_ack_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => i2c_alost,
-      I1 => dSDA_reg,
+      I1 => slave_wait_reg_inv,
       I2 => c_state,
       O => \core_cmd[3]_i_1_n_0\
     );
@@ -3479,7 +3501,7 @@ core_txd_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \dcnt[0]_i_1_n_0\,
       Q => \dcnt_reg_n_0_[0]\,
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \dcnt_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -3487,7 +3509,7 @@ core_txd_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \dcnt[1]_i_1_n_0\,
       Q => \dcnt_reg_n_0_[1]\,
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \dcnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -3495,7 +3517,7 @@ core_txd_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \dcnt[2]_i_2_n_0\,
       Q => \dcnt_reg_n_0_[2]\,
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 i2c_write_req_ack_INST_0: unisim.vcomponents.LUT2
     generic map(
@@ -3620,7 +3642,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => bit_controller_n_29,
       Q => sr(0),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -3628,7 +3650,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[1]_i_1_n_0\,
       Q => sr(1),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -3636,7 +3658,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[2]_i_1_n_0\,
       Q => sr(2),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -3644,7 +3666,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[3]_i_1_n_0\,
       Q => sr(3),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -3652,7 +3674,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[4]_i_1_n_0\,
       Q => sr(4),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -3660,7 +3682,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[5]_i_1_n_0\,
       Q => sr(5),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -3668,7 +3690,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[6]_i_1_n_0\,
       Q => sr(6),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 \sr_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -3676,7 +3698,7 @@ shift_reg: unisim.vcomponents.FDRE
       CE => dcnt,
       D => \sr[7]_i_1_n_0\,
       Q => rxr(7),
-      R => dSDA_reg
+      R => slave_wait_reg_inv
     );
 start_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -3731,13 +3753,13 @@ entity design_1_i2c_master_0_4_i2c_master_top is
     al_reg_0 : out STD_LOGIC;
     \FSM_sequential_state_reg[1]\ : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
-    dSDA_reg : in STD_LOGIC;
+    slave_wait_reg_inv : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \FSM_onehot_state_reg[7]_0\ : in STD_LOGIC;
     i2c_write_req_reg : in STD_LOGIC;
     wr_data_stop_reg : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \lut_index_reg[7]\ : in STD_LOGIC;
     \lut_index_reg[5]\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[7]_0\ : in STD_LOGIC;
     wr_data_stop_reg_0 : in STD_LOGIC;
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     \txr_reg[7]_i_9_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3774,16 +3796,16 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_top is
   signal \^busy\ : STD_LOGIC;
   signal busy_i_1_n_0 : STD_LOGIC;
   signal byte_controller_n_1 : STD_LOGIC;
+  signal byte_controller_n_12 : STD_LOGIC;
+  signal byte_controller_n_13 : STD_LOGIC;
+  signal byte_controller_n_14 : STD_LOGIC;
+  signal byte_controller_n_15 : STD_LOGIC;
+  signal byte_controller_n_16 : STD_LOGIC;
+  signal byte_controller_n_17 : STD_LOGIC;
   signal byte_controller_n_18 : STD_LOGIC;
   signal byte_controller_n_24 : STD_LOGIC;
   signal byte_controller_n_25 : STD_LOGIC;
   signal byte_controller_n_26 : STD_LOGIC;
-  signal byte_controller_n_4 : STD_LOGIC;
-  signal byte_controller_n_5 : STD_LOGIC;
-  signal byte_controller_n_6 : STD_LOGIC;
-  signal byte_controller_n_7 : STD_LOGIC;
-  signal byte_controller_n_8 : STD_LOGIC;
-  signal byte_controller_n_9 : STD_LOGIC;
   signal \^error\ : STD_LOGIC;
   signal error_i_1_n_0 : STD_LOGIC;
   signal mhang_i_1_n_0 : STD_LOGIC;
@@ -4073,7 +4095,7 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_top is
   signal \NLW_msg_wait_cnt_reg[20]_i_4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   signal \NLW_msg_wait_cnt_reg[20]_i_4_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 4 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_1\ : label is "soft_lutpair41";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "S_ACK:0000000000100,S_WR_DATA:0000000000001,S_WR_REG_ADDR:0000000010000,S_WAIT:0000000001000,S_WR_STOP:0000000000010,S_RD_STOP:0000001000000,S_WR_DEV_ADDR:0000010000000,S_IDLE:0000000100000,S_RD_REG_ADDR:0100000000000,S_RD_DATA:0010000000000,S_RD_DEV_ADDR1:1000000000000,S_RD_DEV_ADDR0:0001000000000,S_WR_ERR_NACK:0000100000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "S_ACK:0000000000100,S_WR_DATA:0000000000001,S_WR_REG_ADDR:0000000010000,S_WAIT:0000000001000,S_WR_STOP:0000000000010,S_RD_STOP:0000001000000,S_WR_DEV_ADDR:0000010000000,S_IDLE:0000000100000,S_RD_REG_ADDR:0100000000000,S_RD_DATA:0010000000000,S_RD_DEV_ADDR1:1000000000000,S_RD_DEV_ADDR0:0001000000000,S_WR_ERR_NACK:0000100000000";
@@ -4082,39 +4104,39 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_top is
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[5]\ : label is "S_ACK:0000000000100,S_WR_DATA:0000000000001,S_WR_REG_ADDR:0000000010000,S_WAIT:0000000001000,S_WR_STOP:0000000000010,S_RD_STOP:0000001000000,S_WR_DEV_ADDR:0000010000000,S_IDLE:0000000100000,S_RD_REG_ADDR:0100000000000,S_RD_DATA:0010000000000,S_RD_DEV_ADDR1:1000000000000,S_RD_DEV_ADDR0:0001000000000,S_WR_ERR_NACK:0000100000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[7]\ : label is "S_ACK:0000000000100,S_WR_DATA:0000000000001,S_WR_REG_ADDR:0000000010000,S_WAIT:0000000001000,S_WR_STOP:0000000000010,S_RD_STOP:0000001000000,S_WR_DEV_ADDR:0000010000000,S_IDLE:0000000100000,S_RD_REG_ADDR:0100000000000,S_RD_DATA:0010000000000,S_RD_DEV_ADDR1:1000000000000,S_RD_DEV_ADDR0:0001000000000,S_WR_ERR_NACK:0000100000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[8]\ : label is "S_ACK:0000000000100,S_WR_DATA:0000000000001,S_WR_REG_ADDR:0000000010000,S_WAIT:0000000001000,S_WR_STOP:0000000000010,S_RD_STOP:0000001000000,S_WR_DEV_ADDR:0000010000000,S_IDLE:0000000100000,S_RD_REG_ADDR:0100000000000,S_RD_DATA:0010000000000,S_RD_DEV_ADDR1:1000000000000,S_RD_DEV_ADDR0:0001000000000,S_WR_ERR_NACK:0000100000000";
-  attribute SOFT_HLUTNM of error_i_1 : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of mhang_i_1 : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[10]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[11]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[12]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[13]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[14]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[15]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[16]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[17]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[18]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[19]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[1]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[20]_i_2\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[2]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[3]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[4]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[5]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[6]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[7]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[8]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \msg_wait_cnt[9]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of error_i_1 : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of mhang_i_1 : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[10]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[11]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[12]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[13]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[14]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[15]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[16]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[17]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[18]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[19]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[1]_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[20]_i_2\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[2]_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[3]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[4]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[5]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[6]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[7]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[8]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \msg_wait_cnt[9]_i_1\ : label is "soft_lutpair48";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \msg_wait_cnt_reg[16]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \msg_wait_cnt_reg[20]_i_4\ : label is 35;
   attribute ADDER_THRESHOLD of \msg_wait_cnt_reg[8]_i_2\ : label is 35;
-  attribute SOFT_HLUTNM of \slv_reg0[1]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \slv_reg0[3]_i_1\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \slv_reg0[5]_i_1\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \stt[0]_INST_0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \stt[1]_INST_0\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \stt[2]_INST_0\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \stt[3]_INST_0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \slv_reg0[1]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \slv_reg0[3]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \slv_reg0[5]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \stt[0]_INST_0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \stt[1]_INST_0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \stt[2]_INST_0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \stt[3]_INST_0\ : label is "soft_lutpair40";
 begin
   \FSM_onehot_state_reg[3]_0\(0) <= \^fsm_onehot_state_reg[3]_0\(0);
   alost <= \^alost\;
@@ -4137,7 +4159,7 @@ begin
       C => s00_axi_aclk,
       CE => '1',
       CLR => state0,
-      D => byte_controller_n_9,
+      D => byte_controller_n_17,
       Q => p_1_in
     );
 \FSM_onehot_state_reg[1]\: unisim.vcomponents.FDCE
@@ -4148,7 +4170,7 @@ begin
       C => s00_axi_aclk,
       CE => '1',
       CLR => state0,
-      D => byte_controller_n_8,
+      D => byte_controller_n_16,
       Q => p_1_in3_in
     );
 \FSM_onehot_state_reg[2]\: unisim.vcomponents.FDCE
@@ -4159,7 +4181,7 @@ begin
       C => s00_axi_aclk,
       CE => '1',
       CLR => state0,
-      D => byte_controller_n_7,
+      D => byte_controller_n_15,
       Q => \FSM_onehot_state_reg_n_0_[2]\
     );
 \FSM_onehot_state_reg[3]\: unisim.vcomponents.FDCE
@@ -4180,7 +4202,7 @@ begin
         port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => byte_controller_n_6,
+      D => byte_controller_n_14,
       PRE => state0,
       Q => \FSM_onehot_state_reg_n_0_[5]\
     );
@@ -4192,7 +4214,7 @@ begin
       C => s00_axi_aclk,
       CE => '1',
       CLR => state0,
-      D => byte_controller_n_5,
+      D => byte_controller_n_13,
       Q => p_0_in1_in
     );
 \FSM_onehot_state_reg[8]\: unisim.vcomponents.FDCE
@@ -4203,7 +4225,7 @@ begin
       C => s00_axi_aclk,
       CE => '1',
       CLR => state0,
-      D => byte_controller_n_4,
+      D => byte_controller_n_12,
       Q => \FSM_onehot_state_reg_n_0_[8]\
     );
 ack_in_reg: unisim.vcomponents.FDCE
@@ -4218,7 +4240,7 @@ alost_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => busy_i_1_n_0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => byte_controller_n_18,
       Q => \^alost\
     );
@@ -4236,21 +4258,22 @@ busy_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => busy_i_1_n_0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => byte_controller_n_1,
       Q => \^busy\
     );
 byte_controller: entity work.design_1_i2c_master_0_4_i2c_master_byte_ctrl
      port map (
       CO(0) => CO(0),
-      D(5) => byte_controller_n_4,
-      D(4) => byte_controller_n_5,
-      D(3) => byte_controller_n_6,
-      D(2) => byte_controller_n_7,
-      D(1) => byte_controller_n_8,
-      D(0) => byte_controller_n_9,
+      D(7 downto 0) => D(7 downto 0),
       E(0) => E(0),
-      \FSM_onehot_state_reg[7]\ => \FSM_onehot_state_reg[7]_0\,
+      \FSM_onehot_state_reg[7]\(5) => byte_controller_n_12,
+      \FSM_onehot_state_reg[7]\(4) => byte_controller_n_13,
+      \FSM_onehot_state_reg[7]\(3) => byte_controller_n_14,
+      \FSM_onehot_state_reg[7]\(2) => byte_controller_n_15,
+      \FSM_onehot_state_reg[7]\(1) => byte_controller_n_16,
+      \FSM_onehot_state_reg[7]\(0) => byte_controller_n_17,
+      \FSM_onehot_state_reg[7]_0\ => \FSM_onehot_state_reg[7]_0\,
       \FSM_sequential_state_reg[1]\ => \FSM_sequential_state_reg[1]\,
       Q(5) => \FSM_onehot_state_reg_n_0_[8]\,
       Q(4) => p_0_in1_in,
@@ -4268,7 +4291,6 @@ byte_controller: entity work.design_1_i2c_master_0_4_i2c_master_byte_ctrl
       cmd_ack_reg_1 => byte_controller_n_25,
       cmd_ack_reg_2 => byte_controller_n_26,
       \core_cmd_reg[0]_0\ => start_reg_n_0,
-      dSDA_reg => dSDA_reg,
       i2c_scl_i => i2c_scl_i,
       i2c_sda_i => i2c_sda_i,
       i2c_sda_t => i2c_sda_t,
@@ -4277,11 +4299,11 @@ byte_controller: entity work.design_1_i2c_master_0_4_i2c_master_byte_ctrl
       ld_reg_0 => stop_reg_n_0,
       ld_reg_1 => write_reg_n_0,
       \lut_index_reg[5]\ => \lut_index_reg[5]\,
-      \lut_index_reg[7]\(7 downto 0) => D(7 downto 0),
-      \lut_index_reg[7]_0\(7 downto 0) => Q(7 downto 0),
-      \lut_index_reg[7]_1\ => \lut_index_reg[7]\,
+      \lut_index_reg[7]\(7 downto 0) => Q(7 downto 0),
+      \lut_index_reg[7]_0\ => \lut_index_reg[7]\,
       s00_axi_aclk => s00_axi_aclk,
       scl_oen_reg => scl_oen_reg,
+      slave_wait_reg_inv => slave_wait_reg_inv,
       \sr_reg[7]_0\(7 downto 0) => txr(7 downto 0),
       state0 => state0,
       wr_data_stop_reg(1 downto 0) => wr_data_stop_reg(1 downto 0),
@@ -4302,7 +4324,7 @@ error_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => error_i_1_n_0,
       Q => \^error\
     );
@@ -4322,7 +4344,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => mhang_i_1_n_0,
       Q => mhang_reg_n_0
     );
@@ -4566,7 +4588,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[0]_i_1_n_0\,
       Q => msg_wait_cnt(0)
     );
@@ -4574,7 +4596,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[10]_i_1_n_0\,
       Q => msg_wait_cnt(10)
     );
@@ -4582,7 +4604,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[11]_i_1_n_0\,
       Q => msg_wait_cnt(11)
     );
@@ -4590,7 +4612,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[12]_i_1_n_0\,
       Q => msg_wait_cnt(12)
     );
@@ -4598,7 +4620,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[13]_i_1_n_0\,
       Q => msg_wait_cnt(13)
     );
@@ -4606,7 +4628,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[14]_i_1_n_0\,
       Q => msg_wait_cnt(14)
     );
@@ -4614,7 +4636,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[15]_i_1_n_0\,
       Q => msg_wait_cnt(15)
     );
@@ -4622,7 +4644,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[16]_i_1_n_0\,
       Q => msg_wait_cnt(16)
     );
@@ -4653,7 +4675,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[17]_i_1_n_0\,
       Q => msg_wait_cnt(17)
     );
@@ -4661,7 +4683,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[18]_i_1_n_0\,
       Q => msg_wait_cnt(18)
     );
@@ -4669,7 +4691,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[19]_i_1_n_0\,
       Q => msg_wait_cnt(19)
     );
@@ -4677,7 +4699,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[1]_i_1_n_0\,
       Q => msg_wait_cnt(1)
     );
@@ -4685,7 +4707,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[20]_i_2_n_0\,
       Q => msg_wait_cnt(20)
     );
@@ -4710,7 +4732,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[2]_i_1_n_0\,
       Q => msg_wait_cnt(2)
     );
@@ -4718,7 +4740,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[3]_i_1_n_0\,
       Q => msg_wait_cnt(3)
     );
@@ -4726,7 +4748,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[4]_i_1_n_0\,
       Q => msg_wait_cnt(4)
     );
@@ -4734,7 +4756,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[5]_i_1_n_0\,
       Q => msg_wait_cnt(5)
     );
@@ -4742,7 +4764,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[6]_i_1_n_0\,
       Q => msg_wait_cnt(6)
     );
@@ -4750,7 +4772,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[7]_i_1_n_0\,
       Q => msg_wait_cnt(7)
     );
@@ -4758,7 +4780,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[8]_i_1_n_0\,
       Q => msg_wait_cnt(8)
     );
@@ -4789,7 +4811,7 @@ mhang_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => msg_wait_cnt0,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => \msg_wait_cnt[9]_i_1_n_0\,
       Q => msg_wait_cnt(9)
     );
@@ -4799,7 +4821,7 @@ mhang_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \^error\,
-      I1 => dSDA_reg,
+      I1 => slave_wait_reg_inv,
       O => mhang_reg_0(0)
     );
 \slv_reg0[2]_i_1\: unisim.vcomponents.LUT2
@@ -4808,7 +4830,7 @@ mhang_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \^busy\,
-      I1 => dSDA_reg,
+      I1 => slave_wait_reg_inv,
       O => mhang_reg_0(1)
     );
 \slv_reg0[3]_i_1\: unisim.vcomponents.LUT2
@@ -4817,7 +4839,7 @@ mhang_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \^alost\,
-      I1 => dSDA_reg,
+      I1 => slave_wait_reg_inv,
       O => mhang_reg_0(2)
     );
 \slv_reg0[5]_i_1\: unisim.vcomponents.LUT2
@@ -4826,7 +4848,7 @@ mhang_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => mhang_reg_n_0,
-      I1 => dSDA_reg,
+      I1 => slave_wait_reg_inv,
       O => mhang_reg_0(4)
     );
 start_reg: unisim.vcomponents.FDCE
@@ -7294,8 +7316,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_i2c_master_0_4_i2c_config is
   port (
-    i2c_write_req_reg_0 : out STD_LOGIC;
     i2c_write_req_done : out STD_LOGIC;
+    i2c_write_req_reg_0 : out STD_LOGIC;
     scl_oen_reg : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 5 downto 0 );
     alost : out STD_LOGIC;
@@ -7305,7 +7327,7 @@ entity design_1_i2c_master_0_4_i2c_config is
     i2c_write_req_ack : out STD_LOGIC;
     i2c_sda_t : out STD_LOGIC;
     stt : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dSDA_reg : in STD_LOGIC;
+    slave_wait_reg_inv : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     i2c_scl_i : in STD_LOGIC;
@@ -7439,8 +7461,8 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_config is
   attribute COMPARATOR_THRESHOLD of \FSM_sequential_state_reg[1]_i_2\ : label is 11;
   attribute COMPARATOR_THRESHOLD of \FSM_sequential_state_reg[1]_i_3\ : label is 11;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of i2c_write_req_i_2 : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of wr_data_stop_i_15 : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of i2c_write_req_i_2 : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of wr_data_stop_i_15 : label is "soft_lutpair54";
 begin
   i2c_write_req_reg_0 <= \^i2c_write_req_reg_0\;
   wr_data_stop_reg_0 <= \^wr_data_stop_reg_0\;
@@ -7808,7 +7830,7 @@ begin
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_21,
       Q => state(0)
     );
@@ -7816,7 +7838,7 @@ begin
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_20,
       Q => state(1)
     );
@@ -7901,7 +7923,6 @@ i2c_master_top_m0: entity work.design_1_i2c_master_0_4_i2c_master_top
       al_reg_0 => i2c_master_top_m0_n_27,
       alost => alost,
       busy => busy,
-      dSDA_reg => dSDA_reg,
       error => error,
       i2c_scl_i => i2c_scl_i,
       i2c_sda_i => i2c_sda_i,
@@ -7913,6 +7934,7 @@ i2c_master_top_m0: entity work.design_1_i2c_master_0_4_i2c_master_top
       mhang_reg_0(4 downto 0) => D(5 downto 1),
       s00_axi_aclk => s00_axi_aclk,
       scl_oen_reg => scl_oen_reg,
+      slave_wait_reg_inv => slave_wait_reg_inv,
       stt(3 downto 0) => stt(3 downto 0),
       \txr[7]_i_5_0\(23 downto 0) => \txr[7]_i_5\(23 downto 0),
       \txr_reg[7]_i_11_0\(31 downto 0) => \txr_reg[7]_i_11\(31 downto 0),
@@ -7993,7 +8015,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_13,
       Q => lut_index_reg(0)
     );
@@ -8001,7 +8023,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_12,
       Q => lut_index_reg(1)
     );
@@ -8009,7 +8031,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_11,
       Q => lut_index_reg(2)
     );
@@ -8017,7 +8039,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_10,
       Q => lut_index_reg(3)
     );
@@ -8025,7 +8047,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_9,
       Q => lut_index_reg(4)
     );
@@ -8033,7 +8055,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_8,
       Q => lut_index_reg(5)
     );
@@ -8041,7 +8063,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_7,
       Q => lut_index_reg(6)
     );
@@ -8049,7 +8071,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => i2c_master_top_m0_n_19,
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_6,
       Q => lut_index_reg(7)
     );
@@ -8060,7 +8082,7 @@ i2c_write_req_reg: unisim.vcomponents.FDRE
         port map (
       I0 => state(1),
       I1 => state(0),
-      I2 => dSDA_reg,
+      I2 => slave_wait_reg_inv,
       O => D(0)
     );
 wr_data_stop_i_10: unisim.vcomponents.LUT6
@@ -8243,7 +8265,7 @@ wr_data_stop_reg: unisim.vcomponents.FDCE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      CLR => dSDA_reg,
+      CLR => slave_wait_reg_inv,
       D => i2c_master_top_m0_n_27,
       Q => \^wr_data_stop_reg_0\
     );
@@ -8298,8 +8320,8 @@ entity design_1_i2c_master_0_4_i2c_master_v1_0_S00_AXI is
     s00_axi_bvalid : out STD_LOGIC;
     aw_en_reg_0 : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
-    i2c_write_req_reg : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 0 to 0 );
+    i2c_write_req_reg : out STD_LOGIC;
     scl_oen_reg : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     alost : out STD_LOGIC;
@@ -8635,38 +8657,38 @@ architecture STRUCTURE of design_1_i2c_master_0_4_i2c_master_v1_0_S00_AXI is
   signal \slv_reg9[7]_i_1_n_0\ : STD_LOGIC;
   signal slv_reg_rden : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \slv_reg0[10]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \slv_reg0[11]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \slv_reg0[12]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \slv_reg0[13]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \slv_reg0[14]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \slv_reg0[15]_i_2\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \slv_reg0[16]_i_1\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \slv_reg0[17]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \slv_reg0[18]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \slv_reg0[19]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \slv_reg0[20]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \slv_reg0[21]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \slv_reg0[22]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \slv_reg0[23]_i_2\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \slv_reg0[24]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \slv_reg0[25]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \slv_reg0[26]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \slv_reg0[27]_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \slv_reg0[28]_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \slv_reg0[29]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \slv_reg0[30]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \slv_reg0[8]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \slv_reg0[9]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \slv_reg1[0]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \slv_reg1[1]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \slv_reg1[2]_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \slv_reg1[3]_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \slv_reg1[4]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \slv_reg1[5]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \slv_reg1[6]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \slv_reg1[7]_i_2\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \slv_reg0[10]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \slv_reg0[11]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \slv_reg0[12]_i_1\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \slv_reg0[13]_i_1\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \slv_reg0[14]_i_1\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \slv_reg0[15]_i_2\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \slv_reg0[16]_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \slv_reg0[17]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \slv_reg0[18]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \slv_reg0[19]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \slv_reg0[20]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \slv_reg0[21]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \slv_reg0[22]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \slv_reg0[23]_i_2\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \slv_reg0[24]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \slv_reg0[25]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \slv_reg0[26]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \slv_reg0[27]_i_1\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \slv_reg0[28]_i_1\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \slv_reg0[29]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \slv_reg0[30]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \slv_reg0[8]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \slv_reg0[9]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \slv_reg1[0]_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \slv_reg1[1]_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \slv_reg1[2]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \slv_reg1[3]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \slv_reg1[4]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \slv_reg1[5]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \slv_reg1[6]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \slv_reg1[7]_i_2\ : label is "soft_lutpair58";
 begin
   aw_en_reg_0 <= \^aw_en_reg_0\;
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
@@ -11429,7 +11451,6 @@ i2c_config_inst: entity work.design_1_i2c_master_0_4_i2c_config
       Q(0) => \msg_len_reg_n_0_[0]\,
       alost => alost,
       busy => busy,
-      dSDA_reg => rst_reg_n_0,
       error => error,
       i2c_scl_i => i2c_scl_i,
       i2c_sda_i => i2c_sda_i,
@@ -11439,6 +11460,7 @@ i2c_config_inst: entity work.design_1_i2c_master_0_4_i2c_config
       i2c_write_req_reg_0 => i2c_write_req_reg,
       s00_axi_aclk => s00_axi_aclk,
       scl_oen_reg => scl_oen_reg,
+      slave_wait_reg_inv => rst_reg_n_0,
       stt(3 downto 0) => stt(3 downto 0),
       \txr[7]_i_5\(23 downto 16) => slv_reg15(31 downto 24),
       \txr[7]_i_5\(15 downto 0) => slv_reg15(15 downto 0),
@@ -16726,8 +16748,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_i2c_master_0_4_i2c_master_v1_0 is
   port (
-    i2c_write_req_reg : out STD_LOGIC;
     i2c_write_req_done : out STD_LOGIC;
+    i2c_write_req_reg : out STD_LOGIC;
     scl_oen_reg : out STD_LOGIC;
     busy : out STD_LOGIC;
     alost : out STD_LOGIC;
