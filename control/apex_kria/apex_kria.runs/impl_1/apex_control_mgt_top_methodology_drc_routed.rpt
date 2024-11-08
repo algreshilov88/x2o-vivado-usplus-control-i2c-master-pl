@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Thu Nov  7 10:56:32 2024
+| Date         : Fri Nov  8 10:53:52 2024
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_methodology -file apex_control_mgt_top_methodology_drc_routed.rpt -pb apex_control_mgt_top_methodology_drc_routed.pb -rpx apex_control_mgt_top_methodology_drc_routed.rpx
 | Design       : apex_control_mgt_top
@@ -36,7 +36,7 @@ Table of Contents
 | TIMING-18 | Warning          | Missing input or output delay                          | 45         |
 | TIMING-24 | Warning          | Overridden Max delay datapath only                     | 29         |
 | TIMING-28 | Warning          | Auto-derived clock referenced by a timing constraint   | 4          |
-| ULMTCS-1  | Warning          | Control Sets use limits recommend reduction            | 1          |
+| ULMTCS-2  | Warning          | Control Sets use limits require reduction              | 1          |
 | XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
 | CLKC-40   | Advisory         | Substitute PLLE4 for MMCME4 check                      | 1          |
 | CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC             | 1          |
@@ -552,612 +552,612 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[111] in site SLICE_X15Y33 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[112] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[111] in site SLICE_X13Y100 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[112] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[127] in site SLICE_X15Y34 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[128] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[127] in site SLICE_X13Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[128] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[143] in site SLICE_X15Y35 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[144] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[143] in site SLICE_X13Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[144] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[159] in site SLICE_X15Y36 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[160] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[159] in site SLICE_X13Y103 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[160] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[175] in site SLICE_X15Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[176] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[175] in site SLICE_X13Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[176] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[191] in site SLICE_X15Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[192] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[191] in site SLICE_X13Y105 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[192] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[207] in site SLICE_X15Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[208] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[207] in site SLICE_X13Y106 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[208] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[223] in site SLICE_X15Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[224] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[223] in site SLICE_X13Y107 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[224] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[239] in site SLICE_X15Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[240] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[239] in site SLICE_X13Y108 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[240] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[255] in site SLICE_X15Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[256] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[255] in site SLICE_X13Y109 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[256] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[271] in site SLICE_X15Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[272] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[271] in site SLICE_X13Y110 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[272] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[287] in site SLICE_X15Y44 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[288] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[287] in site SLICE_X13Y111 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[288] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#13 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[303] in site SLICE_X15Y45 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[304] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[303] in site SLICE_X13Y112 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[304] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#14 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[319] in site SLICE_X15Y46 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[320] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[319] in site SLICE_X13Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[320] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#15 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[31] in site SLICE_X15Y28 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[32] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[31] in site SLICE_X13Y95 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[32] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#16 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[335] in site SLICE_X15Y47 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[336] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[335] in site SLICE_X13Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[336] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#17 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[351] in site SLICE_X15Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[352] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[351] in site SLICE_X13Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[352] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#18 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[367] in site SLICE_X15Y49 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[368] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[367] in site SLICE_X13Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[368] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#19 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[383] in site SLICE_X15Y50 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[384] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[383] in site SLICE_X13Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[384] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#20 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[399] in site SLICE_X15Y51 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[400] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[399] in site SLICE_X13Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[400] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#21 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[415] in site SLICE_X15Y52 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[416] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[415] in site SLICE_X13Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[416] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#22 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[431] in site SLICE_X15Y53 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[432] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[431] in site SLICE_X13Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[432] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#23 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[447] in site SLICE_X15Y54 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[448] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[447] in site SLICE_X13Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[448] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#24 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[463] in site SLICE_X15Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[464] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[463] in site SLICE_X13Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[464] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#25 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[479] in site SLICE_X15Y56 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[480] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[479] in site SLICE_X13Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[480] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#26 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[47] in site SLICE_X15Y29 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[48] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[47] in site SLICE_X13Y96 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[48] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#27 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[495] in site SLICE_X15Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[496] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[495] in site SLICE_X13Y124 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[496] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#28 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[511] in site SLICE_X15Y58 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[512] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[511] in site SLICE_X13Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[512] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#29 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[527] in site SLICE_X15Y59 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[528] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[527] in site SLICE_X13Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[528] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#30 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[543] in site SLICE_X15Y60 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[544] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[543] in site SLICE_X13Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[544] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#31 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[559] in site SLICE_X15Y61 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[560] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[559] in site SLICE_X13Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[560] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#32 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[575] in site SLICE_X15Y62 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[576] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[575] in site SLICE_X13Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[576] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#33 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[591] in site SLICE_X15Y63 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[592] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[591] in site SLICE_X13Y130 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[592] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#34 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[607] in site SLICE_X15Y64 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[608] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[607] in site SLICE_X13Y131 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[608] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#35 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[623] in site SLICE_X15Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[624] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[623] in site SLICE_X13Y132 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[624] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#36 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[639] in site SLICE_X15Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[640] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[639] in site SLICE_X13Y133 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[640] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#37 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[63] in site SLICE_X15Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[64] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[63] in site SLICE_X13Y97 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[64] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#38 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[655] in site SLICE_X15Y67 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[656] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[655] in site SLICE_X13Y134 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[656] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#39 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[671] in site SLICE_X15Y68 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[672] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[671] in site SLICE_X13Y135 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[672] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#40 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[687] in site SLICE_X15Y69 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[688] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[687] in site SLICE_X13Y136 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[688] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#41 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[703] in site SLICE_X15Y70 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[704] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[703] in site SLICE_X13Y137 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[704] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#42 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[719] in site SLICE_X15Y71 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[720] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[719] in site SLICE_X13Y138 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[720] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#43 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[735] in site SLICE_X15Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[736] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[735] in site SLICE_X13Y139 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[736] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#44 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[751] in site SLICE_X15Y73 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[752] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[751] in site SLICE_X13Y140 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[752] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#45 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[767] in site SLICE_X15Y74 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[768] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[767] in site SLICE_X13Y141 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[768] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#46 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[783] in site SLICE_X15Y75 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[784] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[783] in site SLICE_X13Y142 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[784] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#47 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[799] in site SLICE_X15Y76 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[800] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[799] in site SLICE_X13Y143 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[800] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#48 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[79] in site SLICE_X15Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[80] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[79] in site SLICE_X13Y98 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[80] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#49 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[815] in site SLICE_X15Y77 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[816] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[815] in site SLICE_X13Y144 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[816] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#50 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[831] in site SLICE_X15Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[832] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[831] in site SLICE_X13Y145 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[832] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#51 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[847] in site SLICE_X15Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[848] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[847] in site SLICE_X13Y146 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[848] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#52 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[863] in site SLICE_X15Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[864] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[863] in site SLICE_X13Y147 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[864] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#53 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[879] in site SLICE_X15Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[880] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[879] in site SLICE_X13Y148 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[880] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#54 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[895] in site SLICE_X15Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[896] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[895] in site SLICE_X13Y149 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[896] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#55 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[911] in site SLICE_X15Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[912] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[911] in site SLICE_X13Y150 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[912] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#56 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[927] in site SLICE_X15Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[928] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[927] in site SLICE_X13Y151 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[928] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#57 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[943] in site SLICE_X15Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[944] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[943] in site SLICE_X13Y152 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[944] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#58 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[959] in site SLICE_X15Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[960] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[959] in site SLICE_X13Y153 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[960] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#59 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[95] in site SLICE_X15Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[96] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[95] in site SLICE_X13Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[96] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#60 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[975] in site SLICE_X15Y87 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[976] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[975] in site SLICE_X13Y154 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[976] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#61 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[991] in site SLICE_X15Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[992] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[991] in site SLICE_X13Y155 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_1/inst/channel_up_r_reg[992] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#62 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[111] in site SLICE_X3Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[112] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[111] in site SLICE_X22Y181 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[112] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#63 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[127] in site SLICE_X3Y49 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[128] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[127] in site SLICE_X22Y182 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[128] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#64 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[143] in site SLICE_X3Y50 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[144] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[143] in site SLICE_X22Y183 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[144] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#65 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[159] in site SLICE_X3Y51 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[160] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[159] in site SLICE_X22Y184 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[160] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#66 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[175] in site SLICE_X3Y52 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[176] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[175] in site SLICE_X22Y185 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[176] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#67 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[191] in site SLICE_X3Y53 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[192] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[191] in site SLICE_X22Y186 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[192] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#68 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[207] in site SLICE_X3Y54 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[208] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[207] in site SLICE_X22Y187 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[208] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#69 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[223] in site SLICE_X3Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[224] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[223] in site SLICE_X22Y188 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[224] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#70 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[239] in site SLICE_X3Y56 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[240] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[239] in site SLICE_X22Y189 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[240] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#71 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[255] in site SLICE_X3Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[256] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[255] in site SLICE_X22Y190 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[256] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#72 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[271] in site SLICE_X3Y58 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[272] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[271] in site SLICE_X22Y191 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[272] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#73 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[287] in site SLICE_X3Y59 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[288] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[287] in site SLICE_X22Y192 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[288] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#74 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[303] in site SLICE_X3Y60 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[304] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[303] in site SLICE_X22Y193 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[304] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#75 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[319] in site SLICE_X3Y61 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[320] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[319] in site SLICE_X22Y194 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[320] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#76 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[31] in site SLICE_X3Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[32] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[31] in site SLICE_X22Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[32] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#77 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[335] in site SLICE_X3Y62 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[336] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[335] in site SLICE_X22Y195 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[336] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#78 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[351] in site SLICE_X3Y63 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[352] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[351] in site SLICE_X22Y196 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[352] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#79 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[367] in site SLICE_X3Y64 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[368] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[367] in site SLICE_X22Y197 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[368] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#80 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[383] in site SLICE_X3Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[384] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[383] in site SLICE_X22Y198 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[384] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#81 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[399] in site SLICE_X3Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[400] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[399] in site SLICE_X22Y199 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[400] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#82 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[415] in site SLICE_X3Y67 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[416] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[415] in site SLICE_X22Y200 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[416] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#83 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[431] in site SLICE_X3Y68 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[432] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[431] in site SLICE_X22Y201 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[432] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#84 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[447] in site SLICE_X3Y69 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[448] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[447] in site SLICE_X22Y202 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[448] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#85 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[463] in site SLICE_X3Y70 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[464] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[463] in site SLICE_X22Y203 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[464] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#86 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[479] in site SLICE_X3Y71 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[480] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[479] in site SLICE_X22Y204 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[480] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#87 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[47] in site SLICE_X3Y44 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[48] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[47] in site SLICE_X22Y177 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[48] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#88 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[495] in site SLICE_X3Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[496] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[495] in site SLICE_X22Y205 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[496] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#89 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[511] in site SLICE_X3Y73 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[512] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[511] in site SLICE_X22Y206 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[512] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#90 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[527] in site SLICE_X3Y74 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[528] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[527] in site SLICE_X22Y207 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[528] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#91 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[543] in site SLICE_X3Y75 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[544] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[543] in site SLICE_X22Y208 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[544] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#92 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[559] in site SLICE_X3Y76 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[560] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[559] in site SLICE_X22Y209 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[560] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#93 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[575] in site SLICE_X3Y77 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[576] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[575] in site SLICE_X22Y210 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[576] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#94 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[591] in site SLICE_X3Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[592] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[591] in site SLICE_X22Y211 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[592] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#95 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[607] in site SLICE_X3Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[608] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[607] in site SLICE_X22Y212 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[608] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#96 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[623] in site SLICE_X3Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[624] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[623] in site SLICE_X22Y213 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[624] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#97 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[639] in site SLICE_X3Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[640] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[639] in site SLICE_X22Y214 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[640] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#98 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[63] in site SLICE_X3Y45 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[64] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[63] in site SLICE_X22Y178 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[64] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#99 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[655] in site SLICE_X3Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[656] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[655] in site SLICE_X22Y215 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[656] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#100 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[671] in site SLICE_X3Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[672] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[671] in site SLICE_X22Y216 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[672] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#101 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[687] in site SLICE_X3Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[688] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[687] in site SLICE_X22Y217 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[688] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#102 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[703] in site SLICE_X3Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[704] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[703] in site SLICE_X22Y218 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[704] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#103 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[719] in site SLICE_X3Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[720] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[719] in site SLICE_X22Y219 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[720] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#104 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[735] in site SLICE_X3Y87 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[736] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[735] in site SLICE_X22Y220 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[736] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#105 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[751] in site SLICE_X3Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[752] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[751] in site SLICE_X22Y221 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[752] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#106 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[767] in site SLICE_X3Y89 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[768] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[767] in site SLICE_X22Y222 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[768] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#107 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[783] in site SLICE_X3Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[784] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[783] in site SLICE_X22Y223 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[784] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#108 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[799] in site SLICE_X3Y91 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[800] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[799] in site SLICE_X22Y224 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[800] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#109 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[79] in site SLICE_X3Y46 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[80] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[79] in site SLICE_X22Y179 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[80] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#110 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[815] in site SLICE_X3Y92 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[816] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[815] in site SLICE_X22Y225 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[816] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#111 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[831] in site SLICE_X3Y93 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[832] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[831] in site SLICE_X22Y226 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[832] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#112 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[847] in site SLICE_X3Y94 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[848] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[847] in site SLICE_X22Y227 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[848] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#113 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[863] in site SLICE_X3Y95 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[864] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[863] in site SLICE_X22Y228 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[864] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#114 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[879] in site SLICE_X3Y96 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[880] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[879] in site SLICE_X22Y229 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[880] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#115 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[895] in site SLICE_X3Y97 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[896] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[895] in site SLICE_X22Y230 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[896] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#116 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[911] in site SLICE_X3Y98 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[912] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[911] in site SLICE_X22Y231 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[912] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#117 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[927] in site SLICE_X3Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[928] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[927] in site SLICE_X22Y232 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[928] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#118 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[943] in site SLICE_X3Y100 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[944] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[943] in site SLICE_X22Y233 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[944] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#119 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[959] in site SLICE_X3Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[960] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[959] in site SLICE_X22Y234 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[960] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#120 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[95] in site SLICE_X3Y47 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[96] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[95] in site SLICE_X22Y180 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[96] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#121 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[975] in site SLICE_X3Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[976] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[975] in site SLICE_X22Y235 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[976] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#122 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[991] in site SLICE_X3Y103 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[992] is not placed in the same (SLICE) site.
+The FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[991] in site SLICE_X22Y236 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bdw/design_1_i/C2C/axisafety_2/inst/channel_up_r_reg[992] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -1560,9 +1560,9 @@ Auto-derived clock referenced by a timing constraint
 The auto-derived clock xxv_ethernet_0_tx_clk_out_0 is referenced by name inside timing constraint (see constraint position 333 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins bdw/design_1_i/xxv_ethernet_0/inst/i_core_gtwiz_userclk_tx_inst_0/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk2_inst/O]
 Related violations: <none>
 
-ULMTCS-1#1 Warning
-Control Sets use limits recommend reduction  
-This design uses 4384 control sets (vs. available limit of 29280, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+ULMTCS-2#1 Warning
+Control Sets use limits require reduction  
+This design uses 4681 control sets (vs. available limit of 29280, determined by 1 control set per CLB). This exceeds the control set use guideline of 15 percent. This is at a level where reduction is REQUIRED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCC-7#1 Warning
