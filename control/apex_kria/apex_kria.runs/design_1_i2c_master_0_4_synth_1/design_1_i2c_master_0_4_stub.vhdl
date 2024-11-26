@@ -1,7 +1,7 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Thu Nov  7 10:31:29 2024
+-- Date        : Sun Nov 24 21:25:26 2024
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_i2c_master_0_4_stub.vhdl
