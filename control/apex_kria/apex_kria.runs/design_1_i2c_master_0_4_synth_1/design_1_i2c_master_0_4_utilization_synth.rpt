@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Sun Nov 24 21:25:27 2024
+| Date         : Wed Nov 27 18:42:20 2024
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file design_1_i2c_master_0_4_utilization_synth.rpt -pb design_1_i2c_master_0_4_utilization_synth.pb
 | Design       : design_1_i2c_master_0_4
@@ -32,11 +32,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  576 |     0 |          0 |    117120 |  0.49 |
-|   LUT as Logic          |  576 |     0 |          0 |    117120 |  0.49 |
+| CLB LUTs*               |  573 |     0 |          0 |    117120 |  0.49 |
+|   LUT as Logic          |  573 |     0 |          0 |    117120 |  0.49 |
 |   LUT as Memory         |    0 |     0 |          0 |     57600 |  0.00 |
-| CLB Registers           |  761 |     0 |          0 |    234240 |  0.32 |
-|   Register as Flip Flop |  761 |     0 |          0 |    234240 |  0.32 |
+| CLB Registers           |  763 |     0 |          0 |    234240 |  0.33 |
+|   Register as Flip Flop |  763 |     0 |          0 |    234240 |  0.33 |
 |   Register as Latch     |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                  |   13 |     0 |          0 |     14640 |  0.09 |
 | F7 Muxes                |  128 |     0 |          0 |     58560 |  0.22 |
@@ -61,8 +61,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
 | 574   |          Yes |           - |        Reset |
-| 13    |          Yes |         Set |            - |
-| 173   |          Yes |       Reset |            - |
+| 11    |          Yes |         Set |            - |
+| 177   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -159,15 +159,15 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | FDCE     |  574 |            Register |
 | LUT6     |  365 |                 CLB |
-| FDRE     |  173 |            Register |
+| FDRE     |  177 |            Register |
 | MUXF7    |  128 |                 CLB |
-| LUT5     |  103 |                 CLB |
-| LUT2     |   91 |                 CLB |
-| LUT3     |   67 |                 CLB |
-| LUT4     |   35 |                 CLB |
+| LUT5     |  102 |                 CLB |
+| LUT2     |   90 |                 CLB |
+| LUT3     |   66 |                 CLB |
+| LUT4     |   37 |                 CLB |
 | MUXF8    |   32 |                 CLB |
-| FDSE     |   13 |            Register |
 | CARRY8   |   13 |                 CLB |
+| FDSE     |   11 |            Register |
 | LUT1     |    3 |                 CLB |
 | FDPE     |    1 |            Register |
 +----------+------+---------------------+

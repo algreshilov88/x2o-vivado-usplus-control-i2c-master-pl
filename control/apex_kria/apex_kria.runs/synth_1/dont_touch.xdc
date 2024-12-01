@@ -292,17 +292,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xl
 # IP: bd/design_1/ip/design_1_xxv_ethernet_0_0/design_1_xxv_ethernet_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xxv_ethernet_0_0 || ORIG_REF_NAME==design_1_xxv_ethernet_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_368/design_1_s00_regslice_368.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_368 || ORIG_REF_NAME==design_1_s00_regslice_368} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_372/design_1_s00_regslice_372.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_372 || ORIG_REF_NAME==design_1_s00_regslice_372} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_368/design_1_s00_data_fifo_368.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_368 || ORIG_REF_NAME==design_1_s00_data_fifo_368} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_372/design_1_s00_data_fifo_372.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_372 || ORIG_REF_NAME==design_1_s00_data_fifo_372} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_369/design_1_s00_regslice_369.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_369 || ORIG_REF_NAME==design_1_s00_regslice_369} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_373/design_1_s00_regslice_373.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_373 || ORIG_REF_NAME==design_1_s00_regslice_373} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_369/design_1_s00_data_fifo_369.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_369 || ORIG_REF_NAME==design_1_s00_data_fifo_369} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_373/design_1_s00_data_fifo_373.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_373 || ORIG_REF_NAME==design_1_s00_data_fifo_373} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_0 || ORIG_REF_NAME==design_1_auto_us_0} -quiet] -quiet
@@ -325,20 +325,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_cc_3/design_1_auto_cc_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_cc_3 || ORIG_REF_NAME==design_1_auto_cc_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_370/design_1_s00_regslice_370.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_370 || ORIG_REF_NAME==design_1_s00_regslice_370} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_374/design_1_s00_regslice_374.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_374 || ORIG_REF_NAME==design_1_s00_regslice_374} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_370/design_1_s00_data_fifo_370.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_370 || ORIG_REF_NAME==design_1_s00_data_fifo_370} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_374/design_1_s00_data_fifo_374.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_374 || ORIG_REF_NAME==design_1_s00_data_fifo_374} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_1 || ORIG_REF_NAME==design_1_auto_ds_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_regslice_371/design_1_s00_regslice_371.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_371 || ORIG_REF_NAME==design_1_s00_regslice_371} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_regslice_375/design_1_s00_regslice_375.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_regslice_375 || ORIG_REF_NAME==design_1_s00_regslice_375} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_s00_data_fifo_371/design_1_s00_data_fifo_371.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_371 || ORIG_REF_NAME==design_1_s00_data_fifo_371} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_s00_data_fifo_375/design_1_s00_data_fifo_375.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_s00_data_fifo_375 || ORIG_REF_NAME==design_1_s00_data_fifo_375} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_2 || ORIG_REF_NAME==design_1_auto_ds_2} -quiet] -quiet
