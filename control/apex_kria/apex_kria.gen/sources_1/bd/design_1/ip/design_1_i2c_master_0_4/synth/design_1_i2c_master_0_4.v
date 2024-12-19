@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:i2c_master:1.0
-// IP Revision: 98
+// IP Revision: 105
 
 (* X_CORE_INFO = "i2c_master_v1_0,Vivado 2022.2.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_i2c_master_0_4,i2c_master_v1_0,{}" *)
