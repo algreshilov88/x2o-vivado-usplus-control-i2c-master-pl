@@ -1,6 +1,69 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Mon Jan 13 10:00:26 2025
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 107) to (Rev. 108)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Fri Jan 10 13:13:50 2025
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 106) to (Rev. 107)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Fri Jan 10 10:57:58 2025
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2c_master_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2c_master_0_4 (user.org:user:i2c_master:1.0) from (Rev. 105) to (Rev. 106)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
 | Date         : Wed Dec 18 16:36:29 2024
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip

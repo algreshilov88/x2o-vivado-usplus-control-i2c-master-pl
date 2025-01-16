@@ -2,13 +2,13 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Wed Dec 18 16:46:30 2024
-# Process ID: 4740
+# Start of session at: Mon Jan 13 10:04:13 2025
+# Process ID: 14451
 # Current directory: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1
 # Command line: vivado -log design_1_i2c_master_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_i2c_master_0_4.tcl
 # Log file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.vds
 # Journal file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/vivado.jou
-# Running On: uftrig01, OS: Linux, CPU Frequency: 4589.897 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4425.825 MHz, CPU Physical cores: 6, Host memory: 33506 MB
 #-----------------------------------------------------------
 source design_1_i2c_master_0_4.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -42,45 +42,44 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4837
+INFO: [Synth 8-7075] Helper process launched with PID 14500
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'i2c_busy', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:253]
-INFO: [Synth 8-11241] undeclared symbol 'i2c_alost', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:254]
-INFO: [Synth 8-11241] undeclared symbol 'first_sto', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:328]
-INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0_S00_AXI.v:628]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_busy', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:253]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_alost', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:254]
+INFO: [Synth 8-11241] undeclared symbol 'first_sto', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:328]
+INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0_S00_AXI.v:629]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3061.344 ; gain = 237.711 ; free physical = 3962 ; free virtual = 6818
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4083.180; parent = 3065.316; children = 1017.863
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3059.156 ; gain = 235.742 ; free physical = 17477 ; free virtual = 24603
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4082.961; parent = 3065.098; children = 1017.863
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_i2c_master_0_4' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/synth/design_1_i2c_master_0_4.v:53]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0_S00_AXI' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0_S00_AXI.v:336]
-INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0_S00_AXI.v:575]
-INFO: [Synth 8-6157] synthesizing module 'i2c_config' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:3]
-WARNING: [Synth 8-151] case item 8'b00111010 is unreachable [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:106]
-INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:180]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_top' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:107]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_byte_ctrl' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_byte_ctrl.v:75]
-INFO: [Synth 8-6157] synthesizing module 'i2c_master_bit_ctrl' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_bit_ctrl.v:143]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_bit_ctrl' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_bit_ctrl.v:143]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_byte_ctrl' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_byte_ctrl.v:75]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_top' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_config' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0_S00_AXI' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0_S00_AXI.v:3]
-WARNING: [Synth 8-7071] port 'chang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:86]
-WARNING: [Synth 8-7071] port 'dhang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:86]
-WARNING: [Synth 8-7071] port 'mhang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:86]
-WARNING: [Synth 8-7071] port 'ibusy' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:86]
-WARNING: [Synth 8-7023] instance 'i2c_master_v1_0_S00_AXI_inst' of module 'i2c_master_v1_0_S00_AXI' has 39 connections declared, but only 35 given [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:86]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/hdl/i2c_master_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_v1_0_S00_AXI' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0_S00_AXI.v:337]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0_S00_AXI.v:576]
+INFO: [Synth 8-6157] synthesizing module 'i2c_config' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:3]
+WARNING: [Synth 8-151] case item 8'b00111010 is unreachable [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:106]
+INFO: [Synth 8-226] default block is never used [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:180]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_top' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:107]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_byte_ctrl' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_byte_ctrl.v:75]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master_bit_ctrl' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_bit_ctrl.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_bit_ctrl' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_bit_ctrl.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_byte_ctrl' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_byte_ctrl.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_top' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_config' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0_S00_AXI' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0_S00_AXI.v:3]
+WARNING: [Synth 8-7071] port 'chang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:86]
+WARNING: [Synth 8-7071] port 'dhang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:86]
+WARNING: [Synth 8-7071] port 'mhang' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:86]
+WARNING: [Synth 8-7071] port 'ibusy' of module 'i2c_master_v1_0_S00_AXI' is unconnected for instance 'i2c_master_v1_0_S00_AXI_inst' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:86]
+WARNING: [Synth 8-7023] instance 'i2c_master_v1_0_S00_AXI_inst' of module 'i2c_master_v1_0_S00_AXI' has 39 connections declared, but only 35 given [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:86]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master_v1_0' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/hdl/i2c_master_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_i2c_master_0_4' (0#1) [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2c_master_0_4/synth/design_1_i2c_master_0_4.v:53]
-WARNING: [Synth 8-6014] Unused sequential element init_busy_cnt_reg was removed.  [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:95]
-WARNING: [Synth 8-7137] Register old_state_reg in module i2c_master_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:101]
-WARNING: [Synth 8-7137] Register i2c_write_req_reg in module i2c_config has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:189]
-WARNING: [Synth 8-3848] Net i2c_read_req in module/entity i2c_config does not have driver. [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_config.v:85]
+WARNING: [Synth 8-7137] Register old_state_reg in module i2c_master_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:101]
+WARNING: [Synth 8-7137] Register i2c_write_req_reg in module i2c_config has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:189]
+WARNING: [Synth 8-3848] Net i2c_read_req in module/entity i2c_config does not have driver. [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_config.v:85]
 WARNING: [Synth 8-7129] Port i2c_slave_dev_addr[0] in module i2c_master_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port slv_reg0[31] in module i2c_config is either unconnected or has no load
 WARNING: [Synth 8-7129] Port slv_reg0[30] in module i2c_config is either unconnected or has no load
@@ -129,41 +128,41 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module i2c_master_v1_0_S00_AXI i
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module i2c_master_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module i2c_master_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3145.281 ; gain = 321.648 ; free physical = 4042 ; free virtual = 6899
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4163.148; parent = 3145.285; children = 1017.863
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3146.062 ; gain = 322.648 ; free physical = 17557 ; free virtual = 24684
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4163.930; parent = 3146.066; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3163.094 ; gain = 339.461 ; free physical = 4041 ; free virtual = 6898
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4180.961; parent = 3163.098; children = 1017.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3163.875 ; gain = 340.461 ; free physical = 17556 ; free virtual = 24684
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4181.742; parent = 3163.879; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3163.094 ; gain = 339.461 ; free physical = 4041 ; free virtual = 6898
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4180.961; parent = 3163.098; children = 1017.863
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3163.875 ; gain = 340.461 ; free physical = 17556 ; free virtual = 24684
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4181.742; parent = 3163.879; children = 1017.863
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3163.094 ; gain = 0.000 ; free physical = 4034 ; free virtual = 6891
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3163.875 ; gain = 0.000 ; free physical = 17550 ; free virtual = 24677
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3310.031 ; gain = 0.000 ; free physical = 3885 ; free virtual = 6742
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3303.812 ; gain = 0.000 ; free physical = 17485 ; free virtual = 24612
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3332.844 ; gain = 22.812 ; free physical = 3883 ; free virtual = 6741
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3326.625 ; gain = 22.812 ; free physical = 17485 ; free virtual = 24612
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3332.844 ; gain = 509.211 ; free physical = 4016 ; free virtual = 6874
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.695; parent = 3300.832; children = 1017.863
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3326.625 ; gain = 503.211 ; free physical = 17533 ; free virtual = 24661
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4312.477; parent = 3294.613; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -171,17 +170,17 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3332.844 ; gain = 509.211 ; free physical = 4016 ; free virtual = 6874
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.695; parent = 3300.832; children = 1017.863
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3326.625 ; gain = 503.211 ; free physical = 17533 ; free virtual = 24661
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4312.477; parent = 3294.613; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3332.844 ; gain = 509.211 ; free physical = 4016 ; free virtual = 6874
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.695; parent = 3300.832; children = 1017.863
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3326.625 ; gain = 503.211 ; free physical = 17533 ; free virtual = 24661
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4312.477; parent = 3294.613; children = 1017.863
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'i2c_master_bit_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'i2c_master_byte_ctrl'
@@ -221,17 +220,17 @@ INFO: [Synth 8-3354] encoded FSM with state register 'c_state_reg' using encodin
                  ST_STOP |                              101 |                            10000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'c_state_reg' using encoding 'sequential' in module 'i2c_master_byte_ctrl'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:110]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:110]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:110]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:110]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                   S_IDLE |                    0000100000000 |                             0000
            S_WR_DEV_ADDR |                    0000001000000 |                             0001
                S_WR_DATA |                    0000000000001 |                             0011
-               S_WR_STOP |                    0000000000010 |                             1011
           S_RD_DEV_ADDR0 |                    0001000000000 |                             0110
            S_WR_ERR_NACK |                    0000010000000 |                             0101
+               S_WR_STOP |                    0000000000010 |                             1011
            S_RD_REG_ADDR |                    0100000000000 |                             0111
           S_RD_DEV_ADDR1 |                    1000000000000 |                             1000
                S_RD_DATA |                    0010000000000 |                             1001
@@ -240,8 +239,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' 
                   S_WAIT |                    0000000001000 |                             1100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_master_top'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:110]
-WARNING: [Synth 8-327] inferring latch for variable 'ibusy_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:115]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:110]
+WARNING: [Synth 8-327] inferring latch for variable 'init_busy_cnt_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:116]
+WARNING: [Synth 8-327] inferring latch for variable 'ibusy_reg' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:115]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -252,16 +252,16 @@ WARNING: [Synth 8-327] inferring latch for variable 'ibusy_reg' [/home/agreshil/
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'i2c_config'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3332.844 ; gain = 509.211 ; free physical = 4009 ; free virtual = 6867
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.695; parent = 3300.832; children = 1017.863
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3326.625 ; gain = 503.211 ; free physical = 17526 ; free virtual = 24654
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4312.477; parent = 3294.613; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 3     
 	   2 Input   21 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 1     
 	   2 Input   14 Bit       Adders := 1     
@@ -278,7 +278,7 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 4     
 	                1 Bit    Registers := 43    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 34    
+	   2 Input   32 Bit        Muxes := 37    
 	  16 Input   32 Bit        Muxes := 17    
 	   2 Input   24 Bit        Muxes := 1     
 	   2 Input   21 Bit        Muxes := 1     
@@ -296,10 +296,10 @@ Detailed RTL Component Info :
 	  15 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 2     
 	  10 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 45    
+	   2 Input    1 Bit        Muxes := 46    
 	  18 Input    1 Bit        Muxes := 5     
 	   6 Input    1 Bit        Muxes := 6     
-	  12 Input    1 Bit        Muxes := 3     
+	  12 Input    1 Bit        Muxes := 4     
 	   3 Input    1 Bit        Muxes := 1     
 	   4 Input    1 Bit        Muxes := 4     
 	  16 Input    1 Bit        Muxes := 2     
@@ -368,30 +368,158 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module i2c_master_v1_0_S00_AXI i
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module i2c_master_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/FSM_onehot_state_reg[4]) is unused and will be removed from module i2c_config.
 WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/FSM_onehot_next_state_reg[4]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[31]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[30]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[29]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[28]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[27]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[26]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[25]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[24]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[23]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[22]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[21]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[20]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[19]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[18]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[17]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[16]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[15]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[14]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[13]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[12]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[11]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[10]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[9]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[8]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[7]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[6]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[5]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[4]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[3]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[2]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[1]) is unused and will be removed from module i2c_config.
+WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/init_busy_cnt_reg[0]) is unused and will be removed from module i2c_config.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[31]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[30]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[29]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[28]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[27]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[26]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[25]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[24]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[23]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[22]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[21]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[20]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[19]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[18]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[17]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[16]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[15]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[14]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[13]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[12]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[11]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[10]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[9]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[8]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[7]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[6]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[5]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[4]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[3]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[2]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[1]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/init_busy_cnt_reg[0]__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:95]
 WARNING: [Synth 8-3332] Sequential element (i2c_master_top_m0/ibusy_reg) is unused and will be removed from module i2c_config.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/ibusy_reg__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/0a24/src/i2c_master_top.v:96]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/ibusy_reg__0/Q' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:96]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:96]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ipshared/73f2/src/i2c_master_top.v:96]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3332.844 ; gain = 509.211 ; free physical = 3982 ; free virtual = 6846
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.778; parent = 2316.741; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4318.695; parent = 3300.832; children = 1017.863
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3326.625 ; gain = 503.211 ; free physical = 17515 ; free virtual = 24649
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2456.522; parent = 2244.146; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4312.477; parent = 3294.613; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3698.562 ; gain = 874.930 ; free physical = 3417 ; free virtual = 6281
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3130.690; parent = 2890.271; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4716.430; parent = 3698.566; children = 1017.863
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3697.953 ; gain = 874.539 ; free physical = 16939 ; free virtual = 24073
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3031.883; parent = 2820.235; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4715.820; parent = 3697.957; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3699.562 ; gain = 875.930 ; free physical = 3416 ; free virtual = 6280
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3131.585; parent = 2891.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4717.430; parent = 3699.566; children = 1017.863
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3698.953 ; gain = 875.539 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3032.816; parent = 2821.169; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4716.820; parent = 3698.957; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -407,9 +535,9 @@ INFO: [Synth 8-3332] Sequential element (inst/i2c_master_v1_0_S00_AXI_inst/i2c_c
 INFO: [Synth 8-3332] Sequential element (inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/FSM_onehot_next_state_reg[9]) is unused and will be removed from module design_1_i2c_master_0_4.
 INFO: [Synth 8-3332] Sequential element (inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/FSM_onehot_next_state_reg[5]) is unused and will be removed from module design_1_i2c_master_0_4.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3412 ; free virtual = 6276
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16935 ; free virtual = 24069
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.027; parent = 2822.380; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -427,49 +555,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.379; parent = 2822.731; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.441; parent = 2822.794; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.648; parent = 2823.001; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.648; parent = 2823.001; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.648; parent = 2823.001; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.648; parent = 2823.001; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -486,47 +614,47 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY8 |    13|
-|2     |LUT1   |    17|
-|3     |LUT2   |    93|
-|4     |LUT3   |    54|
-|5     |LUT4   |    42|
-|6     |LUT5   |   103|
-|7     |LUT6   |   344|
-|8     |MUXF7  |   125|
+|2     |LUT1   |     5|
+|3     |LUT2   |    94|
+|4     |LUT3   |    66|
+|5     |LUT4   |    46|
+|6     |LUT5   |    97|
+|7     |LUT6   |   350|
+|8     |MUXF7  |   120|
 |9     |MUXF8  |    32|
-|10    |FDCE   |   574|
+|10    |FDCE   |   573|
 |11    |FDPE   |     1|
 |12    |FDRE   |   181|
 |13    |FDSE   |     9|
 |14    |LD     |     7|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3727.609 ; gain = 903.977 ; free physical = 3413 ; free virtual = 6277
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3134.585; parent = 2894.166; children = 241.037
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.477; parent = 3727.613; children = 1017.863
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.000 ; gain = 904.586 ; free physical = 16938 ; free virtual = 24072
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3034.707; parent = 2823.060; children = 212.376
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4745.867; parent = 3728.004; children = 1017.863
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 55 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3727.609 ; gain = 734.227 ; free physical = 3454 ; free virtual = 6318
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3727.617 ; gain = 903.977 ; free physical = 3454 ; free virtual = 6318
+Synthesis finished with 0 errors, 99 critical warnings and 88 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3728.000 ; gain = 741.836 ; free physical = 16975 ; free virtual = 24109
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3728.008 ; gain = 904.586 ; free physical = 16975 ; free virtual = 24109
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3738.578 ; gain = 0.000 ; free physical = 3563 ; free virtual = 6426
-INFO: [Netlist 29-17] Analyzing 177 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3738.969 ; gain = 0.000 ; free physical = 17087 ; free virtual = 24221
+INFO: [Netlist 29-17] Analyzing 172 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3780.434 ; gain = 0.000 ; free physical = 3495 ; free virtual = 6359
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3780.824 ; gain = 0.000 ; free physical = 17020 ; free virtual = 24154
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 7 instances were transformed.
   LD => LDCE: 7 instances
 
-Synth Design complete, checksum: 236e89fd
+Synth Design complete, checksum: 5e1771fb
 INFO: [Common 17-83] Releasing license: Synthesis
-66 Infos, 123 Warnings, 3 Critical Warnings and 0 Errors encountered.
+66 Infos, 155 Warnings, 99 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 3780.434 ; gain = 1871.156 ; free physical = 3709 ; free virtual = 6573
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 3780.824 ; gain = 1870.734 ; free physical = 17233 ; free virtual = 24367
 INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_i2c_master_0_4_synth_1/design_1_i2c_master_0_4.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_i2c_master_0_4_utilization_synth.rpt -pb design_1_i2c_master_0_4_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 16:47:13 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 13 10:04:55 2025...

@@ -90,7 +90,7 @@ set_max_delay -datapath_only -from [get_clocks -of_objects [get_pins -hierarchic
 set_max_delay -datapath_only -from [get_clocks clk_pl_1] -to [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ */channel_inst/*_CHANNEL_PRIM_INST/TXOUTCLK}]] 10.000
 set_max_delay -datapath_only -from [get_clocks clk_pl_1] -to [get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ */channel_inst/*_CHANNEL_PRIM_INST/RXOUTCLK}]] 10.000
 
-#set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.300
+#set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.304
 #set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.314
 #set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.311
-set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.305
+set_max_delay -from [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins bdw/design_1_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0]] 3.304

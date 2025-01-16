@@ -5511,8 +5511,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_400",
-                    "xci_path": "ip/design_1_s00_regslice_400/design_1_s00_regslice_400.xci",
+                    "xci_name": "design_1_s00_regslice_412",
+                    "xci_path": "ip/design_1_s00_regslice_412/design_1_s00_regslice_412.xci",
                     "inst_hier_path": "cpu/axi_interconnect_1/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -5526,8 +5526,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_400",
-                    "xci_path": "ip/design_1_s00_data_fifo_400/design_1_s00_data_fifo_400.xci",
+                    "xci_name": "design_1_s00_data_fifo_412",
+                    "xci_path": "ip/design_1_s00_data_fifo_412/design_1_s00_data_fifo_412.xci",
                     "inst_hier_path": "cpu/axi_interconnect_1/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -5758,8 +5758,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_401",
-                    "xci_path": "ip/design_1_s00_regslice_401/design_1_s00_regslice_401.xci",
+                    "xci_name": "design_1_s00_regslice_413",
+                    "xci_path": "ip/design_1_s00_regslice_413/design_1_s00_regslice_413.xci",
                     "inst_hier_path": "cpu/axi_interconnect_2/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -5773,8 +5773,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_401",
-                    "xci_path": "ip/design_1_s00_data_fifo_401/design_1_s00_data_fifo_401.xci",
+                    "xci_name": "design_1_s00_data_fifo_413",
+                    "xci_path": "ip/design_1_s00_data_fifo_413/design_1_s00_data_fifo_413.xci",
                     "inst_hier_path": "cpu/axi_interconnect_2/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -7002,8 +7002,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_402",
-                    "xci_path": "ip/design_1_s00_regslice_402/design_1_s00_regslice_402.xci",
+                    "xci_name": "design_1_s00_regslice_414",
+                    "xci_path": "ip/design_1_s00_regslice_414/design_1_s00_regslice_414.xci",
                     "inst_hier_path": "cpu/axi_interconnect_3/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -7017,8 +7017,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_402",
-                    "xci_path": "ip/design_1_s00_data_fifo_402/design_1_s00_data_fifo_402.xci",
+                    "xci_name": "design_1_s00_data_fifo_414",
+                    "xci_path": "ip/design_1_s00_data_fifo_414/design_1_s00_data_fifo_414.xci",
                     "inst_hier_path": "cpu/axi_interconnect_3/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -7891,8 +7891,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_403",
-                    "xci_path": "ip/design_1_s00_regslice_403/design_1_s00_regslice_403.xci",
+                    "xci_name": "design_1_s00_regslice_415",
+                    "xci_path": "ip/design_1_s00_regslice_415/design_1_s00_regslice_415.xci",
                     "inst_hier_path": "cpu/ps7_0_axi_periph/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -7906,8 +7906,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_403",
-                    "xci_path": "ip/design_1_s00_data_fifo_403/design_1_s00_data_fifo_403.xci",
+                    "xci_name": "design_1_s00_data_fifo_415",
+                    "xci_path": "ip/design_1_s00_data_fifo_415/design_1_s00_data_fifo_415.xci",
                     "inst_hier_path": "cpu/ps7_0_axi_periph/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {

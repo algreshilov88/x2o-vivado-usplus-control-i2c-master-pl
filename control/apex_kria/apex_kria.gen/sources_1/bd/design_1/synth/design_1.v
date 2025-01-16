@@ -1,7 +1,7 @@
 //Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-//Date        : Wed Dec 18 16:44:57 2024
+//Date        : Mon Jan 13 10:03:12 2025
 //Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -24343,7 +24343,7 @@ module s00_couplers_imp_17NDAC5
         .s_axi_wready(s00_regslice_to_auto_ds_WREADY),
         .s_axi_wstrb(s00_regslice_to_auto_ds_WSTRB),
         .s_axi_wvalid(s00_regslice_to_auto_ds_WVALID));
-  design_1_s00_data_fifo_403 s00_data_fifo
+  design_1_s00_data_fifo_415 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_araddr(s00_data_fifo_to_s00_couplers_ARADDR),
@@ -24414,7 +24414,7 @@ module s00_couplers_imp_17NDAC5
         .s_axi_wready(auto_ds_to_s00_data_fifo_WREADY),
         .s_axi_wstrb(auto_ds_to_s00_data_fifo_WSTRB),
         .s_axi_wvalid(auto_ds_to_s00_data_fifo_WVALID));
-  design_1_s00_regslice_403 s00_regslice
+  design_1_s00_regslice_415 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(s00_regslice_to_auto_ds_ARADDR),
@@ -25427,7 +25427,7 @@ module s00_couplers_imp_JHHGD2
   assign s00_data_fifo_to_s00_couplers_RLAST = M_AXI_rlast;
   assign s00_data_fifo_to_s00_couplers_RRESP = M_AXI_rresp[1:0];
   assign s00_data_fifo_to_s00_couplers_RVALID = M_AXI_rvalid;
-  design_1_s00_data_fifo_402 s00_data_fifo
+  design_1_s00_data_fifo_414 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_araddr(s00_data_fifo_to_s00_couplers_ARADDR),
@@ -25463,7 +25463,7 @@ module s00_couplers_imp_JHHGD2
         .s_axi_rready(s00_regslice_to_s00_data_fifo_RREADY),
         .s_axi_rresp(s00_regslice_to_s00_data_fifo_RRESP),
         .s_axi_rvalid(s00_regslice_to_s00_data_fifo_RVALID));
-  design_1_s00_regslice_402 s00_regslice
+  design_1_s00_regslice_414 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(s00_regslice_to_s00_data_fifo_ARADDR),
@@ -25920,7 +25920,7 @@ module s00_couplers_imp_MHSNH2
         .s_axi_wready(s00_regslice_to_auto_us_WREADY),
         .s_axi_wstrb(s00_regslice_to_auto_us_WSTRB),
         .s_axi_wvalid(s00_regslice_to_auto_us_WVALID));
-  design_1_s00_data_fifo_401 s00_data_fifo
+  design_1_s00_data_fifo_413 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_araddr(s00_data_fifo_to_s00_couplers_ARADDR),
@@ -25991,7 +25991,7 @@ module s00_couplers_imp_MHSNH2
         .s_axi_wready(auto_us_to_s00_data_fifo_WREADY),
         .s_axi_wstrb(auto_us_to_s00_data_fifo_WSTRB),
         .s_axi_wvalid(auto_us_to_s00_data_fifo_WVALID));
-  design_1_s00_regslice_401 s00_regslice
+  design_1_s00_regslice_413 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(s00_regslice_to_auto_us_ARADDR),
@@ -26587,7 +26587,7 @@ module s00_couplers_imp_SYZDZQ
   assign s00_data_fifo_to_s00_couplers_BRESP = M_AXI_bresp[1:0];
   assign s00_data_fifo_to_s00_couplers_BVALID = M_AXI_bvalid;
   assign s00_data_fifo_to_s00_couplers_WREADY = M_AXI_wready;
-  design_1_s00_data_fifo_400 s00_data_fifo
+  design_1_s00_data_fifo_412 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_awaddr(s00_data_fifo_to_s00_couplers_AWADDR),
@@ -26629,7 +26629,7 @@ module s00_couplers_imp_SYZDZQ
         .s_axi_wready(s00_regslice_to_s00_data_fifo_WREADY),
         .s_axi_wstrb(s00_regslice_to_s00_data_fifo_WSTRB),
         .s_axi_wvalid(s00_regslice_to_s00_data_fifo_WVALID));
-  design_1_s00_regslice_400 s00_regslice
+  design_1_s00_regslice_412 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_awaddr(s00_regslice_to_s00_data_fifo_AWADDR),
