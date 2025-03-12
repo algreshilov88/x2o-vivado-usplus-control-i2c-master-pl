@@ -40,6 +40,7 @@
       "ports": {
         "prbs_clk": [ { "direction": "in" } ],
         "reg_rw": [ { "direction": "in", "size_left": "28", "size_right": "0" } ],
+        "reg_js_rw": [ { "direction": "in", "size_left": "4", "size_right": "0" } ],
         "ipmb_en_1_0": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "id_4_2": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
         "payload_on_5": [ { "direction": "out" } ],
@@ -55,6 +56,8 @@
         "pok_change_enable_25_23": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
         "bp_clk_sel_27_26": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "jtag_channel_28": [ { "direction": "out" } ],
+        "tck_clk_ratio_3_0": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "serial_4": [ { "direction": "out" } ],
         "ha_7_0": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
         "ready_ipmb_zynq_9_8": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "los_10g_10": [ { "direction": "in" } ],

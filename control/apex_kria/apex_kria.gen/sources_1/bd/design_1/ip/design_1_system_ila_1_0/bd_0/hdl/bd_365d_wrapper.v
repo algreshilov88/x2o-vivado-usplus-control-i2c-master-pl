@@ -17,10 +17,6 @@ module bd_365d_wrapper
     SLOT_1_AXIS_tlast,
     SLOT_1_AXIS_tready,
     SLOT_1_AXIS_tvalid,
-    SLOT_2_JTAG_tck,
-    SLOT_2_JTAG_tdi,
-    SLOT_2_JTAG_tdo,
-    SLOT_2_JTAG_tms,
     clk,
     resetn);
   input [63:0]SLOT_0_AXIS_tdata;
@@ -33,10 +29,6 @@ module bd_365d_wrapper
   input SLOT_1_AXIS_tlast;
   input SLOT_1_AXIS_tready;
   input SLOT_1_AXIS_tvalid;
-  input SLOT_2_JTAG_tck;
-  input SLOT_2_JTAG_tdi;
-  input SLOT_2_JTAG_tdo;
-  input SLOT_2_JTAG_tms;
   input clk;
   input resetn;
 
@@ -50,10 +42,6 @@ module bd_365d_wrapper
   wire SLOT_1_AXIS_tlast;
   wire SLOT_1_AXIS_tready;
   wire SLOT_1_AXIS_tvalid;
-  wire SLOT_2_JTAG_tck;
-  wire SLOT_2_JTAG_tdi;
-  wire SLOT_2_JTAG_tdo;
-  wire SLOT_2_JTAG_tms;
   wire clk;
   wire resetn;
 
@@ -68,10 +56,6 @@ module bd_365d_wrapper
         .SLOT_1_AXIS_tlast(SLOT_1_AXIS_tlast),
         .SLOT_1_AXIS_tready(SLOT_1_AXIS_tready),
         .SLOT_1_AXIS_tvalid(SLOT_1_AXIS_tvalid),
-        .SLOT_2_JTAG_tck(SLOT_2_JTAG_tck),
-        .SLOT_2_JTAG_tdi(SLOT_2_JTAG_tdi),
-        .SLOT_2_JTAG_tdo(SLOT_2_JTAG_tdo),
-        .SLOT_2_JTAG_tms(SLOT_2_JTAG_tms),
         .clk(clk),
         .resetn(resetn));
 endmodule

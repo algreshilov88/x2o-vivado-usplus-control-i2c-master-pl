@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,14 +48,16 @@
 
 
 // IP VLNV: user.org:user:axis_jtag:1.0
-// IP Revision: 27
+// IP Revision: 29
 
 (* X_CORE_INFO = "axis_jtag_v1_0,Vivado 2022.2.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_axis_jtag_0_0,axis_jtag_v1_0,{}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_axis_jtag_0_0 (
-  channel,
+  jtag_channel,
+  serial,
+  tck_clk_ratio,
   s_axis_aclk,
   s_axis_tdata,
   s_axis_tvalid,
@@ -72,8 +74,10 @@ module design_1_axis_jtag_0_0 (
   TDO_1
 );
 
-input wire channel;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_BUSIF s_axis, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
+input wire jtag_channel;
+input wire serial;
+input wire [3 : 0] tck_clk_ratio;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_BUSIF s_axis, FREQ_HZ 199998001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
 input wire s_axis_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *)
@@ -84,7 +88,7 @@ input wire s_axis_tvalid;
 output wire s_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TKEEP" *)
 input wire [7 : 0] s_axis_tkeep;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 99999001, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 199998001, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *)
 input wire s_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:jtag:2.0 jtag_0 TCK" *)
@@ -106,10 +110,11 @@ input wire TDO_1;
 
   axis_jtag_v1_0 #(
     .C_S_AXIS_DATA_WIDTH(64),
-    .C_S_AXIS_DATA_LENGTH(32),
-    .C_TCK_CLOCK_RATIO(4)
+    .C_S_AXIS_DATA_LENGTH(32)
   ) inst (
-    .channel(channel),
+    .jtag_channel(jtag_channel),
+    .serial(serial),
+    .tck_clk_ratio(tck_clk_ratio),
     .s_axis_aclk(s_axis_aclk),
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tvalid(s_axis_tvalid),

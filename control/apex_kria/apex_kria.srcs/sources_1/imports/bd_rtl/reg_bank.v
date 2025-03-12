@@ -3,6 +3,7 @@ module reg_bank
 (
     input prbs_clk,
     input  [28:0] reg_rw,
+    input  [4:0] reg_js_rw,
     output [1:0] ipmb_en_1_0,
     output [2:0] id_4_2,
     output payload_on_5,
@@ -18,6 +19,8 @@ module reg_bank
     output [2:0] pok_change_enable_25_23,
     output [1:0] bp_clk_sel_27_26,
     output jtag_channel_28,
+    output [3:0] tck_clk_ratio_3_0,
+    output serial_4,
     
     input [7:0] ha_7_0,
     input [1:0] ready_ipmb_zynq_9_8,
@@ -50,7 +53,8 @@ module reg_bank
     assign pok_change_polarity_22_20 = reg_rw[22:20];
     assign pok_change_enable_25_23   = reg_rw[25:23];
     assign bp_clk_sel_27_26          = reg_rw[27:26];
-    assign jtag_channel_28           = reg_rw[28];
+    assign tck_clk_ratio_3_0         = reg_js_rw[3:0];
+    assign serial_4                  = reg_js_rw[4];
     
     reg [3:0] prbs_err_sticky;
     

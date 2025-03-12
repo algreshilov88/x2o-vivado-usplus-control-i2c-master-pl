@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Wed Aug  9 18:49:38 2023
+| Date         : Tue Mar  4 16:31:02 2025
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file design_1_reg_bank_0_0_utilization_synth.rpt -pb design_1_reg_bank_0_0_utilization_synth.pb
 | Design       : design_1_reg_bank_0_0

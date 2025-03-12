@@ -1,6 +1,108 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Tue Mar 11 18:25:37 2025
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axis_jtag_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axis_jtag_0_0 (user.org:user:axis_jtag:1.0) from (Rev. 28) to (Rev. 29)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Tue Mar  4 15:52:27 2025
+| Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xck26-sfvc784-2LV-c
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axis_jtag_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_axis_jtag_0_0 (user.org:user:axis_jtag:1.0) from (Rev. 27) to (Rev. 28)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_axis_jtag_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'channel'
+
+-Upgrade has added port 'jtag_channel'
+
+-Upgrade has added port 'serial'
+
+-Upgrade has added port 'tck_clk_ratio'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'C_TCK_CLOCK_RATIO' is no longer present on the upgraded IP 'design_1_axis_jtag_0_0', and cannot be set to '2'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv user.org:user:axis_jtag:1.0 -user_name design_1_axis_jtag_0_0
+set_property -dict "\
+  CONFIG.C_S_AXIS_DATA_LENGTH {32} \
+  CONFIG.C_S_AXIS_DATA_WIDTH {64} \
+  CONFIG.Component_Name {design_1_axis_jtag_0_0} \
+  CONFIG.s_axis.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.s_axis.FREQ_HZ {99999001} \
+  CONFIG.s_axis.HAS_TKEEP {1} \
+  CONFIG.s_axis.HAS_TLAST {1} \
+  CONFIG.s_axis.HAS_TREADY {1} \
+  CONFIG.s_axis.HAS_TSTRB {0} \
+  CONFIG.s_axis.INSERT_VIP {0} \
+  CONFIG.s_axis.LAYERED_METADATA {undef} \
+  CONFIG.s_axis.PHASE {0.0} \
+  CONFIG.s_axis.TDATA_NUM_BYTES {8} \
+  CONFIG.s_axis.TDEST_WIDTH {0} \
+  CONFIG.s_axis.TID_WIDTH {0} \
+  CONFIG.s_axis.TUSER_WIDTH {0} \
+  CONFIG.s_axis_aclk.ASSOCIATED_BUSIF {s_axis} \
+  CONFIG.s_axis_aclk.ASSOCIATED_PORT {} \
+  CONFIG.s_axis_aclk.ASSOCIATED_RESET {} \
+  CONFIG.s_axis_aclk.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.s_axis_aclk.FREQ_HZ {99999001} \
+  CONFIG.s_axis_aclk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.s_axis_aclk.INSERT_VIP {0} \
+  CONFIG.s_axis_aclk.PHASE {0.0} " [get_ips design_1_axis_jtag_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
 | Date         : Mon Jan 13 10:00:26 2025
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip

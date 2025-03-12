@@ -1,10 +1,10 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Wed Aug  9 18:49:38 2023
+// Date        : Tue Mar  4 16:31:02 2025
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0/design_1_reg_bank_0_0_sim_netlist.v
+//               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0/design_1_reg_bank_0_0_sim_netlist.v
 // Design      : design_1_reg_bank_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,6 +18,7 @@
 module design_1_reg_bank_0_0
    (prbs_clk,
     reg_rw,
+    reg_js_rw,
     ipmb_en_1_0,
     id_4_2,
     payload_on_5,
@@ -33,6 +34,8 @@ module design_1_reg_bank_0_0
     pok_change_enable_25_23,
     bp_clk_sel_27_26,
     jtag_channel_28,
+    tck_clk_ratio_3_0,
+    serial_4,
     ha_7_0,
     ready_ipmb_zynq_9_8,
     los_10g_10,
@@ -49,6 +52,7 @@ module design_1_reg_bank_0_0
     reg_ro);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 prbs_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME prbs_clk, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN design_1_axi_c2c_phy_clk, INSERT_VIP 0" *) input prbs_clk;
   input [28:0]reg_rw;
+  input [4:0]reg_js_rw;
   output [1:0]ipmb_en_1_0;
   output [2:0]id_4_2;
   output payload_on_5;
@@ -64,6 +68,8 @@ module design_1_reg_bank_0_0
   output [2:0]pok_change_enable_25_23;
   output [1:0]bp_clk_sel_27_26;
   output jtag_channel_28;
+  output [3:0]tck_clk_ratio_3_0;
+  output serial_4;
   input [7:0]ha_7_0;
   input [1:0]ready_ipmb_zynq_9_8;
   input los_10g_10;
@@ -79,6 +85,7 @@ module design_1_reg_bank_0_0
   input [2:0]pok_change_31_29;
   output [31:0]reg_ro;
 
+  wire \<const0> ;
   wire channel_up_bot_15;
   wire channel_up_top_13;
   wire [7:0]ha_7_0;
@@ -94,6 +101,7 @@ module design_1_reg_bank_0_0
   wire prbs_clk;
   wire [3:0]prbs_err_20_17;
   wire [1:0]ready_ipmb_zynq_9_8;
+  wire [4:0]reg_js_rw;
   wire [24:21]\^reg_ro ;
   wire [28:0]reg_rw;
 
@@ -106,7 +114,7 @@ module design_1_reg_bank_0_0
   assign gtp_reset_14 = reg_rw[14];
   assign id_4_2[2:0] = reg_rw[4:2];
   assign ipmb_en_1_0[1:0] = reg_rw[1:0];
-  assign jtag_channel_28 = reg_rw[28];
+  assign jtag_channel_28 = \<const0> ;
   assign pok_change_enable_25_23[2:0] = reg_rw[25:23];
   assign pok_change_polarity_22_20[2:0] = reg_rw[22:20];
   assign prbs_sel_8_6[2:0] = reg_rw[8:6];
@@ -124,7 +132,11 @@ module design_1_reg_bank_0_0
   assign reg_ro[10] = los_10g_10;
   assign reg_ro[9:8] = ready_ipmb_zynq_9_8;
   assign reg_ro[7:0] = ha_7_0;
+  assign serial_4 = reg_js_rw[4];
+  assign tck_clk_ratio_3_0[3:0] = reg_js_rw[3:0];
   assign tx_polarity_13_10[3:0] = reg_rw[13:10];
+  GND GND
+       (.G(\<const0> ));
   design_1_reg_bank_0_0_reg_bank inst
        (.prbs_clk(prbs_clk),
         .prbs_err_20_17(prbs_err_20_17),

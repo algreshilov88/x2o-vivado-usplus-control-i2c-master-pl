@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Tue Jan 14 03:33:20 2025
+| Date         : Wed Mar 12 04:49:03 2025
 | Host         : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file apex_control_mgt_top_utilization_synth.rpt -pb apex_control_mgt_top_utilization_synth.pb
 | Design       : apex_control_mgt_top
@@ -201,14 +201,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_system_ila_0_0            |    1 |
 | design_1_s01_regslice_0            |    1 |
 | design_1_s01_data_fifo_0           |    1 |
-| design_1_s00_regslice_415          |    1 |
-| design_1_s00_regslice_414          |    1 |
-| design_1_s00_regslice_413          |    1 |
-| design_1_s00_regslice_412          |    1 |
-| design_1_s00_data_fifo_415         |    1 |
-| design_1_s00_data_fifo_414         |    1 |
-| design_1_s00_data_fifo_413         |    1 |
-| design_1_s00_data_fifo_412         |    1 |
+| design_1_s00_regslice_443          |    1 |
+| design_1_s00_regslice_442          |    1 |
+| design_1_s00_regslice_441          |    1 |
+| design_1_s00_regslice_440          |    1 |
+| design_1_s00_data_fifo_443         |    1 |
+| design_1_s00_data_fifo_442         |    1 |
+| design_1_s00_data_fifo_441         |    1 |
+| design_1_s00_data_fifo_440         |    1 |
 | design_1_reg_bank_0_0              |    1 |
 | design_1_proc_sys_reset_2_0        |    1 |
 | design_1_proc_sys_reset_1_0        |    1 |
@@ -255,6 +255,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_axi_iic_1_0               |    1 |
 | design_1_axi_iic_0_0               |    1 |
 | design_1_axi_gpio_1_0              |    1 |
+| design_1_axi_gpio_0_2              |    1 |
 | design_1_axi_gpio_0_1              |    1 |
 | design_1_axi_gpio_0_0              |    1 |
 | design_1_axi_dma_0_0               |    1 |
@@ -282,6 +283,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_auto_ds_2                 |    1 |
 | design_1_auto_ds_1                 |    1 |
 | design_1_auto_ds_0                 |    1 |
+| design_1_auto_cc_7                 |    1 |
+| design_1_auto_cc_6                 |    1 |
 | design_1_auto_cc_5                 |    1 |
 | design_1_auto_cc_4                 |    1 |
 | design_1_auto_cc_3                 |    1 |

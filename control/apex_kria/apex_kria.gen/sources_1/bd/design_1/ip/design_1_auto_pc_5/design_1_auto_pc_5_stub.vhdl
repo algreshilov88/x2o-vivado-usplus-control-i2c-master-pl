@@ -1,11 +1,11 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Wed Aug  9 18:53:18 2023
+-- Date        : Wed Aug  9 18:53:14 2023
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_pc_5 -prefix
---               design_1_auto_pc_5_ design_1_auto_pc_2_stub.vhdl
--- Design      : design_1_auto_pc_2
+--               design_1_auto_pc_5_ design_1_auto_pc_4_stub.vhdl
+-- Design      : design_1_auto_pc_4
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xck26-sfvc784-2LV-c
 -- --------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-# (c) Copyright 2012-2023 Xilinx, Inc. All rights reserved.
+# (c) Copyright 2012-2025 Xilinx, Inc. All rights reserved.
 # 
 # This file contains confidential and proprietary information
 # of Xilinx, Inc. and is protected under U.S. and
@@ -52,12 +52,12 @@
 # #########################################################
 
 
-create_clock -period 10 -name m_axi_sg_aclk [get_ports m_axi_sg_aclk]
+create_clock -period 5 -name m_axi_sg_aclk [get_ports m_axi_sg_aclk]
 
-create_clock -period 10 -name m_axi_mm2s_aclk [get_ports m_axi_mm2s_aclk]
+create_clock -period 5 -name m_axi_mm2s_aclk [get_ports m_axi_mm2s_aclk]
 
-create_clock -period 10 -name m_axi_s2mm_aclk [get_ports m_axi_s2mm_aclk]
+create_clock -period 5 -name m_axi_s2mm_aclk [get_ports m_axi_s2mm_aclk]
 
-create_clock -period 10 -name s_axi_lite_aclk [get_ports s_axi_lite_aclk]
+create_clock -period 5 -name s_axi_lite_aclk [get_ports s_axi_lite_aclk]
 
 

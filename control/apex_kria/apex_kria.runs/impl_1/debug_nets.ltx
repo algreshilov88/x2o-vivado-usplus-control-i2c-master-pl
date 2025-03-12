@@ -4908,54 +4908,6 @@
                                         "isBus": false
                                     }
                                 ]
-                            },
-                            {
-                                "name": "probe10",
-                                "id": 107,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 10,
-                                "nets": [
-                                    {
-                                        "name": "bdw/design_1_i/system_ila_1/inst/SLOT_2_JTAG_tms_1",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe11",
-                                "id": 108,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 11,
-                                "nets": [
-                                    {
-                                        "name": "bdw/design_1_i/system_ila_1/inst/SLOT_2_JTAG_tdi_1",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe12",
-                                "id": 109,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 12,
-                                "nets": [
-                                    {
-                                        "name": "bdw/design_1_i/system_ila_1/inst/SLOT_2_JTAG_tdo_1",
-                                        "isBus": false
-                                    }
-                                ]
                             }
                         ],
                         "bus_interfaces": [
@@ -5062,40 +5014,6 @@
                                         }
                                     }
                                 ]
-                            },
-                            {
-                                "name": "SLOT_2_JTAG",
-                                "vlnv": "xilinx.com:interface:jtag:2.0",
-                                "connectedBus": "jtag_logic_0_JTAG",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "TDI",
-                                        "physical_pin": {
-                                            "id": 108,
-                                            "name": "probe11",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    },
-                                    {
-                                        "logical_port": "TDO",
-                                        "physical_pin": {
-                                            "id": 109,
-                                            "name": "probe12",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    },
-                                    {
-                                        "logical_port": "TMS",
-                                        "physical_pin": {
-                                            "id": 107,
-                                            "name": "probe10",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    }
-                                ]
                             }
                         ]
                     },
@@ -5108,7 +5026,7 @@
                         "pins": [
                             {
                                 "name": "probe_in0",
-                                "id": 110,
+                                "id": 107,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": false,
@@ -5124,7 +5042,7 @@
                             },
                             {
                                 "name": "probe_in1",
-                                "id": 111,
+                                "id": 108,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5148,7 +5066,7 @@
                             },
                             {
                                 "name": "probe_in2",
-                                "id": 112,
+                                "id": 109,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5172,7 +5090,7 @@
                             },
                             {
                                 "name": "probe_in3",
-                                "id": 113,
+                                "id": 110,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5196,7 +5114,7 @@
                             },
                             {
                                 "name": "probe_in4",
-                                "id": 114,
+                                "id": 111,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": false,
@@ -5212,7 +5130,7 @@
                             },
                             {
                                 "name": "probe_in5",
-                                "id": 115,
+                                "id": 112,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": false,
@@ -5228,7 +5146,7 @@
                             },
                             {
                                 "name": "probe_in6",
-                                "id": 116,
+                                "id": 113,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5252,7 +5170,7 @@
                             },
                             {
                                 "name": "probe_in7",
-                                "id": 117,
+                                "id": 114,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5276,7 +5194,7 @@
                             },
                             {
                                 "name": "probe_in8",
-                                "id": 118,
+                                "id": 115,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": false,
@@ -5297,7 +5215,7 @@
                             },
                             {
                                 "name": "probe_in9",
-                                "id": 119,
+                                "id": 116,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5321,7 +5239,7 @@
                             },
                             {
                                 "name": "probe_in10",
-                                "id": 120,
+                                "id": 117,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5345,7 +5263,7 @@
                             },
                             {
                                 "name": "probe_in11",
-                                "id": 121,
+                                "id": 118,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5369,7 +5287,7 @@
                             },
                             {
                                 "name": "probe_in12",
-                                "id": 122,
+                                "id": 119,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5393,7 +5311,7 @@
                             },
                             {
                                 "name": "probe_in13",
-                                "id": 123,
+                                "id": 120,
                                 "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
@@ -5417,7 +5335,7 @@
                             },
                             {
                                 "name": "probe_out0",
-                                "id": 124,
+                                "id": 121,
                                 "type": "DATA",
                                 "direction": "OUT",
                                 "isVector": false,

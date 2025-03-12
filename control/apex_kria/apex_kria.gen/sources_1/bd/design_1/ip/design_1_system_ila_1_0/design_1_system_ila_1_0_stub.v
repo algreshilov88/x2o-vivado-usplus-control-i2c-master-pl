@@ -1,10 +1,10 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Fri Oct 27 10:27:29 2023
+// Date        : Tue Mar 11 19:05:35 2025
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_system_ila_1_0 -prefix
-//               design_1_system_ila_1_0_ design_1_system_ila_1_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_system_ila_1_0/design_1_system_ila_1_0_stub.v
 // Design      : design_1_system_ila_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xck26-sfvc784-2LV-c
@@ -16,9 +16,8 @@
 (* X_CORE_INFO = "bd_365d,Vivado 2022.2.2" *)
 module design_1_system_ila_1_0(clk, SLOT_0_AXIS_tdata, SLOT_0_AXIS_tkeep, 
   SLOT_0_AXIS_tlast, SLOT_0_AXIS_tvalid, SLOT_0_AXIS_tready, SLOT_1_AXIS_tdata, 
-  SLOT_1_AXIS_tkeep, SLOT_1_AXIS_tlast, SLOT_1_AXIS_tvalid, SLOT_1_AXIS_tready, 
-  SLOT_2_JTAG_tck, SLOT_2_JTAG_tms, SLOT_2_JTAG_tdi, SLOT_2_JTAG_tdo, resetn)
-/* synthesis syn_black_box black_box_pad_pin="clk,SLOT_0_AXIS_tdata[63:0],SLOT_0_AXIS_tkeep[7:0],SLOT_0_AXIS_tlast,SLOT_0_AXIS_tvalid,SLOT_0_AXIS_tready,SLOT_1_AXIS_tdata[63:0],SLOT_1_AXIS_tkeep[7:0],SLOT_1_AXIS_tlast,SLOT_1_AXIS_tvalid,SLOT_1_AXIS_tready,SLOT_2_JTAG_tck,SLOT_2_JTAG_tms,SLOT_2_JTAG_tdi,SLOT_2_JTAG_tdo,resetn" */;
+  SLOT_1_AXIS_tkeep, SLOT_1_AXIS_tlast, SLOT_1_AXIS_tvalid, SLOT_1_AXIS_tready, resetn)
+/* synthesis syn_black_box black_box_pad_pin="clk,SLOT_0_AXIS_tdata[63:0],SLOT_0_AXIS_tkeep[7:0],SLOT_0_AXIS_tlast,SLOT_0_AXIS_tvalid,SLOT_0_AXIS_tready,SLOT_1_AXIS_tdata[63:0],SLOT_1_AXIS_tkeep[7:0],SLOT_1_AXIS_tlast,SLOT_1_AXIS_tvalid,SLOT_1_AXIS_tready,resetn" */;
   input clk;
   input [63:0]SLOT_0_AXIS_tdata;
   input [7:0]SLOT_0_AXIS_tkeep;
@@ -30,9 +29,5 @@ module design_1_system_ila_1_0(clk, SLOT_0_AXIS_tdata, SLOT_0_AXIS_tkeep,
   input SLOT_1_AXIS_tlast;
   input SLOT_1_AXIS_tvalid;
   input SLOT_1_AXIS_tready;
-  input SLOT_2_JTAG_tck;
-  input SLOT_2_JTAG_tms;
-  input SLOT_2_JTAG_tdi;
-  input SLOT_2_JTAG_tdo;
   input resetn;
 endmodule

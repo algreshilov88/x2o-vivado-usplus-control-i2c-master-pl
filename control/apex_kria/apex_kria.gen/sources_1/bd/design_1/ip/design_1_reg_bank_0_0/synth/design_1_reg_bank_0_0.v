@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -58,6 +58,7 @@
 module design_1_reg_bank_0_0 (
   prbs_clk,
   reg_rw,
+  reg_js_rw,
   ipmb_en_1_0,
   id_4_2,
   payload_on_5,
@@ -73,6 +74,8 @@ module design_1_reg_bank_0_0 (
   pok_change_enable_25_23,
   bp_clk_sel_27_26,
   jtag_channel_28,
+  tck_clk_ratio_3_0,
+  serial_4,
   ha_7_0,
   ready_ipmb_zynq_9_8,
   los_10g_10,
@@ -93,6 +96,7 @@ module design_1_reg_bank_0_0 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 prbs_clk CLK" *)
 input wire prbs_clk;
 input wire [28 : 0] reg_rw;
+input wire [4 : 0] reg_js_rw;
 output wire [1 : 0] ipmb_en_1_0;
 output wire [2 : 0] id_4_2;
 output wire payload_on_5;
@@ -108,6 +112,8 @@ output wire [2 : 0] pok_change_polarity_22_20;
 output wire [2 : 0] pok_change_enable_25_23;
 output wire [1 : 0] bp_clk_sel_27_26;
 output wire jtag_channel_28;
+output wire [3 : 0] tck_clk_ratio_3_0;
+output wire serial_4;
 input wire [7 : 0] ha_7_0;
 input wire [1 : 0] ready_ipmb_zynq_9_8;
 input wire los_10g_10;
@@ -126,6 +132,7 @@ output wire [31 : 0] reg_ro;
   reg_bank inst (
     .prbs_clk(prbs_clk),
     .reg_rw(reg_rw),
+    .reg_js_rw(reg_js_rw),
     .ipmb_en_1_0(ipmb_en_1_0),
     .id_4_2(id_4_2),
     .payload_on_5(payload_on_5),
@@ -141,6 +148,8 @@ output wire [31 : 0] reg_ro;
     .pok_change_enable_25_23(pok_change_enable_25_23),
     .bp_clk_sel_27_26(bp_clk_sel_27_26),
     .jtag_channel_28(jtag_channel_28),
+    .tck_clk_ratio_3_0(tck_clk_ratio_3_0),
+    .serial_4(serial_4),
     .ha_7_0(ha_7_0),
     .ready_ipmb_zynq_9_8(ready_ipmb_zynq_9_8),
     .los_10g_10(los_10g_10),

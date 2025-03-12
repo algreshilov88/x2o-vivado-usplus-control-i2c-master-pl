@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Tue Jan 14 03:59:04 2025
+| Date             : Wed Mar 12 05:16:45 2025
 | Host             : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command          : report_power -file apex_control_mgt_top_power_routed.rpt -pb apex_control_mgt_top_power_summary_routed.pb -rpx apex_control_mgt_top_power_routed.rpx
 | Design           : apex_control_mgt_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.360        |
+| Total On-Chip Power (W)  | 4.409        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.018        |
-| Device Static (W)        | 0.342        |
+| Dynamic (W)              | 4.066        |
+| Device Static (W)        | 0.343        |
 | Effective TJA (C/W)      | 2.3          |
-| Max Ambient (C)          | 74.9         |
-| Junction Temperature (C) | 35.1         |
+| Max Ambient (C)          | 74.8         |
+| Junction Temperature (C) | 35.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,28 +52,28 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.329 |       26 |       --- |             --- |
-| CLB Logic                |     0.097 |   176148 |       --- |             --- |
-|   LUT as Logic           |     0.066 |    57351 |    117120 |           48.97 |
-|   LUT as Distributed RAM |     0.011 |     1150 |     57600 |            2.00 |
-|   Register               |     0.009 |    92077 |    234240 |           39.31 |
-|   LUT as Shift Register  |     0.008 |     2609 |     57600 |            4.53 |
-|   CARRY8                 |     0.002 |     1440 |     14640 |            9.84 |
-|   BUFG                   |    <0.001 |        6 |        32 |           18.75 |
-|   Others                 |     0.000 |     5790 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |     1173 |    117120 |            1.00 |
-| Signals                  |     0.128 |   133930 |       --- |             --- |
-| Block RAM                |     0.139 |    142.5 |       144 |           98.96 |
+| Clocks                   |     0.350 |       26 |       --- |             --- |
+| CLB Logic                |     0.106 |   177674 |       --- |             --- |
+|   LUT as Logic           |     0.073 |    57662 |    117120 |           49.23 |
+|   LUT as Distributed RAM |     0.012 |     1250 |     57600 |            2.17 |
+|   Register               |     0.010 |    92971 |    234240 |           39.69 |
+|   LUT as Shift Register  |     0.008 |     2592 |     57600 |            4.50 |
+|   CARRY8                 |     0.002 |     1439 |     14640 |            9.83 |
+|   BUFG                   |    <0.001 |        7 |        32 |           21.88 |
+|   Others                 |     0.000 |     5898 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |     1174 |    117120 |            1.00 |
+| Signals                  |     0.138 |   134950 |       --- |             --- |
+| Block RAM                |     0.144 |      142 |       144 |           98.61 |
 | URAM                     |     0.014 |        2 |        64 |            3.13 |
 | MMCM                     |     0.098 |        0 |       --- |             --- |
 | I/O                      |     0.022 |       50 |       189 |           26.46 |
 | GTH                      |     0.642 |        3 |         4 |           75.00 |
 | SYSMON                   |     0.003 |        1 |       --- |             --- |
-| PS8                      |     2.545 |        1 |       --- |             --- |
-| Static Power             |     0.342 |          |           |                 |
+| PS8                      |     2.547 |        1 |       --- |             --- |
+| Static Power             |     0.343 |          |           |                 |
 |   PS Static              |     0.000 |          |           |                 |
-|   PL Static              |     0.342 |          |           |                 |
-| Total                    |     4.360 |          |           |                 |
+|   PL Static              |     0.343 |          |           |                 |
+| Total                    |     4.409 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -83,10 +83,10 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     1.199 |       1.096 |      0.103 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     1.262 |       1.159 |      0.103 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.038 |       0.001 |      0.037 |       NA    | Unspecified | NA         |
-| Vccbram         |       0.850 |     0.019 |       0.017 |      0.002 |       NA    | Unspecified | NA         |
-| Vccaux          |       1.800 |     0.128 |       0.054 |      0.074 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.019 |       0.018 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.129 |       0.054 |      0.074 |       NA    | Unspecified | NA         |
 | Vccaux_io       |       1.800 |     0.036 |       0.005 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.011 |       0.004 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -96,7 +96,7 @@ Table of Contents
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
-| VCC_PSINTFP     |       0.850 |     0.986 |       0.986 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.989 |       0.989 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSINTLP     |       0.850 |     0.232 |       0.232 |      0.000 |       NA    | Unspecified | NA         |
 | VPS_MGTRAVCC    |       0.850 |     0.078 |       0.078 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSINTFP_DDR |       0.850 |     0.726 |       0.726 |      0.000 |       NA    | Unspecified | NA         |
@@ -187,30 +187,34 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------+-----------+
-| Name                     | Power (W) |
-+--------------------------+-----------+
-| apex_control_mgt_top     |     4.018 |
-|   bdw                    |     3.652 |
-|     design_1_i           |     3.651 |
-|       C2C                |     0.026 |
-|       IPMC               |     0.018 |
-|       JTAG               |     0.008 |
-|       axi_dma_0          |     0.012 |
-|       axi_interconnect_0 |     0.004 |
-|       clk_wiz_0          |     0.098 |
-|       cpu                |     2.670 |
-|       dbg                |     0.003 |
-|       hier_0             |     0.334 |
-|       i2c                |     0.005 |
-|       ila_0              |     0.017 |
-|       registers          |     0.001 |
-|       system_ila_0       |     0.031 |
-|       system_ila_1       |     0.012 |
-|       xxv_ethernet_0     |     0.412 |
-|   c2c_mgt                |     0.351 |
-|     c2c_gth              |     0.347 |
-|       inst               |     0.347 |
-+--------------------------+-----------+
++--------------------------------+-----------+
+| Name                           | Power (W) |
++--------------------------------+-----------+
+| apex_control_mgt_top           |     4.066 |
+|   bdw                          |     3.701 |
+|     design_1_i                 |     3.699 |
+|       C2C                      |     0.026 |
+|       IPMC                     |     0.019 |
+|       JTAG                     |     0.007 |
+|       axi_dma_0                |     0.025 |
+|       axi_interconnect_0       |     0.010 |
+|       axis_data_fifo_0         |     0.001 |
+|       axis_jtag_0              |     0.003 |
+|       clk_wiz_0                |     0.098 |
+|       cpu                      |     2.675 |
+|       dbg                      |     0.003 |
+|       hier_0                   |     0.351 |
+|       i2c                      |     0.006 |
+|       ila_0                    |     0.017 |
+|       registers                |     0.001 |
+|       system_ila_0             |     0.032 |
+|       system_ila_1             |     0.018 |
+|       xxv_ethernet_0           |     0.407 |
+|   c2c_mgt                      |     0.350 |
+|     c2c_gth                    |     0.346 |
+|       inst                     |     0.346 |
+|     c2c_gth_7p8125g_vio_0_inst |     0.001 |
+|       inst                     |     0.001 |
++--------------------------------+-----------+
 
 
