@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:axis_jtag:1.0
-// IP Revision: 29
+// IP Revision: 31
 
 `timescale 1ns/1ps
 

@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_axis_jtag_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_msg_config  -id {IP_Flow 19-4965}  -new_severity {WARNING} 
 set_msg_config  -id {BD 41-2383}  -new_severity {WARNING} 
 set_param project.vivado.isBlockSynthRun true

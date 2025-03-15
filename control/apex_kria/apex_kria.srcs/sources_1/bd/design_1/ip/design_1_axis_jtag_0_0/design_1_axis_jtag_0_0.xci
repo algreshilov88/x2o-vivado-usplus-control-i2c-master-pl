@@ -4,7 +4,7 @@
     "xci_name": "design_1_axis_jtag_0_0",
     "cell_name": "axis_jtag_0",
     "component_reference": "user.org:user:axis_jtag:1.0",
-    "ip_revision": "29",
+    "ip_revision": "31",
     "gen_directory": "../../../../../../apex_kria.gen/sources_1/bd/design_1/ip/design_1_axis_jtag_0_0",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "29" } ],
+        "IPREVISION": [ { "value": "31" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../apex_kria.gen/sources_1/bd/design_1/ip/design_1_axis_jtag_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

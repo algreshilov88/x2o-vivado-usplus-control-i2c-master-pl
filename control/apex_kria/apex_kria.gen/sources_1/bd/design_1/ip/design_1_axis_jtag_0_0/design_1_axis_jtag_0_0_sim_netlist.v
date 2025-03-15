@@ -1,7 +1,7 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Tue Mar 11 19:04:52 2025
+// Date        : Sat Mar 15 02:12:21 2025
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axis_jtag_0_0/design_1_axis_jtag_0_0_sim_netlist.v
@@ -1006,385 +1006,385 @@ module design_1_axis_jtag_0_0_jtag_fifo
   FDRE \tms_serial_output_reg[0] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[0]),
+        .D(s_axis_tdata[7]),
         .Q(\tms_serial_output_reg[62]_0 [0]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[10] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[10]),
+        .D(s_axis_tdata[13]),
         .Q(\tms_serial_output_reg[62]_0 [10]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[11] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[11]),
+        .D(s_axis_tdata[12]),
         .Q(\tms_serial_output_reg[62]_0 [11]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[12] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[12]),
+        .D(s_axis_tdata[11]),
         .Q(\tms_serial_output_reg[62]_0 [12]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[13] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[13]),
+        .D(s_axis_tdata[10]),
         .Q(\tms_serial_output_reg[62]_0 [13]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[14] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[14]),
+        .D(s_axis_tdata[9]),
         .Q(\tms_serial_output_reg[62]_0 [14]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[15] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[15]),
+        .D(s_axis_tdata[8]),
         .Q(\tms_serial_output_reg[62]_0 [15]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[16] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[16]),
+        .D(s_axis_tdata[23]),
         .Q(\tms_serial_output_reg[62]_0 [16]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[17] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[17]),
+        .D(s_axis_tdata[22]),
         .Q(\tms_serial_output_reg[62]_0 [17]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[18] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[18]),
+        .D(s_axis_tdata[21]),
         .Q(\tms_serial_output_reg[62]_0 [18]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[19] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[19]),
+        .D(s_axis_tdata[20]),
         .Q(\tms_serial_output_reg[62]_0 [19]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[1] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[1]),
+        .D(s_axis_tdata[6]),
         .Q(\tms_serial_output_reg[62]_0 [1]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[20] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[20]),
+        .D(s_axis_tdata[19]),
         .Q(\tms_serial_output_reg[62]_0 [20]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[21] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[21]),
+        .D(s_axis_tdata[18]),
         .Q(\tms_serial_output_reg[62]_0 [21]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[22] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[22]),
+        .D(s_axis_tdata[17]),
         .Q(\tms_serial_output_reg[62]_0 [22]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[23] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[23]),
+        .D(s_axis_tdata[16]),
         .Q(\tms_serial_output_reg[62]_0 [23]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[24] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[24]),
+        .D(s_axis_tdata[31]),
         .Q(\tms_serial_output_reg[62]_0 [24]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[25] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[25]),
+        .D(s_axis_tdata[30]),
         .Q(\tms_serial_output_reg[62]_0 [25]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[26] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[26]),
+        .D(s_axis_tdata[29]),
         .Q(\tms_serial_output_reg[62]_0 [26]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[27] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[27]),
+        .D(s_axis_tdata[28]),
         .Q(\tms_serial_output_reg[62]_0 [27]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[28] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[28]),
+        .D(s_axis_tdata[27]),
         .Q(\tms_serial_output_reg[62]_0 [28]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[29] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[29]),
+        .D(s_axis_tdata[26]),
         .Q(\tms_serial_output_reg[62]_0 [29]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[2] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[2]),
+        .D(s_axis_tdata[5]),
         .Q(\tms_serial_output_reg[62]_0 [2]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[30] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[30]),
+        .D(s_axis_tdata[25]),
         .Q(\tms_serial_output_reg[62]_0 [30]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[31] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[31]),
+        .D(s_axis_tdata[24]),
         .Q(\tms_serial_output_reg[62]_0 [31]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[32] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[32]),
+        .D(s_axis_tdata[39]),
         .Q(\tms_serial_output_reg[62]_0 [32]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[33] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[33]),
+        .D(s_axis_tdata[38]),
         .Q(\tms_serial_output_reg[62]_0 [33]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[34] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[34]),
+        .D(s_axis_tdata[37]),
         .Q(\tms_serial_output_reg[62]_0 [34]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[35] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[35]),
+        .D(s_axis_tdata[36]),
         .Q(\tms_serial_output_reg[62]_0 [35]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[36] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[36]),
+        .D(s_axis_tdata[35]),
         .Q(\tms_serial_output_reg[62]_0 [36]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[37] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[37]),
+        .D(s_axis_tdata[34]),
         .Q(\tms_serial_output_reg[62]_0 [37]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[38] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[38]),
+        .D(s_axis_tdata[33]),
         .Q(\tms_serial_output_reg[62]_0 [38]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[39] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[39]),
+        .D(s_axis_tdata[32]),
         .Q(\tms_serial_output_reg[62]_0 [39]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[3] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[3]),
+        .D(s_axis_tdata[4]),
         .Q(\tms_serial_output_reg[62]_0 [3]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[40] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[40]),
+        .D(s_axis_tdata[47]),
         .Q(\tms_serial_output_reg[62]_0 [40]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[41] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[41]),
+        .D(s_axis_tdata[46]),
         .Q(\tms_serial_output_reg[62]_0 [41]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[42] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[42]),
+        .D(s_axis_tdata[45]),
         .Q(\tms_serial_output_reg[62]_0 [42]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[43] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[43]),
+        .D(s_axis_tdata[44]),
         .Q(\tms_serial_output_reg[62]_0 [43]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[44] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[44]),
+        .D(s_axis_tdata[43]),
         .Q(\tms_serial_output_reg[62]_0 [44]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[45] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[45]),
+        .D(s_axis_tdata[42]),
         .Q(\tms_serial_output_reg[62]_0 [45]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[46] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[46]),
+        .D(s_axis_tdata[41]),
         .Q(\tms_serial_output_reg[62]_0 [46]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[47] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[47]),
+        .D(s_axis_tdata[40]),
         .Q(\tms_serial_output_reg[62]_0 [47]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[48] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[48]),
+        .D(s_axis_tdata[55]),
         .Q(\tms_serial_output_reg[62]_0 [48]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[49] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[49]),
+        .D(s_axis_tdata[54]),
         .Q(\tms_serial_output_reg[62]_0 [49]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[4] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[4]),
+        .D(s_axis_tdata[3]),
         .Q(\tms_serial_output_reg[62]_0 [4]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[50] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[50]),
+        .D(s_axis_tdata[53]),
         .Q(\tms_serial_output_reg[62]_0 [50]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[51] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[51]),
+        .D(s_axis_tdata[52]),
         .Q(\tms_serial_output_reg[62]_0 [51]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[52] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[52]),
+        .D(s_axis_tdata[51]),
         .Q(\tms_serial_output_reg[62]_0 [52]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[53] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[53]),
+        .D(s_axis_tdata[50]),
         .Q(\tms_serial_output_reg[62]_0 [53]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[54] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[54]),
+        .D(s_axis_tdata[49]),
         .Q(\tms_serial_output_reg[62]_0 [54]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[55] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[55]),
+        .D(s_axis_tdata[48]),
         .Q(\tms_serial_output_reg[62]_0 [55]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[56] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[56]),
+        .D(s_axis_tdata[63]),
         .Q(\tms_serial_output_reg[62]_0 [56]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[57] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[57]),
+        .D(s_axis_tdata[62]),
         .Q(\tms_serial_output_reg[62]_0 [57]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[58] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[58]),
+        .D(s_axis_tdata[61]),
         .Q(\tms_serial_output_reg[62]_0 [58]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[59] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[59]),
+        .D(s_axis_tdata[60]),
         .Q(\tms_serial_output_reg[62]_0 [59]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[5] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[5]),
+        .D(s_axis_tdata[2]),
         .Q(\tms_serial_output_reg[62]_0 [5]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[60] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[60]),
+        .D(s_axis_tdata[59]),
         .Q(\tms_serial_output_reg[62]_0 [60]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[61] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[61]),
+        .D(s_axis_tdata[58]),
         .Q(\tms_serial_output_reg[62]_0 [61]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[62] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[62]),
+        .D(s_axis_tdata[57]),
         .Q(\tms_serial_output_reg[62]_0 [62]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[63] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[63]),
+        .D(s_axis_tdata[56]),
         .Q(\tms_serial_output_reg_n_0_[63] ),
         .R(1'b0));
   FDRE \tms_serial_output_reg[6] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[6]),
+        .D(s_axis_tdata[1]),
         .Q(\tms_serial_output_reg[62]_0 [6]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[7] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[7]),
+        .D(s_axis_tdata[0]),
         .Q(\tms_serial_output_reg[62]_0 [7]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[8] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[8]),
+        .D(s_axis_tdata[15]),
         .Q(\tms_serial_output_reg[62]_0 [8]),
         .R(1'b0));
   FDRE \tms_serial_output_reg[9] 
        (.C(s_axis_aclk),
         .CE(\tms_output[31]_i_1_n_0 ),
-        .D(s_axis_tdata[9]),
+        .D(s_axis_tdata[14]),
         .Q(\tms_serial_output_reg[62]_0 [9]),
         .R(1'b0));
 endmodule

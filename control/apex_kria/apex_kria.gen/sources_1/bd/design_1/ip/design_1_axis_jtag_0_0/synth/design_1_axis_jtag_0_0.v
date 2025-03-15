@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:axis_jtag:1.0
-// IP Revision: 29
+// IP Revision: 31
 
 (* X_CORE_INFO = "axis_jtag_v1_0,Vivado 2022.2.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_axis_jtag_0_0,axis_jtag_v1_0,{}" *)
