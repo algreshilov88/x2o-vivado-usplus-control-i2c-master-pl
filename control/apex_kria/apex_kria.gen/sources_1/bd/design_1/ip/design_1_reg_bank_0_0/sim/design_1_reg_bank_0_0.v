@@ -57,7 +57,7 @@
 module design_1_reg_bank_0_0 (
   prbs_clk,
   reg_rw,
-  reg_js_rw,
+  reg_com_rw,
   ipmb_en_1_0,
   id_4_2,
   payload_on_5,
@@ -75,6 +75,8 @@ module design_1_reg_bank_0_0 (
   jtag_channel_28,
   tck_clk_ratio_3_0,
   serial_4,
+  axisaf_wr_rst_top_5,
+  axisaf_wr_rst_bot_6,
   ha_7_0,
   ready_ipmb_zynq_9_8,
   los_10g_10,
@@ -88,14 +90,17 @@ module design_1_reg_bank_0_0 (
   payload_off_alarm_27_25,
   pok_payload_28,
   pok_change_31_29,
-  reg_ro
+  axi_wr_err_top_0,
+  axi_wr_err_bot_1,
+  reg_ro,
+  reg_com_ro
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME prbs_clk, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN design_1_axi_c2c_phy_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 prbs_clk CLK" *)
 input wire prbs_clk;
 input wire [28 : 0] reg_rw;
-input wire [4 : 0] reg_js_rw;
+input wire [6 : 0] reg_com_rw;
 output wire [1 : 0] ipmb_en_1_0;
 output wire [2 : 0] id_4_2;
 output wire payload_on_5;
@@ -113,6 +118,8 @@ output wire [1 : 0] bp_clk_sel_27_26;
 output wire jtag_channel_28;
 output wire [3 : 0] tck_clk_ratio_3_0;
 output wire serial_4;
+output wire axisaf_wr_rst_top_5;
+output wire axisaf_wr_rst_bot_6;
 input wire [7 : 0] ha_7_0;
 input wire [1 : 0] ready_ipmb_zynq_9_8;
 input wire los_10g_10;
@@ -126,12 +133,15 @@ input wire [3 : 0] prbs_err_20_17;
 input wire [2 : 0] payload_off_alarm_27_25;
 input wire pok_payload_28;
 input wire [2 : 0] pok_change_31_29;
+input wire axi_wr_err_top_0;
+input wire axi_wr_err_bot_1;
 output wire [31 : 0] reg_ro;
+output wire [1 : 0] reg_com_ro;
 
   reg_bank inst (
     .prbs_clk(prbs_clk),
     .reg_rw(reg_rw),
-    .reg_js_rw(reg_js_rw),
+    .reg_com_rw(reg_com_rw),
     .ipmb_en_1_0(ipmb_en_1_0),
     .id_4_2(id_4_2),
     .payload_on_5(payload_on_5),
@@ -149,6 +159,8 @@ output wire [31 : 0] reg_ro;
     .jtag_channel_28(jtag_channel_28),
     .tck_clk_ratio_3_0(tck_clk_ratio_3_0),
     .serial_4(serial_4),
+    .axisaf_wr_rst_top_5(axisaf_wr_rst_top_5),
+    .axisaf_wr_rst_bot_6(axisaf_wr_rst_bot_6),
     .ha_7_0(ha_7_0),
     .ready_ipmb_zynq_9_8(ready_ipmb_zynq_9_8),
     .los_10g_10(los_10g_10),
@@ -162,6 +174,9 @@ output wire [31 : 0] reg_ro;
     .payload_off_alarm_27_25(payload_off_alarm_27_25),
     .pok_payload_28(pok_payload_28),
     .pok_change_31_29(pok_change_31_29),
-    .reg_ro(reg_ro)
+    .axi_wr_err_top_0(axi_wr_err_top_0),
+    .axi_wr_err_bot_1(axi_wr_err_bot_1),
+    .reg_ro(reg_ro),
+    .reg_com_ro(reg_com_ro)
   );
 endmodule

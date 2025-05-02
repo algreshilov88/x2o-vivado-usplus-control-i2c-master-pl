@@ -1,7 +1,7 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Tue Mar  4 16:31:02 2025
+// Date        : Tue Apr 29 18:44:18 2025
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0/design_1_reg_bank_0_0_sim_netlist.v
@@ -18,7 +18,7 @@
 module design_1_reg_bank_0_0
    (prbs_clk,
     reg_rw,
-    reg_js_rw,
+    reg_com_rw,
     ipmb_en_1_0,
     id_4_2,
     payload_on_5,
@@ -36,6 +36,8 @@ module design_1_reg_bank_0_0
     jtag_channel_28,
     tck_clk_ratio_3_0,
     serial_4,
+    axisaf_wr_rst_top_5,
+    axisaf_wr_rst_bot_6,
     ha_7_0,
     ready_ipmb_zynq_9_8,
     los_10g_10,
@@ -49,10 +51,13 @@ module design_1_reg_bank_0_0
     payload_off_alarm_27_25,
     pok_payload_28,
     pok_change_31_29,
-    reg_ro);
+    axi_wr_err_top_0,
+    axi_wr_err_bot_1,
+    reg_ro,
+    reg_com_ro);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 prbs_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME prbs_clk, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN design_1_axi_c2c_phy_clk, INSERT_VIP 0" *) input prbs_clk;
   input [28:0]reg_rw;
-  input [4:0]reg_js_rw;
+  input [6:0]reg_com_rw;
   output [1:0]ipmb_en_1_0;
   output [2:0]id_4_2;
   output payload_on_5;
@@ -70,6 +75,8 @@ module design_1_reg_bank_0_0
   output jtag_channel_28;
   output [3:0]tck_clk_ratio_3_0;
   output serial_4;
+  output axisaf_wr_rst_top_5;
+  output axisaf_wr_rst_bot_6;
   input [7:0]ha_7_0;
   input [1:0]ready_ipmb_zynq_9_8;
   input los_10g_10;
@@ -83,9 +90,14 @@ module design_1_reg_bank_0_0
   input [2:0]payload_off_alarm_27_25;
   input pok_payload_28;
   input [2:0]pok_change_31_29;
+  input axi_wr_err_top_0;
+  input axi_wr_err_bot_1;
   output [31:0]reg_ro;
+  output [1:0]reg_com_ro;
 
   wire \<const0> ;
+  wire axi_wr_err_bot_1;
+  wire axi_wr_err_top_0;
   wire channel_up_bot_15;
   wire channel_up_top_13;
   wire [7:0]ha_7_0;
@@ -101,11 +113,13 @@ module design_1_reg_bank_0_0
   wire prbs_clk;
   wire [3:0]prbs_err_20_17;
   wire [1:0]ready_ipmb_zynq_9_8;
-  wire [4:0]reg_js_rw;
+  wire [6:0]reg_com_rw;
   wire [24:21]\^reg_ro ;
   wire [28:0]reg_rw;
 
   assign aurora_pma_init_9 = reg_rw[9];
+  assign axisaf_wr_rst_bot_6 = reg_com_rw[6];
+  assign axisaf_wr_rst_top_5 = reg_com_rw[5];
   assign bp_clk_sel_27_26[1:0] = reg_rw[27:26];
   assign c2c_slave_reset_bot_18 = reg_rw[18];
   assign c2c_slave_reset_top_16 = reg_rw[16];
@@ -118,6 +132,8 @@ module design_1_reg_bank_0_0
   assign pok_change_enable_25_23[2:0] = reg_rw[25:23];
   assign pok_change_polarity_22_20[2:0] = reg_rw[22:20];
   assign prbs_sel_8_6[2:0] = reg_rw[8:6];
+  assign reg_com_ro[1] = axi_wr_err_bot_1;
+  assign reg_com_ro[0] = axi_wr_err_top_0;
   assign reg_ro[31:29] = pok_change_31_29;
   assign reg_ro[28] = pok_payload_28;
   assign reg_ro[27:25] = payload_off_alarm_27_25;
@@ -132,8 +148,8 @@ module design_1_reg_bank_0_0
   assign reg_ro[10] = los_10g_10;
   assign reg_ro[9:8] = ready_ipmb_zynq_9_8;
   assign reg_ro[7:0] = ha_7_0;
-  assign serial_4 = reg_js_rw[4];
-  assign tck_clk_ratio_3_0[3:0] = reg_js_rw[3:0];
+  assign serial_4 = reg_com_rw[4];
+  assign tck_clk_ratio_3_0[3:0] = reg_com_rw[3:0];
   assign tx_polarity_13_10[3:0] = reg_rw[13:10];
   GND GND
        (.G(\<const0> ));

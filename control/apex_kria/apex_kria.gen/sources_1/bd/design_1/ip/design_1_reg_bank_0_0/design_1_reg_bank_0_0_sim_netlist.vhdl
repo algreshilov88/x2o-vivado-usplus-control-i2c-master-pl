@@ -1,7 +1,7 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Tue Mar  4 16:31:02 2025
+-- Date        : Tue Apr 29 18:44:18 2025
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0/design_1_reg_bank_0_0_sim_netlist.vhdl
@@ -110,7 +110,7 @@ entity design_1_reg_bank_0_0 is
   port (
     prbs_clk : in STD_LOGIC;
     reg_rw : in STD_LOGIC_VECTOR ( 28 downto 0 );
-    reg_js_rw : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    reg_com_rw : in STD_LOGIC_VECTOR ( 6 downto 0 );
     ipmb_en_1_0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
     id_4_2 : out STD_LOGIC_VECTOR ( 2 downto 0 );
     payload_on_5 : out STD_LOGIC;
@@ -128,6 +128,8 @@ entity design_1_reg_bank_0_0 is
     jtag_channel_28 : out STD_LOGIC;
     tck_clk_ratio_3_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     serial_4 : out STD_LOGIC;
+    axisaf_wr_rst_top_5 : out STD_LOGIC;
+    axisaf_wr_rst_bot_6 : out STD_LOGIC;
     ha_7_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     ready_ipmb_zynq_9_8 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     los_10g_10 : in STD_LOGIC;
@@ -141,7 +143,10 @@ entity design_1_reg_bank_0_0 is
     payload_off_alarm_27_25 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     pok_payload_28 : in STD_LOGIC;
     pok_change_31_29 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    reg_ro : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    axi_wr_err_top_0 : in STD_LOGIC;
+    axi_wr_err_bot_1 : in STD_LOGIC;
+    reg_ro : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    reg_com_ro : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_reg_bank_0_0 : entity is true;
@@ -157,6 +162,8 @@ end design_1_reg_bank_0_0;
 
 architecture STRUCTURE of design_1_reg_bank_0_0 is
   signal \<const0>\ : STD_LOGIC;
+  signal \^axi_wr_err_bot_1\ : STD_LOGIC;
+  signal \^axi_wr_err_top_0\ : STD_LOGIC;
   signal \^channel_up_bot_15\ : STD_LOGIC;
   signal \^channel_up_top_13\ : STD_LOGIC;
   signal \^ha_7_0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -170,7 +177,7 @@ architecture STRUCTURE of design_1_reg_bank_0_0 is
   signal \^pok_payload_28\ : STD_LOGIC;
   signal \^prbs_err_20_17\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \^ready_ipmb_zynq_9_8\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \^reg_js_rw\ : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal \^reg_com_rw\ : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal \^reg_ro\ : STD_LOGIC_VECTOR ( 24 downto 21 );
   signal \^reg_rw\ : STD_LOGIC_VECTOR ( 28 downto 0 );
   attribute X_INTERFACE_INFO : string;
@@ -178,6 +185,8 @@ architecture STRUCTURE of design_1_reg_bank_0_0 is
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of prbs_clk : signal is "XIL_INTERFACENAME prbs_clk, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN design_1_axi_c2c_phy_clk, INSERT_VIP 0";
 begin
+  \^axi_wr_err_bot_1\ <= axi_wr_err_bot_1;
+  \^axi_wr_err_top_0\ <= axi_wr_err_top_0;
   \^channel_up_bot_15\ <= channel_up_bot_15;
   \^channel_up_top_13\ <= channel_up_top_13;
   \^ha_7_0\(7 downto 0) <= ha_7_0(7 downto 0);
@@ -191,9 +200,11 @@ begin
   \^pok_payload_28\ <= pok_payload_28;
   \^prbs_err_20_17\(3 downto 0) <= prbs_err_20_17(3 downto 0);
   \^ready_ipmb_zynq_9_8\(1 downto 0) <= ready_ipmb_zynq_9_8(1 downto 0);
-  \^reg_js_rw\(4 downto 0) <= reg_js_rw(4 downto 0);
+  \^reg_com_rw\(6 downto 0) <= reg_com_rw(6 downto 0);
   \^reg_rw\(27 downto 0) <= reg_rw(27 downto 0);
   aurora_pma_init_9 <= \^reg_rw\(9);
+  axisaf_wr_rst_bot_6 <= \^reg_com_rw\(6);
+  axisaf_wr_rst_top_5 <= \^reg_com_rw\(5);
   bp_clk_sel_27_26(1 downto 0) <= \^reg_rw\(27 downto 26);
   c2c_slave_reset_bot_18 <= \^reg_rw\(18);
   c2c_slave_reset_top_16 <= \^reg_rw\(16);
@@ -206,6 +217,8 @@ begin
   pok_change_enable_25_23(2 downto 0) <= \^reg_rw\(25 downto 23);
   pok_change_polarity_22_20(2 downto 0) <= \^reg_rw\(22 downto 20);
   prbs_sel_8_6(2 downto 0) <= \^reg_rw\(8 downto 6);
+  reg_com_ro(1) <= \^axi_wr_err_bot_1\;
+  reg_com_ro(0) <= \^axi_wr_err_top_0\;
   reg_ro(31 downto 29) <= \^pok_change_31_29\(2 downto 0);
   reg_ro(28) <= \^pok_payload_28\;
   reg_ro(27 downto 25) <= \^payload_off_alarm_27_25\(2 downto 0);
@@ -220,8 +233,8 @@ begin
   reg_ro(10) <= \^los_10g_10\;
   reg_ro(9 downto 8) <= \^ready_ipmb_zynq_9_8\(1 downto 0);
   reg_ro(7 downto 0) <= \^ha_7_0\(7 downto 0);
-  serial_4 <= \^reg_js_rw\(4);
-  tck_clk_ratio_3_0(3 downto 0) <= \^reg_js_rw\(3 downto 0);
+  serial_4 <= \^reg_com_rw\(4);
+  tck_clk_ratio_3_0(3 downto 0) <= \^reg_com_rw\(3 downto 0);
   tx_polarity_13_10(3 downto 0) <= \^reg_rw\(13 downto 10);
 GND: unisim.vcomponents.GND
      port map (

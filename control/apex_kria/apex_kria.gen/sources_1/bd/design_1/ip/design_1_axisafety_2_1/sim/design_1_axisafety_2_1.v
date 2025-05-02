@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -136,7 +136,9 @@ module design_1_axisafety_2_1 (
   M_AXI_RRESP,
   M_AXI_RLAST,
   M_AXI_RVALID,
-  M_AXI_RREADY
+  M_AXI_RREADY,
+  axisaf_wr_rst,
+  axi_wr_err
 );
 
 output wire o_read_fault;
@@ -309,6 +311,10 @@ input wire M_AXI_RVALID;
 S_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire M_AXI_RREADY;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axisaf_wr_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axisaf_wr_rst RST" *)
+input wire axisaf_wr_rst;
+output wire axi_wr_err;
 
   axisafety #(
     .C_S_AXI_ID_WIDTH(6),
@@ -402,6 +408,8 @@ output wire M_AXI_RREADY;
     .M_AXI_RRESP(M_AXI_RRESP),
     .M_AXI_RLAST(M_AXI_RLAST),
     .M_AXI_RVALID(M_AXI_RVALID),
-    .M_AXI_RREADY(M_AXI_RREADY)
+    .M_AXI_RREADY(M_AXI_RREADY),
+    .axisaf_wr_rst(axisaf_wr_rst),
+    .axi_wr_err(axi_wr_err)
   );
 endmodule

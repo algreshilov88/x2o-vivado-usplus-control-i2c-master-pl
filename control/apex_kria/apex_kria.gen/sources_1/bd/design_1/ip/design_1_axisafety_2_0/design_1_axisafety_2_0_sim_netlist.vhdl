@@ -1,10 +1,10 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Sun Oct 29 17:16:35 2023
+-- Date        : Tue Apr 29 20:45:37 2025
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axisafety_2_0/design_1_axisafety_2_0_sim_netlist.vhdl
+--               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axisafety_2_0/design_1_axisafety_2_0_sim_netlist.vhdl
 -- Design      : design_1_axisafety_2_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,6 +24,7 @@ entity design_1_axisafety_2_0_axisafety is
     o_read_fault_reg_0 : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     channel_up : out STD_LOGIC;
+    axi_wr_err : out STD_LOGIC;
     o_write_fault_reg_0 : out STD_LOGIC;
     S_AXI_BVALID_reg_0 : out STD_LOGIC;
     S_AXI_AWREADY_reg_0 : out STD_LOGIC;
@@ -61,6 +62,7 @@ entity design_1_axisafety_2_0_axisafety is
     S_AXI_ARESETN : in STD_LOGIC;
     S_AXI_ARLEN : in STD_LOGIC_VECTOR ( 7 downto 0 );
     S_AXI_RREADY : in STD_LOGIC;
+    axisaf_wr_rst : in STD_LOGIC;
     M_AXI_BVALID : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC;
     S_AXI_AWLEN : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -434,6 +436,10 @@ architecture STRUCTURE of design_1_axisafety_2_0_axisafety is
   attribute SOFT_HLUTNM of S_AXI_RLAST_i_1 : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of S_AXI_RVALID_i_4 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of S_AXI_WREADY_i_2 : label is "soft_lutpair1";
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of axi_wr_err_reg : label is "LDP";
+  attribute XILINX_TRANSFORM_PINMAP : string;
+  attribute XILINX_TRANSFORM_PINMAP of axi_wr_err_reg : label is "VCC:GE";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \channel_up_r_reg[0]\ : label is std.standard.true;
   attribute KEEP : string;
@@ -4429,13 +4435,13 @@ S_AXI_AWREADY_reg: unisim.vcomponents.FDRE
       Q => S_AXI_BRESP(0),
       R => \S_AXI_BRESP[1]_i_1_n_0\
     );
-\S_AXI_BRESP_reg[1]\: unisim.vcomponents.FDSE
+\S_AXI_BRESP_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => S_AXI_ACLK,
       CE => S_AXI_BVALID0,
       D => M_AXI_BRESP(1),
       Q => S_AXI_BRESP(1),
-      S => \S_AXI_BRESP[1]_i_1_n_0\
+      R => \S_AXI_BRESP[1]_i_1_n_0\
     );
 S_AXI_BVALID_i_1: unisim.vcomponents.LUT5
     generic map(
@@ -5276,6 +5282,17 @@ S_AXI_WREADY_reg: unisim.vcomponents.FDRE
       D => S_AXI_WREADY_i_1_n_0,
       Q => \^s_axi_wready_reg_0\,
       R => '0'
+    );
+axi_wr_err_reg: unisim.vcomponents.LDPE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      D => '0',
+      G => axisaf_wr_rst,
+      GE => '1',
+      PRE => \^o_write_fault_reg_0\,
+      Q => axi_wr_err
     );
 \channel_up_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -16455,7 +16472,9 @@ entity design_1_axisafety_2_0 is
     M_AXI_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_RLAST : in STD_LOGIC;
     M_AXI_RVALID : in STD_LOGIC;
-    M_AXI_RREADY : out STD_LOGIC
+    M_AXI_RREADY : out STD_LOGIC;
+    axisaf_wr_rst : in STD_LOGIC;
+    axi_wr_err : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_axisafety_2_0 : entity is true;
@@ -16510,6 +16529,8 @@ architecture STRUCTURE of design_1_axisafety_2_0 is
   attribute X_INTERFACE_INFO of S_AXI_WLAST : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of S_AXI_WREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
   attribute X_INTERFACE_INFO of S_AXI_WVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
+  attribute X_INTERFACE_INFO of axisaf_wr_rst : signal is "xilinx.com:signal:reset:1.0 axisaf_wr_rst RST";
+  attribute X_INTERFACE_PARAMETER of axisaf_wr_rst : signal is "XIL_INTERFACENAME axisaf_wr_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of comb_aresetn : signal is "xilinx.com:signal:reset:1.0 comb_aresetn RST";
   attribute X_INTERFACE_PARAMETER of comb_aresetn : signal is "XIL_INTERFACENAME comb_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of ext_resetn : signal is "xilinx.com:signal:reset:1.0 ext_resetn RST";
@@ -16646,6 +16667,8 @@ inst: entity work.design_1_axisafety_2_0_axisafety
       S_AXI_WREADY_reg_0 => S_AXI_WREADY,
       S_AXI_WSTRB(3 downto 0) => S_AXI_WSTRB(3 downto 0),
       S_AXI_WVALID => S_AXI_WVALID,
+      axi_wr_err => axi_wr_err,
+      axisaf_wr_rst => axisaf_wr_rst,
       channel_up => channel_up,
       comb_aresetn => comb_aresetn,
       ext_resetn => ext_resetn,

@@ -1,10 +1,10 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Sun Oct 29 17:16:35 2023
+// Date        : Tue Apr 29 20:45:37 2025
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axisafety_2_0/design_1_axisafety_2_0_sim_netlist.v
+//               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axisafety_2_0/design_1_axisafety_2_0_sim_netlist.v
 // Design      : design_1_axisafety_2_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -97,7 +97,9 @@ module design_1_axisafety_2_0
     M_AXI_RRESP,
     M_AXI_RLAST,
     M_AXI_RVALID,
-    M_AXI_RREADY);
+    M_AXI_RREADY,
+    axisaf_wr_rst,
+    axi_wr_err);
   output o_read_fault;
   output o_write_fault;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input S_AXI_ACLK;
@@ -180,6 +182,8 @@ module design_1_axisafety_2_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RLAST" *) input M_AXI_RLAST;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input M_AXI_RVALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 99999001, ID_WIDTH 6, ADDR_WIDTH 28, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output M_AXI_RREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axisaf_wr_rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axisaf_wr_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axisaf_wr_rst;
+  output axi_wr_err;
 
   wire \<const0> ;
   wire \<const1> ;
@@ -255,6 +259,8 @@ module design_1_axisafety_2_0
   wire S_AXI_WREADY;
   wire [3:0]S_AXI_WSTRB;
   wire S_AXI_WVALID;
+  wire axi_wr_err;
+  wire axisaf_wr_rst;
   wire channel_up;
   wire comb_aresetn;
   wire ext_resetn;
@@ -341,6 +347,8 @@ module design_1_axisafety_2_0
         .S_AXI_WREADY_reg_0(S_AXI_WREADY),
         .S_AXI_WSTRB(S_AXI_WSTRB),
         .S_AXI_WVALID(S_AXI_WVALID),
+        .axi_wr_err(axi_wr_err),
+        .axisaf_wr_rst(axisaf_wr_rst),
         .channel_up(channel_up),
         .comb_aresetn(comb_aresetn),
         .ext_resetn(ext_resetn),
@@ -358,6 +366,7 @@ module design_1_axisafety_2_0_axisafety
     o_read_fault_reg_0,
     E,
     channel_up,
+    axi_wr_err,
     o_write_fault_reg_0,
     S_AXI_BVALID_reg_0,
     S_AXI_AWREADY_reg_0,
@@ -395,6 +404,7 @@ module design_1_axisafety_2_0_axisafety
     S_AXI_ARESETN,
     S_AXI_ARLEN,
     S_AXI_RREADY,
+    axisaf_wr_rst,
     M_AXI_BVALID,
     S_AXI_ACLK,
     S_AXI_AWLEN,
@@ -435,6 +445,7 @@ module design_1_axisafety_2_0_axisafety
   output o_read_fault_reg_0;
   output [0:0]E;
   output channel_up;
+  output axi_wr_err;
   output o_write_fault_reg_0;
   output S_AXI_BVALID_reg_0;
   output S_AXI_AWREADY_reg_0;
@@ -472,6 +483,7 @@ module design_1_axisafety_2_0_axisafety
   input S_AXI_ARESETN;
   input [7:0]S_AXI_ARLEN;
   input S_AXI_RREADY;
+  input axisaf_wr_rst;
   input M_AXI_BVALID;
   input S_AXI_ACLK;
   input [7:0]S_AXI_AWLEN;
@@ -609,6 +621,8 @@ module design_1_axisafety_2_0_axisafety
   wire S_AXI_WREADY_reg_0;
   wire [3:0]S_AXI_WSTRB;
   wire S_AXI_WVALID;
+  wire axi_wr_err;
+  wire axisaf_wr_rst;
   (* async_reg = "true" *) wire [1023:0]channel_up_r;
   wire comb_aresetn;
   wire ext_resetn;
@@ -2258,12 +2272,12 @@ module design_1_axisafety_2_0_axisafety
         .D(M_AXI_BRESP[0]),
         .Q(S_AXI_BRESP[0]),
         .R(\S_AXI_BRESP[1]_i_1_n_0 ));
-  FDSE \S_AXI_BRESP_reg[1] 
+  FDRE \S_AXI_BRESP_reg[1] 
        (.C(S_AXI_ACLK),
         .CE(S_AXI_BVALID0),
         .D(M_AXI_BRESP[1]),
         .Q(S_AXI_BRESP[1]),
-        .S(\S_AXI_BRESP[1]_i_1_n_0 ));
+        .R(\S_AXI_BRESP[1]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h0000FFBA)) 
     S_AXI_BVALID_i_1
@@ -2910,6 +2924,16 @@ module design_1_axisafety_2_0_axisafety
         .D(S_AXI_WREADY_i_1_n_0),
         .Q(S_AXI_WREADY_reg_0),
         .R(1'b0));
+  (* XILINX_LEGACY_PRIM = "LDP" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDPE #(
+    .INIT(1'b0)) 
+    axi_wr_err_reg
+       (.D(1'b0),
+        .G(axisaf_wr_rst),
+        .GE(1'b1),
+        .PRE(o_write_fault_reg_0),
+        .Q(axi_wr_err));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
   FDRE \channel_up_r_reg[0] 

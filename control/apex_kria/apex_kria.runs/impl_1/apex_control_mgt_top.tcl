@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {IP_Flow 19-4965}  -new_severity {WARNING} 
 set_msg_config  -id {BD 41-2383}  -new_severity {WARNING} 
 
@@ -124,7 +125,11 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.enableLutRouteBelPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableUnconnectedCarry8PinPower 1
   set_param chipscope.maxJobs 3
+  set_param power.BramSDPPropagationFix 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xck26-sfvc784-2LV-c
   set_property board_part xilinx.com:k26c:part0:1.3 [current_project]

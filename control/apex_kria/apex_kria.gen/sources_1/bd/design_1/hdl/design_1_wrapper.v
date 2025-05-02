@@ -1,7 +1,7 @@
 //Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-//Date        : Sat Mar 15 02:10:43 2025
+//Date        : Tue Apr 29 20:43:31 2025
 //Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -14,6 +14,7 @@ module design_1_wrapper
     IIC_0_sda_io,
     axi_c2c_phy_clk,
     axi_clk,
+    axisaf_wr_rst_0,
     bp_clk_sel,
     c2c_mgt_stat,
     c2c_slave_reset_bot,
@@ -81,6 +82,7 @@ module design_1_wrapper
   inout IIC_0_sda_io;
   input axi_c2c_phy_clk;
   output axi_clk;
+  input axisaf_wr_rst_0;
   output [1:0]bp_clk_sel;
   input [2:0]c2c_mgt_stat;
   output c2c_slave_reset_bot;
@@ -155,6 +157,7 @@ module design_1_wrapper
   wire IIC_0_sda_t;
   wire axi_c2c_phy_clk;
   wire axi_clk;
+  wire axisaf_wr_rst_0;
   wire [1:0]bp_clk_sel;
   wire [2:0]c2c_mgt_stat;
   wire c2c_slave_reset_bot;
@@ -265,6 +268,7 @@ module design_1_wrapper
         .IIC_0_sda_t(IIC_0_sda_t),
         .axi_c2c_phy_clk(axi_c2c_phy_clk),
         .axi_clk(axi_clk),
+        .axisaf_wr_rst_0(axisaf_wr_rst_0),
         .bp_clk_sel(bp_clk_sel),
         .c2c_mgt_stat(c2c_mgt_stat),
         .c2c_slave_reset_bot(c2c_slave_reset_bot),

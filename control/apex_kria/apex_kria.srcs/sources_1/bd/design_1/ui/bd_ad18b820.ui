@@ -1,0 +1,92 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.851579",
+   "Default View_TopLeft":"-332,-11",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x -10 -y 200 -defaultsOSRD
+preplace port S_AXI1 -pg 1 -lvl 0 -x -10 -y 50 -defaultsOSRD
+preplace port port-id_aurora_pma_init_9 -pg 1 -lvl 3 -x 1210 -y 590 -defaultsOSRD
+preplace port port-id_axi_c2c_phy_clk -pg 1 -lvl 0 -x -10 -y 530 -defaultsOSRD
+preplace port port-id_axi_clk -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace port port-id_c2c_slave_reset_bot -pg 1 -lvl 3 -x 1210 -y 710 -defaultsOSRD
+preplace port port-id_c2c_slave_reset_top -pg 1 -lvl 3 -x 1210 -y 670 -defaultsOSRD
+preplace port port-id_channel_up_bot_15 -pg 1 -lvl 3 -x 1210 -y 690 -defaultsOSRD
+preplace port port-id_channel_up_top_13 -pg 1 -lvl 3 -x 1210 -y 650 -defaultsOSRD
+preplace port port-id_gtp_reset -pg 1 -lvl 3 -x 1210 -y 630 -defaultsOSRD
+preplace port port-id_hot_swap_sw -pg 1 -lvl 0 -x -10 -y 750 -defaultsOSRD
+preplace port port-id_link_up_bot -pg 1 -lvl 0 -x -10 -y 710 -defaultsOSRD
+preplace port port-id_link_up_top -pg 1 -lvl 0 -x -10 -y 670 -defaultsOSRD
+preplace port port-id_los_10g -pg 1 -lvl 0 -x -10 -y 630 -defaultsOSRD
+preplace port port-id_pim_alarm -pg 1 -lvl 0 -x -10 -y 650 -defaultsOSRD
+preplace port port-id_pok_payload -pg 1 -lvl 0 -x -10 -y 810 -defaultsOSRD
+preplace port port-id_qbv_on_off -pg 1 -lvl 3 -x 1210 -y 440 -defaultsOSRD
+preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_jtag_channel_28 -pg 1 -lvl 3 -x 1210 -y 790 -defaultsOSRD
+preplace port port-id_serial_4 -pg 1 -lvl 3 -x 1210 -y 830 -defaultsOSRD
+preplace port port-id_axi_wr_err_top_0 -pg 1 -lvl 0 -x -10 -y 830 -defaultsOSRD
+preplace port port-id_axi_wr_err_bot_1 -pg 1 -lvl 0 -x -10 -y 850 -defaultsOSRD
+preplace port port-id_axisaf_wr_rst_bot_6 -pg 1 -lvl 3 -x 1210 -y 850 -defaultsOSRD
+preplace port port-id_axisaf_wr_rst_top_5 -pg 1 -lvl 3 -x 1210 -y 870 -defaultsOSRD
+preplace portBus bp_clk_sel_27_26_0 -pg 1 -lvl 3 -x 1210 -y 770 -defaultsOSRD
+preplace portBus en_ipmb_zynq -pg 1 -lvl 3 -x 1210 -y 510 -defaultsOSRD
+preplace portBus ha -pg 1 -lvl 0 -x -10 -y 590 -defaultsOSRD
+preplace portBus id -pg 1 -lvl 3 -x 1210 -y 530 -defaultsOSRD
+preplace portBus pok_change -pg 1 -lvl 0 -x -10 -y 450 -defaultsOSRD
+preplace portBus prbs_err -pg 1 -lvl 0 -x -10 -y 770 -defaultsOSRD
+preplace portBus prbs_sel -pg 1 -lvl 3 -x 1210 -y 570 -defaultsOSRD
+preplace portBus ready_ipmb_zynq -pg 1 -lvl 0 -x -10 -y 610 -defaultsOSRD
+preplace portBus tx_polarity -pg 1 -lvl 3 -x 1210 -y 610 -defaultsOSRD
+preplace portBus tck_clk_ratio_3_0 -pg 1 -lvl 3 -x 1210 -y 810 -defaultsOSRD
+preplace inst pok_alarm_0 -pg 1 -lvl 1 -x 270 -y 430 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 270 -y 230 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 1 -x 270 -y 70 -defaultsOSRD
+preplace inst reg_bank_0 -pg 1 -lvl 2 -x 810 -y 680 -defaultsOSRD
+preplace netloc In1_0_1 1 0 2 NJ 630 490J
+preplace netloc In2_0_1 1 0 2 40J 570 NJ
+preplace netloc In3_0_1 1 0 2 NJ 650 520J
+preplace netloc In8_0_1 1 0 2 NJ 750 480J
+preplace netloc Net 1 0 1 30 70n
+preplace netloc axi_c2c_phy_clk_0_1 1 0 2 NJ 530 500J
+preplace netloc axi_gpio_0_gpio_io_o 1 1 1 520 220n
+preplace netloc cpu_peripheral_reset 1 2 1 1140J 560n
+preplace netloc ipmb_rdy 1 0 2 NJ 610 480J
+preplace netloc link_stat_bot 1 0 2 NJ 710 530J
+preplace netloc link_stat_top 1 0 2 NJ 670 530J
+preplace netloc pok_alarm_0_payload_off_alarm 1 1 1 510 420n
+preplace netloc pok_alarm_0_payload_on_out 1 1 2 480J 400 1180J
+preplace netloc pok_change_0_1 1 0 2 10 800 540J
+preplace netloc pok_payload_28_0_1 1 0 2 NJ 810 500J
+preplace netloc prbs_sel 1 2 1 1180J 540n
+preplace netloc probe0_0_1 1 0 2 NJ 770 490J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 1 20 90n
+preplace netloc reg_bank_0_bp_clk_sel_27_26 1 2 1 1180J 740n
+preplace netloc reg_bank_0_c2c_slave_reset 1 2 1 1130J 640n
+preplace netloc reg_bank_0_c2c_slave_reset_bot_18 1 2 1 1130J 680n
+preplace netloc reg_bank_0_channel_up_bot_17 1 1 2 540 410 1150
+preplace netloc reg_bank_0_channel_up_top_15 1 1 2 550 420 1160
+preplace netloc reg_bank_0_jtag_channel_28 1 2 1 1170J 760n
+preplace netloc reg_bank_0_payload_on_5 1 0 3 40 320 NJ 320 1080
+preplace netloc reg_bank_0_pok_change_enable_25_23 1 0 3 60 330 NJ 330 1090
+preplace netloc reg_bank_0_pok_change_polarity_22_20 1 0 3 50 540 490J 390 1070
+preplace netloc reg_bank_0_reg_ro 1 1 2 NJ 260 1100
+preplace netloc reg_bank_0_serial_4 1 2 1 1150J 800n
+preplace netloc reg_bank_0_tck_clk_ratio_3_0 1 2 1 1160J 780n
+preplace netloc reg_bank_Dout2 1 2 1 1130J 580n
+preplace netloc reg_bank_en_ipmb_zynq 1 2 1 1180J 480n
+preplace netloc reg_bank_gtp_reset_14_0 1 2 1 1120J 600n
+preplace netloc xlslice_0_Dout 1 2 1 1170J 500n
+preplace netloc axi_gpio_1_gpio_io_o 1 1 1 530 60n
+preplace netloc reg_bank_0_reg_com_ro 1 1 2 NJ 100 1110
+preplace netloc axi_wr_err_top_0_1 1 0 2 NJ 830 NJ
+preplace netloc axi_wr_err_bot_1_1 1 0 2 NJ 850 NJ
+preplace netloc reg_bank_0_axisaf_wr_rst_bot_6 1 2 1 1130 840n
+preplace netloc reg_bank_0_axisaf_wr_rst_top_5 1 2 1 1140 820n
+preplace netloc S_AXI1_1 1 0 1 NJ 50
+preplace netloc cpu_M13_AXI 1 0 1 10J 200n
+levelinfo -pg 1 -10 270 810 1210
+pagesize -pg 1 -db -bbox -sgen -220 -20 1440 940
+"
+}
+

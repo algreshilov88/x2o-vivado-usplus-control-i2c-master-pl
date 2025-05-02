@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_reg_bank_0_0",
-    "cell_name": "registers/reg_bank_0",
+    "cell_name": "reg_bank_0",
     "component_reference": "xilinx.com:module_ref:reg_bank:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../apex_kria.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0",
@@ -40,7 +40,7 @@
       "ports": {
         "prbs_clk": [ { "direction": "in" } ],
         "reg_rw": [ { "direction": "in", "size_left": "28", "size_right": "0" } ],
-        "reg_js_rw": [ { "direction": "in", "size_left": "4", "size_right": "0" } ],
+        "reg_com_rw": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],
         "ipmb_en_1_0": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "id_4_2": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
         "payload_on_5": [ { "direction": "out" } ],
@@ -58,6 +58,8 @@
         "jtag_channel_28": [ { "direction": "out" } ],
         "tck_clk_ratio_3_0": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
         "serial_4": [ { "direction": "out" } ],
+        "axisaf_wr_rst_top_5": [ { "direction": "out" } ],
+        "axisaf_wr_rst_bot_6": [ { "direction": "out" } ],
         "ha_7_0": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
         "ready_ipmb_zynq_9_8": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "los_10g_10": [ { "direction": "in" } ],
@@ -71,7 +73,10 @@
         "payload_off_alarm_27_25": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
         "pok_payload_28": [ { "direction": "in" } ],
         "pok_change_31_29": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
-        "reg_ro": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
+        "axi_wr_err_top_0": [ { "direction": "in" } ],
+        "axi_wr_err_bot_1": [ { "direction": "in" } ],
+        "reg_ro": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "reg_com_ro": [ { "direction": "out", "size_left": "1", "size_right": "0" } ]
       },
       "interfaces": {
         "prbs_clk": {

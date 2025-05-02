@@ -293,7 +293,10 @@ module axisafety #(
 		input	wire [1 : 0]		M_AXI_RRESP,
 		input	wire			M_AXI_RLAST,
 		input	wire			M_AXI_RVALID,
-		output	wire			M_AXI_RREADY
+		output	wire			M_AXI_RREADY,
+		
+		input	wire			axisaf_wr_rst,
+		output	reg			    axi_wr_err
 		// }}}
 		// }}}
 		// }}}
@@ -305,7 +308,7 @@ module axisafety #(
 	//
 	//
 	// Register declarations
-	// {{{
+	// {{{	
 	reg			faulty_write_return, faulty_read_return;
 	wire			clear_fault;  // Maq
 	//
@@ -908,18 +911,26 @@ module axisafety #(
 	// we're overriding the M_AXI_BID below, in order to make certain that
 	// the return goes to the right source.
 	//
+	// (+CRUTCH) Due to Linux Kernel crash logic on AXI bus write operation (for ARM64) to a bad address was included custom workaround: 
+	// added custom axi_wr_err error flag for check via gpio from Linux userspace && added corresponding manual axisaf_wr_rst error reset register
+	initial	axi_wr_err = 0;
 	always @(*)
 	if (o_write_fault)
 	begin
 		m_bvalid = (s_wbursts > (S_AXI_BVALID ? 1:0));
 		m_bid    = wfifo_id;
-		m_bresp  = SLAVE_ERROR; // should be replaced with 0 on advice from Dan
+		m_bresp  = 0; // SLAVE_ERROR; // should be replaced with 0 on advice from Dan
+		axi_wr_err <= 1;
 	end else begin
 		m_bvalid = M_AXI_BVALID;
 		if (faulty_write_return)
 			m_bvalid = 0;
 		m_bid    = wfifo_id;
 		m_bresp  = M_AXI_BRESP;
+		if (axisaf_wr_rst)
+	    begin
+		    axi_wr_err <= 0;
+        end
 	end
 	// }}}
 

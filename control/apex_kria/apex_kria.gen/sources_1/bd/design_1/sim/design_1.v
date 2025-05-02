@@ -1,7 +1,7 @@
 //Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-//Date        : Sat Mar 15 02:10:43 2025
+//Date        : Tue Apr 29 20:43:31 2025
 //Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -118,6 +118,10 @@ module C2C_imp_1JU4LGU
     axi_c2c_aurora_tx_tready,
     axi_c2c_phy_clk,
     axi_clk,
+    axi_wr_err,
+    axi_wr_err1,
+    axisaf_wr_rst,
+    axisaf_wr_rst1,
     comb_aresetn,
     do_cc_bot,
     do_cc_top,
@@ -247,6 +251,10 @@ module C2C_imp_1JU4LGU
   input axi_c2c_aurora_tx_tready;
   input axi_c2c_phy_clk;
   input axi_clk;
+  output axi_wr_err;
+  output axi_wr_err1;
+  input axisaf_wr_rst;
+  input axisaf_wr_rst1;
   output comb_aresetn;
   output do_cc_bot;
   output do_cc_top;
@@ -279,6 +287,8 @@ module C2C_imp_1JU4LGU
   wire axi_c2c_phy_clk_0_1;
   wire axi_chip2chip_0_axi_c2c_aurora_tx_tvalid;
   wire axi_chip2chip_1_axi_c2c_aurora_tx_tvalid;
+  wire axisaf_wr_rst1_1;
+  wire axisaf_wr_rst_1;
   wire [27:0]axisafety_1_M_AXI_1_ARADDR;
   wire [1:0]axisafety_1_M_AXI_1_ARBURST;
   wire [5:0]axisafety_1_M_AXI_1_ARID;
@@ -337,7 +347,9 @@ module C2C_imp_1JU4LGU
   wire axisafety_1_M_AXI_WREADY;
   wire [3:0]axisafety_1_M_AXI_WSTRB;
   wire axisafety_1_M_AXI_WVALID;
+  wire axisafety_1_axi_wr_err;
   wire axisafety_1_channel_up;
+  wire axisafety_2_axi_wr_err;
   wire axisafety_2_channel_up;
   wire chip2chip_bot_ff_aurora_do_cc;
   wire chip2chip_top_ff_aurora_do_cc;
@@ -487,6 +499,10 @@ module C2C_imp_1JU4LGU
   assign aurora_mmcm_not_locked_0_1 = mgt_unlocked_top;
   assign aurora_mmcm_not_locked_1_1 = mgt_unlocked_bot;
   assign axi_c2c_phy_clk_0_1 = axi_c2c_phy_clk;
+  assign axi_wr_err = axisafety_2_axi_wr_err;
+  assign axi_wr_err1 = axisafety_1_axi_wr_err;
+  assign axisaf_wr_rst1_1 = axisaf_wr_rst1;
+  assign axisaf_wr_rst_1 = axisaf_wr_rst;
   assign comb_aresetn = aresetn_bot;
   assign cpu_M14_AXI_ARADDR = S_AXI1_araddr[39:0];
   assign cpu_M14_AXI_ARBURST = S_AXI1_arburst[1:0];
@@ -714,6 +730,8 @@ module C2C_imp_1JU4LGU
         .S_AXI_WREADY(s_axi_2_WREADY),
         .S_AXI_WSTRB(s_axi_2_WSTRB),
         .S_AXI_WVALID(s_axi_2_WVALID),
+        .axi_wr_err(axisafety_1_axi_wr_err),
+        .axisaf_wr_rst(axisaf_wr_rst_1),
         .channel_up(axisafety_1_channel_up),
         .comb_aresetn(aresetn_bot),
         .ext_resetn(reg_bank_0_channel_up_bot_17),
@@ -788,6 +806,8 @@ module C2C_imp_1JU4LGU
         .S_AXI_WREADY(cpu_M14_AXI_WREADY),
         .S_AXI_WSTRB(cpu_M14_AXI_WSTRB),
         .S_AXI_WVALID(cpu_M14_AXI_WVALID),
+        .axi_wr_err(axisafety_2_axi_wr_err),
+        .axisaf_wr_rst(axisaf_wr_rst1_1),
         .channel_up(axisafety_2_channel_up),
         .comb_aresetn(aresetn_top),
         .ext_resetn(reg_bank_0_channel_up_top_15),
@@ -1939,7 +1959,8 @@ module bram_loopback_imp_8MI6B2
     S_AXI_wlast,
     S_AXI_wready,
     S_AXI_wstrb,
-    S_AXI_wvalid);
+    S_AXI_wvalid,
+    axisaf_wr_rst_0);
   input S_AXI_ACLK;
   input S_AXI_ARESETN;
   input [39:0]S_AXI_araddr;
@@ -1979,6 +2000,7 @@ module bram_loopback_imp_8MI6B2
   output [0:0]S_AXI_wready;
   input [3:0]S_AXI_wstrb;
   input [0:0]S_AXI_wvalid;
+  input axisaf_wr_rst_0;
 
   wire Net;
   wire [39:0]S_AXI_1_ARADDR;
@@ -2019,6 +2041,7 @@ module bram_loopback_imp_8MI6B2
   wire [3:0]S_AXI_1_WSTRB;
   wire [0:0]S_AXI_1_WVALID;
   wire S_AXI_ARESETN_1;
+  wire axisaf_wr_rst_0_1;
   wire [0:0]xlconstant_0_dout;
 
   assign Net = S_AXI_ACLK;
@@ -2060,6 +2083,7 @@ module bram_loopback_imp_8MI6B2
   assign S_AXI_rresp[1:0] = S_AXI_1_RRESP;
   assign S_AXI_rvalid[0] = S_AXI_1_RVALID;
   assign S_AXI_wready[0] = S_AXI_1_WREADY;
+  assign axisaf_wr_rst_0_1 = axisaf_wr_rst_0;
   design_1_axisafety_2_1 axisafety_2
        (.M_AXI_ARREADY(1'b0),
         .M_AXI_AWREADY(1'b0),
@@ -2111,6 +2135,7 @@ module bram_loopback_imp_8MI6B2
         .S_AXI_WREADY(S_AXI_1_WREADY),
         .S_AXI_WSTRB(S_AXI_1_WSTRB),
         .S_AXI_WVALID(S_AXI_1_WVALID),
+        .axisaf_wr_rst(axisaf_wr_rst_0_1),
         .ext_resetn(xlconstant_0_dout));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
@@ -6172,6 +6197,7 @@ module design_1
     IIC_0_sda_t,
     axi_c2c_phy_clk,
     axi_clk,
+    axisaf_wr_rst_0,
     bp_clk_sel,
     c2c_mgt_stat,
     c2c_slave_reset_bot,
@@ -6261,6 +6287,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_T" *) output IIC_0_sda_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AXI_C2C_PHY_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AXI_C2C_PHY_CLK, CLK_DOMAIN design_1_axi_c2c_phy_clk, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0" *) input axi_c2c_phy_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AXI_CLK, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output axi_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.AXISAF_WR_RST_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.AXISAF_WR_RST_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input axisaf_wr_rst_0;
   output [1:0]bp_clk_sel;
   input [2:0]c2c_mgt_stat;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.C2C_SLAVE_RESET_BOT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.C2C_SLAVE_RESET_BOT, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output c2c_slave_reset_bot;
@@ -6628,6 +6655,8 @@ module design_1
   wire [0:0]axi_interconnect_0_M00_AXI_WREADY;
   wire [15:0]axi_interconnect_0_M00_AXI_WSTRB;
   wire [0:0]axi_interconnect_0_M00_AXI_WVALID;
+  wire axi_wr_err_bot_1_1;
+  wire axi_wr_err_top_0_1;
   (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
   (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TKEEP" *) (* DONT_TOUCH *) wire [7:0]axis_data_fifo_0_M_AXIS_TKEEP;
   (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TLAST;
@@ -6641,6 +6670,9 @@ module design_1
   wire axis_jtag_0_jtag_1_TDI;
   wire axis_jtag_0_jtag_1_TDO;
   wire axis_jtag_0_jtag_1_TMS;
+  wire axisaf_wr_rst1_1;
+  wire axisaf_wr_rst_0_1;
+  wire axisaf_wr_rst_1;
   (* CONN_BUS_INFO = "axisafety_1_M_AXI xilinx.com:interface:aximm:1.0 AXI4 ARADDR" *) (* DONT_TOUCH *) wire [27:0]axisafety_1_M_AXI_ARADDR;
   (* CONN_BUS_INFO = "axisafety_1_M_AXI xilinx.com:interface:aximm:1.0 AXI4 ARBURST" *) (* DONT_TOUCH *) wire [1:0]axisafety_1_M_AXI_ARBURST;
   (* CONN_BUS_INFO = "axisafety_1_M_AXI xilinx.com:interface:aximm:1.0 AXI4 ARID" *) (* DONT_TOUCH *) wire [5:0]axisafety_1_M_AXI_ARID;
@@ -7180,6 +7212,7 @@ module design_1
   assign axi_iic_1_IIC_SDA_I = scf_i2c_1_sda_i;
   assign axi_iic_2_IIC_SCL_I = scf_i2c_2_scl_i;
   assign axi_iic_2_IIC_SDA_I = scf_i2c_2_sda_i;
+  assign axisaf_wr_rst_0_1 = axisaf_wr_rst_0;
   assign bp_clk_sel[1:0] = registers_bp_clk_sel_27_26_0;
   assign c2c_slave_reset_bot = reg_bank_0_c2c_slave_reset_bot_18;
   assign c2c_slave_reset_top = reg_bank_0_c2c_slave_reset;
@@ -7348,6 +7381,10 @@ module design_1
         .axi_c2c_aurora_tx_tready(reg_bank_0_channel_up_top_15),
         .axi_c2c_phy_clk(axi_c2c_phy_clk_0_1),
         .axi_clk(Net),
+        .axi_wr_err(axi_wr_err_top_0_1),
+        .axi_wr_err1(axi_wr_err_bot_1_1),
+        .axisaf_wr_rst(axisaf_wr_rst_1),
+        .axisaf_wr_rst1(axisaf_wr_rst1_1),
         .comb_aresetn(aresetn_bot),
         .do_cc_bot(chip2chip_bot_ff_aurora_do_cc),
         .do_cc_top(chip2chip_top_ff_aurora_do_cc),
@@ -7818,7 +7855,8 @@ module design_1
         .S_AXI_wlast(cpu_M18_AXI_WLAST),
         .S_AXI_wready(cpu_M18_AXI_WREADY),
         .S_AXI_wstrb(cpu_M18_AXI_WSTRB),
-        .S_AXI_wvalid(cpu_M18_AXI_WVALID));
+        .S_AXI_wvalid(cpu_M18_AXI_WVALID),
+        .axisaf_wr_rst_0(axisaf_wr_rst_0_1));
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK1),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -8751,6 +8789,10 @@ module design_1
         .aurora_pma_init_9(cpu_peripheral_reset),
         .axi_c2c_phy_clk(axi_c2c_phy_clk_0_1),
         .axi_clk(Net),
+        .axi_wr_err_bot_1(axi_wr_err_bot_1_1),
+        .axi_wr_err_top_0(axi_wr_err_top_0_1),
+        .axisaf_wr_rst_bot_6(axisaf_wr_rst_1),
+        .axisaf_wr_rst_top_5(axisaf_wr_rst1_1),
         .bp_clk_sel_27_26_0(registers_bp_clk_sel_27_26_0),
         .c2c_slave_reset_bot(reg_bank_0_c2c_slave_reset_bot_18),
         .c2c_slave_reset_top(reg_bank_0_c2c_slave_reset),
@@ -24287,6 +24329,10 @@ module registers_imp_1QVI28F
     aurora_pma_init_9,
     axi_c2c_phy_clk,
     axi_clk,
+    axi_wr_err_bot_1,
+    axi_wr_err_top_0,
+    axisaf_wr_rst_bot_6,
+    axisaf_wr_rst_top_5,
     bp_clk_sel_27_26_0,
     c2c_slave_reset_bot,
     c2c_slave_reset_top,
@@ -24349,6 +24395,10 @@ module registers_imp_1QVI28F
   output aurora_pma_init_9;
   input axi_c2c_phy_clk;
   input axi_clk;
+  input axi_wr_err_bot_1;
+  input axi_wr_err_top_0;
+  output axisaf_wr_rst_bot_6;
+  output axisaf_wr_rst_top_5;
   output [1:0]bp_clk_sel_27_26_0;
   output c2c_slave_reset_bot;
   output c2c_slave_reset_top;
@@ -24399,7 +24449,9 @@ module registers_imp_1QVI28F
   wire S_AXI1_1_WVALID;
   wire axi_c2c_phy_clk_0_1;
   wire [28:0]axi_gpio_0_gpio_io_o;
-  wire [4:0]axi_gpio_1_gpio_io_o;
+  wire [6:0]axi_gpio_1_gpio_io_o;
+  wire axi_wr_err_bot_1_1;
+  wire axi_wr_err_top_0_1;
   wire [39:0]cpu_M13_AXI_ARADDR;
   wire cpu_M13_AXI_ARREADY;
   wire cpu_M13_AXI_ARVALID;
@@ -24428,6 +24480,8 @@ module registers_imp_1QVI28F
   wire [2:0]prbs_sel;
   wire [3:0]probe0_0_1;
   wire proc_sys_reset_0_peripheral_aresetn;
+  wire reg_bank_0_axisaf_wr_rst_bot_6;
+  wire reg_bank_0_axisaf_wr_rst_top_5;
   wire [1:0]reg_bank_0_bp_clk_sel_27_26;
   wire reg_bank_0_c2c_slave_reset;
   wire reg_bank_0_c2c_slave_reset_bot_18;
@@ -24437,6 +24491,7 @@ module registers_imp_1QVI28F
   wire reg_bank_0_payload_on_5;
   wire [2:0]reg_bank_0_pok_change_enable_25_23;
   wire [2:0]reg_bank_0_pok_change_polarity_22_20;
+  wire [1:0]reg_bank_0_reg_com_ro;
   wire [31:0]reg_bank_0_reg_ro;
   wire reg_bank_0_serial_4;
   wire [3:0]reg_bank_0_tck_clk_ratio_3_0;
@@ -24477,6 +24532,10 @@ module registers_imp_1QVI28F
   assign S_AXI_wready = cpu_M13_AXI_WREADY;
   assign aurora_pma_init_9 = cpu_peripheral_reset;
   assign axi_c2c_phy_clk_0_1 = axi_c2c_phy_clk;
+  assign axi_wr_err_bot_1_1 = axi_wr_err_bot_1;
+  assign axi_wr_err_top_0_1 = axi_wr_err_top_0;
+  assign axisaf_wr_rst_bot_6 = reg_bank_0_axisaf_wr_rst_bot_6;
+  assign axisaf_wr_rst_top_5 = reg_bank_0_axisaf_wr_rst_top_5;
   assign bp_clk_sel_27_26_0[1:0] = reg_bank_0_bp_clk_sel_27_26;
   assign c2c_slave_reset_bot = reg_bank_0_c2c_slave_reset_bot_18;
   assign c2c_slave_reset_top = reg_bank_0_c2c_slave_reset;
@@ -24529,7 +24588,8 @@ module registers_imp_1QVI28F
         .s_axi_wstrb(cpu_M13_AXI_WSTRB),
         .s_axi_wvalid(cpu_M13_AXI_WVALID));
   design_1_axi_gpio_0_2 axi_gpio_1
-       (.gpio_io_o(axi_gpio_1_gpio_io_o),
+       (.gpio2_io_i(reg_bank_0_reg_com_ro),
+        .gpio_io_o(axi_gpio_1_gpio_io_o),
         .s_axi_aclk(Net),
         .s_axi_araddr(S_AXI1_1_ARADDR),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -24559,6 +24619,10 @@ module registers_imp_1QVI28F
         .pok_change_polarity(reg_bank_0_pok_change_polarity_22_20));
   design_1_reg_bank_0_0 reg_bank_0
        (.aurora_pma_init_9(cpu_peripheral_reset),
+        .axi_wr_err_bot_1(axi_wr_err_bot_1_1),
+        .axi_wr_err_top_0(axi_wr_err_top_0_1),
+        .axisaf_wr_rst_bot_6(reg_bank_0_axisaf_wr_rst_bot_6),
+        .axisaf_wr_rst_top_5(reg_bank_0_axisaf_wr_rst_top_5),
         .bp_clk_sel_27_26(reg_bank_0_bp_clk_sel_27_26),
         .c2c_slave_reset_bot_18(reg_bank_0_c2c_slave_reset_bot_18),
         .c2c_slave_reset_top_16(reg_bank_0_c2c_slave_reset),
@@ -24586,7 +24650,8 @@ module registers_imp_1QVI28F
         .prbs_err_20_17(probe0_0_1),
         .prbs_sel_8_6(prbs_sel),
         .ready_ipmb_zynq_9_8(ipmb_rdy),
-        .reg_js_rw(axi_gpio_1_gpio_io_o),
+        .reg_com_ro(reg_bank_0_reg_com_ro),
+        .reg_com_rw(axi_gpio_1_gpio_io_o),
         .reg_ro(reg_bank_0_reg_ro),
         .reg_rw(axi_gpio_0_gpio_io_o),
         .serial_4(reg_bank_0_serial_4),
@@ -25052,7 +25117,7 @@ module s00_couplers_imp_17NDAC5
         .s_axi_wready(s00_regslice_to_auto_ds_WREADY),
         .s_axi_wstrb(s00_regslice_to_auto_ds_WSTRB),
         .s_axi_wvalid(s00_regslice_to_auto_ds_WVALID));
-  design_1_s00_data_fifo_451 s00_data_fifo
+  design_1_s00_data_fifo_499 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_araddr(s00_data_fifo_to_s00_couplers_ARADDR),
@@ -25123,7 +25188,7 @@ module s00_couplers_imp_17NDAC5
         .s_axi_wready(auto_ds_to_s00_data_fifo_WREADY),
         .s_axi_wstrb(auto_ds_to_s00_data_fifo_WSTRB),
         .s_axi_wvalid(auto_ds_to_s00_data_fifo_WVALID));
-  design_1_s00_regslice_451 s00_regslice
+  design_1_s00_regslice_499 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(s00_regslice_to_auto_ds_ARADDR),
@@ -26136,7 +26201,7 @@ module s00_couplers_imp_JHHGD2
   assign s00_data_fifo_to_s00_couplers_RLAST = M_AXI_rlast;
   assign s00_data_fifo_to_s00_couplers_RRESP = M_AXI_rresp[1:0];
   assign s00_data_fifo_to_s00_couplers_RVALID = M_AXI_rvalid;
-  design_1_s00_data_fifo_450 s00_data_fifo
+  design_1_s00_data_fifo_498 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_araddr(s00_data_fifo_to_s00_couplers_ARADDR),
@@ -26172,7 +26237,7 @@ module s00_couplers_imp_JHHGD2
         .s_axi_rready(s00_regslice_to_s00_data_fifo_RREADY),
         .s_axi_rresp(s00_regslice_to_s00_data_fifo_RRESP),
         .s_axi_rvalid(s00_regslice_to_s00_data_fifo_RVALID));
-  design_1_s00_regslice_450 s00_regslice
+  design_1_s00_regslice_498 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(s00_regslice_to_s00_data_fifo_ARADDR),
@@ -26629,7 +26694,7 @@ module s00_couplers_imp_MHSNH2
         .s_axi_wready(s00_regslice_to_auto_us_WREADY),
         .s_axi_wstrb(s00_regslice_to_auto_us_WSTRB),
         .s_axi_wvalid(s00_regslice_to_auto_us_WVALID));
-  design_1_s00_data_fifo_449 s00_data_fifo
+  design_1_s00_data_fifo_497 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_araddr(s00_data_fifo_to_s00_couplers_ARADDR),
@@ -26700,7 +26765,7 @@ module s00_couplers_imp_MHSNH2
         .s_axi_wready(auto_us_to_s00_data_fifo_WREADY),
         .s_axi_wstrb(auto_us_to_s00_data_fifo_WSTRB),
         .s_axi_wvalid(auto_us_to_s00_data_fifo_WVALID));
-  design_1_s00_regslice_449 s00_regslice
+  design_1_s00_regslice_497 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(s00_regslice_to_auto_us_ARADDR),
@@ -27296,7 +27361,7 @@ module s00_couplers_imp_SYZDZQ
   assign s00_data_fifo_to_s00_couplers_BRESP = M_AXI_bresp[1:0];
   assign s00_data_fifo_to_s00_couplers_BVALID = M_AXI_bvalid;
   assign s00_data_fifo_to_s00_couplers_WREADY = M_AXI_wready;
-  design_1_s00_data_fifo_448 s00_data_fifo
+  design_1_s00_data_fifo_496 s00_data_fifo
        (.aclk(M_ACLK_1),
         .aresetn(M_ARESETN_1),
         .m_axi_awaddr(s00_data_fifo_to_s00_couplers_AWADDR),
@@ -27338,7 +27403,7 @@ module s00_couplers_imp_SYZDZQ
         .s_axi_wready(s00_regslice_to_s00_data_fifo_WREADY),
         .s_axi_wstrb(s00_regslice_to_s00_data_fifo_WSTRB),
         .s_axi_wvalid(s00_regslice_to_s00_data_fifo_WVALID));
-  design_1_s00_regslice_448 s00_regslice
+  design_1_s00_regslice_496 s00_regslice
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_awaddr(s00_regslice_to_s00_data_fifo_AWADDR),

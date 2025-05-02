@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5FC0AF15C251E33B",
+      "boundary_crc": "0x55036B077B930CAE",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../apex_kria.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -797,6 +797,20 @@
             "value_src": "user_prop"
           }
         }
+      },
+      "axisaf_wr_rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -913,6 +927,20 @@
           },
           "txvalid_top": {
             "direction": "O"
+          },
+          "axi_wr_err": {
+            "direction": "O"
+          },
+          "axi_wr_err1": {
+            "direction": "O"
+          },
+          "axisaf_wr_rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "axisaf_wr_rst1": {
+            "type": "rst",
+            "direction": "I"
           }
         },
         "components": {
@@ -1661,6 +1689,13 @@
               },
               "channel_up": {
                 "direction": "O"
+              },
+              "axisaf_wr_rst": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "axi_wr_err": {
+                "direction": "O"
               }
             },
             "addressing": {
@@ -2377,6 +2412,13 @@
               },
               "channel_up": {
                 "direction": "O"
+              },
+              "axisaf_wr_rst": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "axi_wr_err": {
+                "direction": "O"
               }
             },
             "addressing": {
@@ -2485,10 +2527,34 @@
               "txvalid_top"
             ]
           },
+          "axisaf_wr_rst1_1": {
+            "ports": [
+              "axisaf_wr_rst1",
+              "axisafety_2/axisaf_wr_rst"
+            ]
+          },
+          "axisaf_wr_rst_1": {
+            "ports": [
+              "axisaf_wr_rst",
+              "axisafety_1/axisaf_wr_rst"
+            ]
+          },
+          "axisafety_1_axi_wr_err": {
+            "ports": [
+              "axisafety_1/axi_wr_err",
+              "axi_wr_err1"
+            ]
+          },
           "axisafety_1_channel_up": {
             "ports": [
               "axisafety_1/channel_up",
               "axi_chip2chip_0/axi_c2c_aurora_channel_up"
+            ]
+          },
+          "axisafety_2_axi_wr_err": {
+            "ports": [
+              "axisafety_2/axi_wr_err",
+              "axi_wr_err"
             ]
           },
           "axisafety_2_channel_up": {
@@ -4302,6 +4368,10 @@
           "S_AXI_ARESETN": {
             "type": "rst",
             "direction": "I"
+          },
+          "axisaf_wr_rst_0": {
+            "type": "rst",
+            "direction": "I"
           }
         },
         "components": {
@@ -5016,6 +5086,13 @@
               },
               "channel_up": {
                 "direction": "O"
+              },
+              "axisaf_wr_rst": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "axi_wr_err": {
+                "direction": "O"
               }
             },
             "addressing": {
@@ -5047,6 +5124,12 @@
             "ports": [
               "S_AXI_ARESETN",
               "axisafety_2/S_AXI_ARESETN"
+            ]
+          },
+          "axisaf_wr_rst_0_1": {
+            "ports": [
+              "axisaf_wr_rst_0",
+              "axisafety_2/axisaf_wr_rst"
             ]
           },
           "xlconstant_0_dout": {
@@ -5521,8 +5604,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_448",
-                    "xci_path": "ip/design_1_s00_regslice_448/design_1_s00_regslice_448.xci",
+                    "xci_name": "design_1_s00_regslice_496",
+                    "xci_path": "ip/design_1_s00_regslice_496/design_1_s00_regslice_496.xci",
                     "inst_hier_path": "cpu/axi_interconnect_1/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -5536,8 +5619,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_448",
-                    "xci_path": "ip/design_1_s00_data_fifo_448/design_1_s00_data_fifo_448.xci",
+                    "xci_name": "design_1_s00_data_fifo_496",
+                    "xci_path": "ip/design_1_s00_data_fifo_496/design_1_s00_data_fifo_496.xci",
                     "inst_hier_path": "cpu/axi_interconnect_1/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -5768,8 +5851,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_449",
-                    "xci_path": "ip/design_1_s00_regslice_449/design_1_s00_regslice_449.xci",
+                    "xci_name": "design_1_s00_regslice_497",
+                    "xci_path": "ip/design_1_s00_regslice_497/design_1_s00_regslice_497.xci",
                     "inst_hier_path": "cpu/axi_interconnect_2/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -5783,8 +5866,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_449",
-                    "xci_path": "ip/design_1_s00_data_fifo_449/design_1_s00_data_fifo_449.xci",
+                    "xci_name": "design_1_s00_data_fifo_497",
+                    "xci_path": "ip/design_1_s00_data_fifo_497/design_1_s00_data_fifo_497.xci",
                     "inst_hier_path": "cpu/axi_interconnect_2/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -7165,8 +7248,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_450",
-                    "xci_path": "ip/design_1_s00_regslice_450/design_1_s00_regslice_450.xci",
+                    "xci_name": "design_1_s00_regslice_498",
+                    "xci_path": "ip/design_1_s00_regslice_498/design_1_s00_regslice_498.xci",
                     "inst_hier_path": "cpu/axi_interconnect_3/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -7180,8 +7263,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_450",
-                    "xci_path": "ip/design_1_s00_data_fifo_450/design_1_s00_data_fifo_450.xci",
+                    "xci_name": "design_1_s00_data_fifo_498",
+                    "xci_path": "ip/design_1_s00_data_fifo_498/design_1_s00_data_fifo_498.xci",
                     "inst_hier_path": "cpu/axi_interconnect_3/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -8054,8 +8137,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_451",
-                    "xci_path": "ip/design_1_s00_regslice_451/design_1_s00_regslice_451.xci",
+                    "xci_name": "design_1_s00_regslice_499",
+                    "xci_path": "ip/design_1_s00_regslice_499/design_1_s00_regslice_499.xci",
                     "inst_hier_path": "cpu/ps7_0_axi_periph/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -8069,8 +8152,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_451",
-                    "xci_path": "ip/design_1_s00_data_fifo_451/design_1_s00_data_fifo_451.xci",
+                    "xci_name": "design_1_s00_data_fifo_499",
+                    "xci_path": "ip/design_1_s00_data_fifo_499/design_1_s00_data_fifo_499.xci",
                     "inst_hier_path": "cpu/ps7_0_axi_periph/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -14714,6 +14797,20 @@
             "direction": "O",
             "left": "3",
             "right": "0"
+          },
+          "axi_wr_err_top_0": {
+            "direction": "I"
+          },
+          "axi_wr_err_bot_1": {
+            "direction": "I"
+          },
+          "axisaf_wr_rst_bot_6": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "axisaf_wr_rst_top_5": {
+            "type": "rst",
+            "direction": "O"
           }
         },
         "components": {
@@ -14805,14 +14902,20 @@
               "C_ALL_INPUTS": {
                 "value": "0"
               },
+              "C_ALL_INPUTS_2": {
+                "value": "1"
+              },
               "C_ALL_OUTPUTS": {
                 "value": "1"
               },
+              "C_GPIO2_WIDTH": {
+                "value": "2"
+              },
               "C_GPIO_WIDTH": {
-                "value": "5"
+                "value": "7"
               },
               "C_IS_DUAL": {
-                "value": "0"
+                "value": "1"
               }
             }
           },
@@ -14850,9 +14953,9 @@
                 "left": "28",
                 "right": "0"
               },
-              "reg_js_rw": {
+              "reg_com_rw": {
                 "direction": "I",
-                "left": "4",
+                "left": "6",
                 "right": "0"
               },
               "ipmb_en_1_0": {
@@ -14922,6 +15025,12 @@
               "serial_4": {
                 "direction": "O"
               },
+              "axisaf_wr_rst_top_5": {
+                "direction": "O"
+              },
+              "axisaf_wr_rst_bot_6": {
+                "direction": "O"
+              },
               "ha_7_0": {
                 "direction": "I",
                 "left": "7",
@@ -14971,9 +15080,20 @@
                 "left": "2",
                 "right": "0"
               },
+              "axi_wr_err_top_0": {
+                "direction": "I"
+              },
+              "axi_wr_err_bot_1": {
+                "direction": "I"
+              },
               "reg_ro": {
                 "direction": "O",
                 "left": "31",
+                "right": "0"
+              },
+              "reg_com_ro": {
+                "direction": "O",
+                "left": "1",
                 "right": "0"
               }
             }
@@ -15041,7 +15161,19 @@
           "axi_gpio_1_gpio_io_o": {
             "ports": [
               "axi_gpio_1/gpio_io_o",
-              "reg_bank_0/reg_js_rw"
+              "reg_bank_0/reg_com_rw"
+            ]
+          },
+          "axi_wr_err_bot_1_1": {
+            "ports": [
+              "axi_wr_err_bot_1",
+              "reg_bank_0/axi_wr_err_bot_1"
+            ]
+          },
+          "axi_wr_err_top_0_1": {
+            "ports": [
+              "axi_wr_err_top_0",
+              "reg_bank_0/axi_wr_err_top_0"
             ]
           },
           "cpu_peripheral_reset": {
@@ -15112,6 +15244,18 @@
               "axi_gpio_1/s_axi_aresetn"
             ]
           },
+          "reg_bank_0_axisaf_wr_rst_bot_6": {
+            "ports": [
+              "reg_bank_0/axisaf_wr_rst_bot_6",
+              "axisaf_wr_rst_bot_6"
+            ]
+          },
+          "reg_bank_0_axisaf_wr_rst_top_5": {
+            "ports": [
+              "reg_bank_0/axisaf_wr_rst_top_5",
+              "axisaf_wr_rst_top_5"
+            ]
+          },
           "reg_bank_0_bp_clk_sel_27_26": {
             "ports": [
               "reg_bank_0/bp_clk_sel_27_26",
@@ -15166,6 +15310,12 @@
             "ports": [
               "reg_bank_0/pok_change_polarity_22_20",
               "pok_alarm_0/pok_change_polarity"
+            ]
+          },
+          "reg_bank_0_reg_com_ro": {
+            "ports": [
+              "reg_bank_0/reg_com_ro",
+              "axi_gpio_1/gpio2_io_i"
             ]
           },
           "reg_bank_0_reg_ro": {
@@ -19209,6 +19359,36 @@
         "ports": [
           "axi_dma_0/s2mm_introut",
           "cpu/In8"
+        ]
+      },
+      "axi_wr_err_bot_1_1": {
+        "ports": [
+          "C2C/axi_wr_err1",
+          "registers/axi_wr_err_bot_1"
+        ]
+      },
+      "axi_wr_err_top_0_1": {
+        "ports": [
+          "C2C/axi_wr_err",
+          "registers/axi_wr_err_top_0"
+        ]
+      },
+      "axisaf_wr_rst1_1": {
+        "ports": [
+          "registers/axisaf_wr_rst_top_5",
+          "C2C/axisaf_wr_rst1"
+        ]
+      },
+      "axisaf_wr_rst_0_1": {
+        "ports": [
+          "axisaf_wr_rst_0",
+          "bram_loopback/axisaf_wr_rst_0"
+        ]
+      },
+      "axisaf_wr_rst_1": {
+        "ports": [
+          "registers/axisaf_wr_rst_bot_6",
+          "C2C/axisaf_wr_rst"
         ]
       },
       "c2c_mgt_stat": {
