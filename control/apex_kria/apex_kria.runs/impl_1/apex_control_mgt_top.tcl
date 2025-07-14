@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {IP_Flow 19-4965}  -new_severity {WARNING} 
 set_msg_config  -id {BD 41-2383}  -new_severity {WARNING} 
@@ -128,6 +129,7 @@ set rc [catch {
   set_param power.enableLutRouteBelPower 1
   set_param power.enableCarry8RouteBelPower 1
   set_param power.enableUnconnectedCarry8PinPower 1
+  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 3
   set_param power.BramSDPPropagationFix 1
 OPTRACE "create in-memory project" START { }

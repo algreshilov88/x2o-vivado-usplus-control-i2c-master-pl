@@ -138,8 +138,8 @@ module design_1_axisafety_1_0 (
   M_AXI_RLAST,
   M_AXI_RVALID,
   M_AXI_RREADY,
-  axisaf_wr_rst,
-  axi_wr_err
+  m_slave_error,
+  r_slave_error
 );
 
 output wire o_read_fault;
@@ -312,10 +312,8 @@ input wire M_AXI_RVALID;
 _PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire M_AXI_RREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axisaf_wr_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axisaf_wr_rst RST" *)
-input wire axisaf_wr_rst;
-output wire axi_wr_err;
+output wire [1 : 0] m_slave_error;
+output wire [1 : 0] r_slave_error;
 
   axisafety #(
     .C_S_AXI_ID_WIDTH(6),
@@ -410,7 +408,7 @@ output wire axi_wr_err;
     .M_AXI_RLAST(M_AXI_RLAST),
     .M_AXI_RVALID(M_AXI_RVALID),
     .M_AXI_RREADY(M_AXI_RREADY),
-    .axisaf_wr_rst(axisaf_wr_rst),
-    .axi_wr_err(axi_wr_err)
+    .m_slave_error(m_slave_error),
+    .r_slave_error(r_slave_error)
   );
 endmodule

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 29 20:43:44 2025" VIVADOVERSION="2022.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 24 18:34:52 2025" VIVADOVERSION="2022.2.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.3" DEVICE="xck26" NAME="design_1" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -459,11 +459,7 @@
         <CONNECTION INSTANCE="xxv_ethernet_0" PORT="gt_refclk_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="axisaf_wr_rst_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_axisaf_wr_rst_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="bram_loopback_axisafety_2" PORT="axisaf_wr_rst"/>
-      </CONNECTIONS>
-    </PORT>
+    <PORT DIR="I" NAME="axisaf_wr_rst_0" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -1741,14 +1737,14 @@
             <CONNECTION INSTANCE="C2C_axi_chip2chip_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axisaf_wr_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="registers_reg_bank_0_axisaf_wr_rst_bot_6">
+        <PORT DIR="O" LEFT="1" NAME="m_slave_error" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_1_m_slave_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="axisaf_wr_rst_bot_6"/>
+            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="m_slave_error_bot_4_5"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_wr_err" SIGIS="undef" SIGNAME="C2C_axisafety_1_axi_wr_err">
+        <PORT DIR="O" LEFT="1" NAME="r_slave_error" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_1_r_slave_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="axi_wr_err_bot_1"/>
+            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="r_slave_error_bot_6_7"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2302,14 +2298,14 @@
             <CONNECTION INSTANCE="C2C_axi_chip2chip_1" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axisaf_wr_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="registers_reg_bank_0_axisaf_wr_rst_top_5">
+        <PORT DIR="O" LEFT="1" NAME="m_slave_error" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_2_m_slave_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="axisaf_wr_rst_top_5"/>
+            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="m_slave_error_top_0_1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_wr_err" SIGIS="undef" SIGNAME="C2C_axisafety_2_axi_wr_err">
+        <PORT DIR="O" LEFT="1" NAME="r_slave_error" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_2_r_slave_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="axi_wr_err_top_0"/>
+            <CONNECTION INSTANCE="registers_reg_bank_0" PORT="r_slave_error_top_2_3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -12791,12 +12787,8 @@
         <PORT DIR="I" NAME="M_AXI_RLAST" SIGIS="undef"/>
         <PORT DIR="I" NAME="M_AXI_RVALID" SIGIS="undef"/>
         <PORT DIR="O" NAME="M_AXI_RREADY" SIGIS="undef"/>
-        <PORT DIR="I" NAME="axisaf_wr_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_axisaf_wr_rst_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="axisaf_wr_rst_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="axi_wr_err" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="m_slave_error" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="r_slave_error" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="32" NAME="M_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
@@ -23441,7 +23433,7 @@
         <PARAMETER NAME="C_TRACE_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_USE_DEBUG_TEST" VALUE="0"/>
         <PARAMETER NAME="C_SD0_INTERNAL_BUS_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_SD1_INTERNAL_BUS_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_NUM_F2P_0_INTR_INPUTS" VALUE="8"/>
         <PARAMETER NAME="C_NUM_F2P_1_INTR_INPUTS" VALUE="6"/>
         <PARAMETER NAME="C_EMIO_GPIO_WIDTH" VALUE="1"/>
@@ -23672,8 +23664,8 @@
         <PARAMETER NAME="SUBPRESET1" VALUE="Custom"/>
         <PARAMETER NAME="SUBPRESET2" VALUE="Custom"/>
         <PARAMETER NAME="PSU_UIPARAM_GENERATE_SUMMARY" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1##########################"/>
-        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#sdio0_data_out[4]#sdio0_data_out[5]#sdio0_data_out[6]#sdio0_data_out[7]#sdio0_cmd_out#sdio0_clk_out#sdio0_bus_pow#gpio0[24]#gpio0[25]#gpio1[26]#gpio1[27]#gpio1[28]#gpio1[29]#gpio1[30]#gpio1[31]#gpio1[32]#gpio1[33]#gpio1[34]#gpio1[35]#gpio1[36]#gpio1[37]#gpio1[38]#sdio1_data_out[4]#sdio1_data_out[5]#sdio1_data_out[6]#sdio1_data_out[7]#sdio1_bus_pow#gpio1[44]#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out##########################"/>
+        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SD 1#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1##########################"/>
+        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#sdio0_data_out[4]#sdio0_data_out[5]#sdio0_data_out[6]#sdio0_data_out[7]#sdio0_cmd_out#sdio0_clk_out#sdio0_bus_pow#gpio0[24]#gpio0[25]#gpio1[26]#gpio1[27]#gpio1[28]#gpio1[29]#gpio1[30]#gpio1[31]#gpio1[32]#gpio1[33]#gpio1[34]#gpio1[35]#gpio1[36]#gpio1[37]#gpio1[38]#gpio1[39]#gpio1[40]#gpio1[41]#gpio1[42]#sdio1_bus_pow#gpio1[44]#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out##########################"/>
         <PARAMETER NAME="PSU_PERIPHERAL_BOARD_PRESET"/>
         <PARAMETER NAME="PSU__NAND__PERIPHERAL__IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PSU__NAND__PERIPHERAL__ENABLE" VALUE="0"/>
@@ -23749,22 +23741,22 @@
         <PARAMETER NAME="PSU__SD0__CLK_100_SDR_OTAP_DLY" VALUE="0x00"/>
         <PARAMETER NAME="PSU__SD0__CLK_200_SDR_OTAP_DLY" VALUE="0x00"/>
         <PARAMETER NAME="PSU__SD1__PERIPHERAL__ENABLE" VALUE="1"/>
-        <PARAMETER NAME="PSU__SD1__PERIPHERAL__IO" VALUE="MIO 39 .. 51"/>
+        <PARAMETER NAME="PSU__SD1__PERIPHERAL__IO" VALUE="MIO 46 .. 51"/>
         <PARAMETER NAME="PSU__SD1__GRP_CD__ENABLE" VALUE="1"/>
         <PARAMETER NAME="PSU__SD1__GRP_CD__IO" VALUE="MIO 45"/>
         <PARAMETER NAME="PSU__SD1__GRP_POW__ENABLE" VALUE="1"/>
         <PARAMETER NAME="PSU__SD1__GRP_POW__IO" VALUE="MIO 43"/>
         <PARAMETER NAME="PSU__SD1__GRP_WP__ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__SD1__GRP_WP__IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PSU__SD1__SLOT_TYPE" VALUE="SD 3.0"/>
+        <PARAMETER NAME="PSU__SD1__SLOT_TYPE" VALUE="SD 2.0"/>
         <PARAMETER NAME="PSU__SD1__RESET__ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PSU__SD1__DATA_TRANSFER_MODE" VALUE="8Bit"/>
+        <PARAMETER NAME="PSU__SD1__DATA_TRANSFER_MODE" VALUE="4Bit"/>
         <PARAMETER NAME="PSU__SD1__CLK_50_SDR_ITAP_DLY" VALUE="0x15"/>
         <PARAMETER NAME="PSU__SD1__CLK_50_SDR_OTAP_DLY" VALUE="0x5"/>
-        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_ITAP_DLY" VALUE="0x3D"/>
-        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_OTAP_DLY" VALUE="0x4"/>
-        <PARAMETER NAME="PSU__SD1__CLK_100_SDR_OTAP_DLY" VALUE="0x3"/>
-        <PARAMETER NAME="PSU__SD1__CLK_200_SDR_OTAP_DLY" VALUE="0x3"/>
+        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_ITAP_DLY" VALUE="0x0"/>
+        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_OTAP_DLY" VALUE="0x0"/>
+        <PARAMETER NAME="PSU__SD1__CLK_100_SDR_OTAP_DLY" VALUE="0x0"/>
+        <PARAMETER NAME="PSU__SD1__CLK_200_SDR_OTAP_DLY" VALUE="0x0"/>
         <PARAMETER NAME="PSU__DEVICE_TYPE" VALUE="EV"/>
         <PARAMETER NAME="PSU_SMC_CYCLE_T0" VALUE="NA"/>
         <PARAMETER NAME="PSU_SMC_CYCLE_T1" VALUE="NA"/>
@@ -24380,10 +24372,10 @@
         <PARAMETER NAME="PSU_MIO_50_SLEW" VALUE="slow"/>
         <PARAMETER NAME="PSU_MIO_50_DIRECTION" VALUE="inout"/>
         <PARAMETER NAME="PSU_MIO_51_PULLUPDOWN" VALUE="pullup"/>
-        <PARAMETER NAME="PSU_MIO_51_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_51_DRIVE_STRENGTH" VALUE="4"/>
         <PARAMETER NAME="PSU_MIO_51_POLARITY" VALUE="Default"/>
         <PARAMETER NAME="PSU_MIO_51_INPUT_TYPE" VALUE="cmos"/>
-        <PARAMETER NAME="PSU_MIO_51_SLEW" VALUE="fast"/>
+        <PARAMETER NAME="PSU_MIO_51_SLEW" VALUE="slow"/>
         <PARAMETER NAME="PSU_MIO_51_DIRECTION" VALUE="out"/>
         <PARAMETER NAME="PSU_MIO_52_PULLUPDOWN" VALUE="pullup"/>
         <PARAMETER NAME="PSU_MIO_52_DRIVE_STRENGTH" VALUE="12"/>
@@ -24546,10 +24538,10 @@
         <PARAMETER NAME="PSU_BANK_2_IO_STANDARD" VALUE="LVCMOS18"/>
         <PARAMETER NAME="PSU_BANK_3_IO_STANDARD" VALUE="LVCMOS18"/>
         <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__FRACDATA" VALUE="0.000778"/>
-        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__FRACDATA" VALUE="0.000000"/>
-        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__FRACDATA" VALUE="0.000000"/>
-        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__FRACDATA" VALUE="0.000000"/>
-        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FRACDATA" VALUE="0.000000"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__FRACDATA" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__FRACDATA" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__FRACDATA" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FRACDATA" VALUE="0"/>
         <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__DIV2" VALUE="1"/>
         <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__DIV2" VALUE="1"/>
         <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__DIV2" VALUE="1"/>
@@ -24644,7 +24636,7 @@
         <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0" VALUE="5"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR1" VALUE="1"/>
-        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" VALUE="8"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" VALUE="30"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR0" VALUE="15"/>
         <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR1" VALUE="1"/>
@@ -24754,7 +24746,7 @@
         <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO__FRAC_ENABLED" VALUE="0"/>
         <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO__FRAC_ENABLED" VALUE="0"/>
         <PARAMETER NAME="PSU__CRF_APB__ACPU__FRAC_ENABLED" VALUE="1"/>
-        <PARAMETER NAME="PSU__OVERRIDE__BASIC_CLOCK" VALUE="0"/>
+        <PARAMETER NAME="PSU__OVERRIDE__BASIC_CLOCK" VALUE="1"/>
         <PARAMETER NAME="PSU__DLL__ISUSED" VALUE="1"/>
         <PARAMETER NAME="PSU__PL_CLK0_BUF" VALUE="TRUE"/>
         <PARAMETER NAME="PSU__PL_CLK1_BUF" VALUE="TRUE"/>
@@ -24809,7 +24801,7 @@
         <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__ACT_FREQMHZ" VALUE="250"/>
         <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__ACT_FREQMHZ" VALUE="124.998749"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__ACT_FREQMHZ" VALUE="199.998001"/>
-        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__ACT_FREQMHZ" VALUE="187.498123"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__ACT_FREQMHZ" VALUE="49.999500"/>
         <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__ACT_FREQMHZ" VALUE="99.999001"/>
         <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__ACT_FREQMHZ" VALUE="99.999001"/>
         <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__ACT_FREQMHZ" VALUE="99.999001"/>
@@ -24870,7 +24862,7 @@
         <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__FREQMHZ" VALUE="250"/>
         <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__FREQMHZ" VALUE="125"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__FREQMHZ" VALUE="200"/>
-        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__FREQMHZ" VALUE="200"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__FREQMHZ" VALUE="50"/>
         <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__FREQMHZ" VALUE="100"/>
@@ -25134,7 +25126,7 @@
         <PARAMETER NAME="PSU__S_AXI_GP4__FREQMHZ" VALUE="299.997"/>
         <PARAMETER NAME="PSU__S_AXI_GP5__FREQMHZ" VALUE="299.997"/>
         <PARAMETER NAME="PSU__S_AXI_GP6__FREQMHZ" VALUE="10"/>
-        <PARAMETER NAME="PSU_SD1_INTERNAL_BUS_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="PSU_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_zynq_ultra_ps_e_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x800000000"/>
@@ -40179,7 +40171,7 @@
             <REGISTER NAME="GPIO_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
-              <PROPERTY NAME="SIZE" VALUE="7"/>
+              <PROPERTY NAME="SIZE" VALUE="5"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -40192,14 +40184,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="7"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="5"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
-              <PROPERTY NAME="SIZE" VALUE="7"/>
+              <PROPERTY NAME="SIZE" VALUE="5"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -40212,14 +40204,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="7"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="5"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO2_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="8"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -40232,14 +40224,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="8"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO2_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="8"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -40252,7 +40244,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="8"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -40343,8 +40335,8 @@
         <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="7"/>
-        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="8"/>
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
         <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="1"/>
         <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
@@ -40459,12 +40451,12 @@
             <CONNECTION INSTANCE="cpu_axi_interconnect_4" PORT="M05_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="6" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="registers_axi_gpio_1_gpio_io_o">
+        <PORT DIR="O" LEFT="4" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="registers_axi_gpio_1_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="registers_reg_bank_0" PORT="reg_com_rw"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="registers_reg_bank_0_reg_com_ro">
+        <PORT DIR="I" LEFT="7" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="registers_reg_bank_0_reg_com_ro">
           <CONNECTIONS>
             <CONNECTION INSTANCE="registers_reg_bank_0" PORT="reg_com_ro"/>
           </CONNECTIONS>
@@ -40597,7 +40589,7 @@
             <CONNECTION INSTANCE="registers_axi_gpio_0" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="6" NAME="reg_com_rw" RIGHT="0" SIGIS="undef" SIGNAME="registers_axi_gpio_1_gpio_io_o">
+        <PORT DIR="I" LEFT="4" NAME="reg_com_rw" RIGHT="0" SIGIS="undef" SIGNAME="registers_axi_gpio_1_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="registers_axi_gpio_1" PORT="gpio_io_o"/>
           </CONNECTIONS>
@@ -40692,16 +40684,6 @@
             <CONNECTION INSTANCE="axis_jtag_0" PORT="serial"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axisaf_wr_rst_top_5" SIGIS="undef" SIGNAME="registers_reg_bank_0_axisaf_wr_rst_top_5">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="C2C_axisafety_2" PORT="axisaf_wr_rst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="axisaf_wr_rst_bot_6" SIGIS="undef" SIGNAME="registers_reg_bank_0_axisaf_wr_rst_bot_6">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="C2C_axisafety_1" PORT="axisaf_wr_rst"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="7" NAME="ha_7_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_ha">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="ha"/>
@@ -40767,14 +40749,24 @@
             <CONNECTION INSTANCE="External_Ports" PORT="pok_change"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_wr_err_top_0" SIGIS="undef" SIGNAME="C2C_axisafety_2_axi_wr_err">
+        <PORT DIR="I" LEFT="1" NAME="m_slave_error_top_0_1" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_2_m_slave_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="C2C_axisafety_2" PORT="axi_wr_err"/>
+            <CONNECTION INSTANCE="C2C_axisafety_2" PORT="m_slave_error"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_wr_err_bot_1" SIGIS="undef" SIGNAME="C2C_axisafety_1_axi_wr_err">
+        <PORT DIR="I" LEFT="1" NAME="r_slave_error_top_2_3" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_2_r_slave_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="C2C_axisafety_1" PORT="axi_wr_err"/>
+            <CONNECTION INSTANCE="C2C_axisafety_2" PORT="r_slave_error"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="m_slave_error_bot_4_5" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_1_m_slave_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="C2C_axisafety_1" PORT="m_slave_error"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="r_slave_error_bot_6_7" RIGHT="0" SIGIS="undef" SIGNAME="C2C_axisafety_1_r_slave_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="C2C_axisafety_1" PORT="r_slave_error"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="reg_ro" RIGHT="0" SIGIS="undef" SIGNAME="registers_reg_bank_0_reg_ro">
@@ -40782,7 +40774,7 @@
             <CONNECTION INSTANCE="registers_axi_gpio_0" PORT="gpio2_io_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="reg_com_ro" RIGHT="0" SIGIS="undef" SIGNAME="registers_reg_bank_0_reg_com_ro">
+        <PORT DIR="O" LEFT="7" NAME="reg_com_ro" RIGHT="0" SIGIS="undef" SIGNAME="registers_reg_bank_0_reg_com_ro">
           <CONNECTIONS>
             <CONNECTION INSTANCE="registers_axi_gpio_1" PORT="gpio2_io_i"/>
           </CONNECTIONS>

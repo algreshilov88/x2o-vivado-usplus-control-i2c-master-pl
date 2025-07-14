@@ -70,7 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_axi_gpio_0_2_synth_1" START { ROLLUP_AUTO }
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
 set_param chipscope.maxJobs 3
+set_param power.BramSDPPropagationFix 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {IP_Flow 19-4965}  -new_severity {WARNING} 
 set_msg_config  -id {BD 41-2383}  -new_severity {WARNING} 

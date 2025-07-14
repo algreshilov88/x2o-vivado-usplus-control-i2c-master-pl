@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Tue Apr 29 20:44:54 2025
-# Process ID: 12747
+# Start of session at: Tue Jun 24 18:35:42 2025
+# Process ID: 2423
 # Current directory: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_axisafety_2_1_synth_1
 # Command line: vivado -log design_1_axisafety_2_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axisafety_2_1.tcl
 # Log file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_axisafety_2_1_synth_1/design_1_axisafety_2_1.vds
 # Journal file: /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.runs/design_1_axisafety_2_1_synth_1/vivado.jou
-# Running On: uftrig01, OS: Linux, CPU Frequency: 4457.212 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+# Running On: uftrig01, OS: Linux, CPU Frequency: 4519.737 MHz, CPU Physical cores: 6, Host memory: 33506 MB
 #-----------------------------------------------------------
 source design_1_axisafety_2_1.tcl -notrace

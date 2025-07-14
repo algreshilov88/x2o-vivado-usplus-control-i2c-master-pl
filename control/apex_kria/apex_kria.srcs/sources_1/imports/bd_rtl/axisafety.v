@@ -295,8 +295,8 @@ module axisafety #(
 		input	wire			M_AXI_RVALID,
 		output	wire			M_AXI_RREADY,
 		
-		input	wire			axisaf_wr_rst,
-		output	reg			    axi_wr_err
+		output	reg	[1 : 0]		m_slave_error,
+		output	reg	[1 : 0]		r_slave_error
 		// }}}
 		// }}}
 		// }}}
@@ -892,7 +892,9 @@ module axisafety #(
 	else if ((!M_AXI_ARESETN&&o_read_fault) || write_timeout)
 		o_write_fault <= 1;
 	else if (M_AXI_BVALID && M_AXI_BREADY)
+	begin
 		o_write_fault <= (o_write_fault) || faulty_write_return;
+	end
 	else if (M_AXI_WVALID && M_AXI_WREADY
 			&& M_AXI_AWVALID && !M_AXI_AWREADY)
 		// Accepting the write data prior to the write address
@@ -910,27 +912,22 @@ module axisafety #(
 	// return channel based upon the incoming values alone.  Note that
 	// we're overriding the M_AXI_BID below, in order to make certain that
 	// the return goes to the right source.
-	//
-	// (+CRUTCH) Due to Linux Kernel crash logic on AXI bus write operation (for ARM64) to a bad address was included custom workaround: 
-	// added custom axi_wr_err error flag for check via gpio from Linux userspace && added corresponding manual axisaf_wr_rst error reset register
-	initial	axi_wr_err = 0;
+	initial	m_slave_error = 0;
 	always @(*)
 	if (o_write_fault)
 	begin
 		m_bvalid = (s_wbursts > (S_AXI_BVALID ? 1:0));
 		m_bid    = wfifo_id;
 		m_bresp  = 0; // SLAVE_ERROR; // should be replaced with 0 on advice from Dan
-		axi_wr_err <= 1;
+		m_slave_error = SLAVE_ERROR;
 	end else begin
 		m_bvalid = M_AXI_BVALID;
 		if (faulty_write_return)
 			m_bvalid = 0;
 		m_bid    = wfifo_id;
 		m_bresp  = M_AXI_BRESP;
-		if (axisaf_wr_rst)
-	    begin
-		    axi_wr_err <= 0;
-        end
+		if (M_AXI_BVALID && M_AXI_BREADY)
+	        m_slave_error = M_AXI_BRESP;
 	end
 	// }}}
 
@@ -1381,20 +1378,26 @@ module axisafety #(
 	//
 	// This data set includes all the return values, even though only
 	// RRESP and RVALID are set in this block.
+	initial	r_slave_error = 0;
 	always @(*)
 	if (o_read_fault || (!M_AXI_ARESETN && OPT_SELF_RESET))
 	begin
 		m_rvalid = !rfifo_empty;
 		if (S_AXI_RVALID && rfifo_last)
 			m_rvalid = 0;
-		m_rresp  = SLAVE_ERROR;
+		m_rresp  = 0; //SLAVE_ERROR;
+		r_slave_error = SLAVE_ERROR;
 	end else if (r_rvalid)
 	begin
 		m_rvalid = r_rvalid;
 		m_rresp  = r_rresp;
+		if (M_AXI_RVALID)
+	        r_slave_error = r_rresp;
 	end else begin
 		m_rvalid = M_AXI_RVALID && raddr_valid && !faulty_read_return;
 		m_rresp  = M_AXI_RRESP;
+		if (M_AXI_RVALID)
+	        r_slave_error = M_AXI_RRESP;
 	end
 	// }}}
 

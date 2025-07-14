@@ -75,8 +75,6 @@ module design_1_reg_bank_0_0 (
   jtag_channel_28,
   tck_clk_ratio_3_0,
   serial_4,
-  axisaf_wr_rst_top_5,
-  axisaf_wr_rst_bot_6,
   ha_7_0,
   ready_ipmb_zynq_9_8,
   los_10g_10,
@@ -90,8 +88,10 @@ module design_1_reg_bank_0_0 (
   payload_off_alarm_27_25,
   pok_payload_28,
   pok_change_31_29,
-  axi_wr_err_top_0,
-  axi_wr_err_bot_1,
+  m_slave_error_top_0_1,
+  r_slave_error_top_2_3,
+  m_slave_error_bot_4_5,
+  r_slave_error_bot_6_7,
   reg_ro,
   reg_com_ro
 );
@@ -100,7 +100,7 @@ module design_1_reg_bank_0_0 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 prbs_clk CLK" *)
 input wire prbs_clk;
 input wire [28 : 0] reg_rw;
-input wire [6 : 0] reg_com_rw;
+input wire [4 : 0] reg_com_rw;
 output wire [1 : 0] ipmb_en_1_0;
 output wire [2 : 0] id_4_2;
 output wire payload_on_5;
@@ -118,8 +118,6 @@ output wire [1 : 0] bp_clk_sel_27_26;
 output wire jtag_channel_28;
 output wire [3 : 0] tck_clk_ratio_3_0;
 output wire serial_4;
-output wire axisaf_wr_rst_top_5;
-output wire axisaf_wr_rst_bot_6;
 input wire [7 : 0] ha_7_0;
 input wire [1 : 0] ready_ipmb_zynq_9_8;
 input wire los_10g_10;
@@ -133,10 +131,12 @@ input wire [3 : 0] prbs_err_20_17;
 input wire [2 : 0] payload_off_alarm_27_25;
 input wire pok_payload_28;
 input wire [2 : 0] pok_change_31_29;
-input wire axi_wr_err_top_0;
-input wire axi_wr_err_bot_1;
+input wire [1 : 0] m_slave_error_top_0_1;
+input wire [1 : 0] r_slave_error_top_2_3;
+input wire [1 : 0] m_slave_error_bot_4_5;
+input wire [1 : 0] r_slave_error_bot_6_7;
 output wire [31 : 0] reg_ro;
-output wire [1 : 0] reg_com_ro;
+output wire [7 : 0] reg_com_ro;
 
   reg_bank inst (
     .prbs_clk(prbs_clk),
@@ -159,8 +159,6 @@ output wire [1 : 0] reg_com_ro;
     .jtag_channel_28(jtag_channel_28),
     .tck_clk_ratio_3_0(tck_clk_ratio_3_0),
     .serial_4(serial_4),
-    .axisaf_wr_rst_top_5(axisaf_wr_rst_top_5),
-    .axisaf_wr_rst_bot_6(axisaf_wr_rst_bot_6),
     .ha_7_0(ha_7_0),
     .ready_ipmb_zynq_9_8(ready_ipmb_zynq_9_8),
     .los_10g_10(los_10g_10),
@@ -174,8 +172,10 @@ output wire [1 : 0] reg_com_ro;
     .payload_off_alarm_27_25(payload_off_alarm_27_25),
     .pok_payload_28(pok_payload_28),
     .pok_change_31_29(pok_change_31_29),
-    .axi_wr_err_top_0(axi_wr_err_top_0),
-    .axi_wr_err_bot_1(axi_wr_err_bot_1),
+    .m_slave_error_top_0_1(m_slave_error_top_0_1),
+    .r_slave_error_top_2_3(r_slave_error_top_2_3),
+    .m_slave_error_bot_4_5(m_slave_error_bot_4_5),
+    .r_slave_error_bot_6_7(r_slave_error_bot_6_7),
     .reg_ro(reg_ro),
     .reg_com_ro(reg_com_ro)
   );

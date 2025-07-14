@@ -3,7 +3,7 @@ module reg_bank
 (
     input prbs_clk,
     input  [28:0] reg_rw,
-    input  [6:0] reg_com_rw,
+    input  [4:0] reg_com_rw,
     output [1:0] ipmb_en_1_0,
     output [2:0] id_4_2,
     output payload_on_5,
@@ -21,8 +21,6 @@ module reg_bank
     output jtag_channel_28,
     output [3:0] tck_clk_ratio_3_0,
     output serial_4,
-    output axisaf_wr_rst_top_5,
-    output axisaf_wr_rst_bot_6,
     
     input [7:0] ha_7_0,
     input [1:0] ready_ipmb_zynq_9_8,
@@ -37,10 +35,12 @@ module reg_bank
     input [2:0] payload_off_alarm_27_25,
     input pok_payload_28,
     input [2:0] pok_change_31_29,
-    input axi_wr_err_top_0,
-    input axi_wr_err_bot_1,
+    input [1:0] m_slave_error_top_0_1,
+    input [1:0] r_slave_error_top_2_3,
+    input [1:0] m_slave_error_bot_4_5,
+    input [1:0] r_slave_error_bot_6_7,
     output [31:0] reg_ro,
-    output [1:0] reg_com_ro
+    output [7:0] reg_com_ro
 );
 
     assign ipmb_en_1_0        = reg_rw[1:0];
@@ -60,8 +60,6 @@ module reg_bank
     assign bp_clk_sel_27_26          = reg_rw[27:26];
     assign tck_clk_ratio_3_0         = reg_com_rw[3:0];
     assign serial_4                  = reg_com_rw[4];
-    assign axisaf_wr_rst_top_5       = reg_com_rw[5];
-    assign axisaf_wr_rst_bot_6       = reg_com_rw[6];
     
     reg [3:0] prbs_err_sticky;
     
@@ -79,8 +77,10 @@ module reg_bank
     assign reg_ro[27:25] = payload_off_alarm_27_25;
     assign reg_ro[28]    = pok_payload_28;
     assign reg_ro[31:29] = pok_change_31_29;
-    assign reg_com_ro[0] = axi_wr_err_top_0;
-    assign reg_com_ro[1] = axi_wr_err_bot_1;
+    assign reg_com_ro[1:0] = m_slave_error_top_0_1;
+    assign reg_com_ro[3:2] = r_slave_error_top_2_3;
+    assign reg_com_ro[5:4] = m_slave_error_bot_4_5;
+    assign reg_com_ro[7:6] = r_slave_error_bot_6_7;
     
     always @(posedge prbs_clk)
     begin

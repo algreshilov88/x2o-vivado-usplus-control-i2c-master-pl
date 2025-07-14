@@ -1,7 +1,7 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Tue Apr 29 20:45:37 2025
+-- Date        : Tue Jun 24 18:36:23 2025
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axisafety_1_0/design_1_axisafety_1_0_sim_netlist.vhdl
@@ -18,14 +18,15 @@ entity design_1_axisafety_1_0_axisafety is
   port (
     Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
     M_AXI_AWVALID_reg_0 : out STD_LOGIC;
-    S_AXI_ARREADY_reg_0 : out STD_LOGIC;
     S_AXI_RVALID_reg_0 : out STD_LOGIC;
     M_AXI_ARESETN_reg_0 : out STD_LOGIC;
     o_read_fault_reg_0 : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    S_AXI_ARREADY_reg_0 : out STD_LOGIC;
     channel_up : out STD_LOGIC;
-    axi_wr_err : out STD_LOGIC;
+    m_slave_error : out STD_LOGIC_VECTOR ( 1 downto 0 );
     o_write_fault_reg_0 : out STD_LOGIC;
+    r_slave_error : out STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_BVALID_reg_0 : out STD_LOGIC;
     S_AXI_AWREADY_reg_0 : out STD_LOGIC;
     S_AXI_RLAST : out STD_LOGIC;
@@ -60,17 +61,17 @@ entity design_1_axisafety_1_0_axisafety is
     S_AXI_ARVALID : in STD_LOGIC;
     S_AXI_AWVALID : in STD_LOGIC;
     S_AXI_ARESETN : in STD_LOGIC;
-    S_AXI_ARLEN : in STD_LOGIC_VECTOR ( 7 downto 0 );
     S_AXI_RREADY : in STD_LOGIC;
-    axisaf_wr_rst : in STD_LOGIC;
+    S_AXI_ARLEN : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    M_AXI_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_BVALID : in STD_LOGIC;
+    M_AXI_RVALID : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC;
     S_AXI_AWLEN : in STD_LOGIC_VECTOR ( 7 downto 0 );
     S_AXI_AWID : in STD_LOGIC_VECTOR ( 5 downto 0 );
     S_AXI_BREADY : in STD_LOGIC;
     S_AXI_ARID : in STD_LOGIC_VECTOR ( 5 downto 0 );
     ext_resetn : in STD_LOGIC;
-    M_AXI_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
     M_AXI_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 27 downto 0 );
@@ -89,7 +90,6 @@ entity design_1_axisafety_1_0_axisafety is
     S_AXI_ARQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_WVALID : in STD_LOGIC;
     S_AXI_WLAST : in STD_LOGIC;
-    M_AXI_RVALID : in STD_LOGIC;
     M_AXI_ARREADY : in STD_LOGIC;
     M_AXI_WREADY : in STD_LOGIC;
     M_AXI_BID : in STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -132,9 +132,7 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   signal S_AXI_BVALID_i_2_n_0 : STD_LOGIC;
   signal \^s_axi_bvalid_reg_0\ : STD_LOGIC;
   signal \^s_axi_rlast\ : STD_LOGIC;
-  signal \S_AXI_RRESP[0]_i_1_n_0\ : STD_LOGIC;
   signal \S_AXI_RRESP[1]_i_1_n_0\ : STD_LOGIC;
-  signal \S_AXI_RRESP[1]_i_2_n_0\ : STD_LOGIC;
   signal S_AXI_RVALID0 : STD_LOGIC;
   signal S_AXI_RVALID_i_1_n_0 : STD_LOGIC;
   signal S_AXI_RVALID_i_2_n_0 : STD_LOGIC;
@@ -152,6 +150,7 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   attribute async_reg of ext_resetn_r : signal is "true";
   signal m_rdata : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal m_rlast : STD_LOGIC;
+  signal m_rresp : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal m_rvalid : STD_LOGIC;
   signal m_wdata : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal m_wempty_i_1_n_0 : STD_LOGIC;
@@ -213,6 +212,7 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   signal r_rdata : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal r_rresp : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal r_rvalid_inv_i_1_n_0 : STD_LOGIC;
+  signal r_slave_error0 : STD_LOGIC;
   signal r_wdata : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal r_wdata_0 : STD_LOGIC;
   signal r_wlast_reg_n_0 : STD_LOGIC;
@@ -303,6 +303,7 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   signal rfifo_last_i_2_n_0 : STD_LOGIC;
   signal rfifo_last_i_3_n_0 : STD_LOGIC;
   signal rfifo_last_i_4_n_0 : STD_LOGIC;
+  signal rfifo_last_i_5_n_0 : STD_LOGIC;
   signal rfifo_penultimate_i_1_n_0 : STD_LOGIC;
   signal rfifo_penultimate_i_2_n_0 : STD_LOGIC;
   signal rfifo_penultimate_i_3_n_0 : STD_LOGIC;
@@ -363,83 +364,81 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   signal \NLW_write_timer_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_write_timer_reg[16]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[0]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[10]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[11]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[12]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[13]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[14]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[15]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[16]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[17]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[18]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[19]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[1]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[20]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[21]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[22]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[23]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[24]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[25]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[26]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[27]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[28]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[29]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[2]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[30]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[31]_i_2\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[3]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[4]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[5]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[6]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[7]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[8]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \M_AXI_WDATA[9]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \M_AXI_WSTRB[0]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \M_AXI_WSTRB[1]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \M_AXI_WSTRB[2]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \M_AXI_WSTRB[3]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[0]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[10]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[11]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[12]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[13]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[14]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[15]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[16]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[17]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[18]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[19]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[1]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[20]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[21]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[22]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[23]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[24]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[25]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[26]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[27]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[28]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[29]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[2]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[30]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[31]_i_2\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[3]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[4]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[5]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[6]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[7]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[8]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \M_AXI_WDATA[9]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \M_AXI_WSTRB[0]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \M_AXI_WSTRB[1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \M_AXI_WSTRB[2]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \M_AXI_WSTRB[3]_i_2\ : label is "soft_lutpair11";
   attribute SOFT_HLUTNM of M_AXI_WVALID_i_2 : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of S_AXI_ARREADY_i_2 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[0]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[10]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[11]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[12]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[13]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[14]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[15]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[16]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[17]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[18]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[19]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[1]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[20]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[21]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[22]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[23]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[24]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[25]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[26]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[27]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[28]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[29]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[2]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[30]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[31]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[3]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[4]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[5]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[6]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[7]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[8]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \S_AXI_RDATA[9]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[0]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[10]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[11]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[12]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[13]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[14]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[15]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[16]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[17]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[18]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[19]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[1]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[20]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[21]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[22]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[23]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[24]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[25]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[26]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[27]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[28]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[29]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[2]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[30]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[31]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[3]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[4]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[5]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[6]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[7]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[8]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \S_AXI_RDATA[9]_i_1\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of S_AXI_RLAST_i_1 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \S_AXI_RRESP[0]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \S_AXI_RRESP[1]_i_2\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of S_AXI_RVALID_i_4 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of S_AXI_WREADY_i_2 : label is "soft_lutpair1";
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of axi_wr_err_reg : label is "LDP";
-  attribute XILINX_TRANSFORM_PINMAP : string;
-  attribute XILINX_TRANSFORM_PINMAP of axi_wr_err_reg : label is "VCC:GE";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \channel_up_r_reg[0]\ : label is std.standard.true;
   attribute KEEP : string;
@@ -2496,6 +2495,12 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   attribute KEEP of \ext_resetn_r_reg[1]\ : label is "yes";
   attribute ASYNC_REG_boolean of \ext_resetn_r_reg[2]\ : label is std.standard.true;
   attribute KEEP of \ext_resetn_r_reg[2]\ : label is "yes";
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \m_slave_error_reg[0]\ : label is "LDC";
+  attribute XILINX_TRANSFORM_PINMAP : string;
+  attribute XILINX_TRANSFORM_PINMAP of \m_slave_error_reg[0]\ : label is "VCC:GE";
+  attribute XILINX_LEGACY_PRIM of \m_slave_error_reg[1]\ : label is "LDP";
+  attribute XILINX_TRANSFORM_PINMAP of \m_slave_error_reg[1]\ : label is "VCC:GE";
   attribute SOFT_HLUTNM of m_wlastctr_i_3 : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \m_wpending[0]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \m_wpending[1]_i_3\ : label is "soft_lutpair7";
@@ -2510,6 +2515,10 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   attribute SOFT_HLUTNM of o_write_fault_i_4 : label is "soft_lutpair1";
   attribute inverted : string;
   attribute inverted of r_rvalid_reg_inv : label is "yes";
+  attribute XILINX_LEGACY_PRIM of \r_slave_error_reg[0]\ : label is "LDC";
+  attribute XILINX_TRANSFORM_PINMAP of \r_slave_error_reg[0]\ : label is "VCC:GE";
+  attribute XILINX_LEGACY_PRIM of \r_slave_error_reg[1]\ : label is "LDP";
+  attribute XILINX_TRANSFORM_PINMAP of \r_slave_error_reg[1]\ : label is "VCC:GE";
   attribute SOFT_HLUTNM of r_wvalid_i_2 : label is "soft_lutpair4";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \read_timer_reg[0]_i_3\ : label is 16;
@@ -2519,8 +2528,8 @@ architecture STRUCTURE of design_1_axisafety_1_0_axisafety is
   attribute METHODOLOGY_DRC_VIOS of \read_timer_reg[16]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute ADDER_THRESHOLD of \read_timer_reg[8]_i_1\ : label is 16;
   attribute METHODOLOGY_DRC_VIOS of \read_timer_reg[8]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \reset_counter[0]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \reset_counter[0]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair45";
   attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair8";
   attribute inverted of \reset_counter_reg[4]_inv\ : label is "yes";
@@ -5138,7 +5147,7 @@ S_AXI_RLAST_reg: unisim.vcomponents.FDRE
       I0 => r_rresp(0),
       I1 => \^e\(0),
       I2 => M_AXI_RRESP(0),
-      O => \S_AXI_RRESP[0]_i_1_n_0\
+      O => m_rresp(0)
     );
 \S_AXI_RRESP[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -5159,23 +5168,23 @@ S_AXI_RLAST_reg: unisim.vcomponents.FDRE
       I0 => r_rresp(1),
       I1 => \^e\(0),
       I2 => M_AXI_RRESP(1),
-      O => \S_AXI_RRESP[1]_i_2_n_0\
+      O => m_rresp(1)
     );
 \S_AXI_RRESP_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => S_AXI_ACLK,
       CE => S_AXI_RVALID0,
-      D => \S_AXI_RRESP[0]_i_1_n_0\,
+      D => m_rresp(0),
       Q => S_AXI_RRESP(0),
       R => \S_AXI_RRESP[1]_i_1_n_0\
     );
-\S_AXI_RRESP_reg[1]\: unisim.vcomponents.FDSE
+\S_AXI_RRESP_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => S_AXI_ACLK,
       CE => S_AXI_RVALID0,
-      D => \S_AXI_RRESP[1]_i_2_n_0\,
+      D => m_rresp(1),
       Q => S_AXI_RRESP(1),
-      S => \S_AXI_RRESP[1]_i_1_n_0\
+      R => \S_AXI_RRESP[1]_i_1_n_0\
     );
 S_AXI_RVALID_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -5282,17 +5291,6 @@ S_AXI_WREADY_reg: unisim.vcomponents.FDRE
       D => S_AXI_WREADY_i_1_n_0,
       Q => \^s_axi_wready_reg_0\,
       R => '0'
-    );
-axi_wr_err_reg: unisim.vcomponents.LDPE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      D => '0',
-      G => axisaf_wr_rst,
-      GE => '1',
-      PRE => \^o_write_fault_reg_0\,
-      Q => axi_wr_err
     );
 \channel_up_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -13519,6 +13517,28 @@ comb_aresetn_INST_0: unisim.vcomponents.LUT2
       Q => ext_resetn_r(2),
       R => '0'
     );
+\m_slave_error_reg[0]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => \^o_write_fault_reg_0\,
+      D => M_AXI_BRESP(0),
+      G => M_AXI_BVALID,
+      GE => '1',
+      Q => m_slave_error(0)
+    );
+\m_slave_error_reg[1]\: unisim.vcomponents.LDPE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      D => M_AXI_BRESP(1),
+      G => M_AXI_BVALID,
+      GE => '1',
+      PRE => \^o_write_fault_reg_0\,
+      Q => m_slave_error(1)
+    );
 m_wempty_i_1: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFF3A200A2"
@@ -14678,6 +14698,37 @@ r_rvalid_reg_inv: unisim.vcomponents.FDRE
       Q => \^e\(0),
       R => '0'
     );
+\r_slave_error_reg[0]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => r_slave_error0,
+      D => m_rresp(0),
+      G => M_AXI_RVALID,
+      GE => '1',
+      Q => r_slave_error(0)
+    );
+\r_slave_error_reg[1]\: unisim.vcomponents.LDPE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      D => m_rresp(1),
+      G => M_AXI_RVALID,
+      GE => '1',
+      PRE => r_slave_error0,
+      Q => r_slave_error(1)
+    );
+\r_slave_error_reg[1]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \^o_read_fault_reg_0\,
+      I1 => \^m_axi_aresetn_reg_0\,
+      O => r_slave_error0
+    );
 \r_wdata[31]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
@@ -15031,24 +15082,23 @@ read_timeout_i_1: unisim.vcomponents.LUT6
     );
 read_timeout_i_2: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => read_timer_reg(1),
-      I1 => read_timer_reg(4),
-      I2 => read_timer_reg(2),
-      I3 => read_timer_reg(0),
-      O => read_timeout_i_2_n_0
-    );
-read_timeout_i_3: unisim.vcomponents.LUT4
-    generic map(
       INIT => X"FFEF"
     )
         port map (
       I0 => read_timer_reg(11),
       I1 => read_timer_reg(12),
       I2 => read_timer_reg(5),
-      I3 => read_timer_reg(8),
+      I3 => read_timer_reg(6),
+      O => read_timeout_i_2_n_0
+    );
+read_timeout_i_3: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => read_timer_reg(2),
+      I1 => read_timer_reg(3),
+      I2 => read_timer_reg(4),
       O => read_timeout_i_3_n_0
     );
 read_timeout_i_4: unisim.vcomponents.LUT3
@@ -15061,16 +15111,17 @@ read_timeout_i_4: unisim.vcomponents.LUT3
       I2 => \^s_axi_rvalid_reg_0\,
       O => read_timeout_i_4_n_0
     );
-read_timeout_i_5: unisim.vcomponents.LUT5
+read_timeout_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000010"
+      INIT => X"0000000000000100"
     )
         port map (
-      I0 => read_timer_reg(6),
-      I1 => read_timer_reg(13),
-      I2 => read_timer_reg(7),
-      I3 => read_timer_reg(14),
-      I4 => read_timer_reg(3),
+      I0 => read_timer_reg(1),
+      I1 => read_timer_reg(0),
+      I2 => read_timer_reg(14),
+      I3 => read_timer_reg(7),
+      I4 => read_timer_reg(13),
+      I5 => read_timer_reg(8),
       O => read_timeout_i_5_n_0
     );
 read_timeout_reg: unisim.vcomponents.FDRE
@@ -15102,9 +15153,9 @@ read_timeout_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \read_timer[0]_i_4_n_0\,
-      I1 => read_timer_reg(0),
-      I2 => read_timer_reg(8),
-      I3 => read_timer_reg(1),
+      I1 => read_timer_reg(7),
+      I2 => read_timer_reg(6),
+      I3 => read_timer_reg(2),
       I4 => \read_timer[0]_i_5_n_0\,
       I5 => \read_timer[0]_i_6_n_0\,
       O => \read_timer[0]_i_2_n_0\
@@ -15114,10 +15165,10 @@ read_timeout_reg: unisim.vcomponents.FDRE
       INIT => X"7FFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => read_timer_reg(6),
-      I1 => read_timer_reg(7),
-      I2 => read_timer_reg(11),
-      I3 => read_timer_reg(3),
+      I0 => read_timer_reg(4),
+      I1 => read_timer_reg(11),
+      I2 => read_timer_reg(13),
+      I3 => read_timer_reg(1),
       I4 => read_timer_reg(12),
       I5 => read_timer_reg(5),
       O => \read_timer[0]_i_4_n_0\
@@ -15127,10 +15178,10 @@ read_timeout_reg: unisim.vcomponents.FDRE
       INIT => X"7FFF"
     )
         port map (
-      I0 => read_timer_reg(2),
-      I1 => read_timer_reg(13),
-      I2 => read_timer_reg(4),
-      I3 => read_timer_reg(14),
+      I0 => read_timer_reg(3),
+      I1 => read_timer_reg(14),
+      I2 => read_timer_reg(8),
+      I3 => read_timer_reg(0),
       O => \read_timer[0]_i_5_n_0\
     );
 \read_timer[0]_i_6\: unisim.vcomponents.LUT4
@@ -15880,14 +15931,14 @@ rfifo_last_i_1: unisim.vcomponents.LUT5
     );
 rfifo_last_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00110F1100110011"
+      INIT => X"0F11111100111111"
     )
         port map (
       I0 => rfifo_last_i_3_n_0,
       I1 => rfifo_counter_reg(4),
-      I2 => S_AXI_ARLEN(1),
-      I3 => S_AXI_ARREADY0,
-      I4 => S_AXI_ARLEN(0),
+      I2 => S_AXI_ARLEN(0),
+      I3 => \^s_axi_arready_reg_0\,
+      I4 => S_AXI_ARVALID,
       I5 => rfifo_last_i_4_n_0,
       O => rfifo_last_i_2_n_0
     );
@@ -15903,18 +15954,27 @@ rfifo_last_i_3: unisim.vcomponents.LUT5
       I4 => rfifo_counter_reg(1),
       O => rfifo_last_i_3_n_0
     );
-rfifo_last_i_4: unisim.vcomponents.LUT6
+rfifo_last_i_4: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"0001"
     )
         port map (
       I0 => S_AXI_ARLEN(3),
+      I1 => S_AXI_ARLEN(6),
+      I2 => S_AXI_ARLEN(7),
+      I3 => rfifo_last_i_5_n_0,
+      O => rfifo_last_i_4_n_0
+    );
+rfifo_last_i_5: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => S_AXI_ARLEN(4),
       I1 => S_AXI_ARLEN(2),
       I2 => S_AXI_ARLEN(5),
-      I3 => S_AXI_ARLEN(6),
-      I4 => S_AXI_ARLEN(4),
-      I5 => S_AXI_ARLEN(7),
-      O => rfifo_last_i_4_n_0
+      I3 => S_AXI_ARLEN(1),
+      O => rfifo_last_i_5_n_0
     );
 rfifo_last_reg: unisim.vcomponents.FDRE
     generic map(
@@ -15929,12 +15989,12 @@ rfifo_last_reg: unisim.vcomponents.FDRE
     );
 rfifo_penultimate_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2000FFFF20002000"
+      INIT => X"8000FFFF80008000"
     )
         port map (
-      I0 => S_AXI_ARREADY0,
-      I1 => S_AXI_ARLEN(1),
-      I2 => S_AXI_ARLEN(0),
+      I0 => S_AXI_ARLEN(0),
+      I1 => \^s_axi_arready_reg_0\,
+      I2 => S_AXI_ARVALID,
       I3 => rfifo_last_i_4_n_0,
       I4 => rfifo_penultimate_i_2_n_0,
       I5 => rfifo_penultimate_i_3_n_0,
@@ -16114,10 +16174,10 @@ write_timeout_reg: unisim.vcomponents.FDRE
       INIT => X"7FFF"
     )
         port map (
-      I0 => write_timer_reg(11),
-      I1 => write_timer_reg(6),
+      I0 => write_timer_reg(3),
+      I1 => write_timer_reg(14),
       I2 => write_timer_reg(1),
-      I3 => write_timer_reg(0),
+      I3 => write_timer_reg(6),
       O => \write_timer[0]_i_5_n_0\
     );
 \write_timer[0]_i_6\: unisim.vcomponents.LUT4
@@ -16125,10 +16185,10 @@ write_timeout_reg: unisim.vcomponents.FDRE
       INIT => X"7FFF"
     )
         port map (
-      I0 => write_timer_reg(2),
-      I1 => write_timer_reg(4),
-      I2 => write_timer_reg(3),
-      I3 => write_timer_reg(14),
+      I0 => write_timer_reg(4),
+      I1 => write_timer_reg(11),
+      I2 => write_timer_reg(2),
+      I3 => write_timer_reg(0),
       O => \write_timer[0]_i_6_n_0\
     );
 \write_timer[0]_i_7\: unisim.vcomponents.LUT1
@@ -16473,8 +16533,8 @@ entity design_1_axisafety_1_0 is
     M_AXI_RLAST : in STD_LOGIC;
     M_AXI_RVALID : in STD_LOGIC;
     M_AXI_RREADY : out STD_LOGIC;
-    axisaf_wr_rst : in STD_LOGIC;
-    axi_wr_err : out STD_LOGIC
+    m_slave_error : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    r_slave_error : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_axisafety_1_0 : entity is true;
@@ -16529,8 +16589,6 @@ architecture STRUCTURE of design_1_axisafety_1_0 is
   attribute X_INTERFACE_INFO of S_AXI_WLAST : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of S_AXI_WREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
   attribute X_INTERFACE_INFO of S_AXI_WVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
-  attribute X_INTERFACE_INFO of axisaf_wr_rst : signal is "xilinx.com:signal:reset:1.0 axisaf_wr_rst RST";
-  attribute X_INTERFACE_PARAMETER of axisaf_wr_rst : signal is "XIL_INTERFACENAME axisaf_wr_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of comb_aresetn : signal is "xilinx.com:signal:reset:1.0 comb_aresetn RST";
   attribute X_INTERFACE_PARAMETER of comb_aresetn : signal is "XIL_INTERFACENAME comb_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of ext_resetn : signal is "xilinx.com:signal:reset:1.0 ext_resetn RST";
@@ -16667,12 +16725,12 @@ inst: entity work.design_1_axisafety_1_0_axisafety
       S_AXI_WREADY_reg_0 => S_AXI_WREADY,
       S_AXI_WSTRB(3 downto 0) => S_AXI_WSTRB(3 downto 0),
       S_AXI_WVALID => S_AXI_WVALID,
-      axi_wr_err => axi_wr_err,
-      axisaf_wr_rst => axisaf_wr_rst,
       channel_up => channel_up,
       comb_aresetn => comb_aresetn,
       ext_resetn => ext_resetn,
+      m_slave_error(1 downto 0) => m_slave_error(1 downto 0),
       o_read_fault_reg_0 => o_read_fault,
-      o_write_fault_reg_0 => o_write_fault
+      o_write_fault_reg_0 => o_write_fault,
+      r_slave_error(1 downto 0) => r_slave_error(1 downto 0)
     );
 end STRUCTURE;
