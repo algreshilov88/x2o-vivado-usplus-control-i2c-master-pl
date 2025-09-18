@@ -1457,7 +1457,11 @@ module axisafety #(
 		S_AXI_RID    <= m_rid;
 		S_AXI_RRESP  <= m_rresp;
 		S_AXI_RLAST  <= m_rlast;
-		S_AXI_RDATA  <= m_rdata;
+		//S_AXI_RDATA  <= m_rdata;
+		if (m_slave_error || r_slave_error)
+		    S_AXI_RDATA <= 32'hdead0000 | m_slave_error | (r_slave_error << 2);  
+		else
+		    S_AXI_RDATA  <= m_rdata;
 	end
 	// }}}
 
