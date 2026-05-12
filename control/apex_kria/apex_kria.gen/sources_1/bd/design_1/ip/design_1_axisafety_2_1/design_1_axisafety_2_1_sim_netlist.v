@@ -1,7 +1,7 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Mon Sep  1 17:00:38 2025
+// Date        : Mon May 11 22:51:08 2026
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/agreshil/vivado_projects/i2c-master/x2o-vivado-usplus-control-i2c-master-pl/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_axisafety_2_1/design_1_axisafety_2_1_sim_netlist.v
@@ -246,13 +246,11 @@ module design_1_axisafety_2_1
   wire S_AXI_AWVALID;
   wire [5:0]S_AXI_BID;
   wire S_AXI_BREADY;
-  wire [1:0]S_AXI_BRESP;
   wire S_AXI_BVALID;
   wire [31:0]S_AXI_RDATA;
   wire [5:0]S_AXI_RID;
   wire S_AXI_RLAST;
   wire S_AXI_RREADY;
-  wire [1:0]S_AXI_RRESP;
   wire S_AXI_RVALID;
   wire [31:0]S_AXI_WDATA;
   wire S_AXI_WLAST;
@@ -270,6 +268,10 @@ module design_1_axisafety_2_1
   assign M_AXI_ARLOCK = \<const0> ;
   assign M_AXI_AWLOCK = \<const0> ;
   assign M_AXI_BREADY = \<const1> ;
+  assign S_AXI_BRESP[1] = \<const0> ;
+  assign S_AXI_BRESP[0] = \<const0> ;
+  assign S_AXI_RRESP[1] = \<const0> ;
+  assign S_AXI_RRESP[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   VCC VCC
@@ -334,13 +336,11 @@ module design_1_axisafety_2_1
         .S_AXI_AWVALID(S_AXI_AWVALID),
         .S_AXI_BID(S_AXI_BID),
         .S_AXI_BREADY(S_AXI_BREADY),
-        .S_AXI_BRESP(S_AXI_BRESP),
         .S_AXI_BVALID_reg_0(S_AXI_BVALID),
         .S_AXI_RDATA(S_AXI_RDATA),
         .S_AXI_RID(S_AXI_RID),
         .S_AXI_RLAST(S_AXI_RLAST),
         .S_AXI_RREADY(S_AXI_RREADY),
-        .S_AXI_RRESP(S_AXI_RRESP),
         .S_AXI_RVALID_reg_0(S_AXI_RVALID),
         .S_AXI_WDATA(S_AXI_WDATA),
         .S_AXI_WLAST(S_AXI_WLAST),
@@ -358,25 +358,23 @@ endmodule
 
 (* ORIG_REF_NAME = "axisafety" *) 
 module design_1_axisafety_2_1_axisafety
-   (Q,
+   (S_AXI_RVALID_reg_0,
+    Q,
     M_AXI_AWVALID_reg_0,
-    S_AXI_RVALID_reg_0,
+    S_AXI_ARREADY_reg_0,
     M_AXI_ARESETN_reg_0,
     o_read_fault_reg_0,
-    E,
-    S_AXI_ARREADY_reg_0,
-    m_slave_error,
-    r_slave_error,
     channel_up,
     o_write_fault_reg_0,
     S_AXI_BVALID_reg_0,
     S_AXI_AWREADY_reg_0,
     S_AXI_RLAST,
     S_AXI_BID,
-    S_AXI_BRESP,
     S_AXI_RID,
+    r_slave_error,
+    m_slave_error,
+    E,
     S_AXI_RDATA,
-    S_AXI_RRESP,
     M_AXI_AWID,
     M_AXI_AWADDR,
     M_AXI_AWSIZE,
@@ -399,23 +397,21 @@ module design_1_axisafety_2_1_axisafety
     M_AXI_ARVALID_reg_0,
     M_AXI_WVALID_reg_0,
     comb_aresetn,
+    S_AXI_RREADY,
     M_AXI_AWREADY,
+    S_AXI_ARLEN,
     S_AXI_ARVALID,
+    M_AXI_RVALID,
     S_AXI_AWVALID,
     S_AXI_ARESETN,
-    S_AXI_RREADY,
-    S_AXI_ARLEN,
-    M_AXI_RVALID,
-    M_AXI_BRESP,
-    M_AXI_BVALID,
     S_AXI_ACLK,
+    ext_resetn,
+    M_AXI_BVALID,
     S_AXI_AWLEN,
     S_AXI_AWID,
     S_AXI_BREADY,
     S_AXI_ARID,
-    ext_resetn,
     M_AXI_RDATA,
-    M_AXI_RRESP,
     S_AXI_AWADDR,
     S_AXI_AWSIZE,
     S_AXI_AWBURST,
@@ -434,28 +430,28 @@ module design_1_axisafety_2_1_axisafety
     S_AXI_WLAST,
     M_AXI_ARREADY,
     M_AXI_WREADY,
+    M_AXI_BRESP,
     M_AXI_BID,
-    M_AXI_RID,
-    M_AXI_RLAST);
+    M_AXI_RRESP,
+    M_AXI_RLAST,
+    M_AXI_RID);
+  output S_AXI_RVALID_reg_0;
   output [7:0]Q;
   output M_AXI_AWVALID_reg_0;
-  output S_AXI_RVALID_reg_0;
+  output S_AXI_ARREADY_reg_0;
   output M_AXI_ARESETN_reg_0;
   output o_read_fault_reg_0;
-  output [0:0]E;
-  output S_AXI_ARREADY_reg_0;
-  output [1:0]m_slave_error;
-  output [1:0]r_slave_error;
   output channel_up;
   output o_write_fault_reg_0;
   output S_AXI_BVALID_reg_0;
   output S_AXI_AWREADY_reg_0;
   output S_AXI_RLAST;
   output [5:0]S_AXI_BID;
-  output [1:0]S_AXI_BRESP;
   output [5:0]S_AXI_RID;
+  output [1:0]r_slave_error;
+  output [1:0]m_slave_error;
+  output [0:0]E;
   output [31:0]S_AXI_RDATA;
-  output [1:0]S_AXI_RRESP;
   output [5:0]M_AXI_AWID;
   output [27:0]M_AXI_AWADDR;
   output [2:0]M_AXI_AWSIZE;
@@ -478,23 +474,21 @@ module design_1_axisafety_2_1_axisafety
   output M_AXI_ARVALID_reg_0;
   output M_AXI_WVALID_reg_0;
   output comb_aresetn;
+  input S_AXI_RREADY;
   input M_AXI_AWREADY;
+  input [7:0]S_AXI_ARLEN;
   input S_AXI_ARVALID;
+  input M_AXI_RVALID;
   input S_AXI_AWVALID;
   input S_AXI_ARESETN;
-  input S_AXI_RREADY;
-  input [7:0]S_AXI_ARLEN;
-  input M_AXI_RVALID;
-  input [1:0]M_AXI_BRESP;
-  input M_AXI_BVALID;
   input S_AXI_ACLK;
+  input ext_resetn;
+  input M_AXI_BVALID;
   input [7:0]S_AXI_AWLEN;
   input [5:0]S_AXI_AWID;
   input S_AXI_BREADY;
   input [5:0]S_AXI_ARID;
-  input ext_resetn;
   input [31:0]M_AXI_RDATA;
-  input [1:0]M_AXI_RRESP;
   input [27:0]S_AXI_AWADDR;
   input [2:0]S_AXI_AWSIZE;
   input [1:0]S_AXI_AWBURST;
@@ -513,9 +507,11 @@ module design_1_axisafety_2_1_axisafety
   input S_AXI_WLAST;
   input M_AXI_ARREADY;
   input M_AXI_WREADY;
+  input [1:0]M_AXI_BRESP;
   input [5:0]M_AXI_BID;
-  input [5:0]M_AXI_RID;
+  input [1:0]M_AXI_RRESP;
   input M_AXI_RLAST;
+  input [5:0]M_AXI_RID;
 
   wire [6:0]A;
   wire [0:0]E;
@@ -523,7 +519,6 @@ module design_1_axisafety_2_1_axisafety
   wire [1:0]M_AXI_ARBURST;
   wire [3:0]M_AXI_ARCACHE;
   wire M_AXI_ARESETN_i_1_n_0;
-  wire M_AXI_ARESETN_i_2_n_0;
   wire M_AXI_ARESETN_reg_0;
   wire [5:0]M_AXI_ARID;
   wire [7:0]M_AXI_ARLEN;
@@ -593,14 +588,13 @@ module design_1_axisafety_2_1_axisafety
   wire S_AXI_AWVALID;
   wire [5:0]S_AXI_BID;
   wire S_AXI_BREADY;
-  wire [1:0]S_AXI_BRESP;
-  wire \S_AXI_BRESP[1]_i_1_n_0 ;
   wire S_AXI_BVALID0;
   wire S_AXI_BVALID_i_1_n_0;
   wire S_AXI_BVALID_i_2_n_0;
   wire S_AXI_BVALID_reg_0;
   wire [31:0]S_AXI_RDATA;
   wire \S_AXI_RDATA[0]_i_1_n_0 ;
+  wire \S_AXI_RDATA[0]_i_2_n_0 ;
   wire \S_AXI_RDATA[10]_i_1_n_0 ;
   wire \S_AXI_RDATA[11]_i_1_n_0 ;
   wire \S_AXI_RDATA[12]_i_1_n_0 ;
@@ -612,6 +606,7 @@ module design_1_axisafety_2_1_axisafety
   wire \S_AXI_RDATA[18]_i_1_n_0 ;
   wire \S_AXI_RDATA[19]_i_1_n_0 ;
   wire \S_AXI_RDATA[1]_i_1_n_0 ;
+  wire \S_AXI_RDATA[1]_i_2_n_0 ;
   wire \S_AXI_RDATA[20]_i_1_n_0 ;
   wire \S_AXI_RDATA[21]_i_1_n_0 ;
   wire \S_AXI_RDATA[22]_i_1_n_0 ;
@@ -623,9 +618,12 @@ module design_1_axisafety_2_1_axisafety
   wire \S_AXI_RDATA[28]_i_1_n_0 ;
   wire \S_AXI_RDATA[29]_i_1_n_0 ;
   wire \S_AXI_RDATA[2]_i_1_n_0 ;
+  wire \S_AXI_RDATA[2]_i_2_n_0 ;
   wire \S_AXI_RDATA[30]_i_1_n_0 ;
   wire \S_AXI_RDATA[31]_i_1_n_0 ;
   wire \S_AXI_RDATA[31]_i_2_n_0 ;
+  wire \S_AXI_RDATA[31]_i_3_n_0 ;
+  wire \S_AXI_RDATA[31]_i_4_n_0 ;
   wire \S_AXI_RDATA[3]_i_1_n_0 ;
   wire \S_AXI_RDATA[3]_i_2_n_0 ;
   wire \S_AXI_RDATA[4]_i_1_n_0 ;
@@ -637,12 +635,11 @@ module design_1_axisafety_2_1_axisafety
   wire [5:0]S_AXI_RID;
   wire S_AXI_RLAST;
   wire S_AXI_RREADY;
-  wire [1:0]S_AXI_RRESP;
-  wire \S_AXI_RRESP[1]_i_1_n_0 ;
   wire S_AXI_RVALID0;
+  wire S_AXI_RVALID17_out;
   wire S_AXI_RVALID_i_1_n_0;
   wire S_AXI_RVALID_i_2_n_0;
-  wire S_AXI_RVALID_i_4_n_0;
+  wire S_AXI_RVALID_i_3_n_0;
   wire S_AXI_RVALID_reg_0;
   wire [31:0]S_AXI_WDATA;
   wire S_AXI_WLAST;
@@ -658,15 +655,15 @@ module design_1_axisafety_2_1_axisafety
   wire ext_resetn;
   (* async_reg = "true" *) wire [2:0]ext_resetn_r;
   wire m_rlast;
-  wire [1:0]m_rresp;
-  wire m_rvalid;
   wire [1:0]m_slave_error;
+  wire \m_slave_error[0]_i_1_n_0 ;
+  wire \m_slave_error[1]_i_1_n_0 ;
+  wire \m_slave_error[1]_i_2_n_0 ;
   wire [31:0]m_wdata;
   wire m_wempty_i_1_n_0;
   wire m_wempty_i_2_n_0;
   wire m_wempty_i_3_n_0;
   wire m_wempty_i_4_n_0;
-  wire m_wempty_i_5_n_0;
   wire m_wempty_reg_n_0;
   wire m_wlast;
   wire m_wlastctr_i_1_n_0;
@@ -676,24 +673,28 @@ module design_1_axisafety_2_1_axisafety
   wire m_wlastctr_i_5_n_0;
   wire m_wlastctr_reg_n_0;
   wire \m_wpending[1]_i_2_n_0 ;
-  wire \m_wpending[1]_i_3_n_0 ;
   wire \m_wpending[2]_i_2_n_0 ;
   wire \m_wpending[3]_i_2_n_0 ;
   wire \m_wpending[3]_i_3_n_0 ;
   wire \m_wpending[4]_i_2_n_0 ;
   wire \m_wpending[4]_i_3_n_0 ;
   wire \m_wpending[5]_i_2_n_0 ;
+  wire \m_wpending[5]_i_3_n_0 ;
+  wire \m_wpending[5]_i_4_n_0 ;
+  wire \m_wpending[5]_i_5_n_0 ;
   wire \m_wpending[6]_i_2_n_0 ;
+  wire \m_wpending[6]_i_3_n_0 ;
   wire \m_wpending[7]_i_2_n_0 ;
   wire \m_wpending[8]_i_1_n_0 ;
   wire \m_wpending[8]_i_2_n_0 ;
   wire \m_wpending[8]_i_4_n_0 ;
   wire \m_wpending[8]_i_5_n_0 ;
+  wire \m_wpending[8]_i_6_n_0 ;
   wire [8:0]m_wpending_reg;
   wire m_wvalid;
-  wire o_read_fault_i_1_n_0;
+  wire o_read_fault_i_10_n_0;
+  wire o_read_fault_i_11_n_0;
   wire o_read_fault_i_2_n_0;
-  wire o_read_fault_i_3_n_0;
   wire o_read_fault_i_4_n_0;
   wire o_read_fault_i_5_n_0;
   wire o_read_fault_i_6_n_0;
@@ -701,6 +702,9 @@ module design_1_axisafety_2_1_axisafety
   wire o_read_fault_i_8_n_0;
   wire o_read_fault_i_9_n_0;
   wire o_read_fault_reg_0;
+  wire o_write_fault0;
+  wire o_write_fault_i_10_n_0;
+  wire o_write_fault_i_11_n_0;
   wire o_write_fault_i_1_n_0;
   wire o_write_fault_i_2_n_0;
   wire o_write_fault_i_3_n_0;
@@ -709,20 +713,25 @@ module design_1_axisafety_2_1_axisafety
   wire o_write_fault_i_6_n_0;
   wire o_write_fault_i_7_n_0;
   wire o_write_fault_i_8_n_0;
+  wire o_write_fault_i_9_n_0;
   wire o_write_fault_reg_0;
   wire [4:0]p_0_in;
   wire [8:0]p_0_in__0;
-  wire p_39_in;
+  wire p_40_in;
   wire [5:0]r_arid;
   wire [5:0]r_awid;
   wire \r_awid[5]_i_1_n_0 ;
   wire r_clear_fault;
-  wire r_clear_fault11_out;
+  wire r_clear_fault1;
+  wire r_clear_fault_i_1_n_0;
+  wire r_clear_fault_i_2_n_0;
+  wire r_clear_fault_i_3_n_0;
   wire [31:0]r_rdata;
-  wire [1:0]r_rresp;
   wire r_rvalid_inv_i_1_n_0;
   wire [1:0]r_slave_error;
-  wire r_slave_error0;
+  wire \r_slave_error[0]_i_1_n_0 ;
+  wire \r_slave_error[1]_i_1_n_0 ;
+  wire \r_slave_error[1]_i_2_n_0 ;
   wire [31:0]r_wdata;
   wire r_wdata_0;
   wire r_wlast_reg_n_0;
@@ -807,6 +816,7 @@ module design_1_axisafety_2_1_axisafety
   wire \rfifo_counter_reg[8]_i_1_n_9 ;
   wire rfifo_empty_i_1_n_0;
   wire rfifo_empty_i_2_n_0;
+  wire rfifo_empty_i_3_n_0;
   wire rfifo_empty_reg_n_0;
   wire rfifo_last;
   wire rfifo_last_i_1_n_0;
@@ -815,18 +825,17 @@ module design_1_axisafety_2_1_axisafety
   wire rfifo_last_i_4_n_0;
   wire rfifo_last_i_5_n_0;
   wire rfifo_penultimate_i_1_n_0;
-  wire rfifo_penultimate_i_2_n_0;
-  wire rfifo_penultimate_i_3_n_0;
   wire rfifo_penultimate_reg_n_0;
   wire s_wbursts;
   wire \s_wbursts[0]_i_1_n_0 ;
   wire sel;
   wire w_clear_fault;
   wire waddr_valid;
-  wire waddr_valid_i_1_n_0;
+  wire waddr_valid_i_2_n_0;
   wire write_timeout_i_1_n_0;
   wire write_timeout_i_2_n_0;
   wire write_timeout_i_3_n_0;
+  wire write_timeout_i_4_n_0;
   wire write_timeout_reg_n_0;
   wire \write_timer[0]_i_1_n_0 ;
   wire \write_timer[0]_i_2_n_0 ;
@@ -1079,36 +1088,24 @@ module design_1_axisafety_2_1_axisafety
         .D(S_AXI_ARCACHE[3]),
         .Q(M_AXI_ARCACHE[3]),
         .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT6 #(
+    .INIT(64'hCCCE000000000000)) 
     M_AXI_ARESETN_i_1
-       (.I0(S_AXI_ARESETN),
-        .O(M_AXI_ARESETN_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hABAA)) 
-    M_AXI_ARESETN_i_2
-       (.I0(w_clear_fault),
-        .I1(o_read_fault_reg_0),
+       (.I0(M_AXI_ARESETN_reg_0),
+        .I1(w_clear_fault),
         .I2(o_write_fault_reg_0),
-        .I3(M_AXI_ARESETN_reg_0),
-        .O(M_AXI_ARESETN_i_2_n_0));
-  LUT5 #(
-    .INIT(32'h00000400)) 
-    M_AXI_ARESETN_i_3
-       (.I0(waddr_valid),
-        .I1(rfifo_empty_reg_n_0),
-        .I2(S_AXI_AWVALID),
-        .I3(r_clear_fault),
-        .I4(S_AXI_ARVALID),
-        .O(w_clear_fault));
+        .I3(o_read_fault_reg_0),
+        .I4(ext_resetn_r[2]),
+        .I5(S_AXI_ARESETN),
+        .O(M_AXI_ARESETN_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
     M_AXI_ARESETN_reg
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(M_AXI_ARESETN_i_2_n_0),
+        .D(M_AXI_ARESETN_i_1_n_0),
         .Q(M_AXI_ARESETN_reg_0),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(1'b0));
   LUT2 #(
     .INIT(4'hB)) 
     \M_AXI_ARID[5]_i_1 
@@ -1649,7 +1646,7 @@ module design_1_axisafety_2_1_axisafety
         .D(M_AXI_AWVALID_i_1_n_0),
         .Q(M_AXI_AWVALID_reg_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[0]_i_1 
@@ -1657,7 +1654,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[0]),
         .O(m_wdata[0]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[10]_i_1 
@@ -1665,7 +1662,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[10]),
         .O(m_wdata[10]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[11]_i_1 
@@ -1673,7 +1670,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[11]),
         .O(m_wdata[11]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[12]_i_1 
@@ -1681,7 +1678,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[12]),
         .O(m_wdata[12]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[13]_i_1 
@@ -1689,7 +1686,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[13]),
         .O(m_wdata[13]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[14]_i_1 
@@ -1697,7 +1694,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[14]),
         .O(m_wdata[14]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[15]_i_1 
@@ -1705,7 +1702,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[15]),
         .O(m_wdata[15]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[16]_i_1 
@@ -1713,7 +1710,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[16]),
         .O(m_wdata[16]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[17]_i_1 
@@ -1721,7 +1718,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[17]),
         .O(m_wdata[17]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[18]_i_1 
@@ -1729,7 +1726,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[18]),
         .O(m_wdata[18]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[19]_i_1 
@@ -1737,7 +1734,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[19]),
         .O(m_wdata[19]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[1]_i_1 
@@ -1745,7 +1742,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[1]),
         .O(m_wdata[1]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[20]_i_1 
@@ -1753,7 +1750,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[20]),
         .O(m_wdata[20]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[21]_i_1 
@@ -1761,7 +1758,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[21]),
         .O(m_wdata[21]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[22]_i_1 
@@ -1769,7 +1766,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[22]),
         .O(m_wdata[22]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[23]_i_1 
@@ -1777,7 +1774,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[23]),
         .O(m_wdata[23]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[24]_i_1 
@@ -1785,7 +1782,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[24]),
         .O(m_wdata[24]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[25]_i_1 
@@ -1793,7 +1790,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[25]),
         .O(m_wdata[25]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[26]_i_1 
@@ -1801,7 +1798,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[26]),
         .O(m_wdata[26]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[27]_i_1 
@@ -1809,7 +1806,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[27]),
         .O(m_wdata[27]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[28]_i_1 
@@ -1817,7 +1814,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[28]),
         .O(m_wdata[28]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[29]_i_1 
@@ -1825,7 +1822,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[29]),
         .O(m_wdata[29]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[2]_i_1 
@@ -1833,7 +1830,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[2]),
         .O(m_wdata[2]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[30]_i_1 
@@ -1847,7 +1844,7 @@ module design_1_axisafety_2_1_axisafety
        (.I0(M_AXI_WREADY),
         .I1(M_AXI_WVALID_reg_0),
         .O(S_AXI_WREADY0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[31]_i_2 
@@ -1855,7 +1852,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[31]),
         .O(m_wdata[31]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[3]_i_1 
@@ -1863,7 +1860,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[3]),
         .O(m_wdata[3]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[4]_i_1 
@@ -1871,7 +1868,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[4]),
         .O(m_wdata[4]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[5]_i_1 
@@ -1879,7 +1876,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[5]),
         .O(m_wdata[5]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[6]_i_1 
@@ -1887,7 +1884,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[6]),
         .O(m_wdata[6]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[7]_i_1 
@@ -1895,7 +1892,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[7]),
         .O(m_wdata[7]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[8]_i_1 
@@ -1903,7 +1900,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(r_wvalid),
         .I2(S_AXI_WDATA[8]),
         .O(m_wdata[8]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \M_AXI_WDATA[9]_i_1 
@@ -2191,7 +2188,7 @@ module design_1_axisafety_2_1_axisafety
         .I4(m_wvalid),
         .I5(M_AXI_ARESETN_reg_0),
         .O(M_AXI_WVALID_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h7444)) 
     M_AXI_WVALID_i_2
@@ -2218,12 +2215,12 @@ module design_1_axisafety_2_1_axisafety
         .I4(S_AXI_ARREADY_reg_0),
         .I5(S_AXI_ARVALID),
         .O(S_AXI_ARREADY_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h7)) 
     S_AXI_ARREADY_i_2
-       (.I0(S_AXI_RVALID_reg_0),
-        .I1(S_AXI_RREADY),
+       (.I0(S_AXI_RREADY),
+        .I1(S_AXI_RVALID_reg_0),
         .O(S_AXI_ARREADY_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -2293,27 +2290,8 @@ module design_1_axisafety_2_1_axisafety
         .D(r_awid[5]),
         .Q(S_AXI_BID[5]),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'h8A)) 
-    \S_AXI_BRESP[1]_i_1 
-       (.I0(o_write_fault_reg_0),
-        .I1(S_AXI_BREADY),
-        .I2(S_AXI_BVALID_reg_0),
-        .O(\S_AXI_BRESP[1]_i_1_n_0 ));
-  FDRE \S_AXI_BRESP_reg[0] 
-       (.C(S_AXI_ACLK),
-        .CE(S_AXI_BVALID0),
-        .D(M_AXI_BRESP[0]),
-        .Q(S_AXI_BRESP[0]),
-        .R(\S_AXI_BRESP[1]_i_1_n_0 ));
-  FDRE \S_AXI_BRESP_reg[1] 
-       (.C(S_AXI_ACLK),
-        .CE(S_AXI_BVALID0),
-        .D(M_AXI_BRESP[1]),
-        .Q(S_AXI_BRESP[1]),
-        .R(\S_AXI_BRESP[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h0000FFBA)) 
+    .INIT(32'h0000BAFF)) 
     S_AXI_BVALID_i_1
        (.I0(o_write_fault_reg_0),
         .I1(S_AXI_BREADY),
@@ -2340,15 +2318,23 @@ module design_1_axisafety_2_1_axisafety
         .Q(S_AXI_BVALID_reg_0),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hBBBAAABA)) 
+    .INIT(32'hAAABAAAA)) 
     \S_AXI_RDATA[0]_i_1 
        (.I0(m_slave_error[0]),
-        .I1(\S_AXI_RDATA[3]_i_2_n_0 ),
-        .I2(r_rdata[0]),
-        .I3(E),
-        .I4(M_AXI_RDATA[0]),
+        .I1(o_read_fault_i_4_n_0),
+        .I2(\S_AXI_RDATA[31]_i_3_n_0 ),
+        .I3(o_write_fault_i_2_n_0),
+        .I4(\S_AXI_RDATA[0]_i_2_n_0 ),
         .O(\S_AXI_RDATA[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT3 #(
+    .INIT(8'hE2)) 
+    \S_AXI_RDATA[0]_i_2 
+       (.I0(r_rdata[0]),
+        .I1(E),
+        .I2(M_AXI_RDATA[0]),
+        .O(\S_AXI_RDATA[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[10]_i_1 
@@ -2356,7 +2342,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[10]),
         .O(\S_AXI_RDATA[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[11]_i_1 
@@ -2364,7 +2350,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[11]),
         .O(\S_AXI_RDATA[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[12]_i_1 
@@ -2372,7 +2358,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[12]),
         .O(\S_AXI_RDATA[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[13]_i_1 
@@ -2380,7 +2366,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[13]),
         .O(\S_AXI_RDATA[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[14]_i_1 
@@ -2396,6 +2382,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[15]),
         .O(\S_AXI_RDATA[15]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[16]_i_1 
@@ -2428,14 +2415,22 @@ module design_1_axisafety_2_1_axisafety
         .I2(M_AXI_RDATA[19]),
         .O(\S_AXI_RDATA[19]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hBBBAAABA)) 
+    .INIT(32'hAAABAAAA)) 
     \S_AXI_RDATA[1]_i_1 
        (.I0(m_slave_error[1]),
-        .I1(\S_AXI_RDATA[3]_i_2_n_0 ),
-        .I2(r_rdata[1]),
-        .I3(E),
-        .I4(M_AXI_RDATA[1]),
+        .I1(o_read_fault_i_4_n_0),
+        .I2(\S_AXI_RDATA[31]_i_3_n_0 ),
+        .I3(o_write_fault_i_2_n_0),
+        .I4(\S_AXI_RDATA[1]_i_2_n_0 ),
         .O(\S_AXI_RDATA[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT3 #(
+    .INIT(8'hE2)) 
+    \S_AXI_RDATA[1]_i_2 
+       (.I0(r_rdata[1]),
+        .I1(E),
+        .I2(M_AXI_RDATA[1]),
+        .O(\S_AXI_RDATA[1]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hE2)) 
@@ -2517,14 +2512,22 @@ module design_1_axisafety_2_1_axisafety
         .I2(M_AXI_RDATA[29]),
         .O(\S_AXI_RDATA[29]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hBBBAAABA)) 
+    .INIT(32'hAAABAAAA)) 
     \S_AXI_RDATA[2]_i_1 
        (.I0(r_slave_error[0]),
-        .I1(\S_AXI_RDATA[3]_i_2_n_0 ),
-        .I2(r_rdata[2]),
-        .I3(E),
-        .I4(M_AXI_RDATA[2]),
+        .I1(o_read_fault_i_4_n_0),
+        .I2(\S_AXI_RDATA[31]_i_3_n_0 ),
+        .I3(o_write_fault_i_2_n_0),
+        .I4(\S_AXI_RDATA[2]_i_2_n_0 ),
         .O(\S_AXI_RDATA[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'hE2)) 
+    \S_AXI_RDATA[2]_i_2 
+       (.I0(r_rdata[2]),
+        .I1(E),
+        .I2(M_AXI_RDATA[2]),
+        .O(\S_AXI_RDATA[2]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hE2)) 
@@ -2533,15 +2536,14 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[30]),
         .O(\S_AXI_RDATA[30]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFE0000FFFEFFFE)) 
+  LUT5 #(
+    .INIT(32'hFE00FEFE)) 
     \S_AXI_RDATA[31]_i_1 
-       (.I0(m_slave_error[0]),
-        .I1(r_slave_error[1]),
-        .I2(m_slave_error[1]),
-        .I3(r_slave_error[0]),
-        .I4(S_AXI_RREADY),
-        .I5(S_AXI_RVALID_reg_0),
+       (.I0(o_write_fault_i_2_n_0),
+        .I1(\S_AXI_RDATA[31]_i_3_n_0 ),
+        .I2(o_read_fault_i_4_n_0),
+        .I3(S_AXI_RREADY),
+        .I4(S_AXI_RVALID_reg_0),
         .O(\S_AXI_RDATA[31]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
@@ -2551,23 +2553,43 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[31]),
         .O(\S_AXI_RDATA[31]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hBBBAAABA)) 
+  LUT4 #(
+    .INIT(16'hFFE0)) 
+    \S_AXI_RDATA[31]_i_3 
+       (.I0(M_AXI_RRESP[1]),
+        .I1(M_AXI_RRESP[0]),
+        .I2(M_AXI_RVALID),
+        .I3(\S_AXI_RDATA[31]_i_4_n_0 ),
+        .O(\S_AXI_RDATA[31]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \S_AXI_RDATA[31]_i_4 
+       (.I0(r_slave_error[0]),
+        .I1(r_slave_error[1]),
+        .I2(m_slave_error[0]),
+        .I3(write_timeout_reg_n_0),
+        .I4(m_slave_error[1]),
+        .I5(r_clear_fault_i_3_n_0),
+        .O(\S_AXI_RDATA[31]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBBBFBBBBBBB0)) 
     \S_AXI_RDATA[3]_i_1 
        (.I0(r_slave_error[1]),
-        .I1(\S_AXI_RDATA[3]_i_2_n_0 ),
-        .I2(r_rdata[3]),
-        .I3(E),
-        .I4(M_AXI_RDATA[3]),
+        .I1(r_slave_error[0]),
+        .I2(o_read_fault_i_4_n_0),
+        .I3(\S_AXI_RDATA[31]_i_3_n_0 ),
+        .I4(o_write_fault_i_2_n_0),
+        .I5(\S_AXI_RDATA[3]_i_2_n_0 ),
         .O(\S_AXI_RDATA[3]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'hE2)) 
     \S_AXI_RDATA[3]_i_2 
-       (.I0(r_slave_error[0]),
-        .I1(m_slave_error[1]),
-        .I2(r_slave_error[1]),
-        .I3(m_slave_error[0]),
+       (.I0(r_rdata[3]),
+        .I1(E),
+        .I2(M_AXI_RDATA[3]),
         .O(\S_AXI_RDATA[3]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[4]_i_1 
@@ -2575,7 +2597,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[4]),
         .O(\S_AXI_RDATA[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[5]_i_1 
@@ -2583,7 +2605,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[5]),
         .O(\S_AXI_RDATA[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[6]_i_1 
@@ -2591,7 +2613,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[6]),
         .O(\S_AXI_RDATA[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[7]_i_1 
@@ -2599,7 +2621,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[7]),
         .O(\S_AXI_RDATA[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[8]_i_1 
@@ -2607,7 +2629,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(E),
         .I2(M_AXI_RDATA[8]),
         .O(\S_AXI_RDATA[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \S_AXI_RDATA[9]_i_1 
@@ -2849,7 +2871,6 @@ module design_1_axisafety_2_1_axisafety
         .D(r_arid[5]),
         .Q(S_AXI_RID[5]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     S_AXI_RLAST_i_1
@@ -2863,80 +2884,44 @@ module design_1_axisafety_2_1_axisafety
         .D(m_rlast),
         .Q(S_AXI_RLAST),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'hE2)) 
-    \S_AXI_RRESP[0]_i_1 
-       (.I0(r_rresp[0]),
-        .I1(E),
-        .I2(M_AXI_RRESP[0]),
-        .O(m_rresp[0]));
-  LUT4 #(
-    .INIT(16'hB0BB)) 
-    \S_AXI_RRESP[1]_i_1 
-       (.I0(o_read_fault_reg_0),
-        .I1(M_AXI_ARESETN_reg_0),
-        .I2(S_AXI_RREADY),
-        .I3(S_AXI_RVALID_reg_0),
-        .O(\S_AXI_RRESP[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'hE2)) 
-    \S_AXI_RRESP[1]_i_2 
-       (.I0(r_rresp[1]),
-        .I1(E),
-        .I2(M_AXI_RRESP[1]),
-        .O(m_rresp[1]));
-  FDRE \S_AXI_RRESP_reg[0] 
-       (.C(S_AXI_ACLK),
-        .CE(S_AXI_RVALID0),
-        .D(m_rresp[0]),
-        .Q(S_AXI_RRESP[0]),
-        .R(\S_AXI_RRESP[1]_i_1_n_0 ));
-  FDRE \S_AXI_RRESP_reg[1] 
-       (.C(S_AXI_ACLK),
-        .CE(S_AXI_RVALID0),
-        .D(m_rresp[1]),
-        .Q(S_AXI_RRESP[1]),
-        .R(\S_AXI_RRESP[1]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hA8AAA8A800000000)) 
     S_AXI_RVALID_i_1
        (.I0(S_AXI_RVALID_i_2_n_0),
-        .I1(m_rvalid),
-        .I2(S_AXI_RVALID_i_4_n_0),
+        .I1(S_AXI_RVALID_i_3_n_0),
+        .I2(S_AXI_RVALID17_out),
         .I3(S_AXI_RREADY),
         .I4(S_AXI_RVALID_reg_0),
         .I5(S_AXI_ARESETN),
         .O(S_AXI_RVALID_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
-    .INIT(32'h4FFFFFFF)) 
+    .INIT(32'h7F7FFF7F)) 
     S_AXI_RVALID_i_2
-       (.I0(o_read_fault_reg_0),
-        .I1(M_AXI_ARESETN_reg_0),
+       (.I0(S_AXI_RVALID_reg_0),
+        .I1(S_AXI_RREADY),
         .I2(rfifo_last),
-        .I3(S_AXI_RVALID_reg_0),
-        .I4(S_AXI_RREADY),
+        .I3(M_AXI_ARESETN_reg_0),
+        .I4(o_read_fault_reg_0),
         .O(S_AXI_RVALID_i_2_n_0));
   LUT5 #(
-    .INIT(32'hFF0D0D0D)) 
+    .INIT(32'h55554055)) 
     S_AXI_RVALID_i_3
-       (.I0(M_AXI_ARESETN_reg_0),
-        .I1(o_read_fault_reg_0),
-        .I2(rfifo_empty_reg_n_0),
-        .I3(o_read_fault_i_3_n_0),
-        .I4(M_AXI_RVALID),
-        .O(m_rvalid));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+       (.I0(rfifo_empty_reg_n_0),
+        .I1(M_AXI_RVALID),
+        .I2(o_read_fault_i_5_n_0),
+        .I3(M_AXI_ARESETN_reg_0),
+        .I4(o_read_fault_reg_0),
+        .O(S_AXI_RVALID_i_3_n_0));
   LUT5 #(
-    .INIT(32'h000000B0)) 
+    .INIT(32'h04040004)) 
     S_AXI_RVALID_i_4
-       (.I0(S_AXI_RREADY),
-        .I1(S_AXI_RVALID_reg_0),
-        .I2(M_AXI_ARESETN_reg_0),
-        .I3(o_read_fault_reg_0),
-        .I4(E),
-        .O(S_AXI_RVALID_i_4_n_0));
+       (.I0(o_read_fault_reg_0),
+        .I1(M_AXI_ARESETN_reg_0),
+        .I2(E),
+        .I3(S_AXI_RVALID_reg_0),
+        .I4(S_AXI_RREADY),
+        .O(S_AXI_RVALID17_out));
   FDRE #(
     .INIT(1'b0)) 
     S_AXI_RVALID_reg
@@ -2955,7 +2940,7 @@ module design_1_axisafety_2_1_axisafety
         .I4(S_AXI_WREADY_reg_0),
         .I5(S_AXI_WLAST),
         .O(S_AXI_WREADY_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT2 #(
     .INIT(4'h2)) 
     S_AXI_WREADY_i_2
@@ -2965,7 +2950,7 @@ module design_1_axisafety_2_1_axisafety
   LUT6 #(
     .INIT(64'hEFEEEFEE45444444)) 
     S_AXI_WREADY_i_3
-       (.I0(p_39_in),
+       (.I0(p_40_in),
         .I1(\r_awid[5]_i_1_n_0 ),
         .I2(s_wbursts),
         .I3(waddr_valid),
@@ -2985,7 +2970,7 @@ module design_1_axisafety_2_1_axisafety
   FDRE \channel_up_r_reg[0] 
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(ext_resetn),
+        .D(ext_resetn_r[2]),
         .Q(channel_up_r[0]),
         .R(1'b0));
   (* ASYNC_REG *) 
@@ -11202,26 +11187,49 @@ module design_1_axisafety_2_1_axisafety
         .D(ext_resetn_r[1]),
         .Q(ext_resetn_r[2]),
         .R(1'b0));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
-  LDCE #(
+  LUT5 #(
+    .INIT(32'h00000002)) 
+    \m_slave_error[0]_i_1 
+       (.I0(M_AXI_BRESP[0]),
+        .I1(write_timeout_reg_n_0),
+        .I2(o_write_fault_i_2_n_0),
+        .I3(o_write_fault_reg_0),
+        .I4(o_write_fault0),
+        .O(\m_slave_error[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \m_slave_error[1]_i_1 
+       (.I0(M_AXI_BVALID),
+        .I1(write_timeout_reg_n_0),
+        .I2(o_write_fault_i_2_n_0),
+        .I3(o_write_fault_reg_0),
+        .I4(o_write_fault0),
+        .O(\m_slave_error[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h55555554)) 
+    \m_slave_error[1]_i_2 
+       (.I0(o_write_fault0),
+        .I1(write_timeout_reg_n_0),
+        .I2(o_write_fault_i_2_n_0),
+        .I3(o_write_fault_reg_0),
+        .I4(M_AXI_BRESP[1]),
+        .O(\m_slave_error[1]_i_2_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \m_slave_error_reg[0] 
-       (.CLR(o_write_fault_reg_0),
-        .D(M_AXI_BRESP[0]),
-        .G(M_AXI_BVALID),
-        .GE(1'b1),
-        .Q(m_slave_error[0]));
-  (* XILINX_LEGACY_PRIM = "LDP" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
-  LDPE #(
+       (.C(S_AXI_ACLK),
+        .CE(\m_slave_error[1]_i_1_n_0 ),
+        .D(\m_slave_error[0]_i_1_n_0 ),
+        .Q(m_slave_error[0]),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \m_slave_error_reg[1] 
-       (.D(M_AXI_BRESP[1]),
-        .G(M_AXI_BVALID),
-        .GE(1'b1),
-        .PRE(o_write_fault_reg_0),
-        .Q(m_slave_error[1]));
+       (.C(S_AXI_ACLK),
+        .CE(\m_slave_error[1]_i_1_n_0 ),
+        .D(\m_slave_error[1]_i_2_n_0 ),
+        .Q(m_slave_error[1]),
+        .R(1'b0));
   LUT6 #(
     .INIT(64'hFFFFFFFFF3A200A2)) 
     m_wempty_i_1
@@ -11241,28 +11249,22 @@ module design_1_axisafety_2_1_axisafety
   LUT6 #(
     .INIT(64'h0000000000000002)) 
     m_wempty_i_3
-       (.I0(\m_wpending[6]_i_2_n_0 ),
+       (.I0(\m_wpending[6]_i_3_n_0 ),
         .I1(m_wpending_reg[6]),
         .I2(m_wpending_reg[5]),
         .I3(m_wpending_reg[8]),
         .I4(m_wpending_reg[7]),
-        .I5(m_wempty_i_5_n_0),
+        .I5(o_write_fault_i_4_n_0),
         .O(m_wempty_i_3_n_0));
   LUT5 #(
     .INIT(32'h10FF1010)) 
     m_wempty_i_4
        (.I0(m_wpending_reg[1]),
         .I1(m_wpending_reg[2]),
-        .I2(m_wlastctr_i_2_n_0),
+        .I2(m_wlastctr_i_4_n_0),
         .I3(Q[0]),
-        .I4(m_wlastctr_i_4_n_0),
+        .I4(m_wlastctr_i_3_n_0),
         .O(m_wempty_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
-    m_wempty_i_5
-       (.I0(M_AXI_WVALID_reg_0),
-        .I1(M_AXI_WREADY),
-        .O(m_wempty_i_5_n_0));
   FDRE #(
     .INIT(1'b1)) 
     m_wempty_reg
@@ -11272,38 +11274,38 @@ module design_1_axisafety_2_1_axisafety
         .Q(m_wempty_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0400FFFF04000400)) 
+    .INIT(64'h44444F4444444444)) 
     m_wlastctr_i_1
-       (.I0(m_wpending_reg[2]),
-        .I1(m_wpending_reg[1]),
-        .I2(m_wpending_reg[0]),
-        .I3(m_wlastctr_i_2_n_0),
-        .I4(m_wlastctr_i_3_n_0),
+       (.I0(m_wlastctr_i_2_n_0),
+        .I1(m_wlastctr_i_3_n_0),
+        .I2(m_wpending_reg[2]),
+        .I3(m_wpending_reg[1]),
+        .I4(m_wpending_reg[0]),
         .I5(m_wlastctr_i_4_n_0),
         .O(m_wlastctr_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_wlastctr_i_2
+       (.I0(Q[0]),
+        .I1(m_wempty_i_3_n_0),
+        .O(m_wlastctr_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    m_wlastctr_i_3
+       (.I0(Q[5]),
+        .I1(Q[6]),
+        .I2(Q[7]),
+        .I3(m_wlastctr_i_5_n_0),
+        .O(m_wlastctr_i_3_n_0));
   LUT5 #(
     .INIT(32'h00000111)) 
-    m_wlastctr_i_2
+    m_wlastctr_i_4
        (.I0(m_wpending_reg[3]),
         .I1(m_wpending_reg[4]),
         .I2(M_AXI_AWVALID_reg_0),
         .I3(M_AXI_AWREADY),
-        .I4(\m_wpending[1]_i_3_n_0 ),
-        .O(m_wlastctr_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    m_wlastctr_i_3
-       (.I0(Q[0]),
-        .I1(m_wempty_i_3_n_0),
-        .O(m_wlastctr_i_3_n_0));
-  LUT4 #(
-    .INIT(16'h0001)) 
-    m_wlastctr_i_4
-       (.I0(Q[6]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(m_wlastctr_i_5_n_0),
+        .I4(\m_wpending[5]_i_4_n_0 ),
         .O(m_wlastctr_i_4_n_0));
   LUT6 #(
     .INIT(64'hFFFEFFFFFFFFFFFF)) 
@@ -11325,14 +11327,15 @@ module design_1_axisafety_2_1_axisafety
         .R(\m_wpending[8]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'hC3555555)) 
+    .INIT(32'hD51515D5)) 
     \m_wpending[0]_i_1 
        (.I0(m_wpending_reg[0]),
-        .I1(Q[0]),
-        .I2(m_wempty_i_3_n_0),
-        .I3(M_AXI_AWVALID_reg_0),
-        .I4(M_AXI_AWREADY),
+        .I1(M_AXI_AWVALID_reg_0),
+        .I2(M_AXI_AWREADY),
+        .I3(Q[0]),
+        .I4(m_wempty_i_3_n_0),
         .O(p_0_in__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hBF8080BF)) 
     \m_wpending[1]_i_1 
@@ -11347,20 +11350,11 @@ module design_1_axisafety_2_1_axisafety
     \m_wpending[1]_i_2 
        (.I0(M_AXI_WVALID_reg_0),
         .I1(M_AXI_WREADY),
-        .I2(\m_wpending[6]_i_2_n_0 ),
-        .I3(\m_wpending[1]_i_3_n_0 ),
+        .I2(\m_wpending[6]_i_3_n_0 ),
+        .I3(\m_wpending[5]_i_4_n_0 ),
         .I4(Q[0]),
         .I5(Q[1]),
         .O(\m_wpending[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \m_wpending[1]_i_3 
-       (.I0(m_wpending_reg[6]),
-        .I1(m_wpending_reg[5]),
-        .I2(m_wpending_reg[8]),
-        .I3(m_wpending_reg[7]),
-        .O(\m_wpending[1]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hBFBFBF80808080BF)) 
     \m_wpending[2]_i_1 
@@ -11371,13 +11365,13 @@ module design_1_axisafety_2_1_axisafety
         .I4(m_wpending_reg[1]),
         .I5(m_wpending_reg[2]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
-    .INIT(16'hAA6A)) 
+    .INIT(16'hF078)) 
     \m_wpending[2]_i_2 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
         .I3(m_wempty_i_3_n_0),
         .O(\m_wpending[2]_i_2_n_0 ));
   LUT6 #(
@@ -11390,14 +11384,14 @@ module design_1_axisafety_2_1_axisafety
         .I4(m_wpending_reg[3]),
         .I5(\m_wpending[3]_i_3_n_0 ),
         .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \m_wpending[3]_i_2 
        (.I0(m_wempty_i_3_n_0),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[2]),
+        .I1(Q[2]),
+        .I2(Q[0]),
+        .I3(Q[1]),
         .O(\m_wpending[3]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
@@ -11421,67 +11415,95 @@ module design_1_axisafety_2_1_axisafety
     \m_wpending[4]_i_3 
        (.I0(Q[4]),
         .I1(m_wempty_i_3_n_0),
-        .I2(Q[0]),
-        .I3(Q[1]),
-        .I4(Q[2]),
+        .I2(Q[2]),
+        .I3(Q[0]),
+        .I4(Q[1]),
         .I5(Q[3]),
         .O(\m_wpending[4]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFF00F00F66666666)) 
-    \m_wpending[5]_i_1 
-       (.I0(m_wpending_reg[5]),
-        .I1(\m_wpending[6]_i_2_n_0 ),
-        .I2(\m_wpending[5]_i_2_n_0 ),
-        .I3(Q[5]),
-        .I4(m_wempty_i_3_n_0),
-        .I5(m_wempty_i_2_n_0),
-        .O(p_0_in__0[5]));
-  LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
+    .INIT(64'hAAAAAAAAAAAAAAA9)) 
     \m_wpending[5]_i_2 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .I3(Q[4]),
-        .I4(Q[3]),
+       (.I0(m_wpending_reg[5]),
+        .I1(m_wpending_reg[3]),
+        .I2(m_wpending_reg[4]),
+        .I3(m_wpending_reg[2]),
+        .I4(m_wpending_reg[1]),
+        .I5(m_wpending_reg[0]),
         .O(\m_wpending[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFF7FF00008000)) 
+    \m_wpending[5]_i_3 
+       (.I0(M_AXI_WVALID_reg_0),
+        .I1(M_AXI_WREADY),
+        .I2(Q[5]),
+        .I3(\m_wpending[6]_i_3_n_0 ),
+        .I4(\m_wpending[5]_i_4_n_0 ),
+        .I5(\m_wpending[5]_i_5_n_0 ),
+        .O(\m_wpending[5]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \m_wpending[5]_i_4 
+       (.I0(m_wpending_reg[6]),
+        .I1(m_wpending_reg[5]),
+        .I2(m_wpending_reg[8]),
+        .I3(m_wpending_reg[7]),
+        .O(\m_wpending[5]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h6AAAAAAAAAAAAAAA)) 
+    \m_wpending[5]_i_5 
+       (.I0(Q[5]),
+        .I1(Q[2]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[3]),
+        .I5(Q[4]),
+        .O(\m_wpending[5]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h6F60606F6F606F60)) 
     \m_wpending[6]_i_1 
        (.I0(Q[6]),
-        .I1(\m_wpending[7]_i_2_n_0 ),
+        .I1(\m_wpending[6]_i_2_n_0 ),
         .I2(m_wempty_i_2_n_0),
         .I3(m_wpending_reg[6]),
         .I4(m_wpending_reg[5]),
-        .I5(\m_wpending[6]_i_2_n_0 ),
+        .I5(\m_wpending[6]_i_3_n_0 ),
         .O(p_0_in__0[6]));
+  LUT3 #(
+    .INIT(8'h40)) 
+    \m_wpending[6]_i_2 
+       (.I0(m_wempty_i_3_n_0),
+        .I1(\m_wpending[8]_i_6_n_0 ),
+        .I2(Q[5]),
+        .O(\m_wpending[6]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
-    \m_wpending[6]_i_2 
+    \m_wpending[6]_i_3 
        (.I0(m_wpending_reg[0]),
         .I1(m_wpending_reg[1]),
         .I2(m_wpending_reg[2]),
         .I3(m_wpending_reg[4]),
         .I4(m_wpending_reg[3]),
-        .O(\m_wpending[6]_i_2_n_0 ));
+        .O(\m_wpending[6]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h6A006AFF6AFF6A00)) 
+    .INIT(64'h60006FFF6FFF6000)) 
     \m_wpending[7]_i_1 
        (.I0(Q[7]),
         .I1(\m_wpending[7]_i_2_n_0 ),
-        .I2(Q[6]),
-        .I3(m_wempty_i_2_n_0),
+        .I2(M_AXI_AWVALID_reg_0),
+        .I3(M_AXI_AWREADY),
         .I4(m_wpending_reg[7]),
         .I5(\m_wpending[8]_i_5_n_0 ),
         .O(p_0_in__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0080)) 
     \m_wpending[7]_i_2 
-       (.I0(m_wempty_i_3_n_0),
+       (.I0(Q[6]),
         .I1(Q[5]),
-        .I2(\m_wpending[5]_i_2_n_0 ),
+        .I2(\m_wpending[8]_i_6_n_0 ),
+        .I3(m_wempty_i_3_n_0),
         .O(\m_wpending[7]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -11499,32 +11521,42 @@ module design_1_axisafety_2_1_axisafety
         .I4(m_wempty_reg_n_0),
         .O(\m_wpending[8]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h8F80808F8F808F80)) 
+    .INIT(64'hBF8080BFBF80BF80)) 
     \m_wpending[8]_i_3 
        (.I0(\m_wpending[8]_i_4_n_0 ),
-        .I1(Q[7]),
-        .I2(m_wempty_i_2_n_0),
+        .I1(M_AXI_AWVALID_reg_0),
+        .I2(M_AXI_AWREADY),
         .I3(m_wpending_reg[8]),
         .I4(m_wpending_reg[7]),
         .I5(\m_wpending[8]_i_5_n_0 ),
         .O(p_0_in__0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h0020)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h40000000)) 
     \m_wpending[8]_i_4 
-       (.I0(Q[6]),
-        .I1(\m_wpending[5]_i_2_n_0 ),
+       (.I0(m_wempty_i_3_n_0),
+        .I1(\m_wpending[8]_i_6_n_0 ),
         .I2(Q[5]),
-        .I3(m_wempty_i_3_n_0),
+        .I3(Q[6]),
+        .I4(Q[7]),
         .O(\m_wpending[8]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \m_wpending[8]_i_5 
-       (.I0(\m_wpending[6]_i_2_n_0 ),
+       (.I0(\m_wpending[6]_i_3_n_0 ),
         .I1(m_wpending_reg[6]),
         .I2(m_wpending_reg[5]),
         .O(\m_wpending[8]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \m_wpending[8]_i_6 
+       (.I0(Q[4]),
+        .I1(Q[3]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[2]),
+        .O(\m_wpending[8]_i_6_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \m_wpending_reg[0] 
@@ -11578,6 +11610,11 @@ module design_1_axisafety_2_1_axisafety
         .D(p_0_in__0[5]),
         .Q(m_wpending_reg[5]),
         .R(\m_wpending[8]_i_1_n_0 ));
+  MUXF7 \m_wpending_reg[5]_i_1 
+       (.I0(\m_wpending[5]_i_2_n_0 ),
+        .I1(\m_wpending[5]_i_3_n_0 ),
+        .O(p_0_in__0[5]),
+        .S(m_wempty_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
     \m_wpending_reg[6] 
@@ -11602,87 +11639,101 @@ module design_1_axisafety_2_1_axisafety
         .D(p_0_in__0[8]),
         .Q(m_wpending_reg[8]),
         .R(\m_wpending[8]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000400FFFFFFFF)) 
+  LUT3 #(
+    .INIT(8'hBF)) 
     o_read_fault_i_1
-       (.I0(S_AXI_ARVALID),
-        .I1(r_clear_fault),
-        .I2(S_AXI_AWVALID),
-        .I3(rfifo_empty_reg_n_0),
-        .I4(waddr_valid),
-        .I5(S_AXI_ARESETN),
-        .O(o_read_fault_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFBABAFFBA)) 
-    o_read_fault_i_2
-       (.I0(read_timeout_reg_n_0),
-        .I1(M_AXI_ARESETN_reg_0),
-        .I2(o_write_fault_reg_0),
-        .I3(M_AXI_RVALID),
-        .I4(o_read_fault_i_3_n_0),
-        .I5(o_read_fault_reg_0),
-        .O(o_read_fault_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    o_read_fault_i_3
-       (.I0(o_read_fault_i_4_n_0),
-        .I1(o_read_fault_i_5_n_0),
-        .I2(o_read_fault_i_6_n_0),
-        .I3(o_read_fault_i_7_n_0),
-        .I4(o_read_fault_i_8_n_0),
-        .I5(o_read_fault_i_9_n_0),
-        .O(o_read_fault_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h0888FFFFFFFF0888)) 
-    o_read_fault_i_4
-       (.I0(S_AXI_RVALID_reg_0),
-        .I1(rfifo_penultimate_reg_n_0),
-        .I2(E),
-        .I3(M_AXI_RLAST),
-        .I4(r_arid[2]),
-        .I5(M_AXI_RID[2]),
-        .O(o_read_fault_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    o_read_fault_i_5
+       (.I0(w_clear_fault),
+        .I1(ext_resetn_r[2]),
+        .I2(S_AXI_ARESETN),
+        .O(o_write_fault0));
+  LUT4 #(
+    .INIT(16'h4F44)) 
+    o_read_fault_i_10
        (.I0(M_AXI_RID[4]),
         .I1(r_arid[4]),
-        .O(o_read_fault_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h2FF22FF2FFFF2FF2)) 
-    o_read_fault_i_6
-       (.I0(r_arid[3]),
-        .I1(M_AXI_RID[3]),
-        .I2(r_arid[0]),
-        .I3(M_AXI_RID[0]),
-        .I4(M_AXI_RRESP[0]),
-        .I5(M_AXI_RRESP[1]),
-        .O(o_read_fault_i_6_n_0));
+        .I2(M_AXI_RRESP[1]),
+        .I3(M_AXI_RRESP[0]),
+        .O(o_read_fault_i_10_n_0));
   LUT4 #(
-    .INIT(16'hFFF4)) 
+    .INIT(16'h4F44)) 
+    o_read_fault_i_11
+       (.I0(M_AXI_RID[5]),
+        .I1(r_arid[5]),
+        .I2(r_arid[3]),
+        .I3(M_AXI_RID[3]),
+        .O(o_read_fault_i_11_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFF444)) 
+    o_read_fault_i_2
+       (.I0(M_AXI_ARESETN_reg_0),
+        .I1(o_write_fault_reg_0),
+        .I2(rfifo_empty_reg_n_0),
+        .I3(M_AXI_RVALID),
+        .I4(o_read_fault_i_4_n_0),
+        .I5(o_read_fault_reg_0),
+        .O(o_read_fault_i_2_n_0));
+  LUT5 #(
+    .INIT(32'h00000200)) 
+    o_read_fault_i_3
+       (.I0(rfifo_empty_reg_n_0),
+        .I1(waddr_valid),
+        .I2(S_AXI_AWVALID),
+        .I3(r_clear_fault),
+        .I4(S_AXI_ARVALID),
+        .O(w_clear_fault));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'hBA)) 
+    o_read_fault_i_4
+       (.I0(read_timeout_reg_n_0),
+        .I1(o_read_fault_i_5_n_0),
+        .I2(M_AXI_RVALID),
+        .O(o_read_fault_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    o_read_fault_i_5
+       (.I0(o_read_fault_i_6_n_0),
+        .I1(o_read_fault_i_7_n_0),
+        .I2(o_read_fault_i_8_n_0),
+        .I3(o_read_fault_i_9_n_0),
+        .I4(o_read_fault_i_10_n_0),
+        .I5(o_read_fault_i_11_n_0),
+        .O(o_read_fault_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    o_read_fault_i_6
+       (.I0(M_AXI_RID[0]),
+        .I1(r_arid[0]),
+        .O(o_read_fault_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h9999099909990999)) 
     o_read_fault_i_7
        (.I0(r_arid[1]),
         .I1(M_AXI_RID[1]),
-        .I2(rfifo_empty_reg_n_0),
-        .I3(M_AXI_ARVALID_reg_0),
+        .I2(S_AXI_RVALID_reg_0),
+        .I3(rfifo_penultimate_reg_n_0),
+        .I4(E),
+        .I5(M_AXI_RLAST),
         .O(o_read_fault_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'h8A)) 
-    o_read_fault_i_8
-       (.I0(rfifo_last),
-        .I1(S_AXI_RVALID_reg_0),
-        .I2(M_AXI_RLAST),
-        .O(o_read_fault_i_8_n_0));
   LUT6 #(
     .INIT(64'h66F666F6FFFF66F6)) 
+    o_read_fault_i_8
+       (.I0(r_arid[2]),
+        .I1(M_AXI_RID[2]),
+        .I2(M_AXI_RID[4]),
+        .I3(r_arid[4]),
+        .I4(M_AXI_RID[5]),
+        .I5(r_arid[5]),
+        .O(o_read_fault_i_8_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFD0D0FFD0)) 
     o_read_fault_i_9
-       (.I0(r_arid[5]),
-        .I1(M_AXI_RID[5]),
-        .I2(r_arid[1]),
-        .I3(M_AXI_RID[1]),
+       (.I0(M_AXI_RLAST),
+        .I1(S_AXI_RVALID_reg_0),
+        .I2(rfifo_last),
+        .I3(r_arid[3]),
         .I4(M_AXI_RID[3]),
-        .I5(r_arid[3]),
+        .I5(M_AXI_ARVALID_reg_0),
         .O(o_read_fault_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -11691,78 +11742,102 @@ module design_1_axisafety_2_1_axisafety
         .CE(1'b1),
         .D(o_read_fault_i_2_n_0),
         .Q(o_read_fault_reg_0),
-        .R(o_read_fault_i_1_n_0));
+        .R(o_write_fault0));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
-    .INIT(16'hFFF4)) 
+    .INIT(16'hFFF8)) 
     o_write_fault_i_1
        (.I0(o_write_fault_i_2_n_0),
         .I1(M_AXI_BVALID),
         .I2(o_write_fault_i_3_n_0),
         .I3(o_write_fault_reg_0),
         .O(o_write_fault_i_1_n_0));
-  LUT5 #(
-    .INIT(32'h40445555)) 
+  LUT4 #(
+    .INIT(16'h4F44)) 
+    o_write_fault_i_10
+       (.I0(r_awid[3]),
+        .I1(M_AXI_BID[3]),
+        .I2(r_awid[2]),
+        .I3(M_AXI_BID[2]),
+        .O(o_write_fault_i_10_n_0));
+  LUT6 #(
+    .INIT(64'h2FF22FF2FFFF2FF2)) 
+    o_write_fault_i_11
+       (.I0(r_awid[3]),
+        .I1(M_AXI_BID[3]),
+        .I2(r_awid[4]),
+        .I3(M_AXI_BID[4]),
+        .I4(r_awid[1]),
+        .I5(M_AXI_BID[1]),
+        .O(o_write_fault_i_11_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFF0FF44444444)) 
     o_write_fault_i_2
        (.I0(o_write_fault_i_4_n_0),
         .I1(o_write_fault_i_5_n_0),
-        .I2(M_AXI_BRESP[1]),
-        .I3(M_AXI_BRESP[0]),
-        .I4(M_AXI_BVALID),
+        .I2(o_write_fault_i_6_n_0),
+        .I3(o_write_fault_i_7_n_0),
+        .I4(o_write_fault_i_8_n_0),
+        .I5(M_AXI_BVALID),
         .O(o_write_fault_i_2_n_0));
-  LUT4 #(
-    .INIT(16'hFFAE)) 
-    o_write_fault_i_3
-       (.I0(o_write_fault_i_4_n_0),
-        .I1(o_read_fault_reg_0),
-        .I2(M_AXI_ARESETN_reg_0),
-        .I3(write_timeout_reg_n_0),
-        .O(o_write_fault_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'h00004000)) 
-    o_write_fault_i_4
-       (.I0(M_AXI_AWREADY),
-        .I1(M_AXI_AWVALID_reg_0),
-        .I2(M_AXI_WVALID_reg_0),
-        .I3(M_AXI_WREADY),
-        .I4(M_AXI_BVALID),
-        .O(o_write_fault_i_4_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000010)) 
+    .INIT(64'hFFFFFFFF1010FF10)) 
+    o_write_fault_i_3
+       (.I0(M_AXI_BVALID),
+        .I1(o_write_fault_i_4_n_0),
+        .I2(o_write_fault_i_5_n_0),
+        .I3(o_read_fault_reg_0),
+        .I4(M_AXI_ARESETN_reg_0),
+        .I5(write_timeout_reg_n_0),
+        .O(o_write_fault_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    o_write_fault_i_4
+       (.I0(M_AXI_WVALID_reg_0),
+        .I1(M_AXI_WREADY),
+        .O(o_write_fault_i_4_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     o_write_fault_i_5
        (.I0(M_AXI_AWVALID_reg_0),
-        .I1(M_AXI_WVALID_reg_0),
-        .I2(m_wempty_reg_n_0),
-        .I3(o_write_fault_i_6_n_0),
-        .I4(o_write_fault_i_7_n_0),
-        .I5(o_write_fault_i_8_n_0),
+        .I1(M_AXI_AWREADY),
         .O(o_write_fault_i_5_n_0));
-  LUT2 #(
-    .INIT(4'hB)) 
+  LUT4 #(
+    .INIT(16'h6FF6)) 
     o_write_fault_i_6
-       (.I0(S_AXI_BVALID_reg_0),
-        .I1(s_wbursts),
+       (.I0(r_awid[5]),
+        .I1(M_AXI_BID[5]),
+        .I2(r_awid[0]),
+        .I3(M_AXI_BID[0]),
         .O(o_write_fault_i_6_n_0));
   LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    .INIT(64'h0000000004040004)) 
     o_write_fault_i_7
-       (.I0(M_AXI_BID[1]),
-        .I1(r_awid[1]),
-        .I2(M_AXI_BID[2]),
+       (.I0(M_AXI_AWVALID_reg_0),
+        .I1(m_wempty_reg_n_0),
+        .I2(M_AXI_WVALID_reg_0),
         .I3(r_awid[2]),
-        .I4(r_awid[0]),
-        .I5(M_AXI_BID[0]),
+        .I4(M_AXI_BID[2]),
+        .I5(o_write_fault_i_9_n_0),
         .O(o_write_fault_i_7_n_0));
   LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    .INIT(64'hFFFFFFFFBAFFBABA)) 
     o_write_fault_i_8
-       (.I0(M_AXI_BID[4]),
-        .I1(r_awid[4]),
-        .I2(M_AXI_BID[5]),
-        .I3(r_awid[5]),
-        .I4(r_awid[3]),
-        .I5(M_AXI_BID[3]),
+       (.I0(o_write_fault_i_10_n_0),
+        .I1(r_awid[1]),
+        .I2(M_AXI_BID[1]),
+        .I3(M_AXI_BRESP[1]),
+        .I4(M_AXI_BRESP[0]),
+        .I5(o_write_fault_i_11_n_0),
         .O(o_write_fault_i_8_n_0));
+  LUT2 #(
+    .INIT(4'hB)) 
+    o_write_fault_i_9
+       (.I0(S_AXI_BVALID_reg_0),
+        .I1(s_wbursts),
+        .O(o_write_fault_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
     o_write_fault_reg
@@ -11770,7 +11845,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(1'b1),
         .D(o_write_fault_i_1_n_0),
         .Q(o_write_fault_reg_0),
-        .R(o_read_fault_i_1_n_0));
+        .R(o_write_fault0));
   LUT2 #(
     .INIT(4'h8)) 
     \r_arid[5]_i_1 
@@ -11856,23 +11931,36 @@ module design_1_axisafety_2_1_axisafety
         .Q(r_awid[5]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h00000000E0EE0000)) 
+    .INIT(64'hAEAAAAAAAEAAAEAA)) 
     r_clear_fault_i_1
-       (.I0(o_read_fault_reg_0),
-        .I1(o_write_fault_reg_0),
-        .I2(M_AXI_ARESETN_reg_0),
-        .I3(sel),
-        .I4(rfifo_empty_reg_n_0),
-        .I5(waddr_valid),
-        .O(r_clear_fault11_out));
-  FDSE #(
+       (.I0(r_clear_fault_i_2_n_0),
+        .I1(rfifo_empty_reg_n_0),
+        .I2(waddr_valid),
+        .I3(r_clear_fault_i_3_n_0),
+        .I4(M_AXI_ARESETN_reg_0),
+        .I5(sel),
+        .O(r_clear_fault_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h7)) 
+    r_clear_fault_i_2
+       (.I0(S_AXI_ARESETN),
+        .I1(ext_resetn_r[2]),
+        .O(r_clear_fault_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    r_clear_fault_i_3
+       (.I0(o_write_fault_reg_0),
+        .I1(o_read_fault_reg_0),
+        .O(r_clear_fault_i_3_n_0));
+  FDRE #(
     .INIT(1'b1)) 
     r_clear_fault_reg
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(r_clear_fault11_out),
+        .D(r_clear_fault_i_1_n_0),
         .Q(r_clear_fault),
-        .S(M_AXI_ARESETN_i_1_n_0));
+        .R(1'b0));
   FDRE \r_rdata_reg[0] 
        (.C(S_AXI_ACLK),
         .CE(E),
@@ -12065,18 +12153,6 @@ module design_1_axisafety_2_1_axisafety
         .D(M_AXI_RDATA[9]),
         .Q(r_rdata[9]),
         .R(1'b0));
-  FDRE \r_rresp_reg[0] 
-       (.C(S_AXI_ACLK),
-        .CE(E),
-        .D(M_AXI_RRESP[0]),
-        .Q(r_rresp[0]),
-        .R(1'b0));
-  FDRE \r_rresp_reg[1] 
-       (.C(S_AXI_ACLK),
-        .CE(E),
-        .D(M_AXI_RRESP[1]),
-        .Q(r_rresp[1]),
-        .R(1'b0));
   LUT6 #(
     .INIT(64'hFFFFFFFFCEEEFFFF)) 
     r_rvalid_inv_i_1
@@ -12096,32 +12172,50 @@ module design_1_axisafety_2_1_axisafety
         .D(r_rvalid_inv_i_1_n_0),
         .Q(E),
         .R(1'b0));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
-  LDCE #(
+  LUT5 #(
+    .INIT(32'h00000200)) 
+    \r_slave_error[0]_i_1 
+       (.I0(M_AXI_RRESP[0]),
+        .I1(o_read_fault_i_4_n_0),
+        .I2(o_read_fault_reg_0),
+        .I3(M_AXI_ARESETN_reg_0),
+        .I4(o_write_fault0),
+        .O(\r_slave_error[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFF8FFFF)) 
+    \r_slave_error[1]_i_1 
+       (.I0(E),
+        .I1(M_AXI_RVALID),
+        .I2(o_read_fault_i_4_n_0),
+        .I3(o_read_fault_reg_0),
+        .I4(M_AXI_ARESETN_reg_0),
+        .I5(o_write_fault0),
+        .O(\r_slave_error[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h55555455)) 
+    \r_slave_error[1]_i_2 
+       (.I0(o_write_fault0),
+        .I1(o_read_fault_i_4_n_0),
+        .I2(o_read_fault_reg_0),
+        .I3(M_AXI_ARESETN_reg_0),
+        .I4(M_AXI_RRESP[1]),
+        .O(\r_slave_error[1]_i_2_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \r_slave_error_reg[0] 
-       (.CLR(r_slave_error0),
-        .D(m_rresp[0]),
-        .G(M_AXI_RVALID),
-        .GE(1'b1),
-        .Q(r_slave_error[0]));
-  (* XILINX_LEGACY_PRIM = "LDP" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
-  LDPE #(
+       (.C(S_AXI_ACLK),
+        .CE(\r_slave_error[1]_i_1_n_0 ),
+        .D(\r_slave_error[0]_i_1_n_0 ),
+        .Q(r_slave_error[0]),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \r_slave_error_reg[1] 
-       (.D(m_rresp[1]),
-        .G(M_AXI_RVALID),
-        .GE(1'b1),
-        .PRE(r_slave_error0),
-        .Q(r_slave_error[1]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \r_slave_error_reg[1]_i_1 
-       (.I0(o_read_fault_reg_0),
-        .I1(M_AXI_ARESETN_reg_0),
-        .O(r_slave_error0));
+       (.C(S_AXI_ACLK),
+        .CE(\r_slave_error[1]_i_1_n_0 ),
+        .D(\r_slave_error[1]_i_2_n_0 ),
+        .Q(r_slave_error[1]),
+        .R(1'b0));
   LUT2 #(
     .INIT(4'h2)) 
     \r_wdata[31]_i_1 
@@ -12353,20 +12447,20 @@ module design_1_axisafety_2_1_axisafety
   LUT6 #(
     .INIT(64'h000F008800000088)) 
     r_wvalid_i_1
-       (.I0(p_39_in),
-        .I1(M_AXI_WVALID_reg_0),
+       (.I0(M_AXI_WVALID_reg_0),
+        .I1(p_40_in),
         .I2(o_write_fault_reg_0),
         .I3(M_AXI_WREADY),
         .I4(r_wvalid),
         .I5(M_AXI_ARESETN_reg_0),
         .O(r_wvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h8)) 
     r_wvalid_i_2
        (.I0(S_AXI_WVALID),
         .I1(S_AXI_WREADY_reg_0),
-        .O(p_39_in));
+        .O(p_40_in));
   FDRE #(
     .INIT(1'b0)) 
     r_wvalid_reg
@@ -12374,7 +12468,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(1'b1),
         .D(r_wvalid_i_1_n_0),
         .Q(r_wvalid),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   LUT6 #(
     .INIT(64'hFFFFFFFF00010000)) 
     read_timeout_i_1
@@ -12388,34 +12482,36 @@ module design_1_axisafety_2_1_axisafety
   LUT4 #(
     .INIT(16'hFFEF)) 
     read_timeout_i_2
-       (.I0(read_timer_reg[11]),
-        .I1(read_timer_reg[12]),
-        .I2(read_timer_reg[5]),
-        .I3(read_timer_reg[6]),
-        .O(read_timeout_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    read_timeout_i_3
        (.I0(read_timer_reg[2]),
-        .I1(read_timer_reg[3]),
-        .I2(read_timer_reg[4]),
+        .I1(read_timer_reg[8]),
+        .I2(read_timer_reg[5]),
+        .I3(read_timer_reg[11]),
+        .O(read_timeout_i_2_n_0));
+  LUT4 #(
+    .INIT(16'hFFEF)) 
+    read_timeout_i_3
+       (.I0(read_timer_reg[1]),
+        .I1(read_timer_reg[12]),
+        .I2(read_timer_reg[7]),
+        .I3(read_timer_reg[14]),
         .O(read_timeout_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     read_timeout_i_4
-       (.I0(M_AXI_RVALID),
-        .I1(rfifo_empty_reg_n_0),
-        .I2(S_AXI_RVALID_reg_0),
+       (.I0(rfifo_empty_reg_n_0),
+        .I1(S_AXI_RVALID_reg_0),
+        .I2(M_AXI_RVALID),
         .O(read_timeout_i_4_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000100)) 
+    .INIT(64'h0000000000000007)) 
     read_timeout_i_5
-       (.I0(read_timer_reg[1]),
-        .I1(read_timer_reg[0]),
-        .I2(read_timer_reg[14]),
-        .I3(read_timer_reg[7]),
+       (.I0(read_timer_reg[6]),
+        .I1(read_timer_reg[7]),
+        .I2(read_timer_reg[0]),
+        .I3(read_timer_reg[3]),
         .I4(read_timer_reg[13]),
-        .I5(read_timer_reg[8]),
+        .I5(read_timer_reg[4]),
         .O(read_timeout_i_5_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -12424,51 +12520,51 @@ module design_1_axisafety_2_1_axisafety
         .CE(1'b1),
         .D(read_timeout_i_1_n_0),
         .Q(read_timeout_reg_n_0),
-        .R(o_read_fault_i_1_n_0));
+        .R(write_timeout_i_1_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFD)) 
     \read_timer[0]_i_1 
        (.I0(S_AXI_ARESETN),
         .I1(w_clear_fault),
-        .I2(S_AXI_RVALID_reg_0),
-        .I3(rfifo_empty_reg_n_0),
-        .I4(M_AXI_RVALID),
+        .I2(M_AXI_RVALID),
+        .I3(S_AXI_RVALID_reg_0),
+        .I4(rfifo_empty_reg_n_0),
         .O(\read_timer[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFBFFF)) 
     \read_timer[0]_i_2 
        (.I0(\read_timer[0]_i_4_n_0 ),
-        .I1(read_timer_reg[7]),
-        .I2(read_timer_reg[6]),
-        .I3(read_timer_reg[2]),
+        .I1(read_timer_reg[0]),
+        .I2(read_timer_reg[8]),
+        .I3(read_timer_reg[1]),
         .I4(\read_timer[0]_i_5_n_0 ),
         .I5(\read_timer[0]_i_6_n_0 ),
         .O(\read_timer[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \read_timer[0]_i_4 
-       (.I0(read_timer_reg[4]),
-        .I1(read_timer_reg[11]),
-        .I2(read_timer_reg[13]),
-        .I3(read_timer_reg[1]),
+       (.I0(read_timer_reg[6]),
+        .I1(read_timer_reg[7]),
+        .I2(read_timer_reg[11]),
+        .I3(read_timer_reg[3]),
         .I4(read_timer_reg[12]),
         .I5(read_timer_reg[5]),
         .O(\read_timer[0]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
     \read_timer[0]_i_5 
-       (.I0(read_timer_reg[3]),
-        .I1(read_timer_reg[14]),
-        .I2(read_timer_reg[8]),
-        .I3(read_timer_reg[0]),
+       (.I0(read_timer_reg[2]),
+        .I1(read_timer_reg[13]),
+        .I2(read_timer_reg[4]),
+        .I3(read_timer_reg[14]),
         .O(\read_timer[0]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
     \read_timer[0]_i_6 
-       (.I0(read_timer_reg[15]),
+       (.I0(read_timer_reg[9]),
         .I1(read_timer_reg[16]),
-        .I2(read_timer_reg[9]),
-        .I3(read_timer_reg[10]),
+        .I2(read_timer_reg[10]),
+        .I3(read_timer_reg[15]),
         .O(\read_timer[0]_i_6_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -12638,20 +12734,20 @@ module design_1_axisafety_2_1_axisafety
         .D(\read_timer_reg[8]_i_1_n_14 ),
         .Q(read_timer_reg[9]),
         .R(\read_timer[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \reset_counter[0]_i_1 
        (.I0(\reset_counter_reg_n_0_[0] ),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \reset_counter[1]_i_1 
        (.I0(\reset_counter_reg_n_0_[0] ),
         .I1(\reset_counter_reg_n_0_[1] ),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \reset_counter[2]_i_1 
@@ -12659,7 +12755,7 @@ module design_1_axisafety_2_1_axisafety
         .I1(\reset_counter_reg_n_0_[1] ),
         .I2(\reset_counter_reg_n_0_[0] ),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \reset_counter[3]_i_1 
@@ -12718,12 +12814,12 @@ module design_1_axisafety_2_1_axisafety
         .Q(sel),
         .S(M_AXI_ARESETN_reg_0));
   LUT4 #(
-    .INIT(16'h15D5)) 
+    .INIT(16'h407F)) 
     \rfifo_counter[0]_i_1 
-       (.I0(rfifo_counter_reg[0]),
-        .I1(S_AXI_ARREADY_reg_0),
-        .I2(S_AXI_ARVALID),
-        .I3(S_AXI_ARLEN[0]),
+       (.I0(S_AXI_ARLEN[0]),
+        .I1(S_AXI_ARVALID),
+        .I2(S_AXI_ARREADY_reg_0),
+        .I3(rfifo_counter_reg[0]),
         .O(\rfifo_counter[0]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h3AAA3555)) 
@@ -12755,24 +12851,24 @@ module design_1_axisafety_2_1_axisafety
         .I5(S_AXI_ARLEN[6]),
         .O(\rfifo_counter[8]_i_12_n_0 ));
   LUT6 #(
-    .INIT(64'hAAC3C3C355C3C3C3)) 
+    .INIT(64'hCCA5A5A533A5A5A5)) 
     \rfifo_counter[8]_i_13 
-       (.I0(S_AXI_ARLEN[4]),
-        .I1(rfifo_counter_reg[4]),
+       (.I0(rfifo_counter_reg[4]),
+        .I1(S_AXI_ARLEN[4]),
         .I2(rfifo_counter_reg[5]),
         .I3(S_AXI_ARREADY_reg_0),
         .I4(S_AXI_ARVALID),
         .I5(S_AXI_ARLEN[5]),
         .O(\rfifo_counter[8]_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'hCAAA3AAAC5553555)) 
+    .INIT(64'hCCA5A5A533A5A5A5)) 
     \rfifo_counter[8]_i_14 
        (.I0(rfifo_counter_reg[3]),
         .I1(S_AXI_ARLEN[3]),
-        .I2(S_AXI_ARREADY_reg_0),
-        .I3(S_AXI_ARVALID),
-        .I4(S_AXI_ARLEN[4]),
-        .I5(rfifo_counter_reg[4]),
+        .I2(rfifo_counter_reg[4]),
+        .I3(S_AXI_ARREADY_reg_0),
+        .I4(S_AXI_ARVALID),
+        .I5(S_AXI_ARLEN[4]),
         .O(\rfifo_counter[8]_i_14_n_0 ));
   LUT6 #(
     .INIT(64'hCCA5A5A533A5A5A5)) 
@@ -12803,12 +12899,12 @@ module design_1_axisafety_2_1_axisafety
         .I3(S_AXI_ARVALID),
         .O(\rfifo_counter[8]_i_17_n_0 ));
   LUT4 #(
-    .INIT(16'hBF80)) 
+    .INIT(16'hEA2A)) 
     \rfifo_counter[8]_i_2 
-       (.I0(S_AXI_ARLEN[0]),
-        .I1(S_AXI_ARVALID),
-        .I2(S_AXI_ARREADY_reg_0),
-        .I3(rfifo_counter_reg[0]),
+       (.I0(rfifo_counter_reg[0]),
+        .I1(S_AXI_ARREADY_reg_0),
+        .I2(S_AXI_ARVALID),
+        .I3(S_AXI_ARLEN[0]),
         .O(A[0]));
   LUT4 #(
     .INIT(16'hBF80)) 
@@ -12827,12 +12923,12 @@ module design_1_axisafety_2_1_axisafety
         .I3(rfifo_counter_reg[5]),
         .O(A[5]));
   LUT4 #(
-    .INIT(16'hCAAA)) 
+    .INIT(16'hBF80)) 
     \rfifo_counter[8]_i_5 
-       (.I0(rfifo_counter_reg[4]),
-        .I1(S_AXI_ARLEN[4]),
-        .I2(S_AXI_ARVALID),
-        .I3(S_AXI_ARREADY_reg_0),
+       (.I0(S_AXI_ARLEN[4]),
+        .I1(S_AXI_ARVALID),
+        .I2(S_AXI_ARREADY_reg_0),
+        .I3(rfifo_counter_reg[4]),
         .O(A[4]));
   LUT4 #(
     .INIT(16'hBF80)) 
@@ -12871,7 +12967,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter[0]_i_1_n_0 ),
         .Q(rfifo_counter_reg[0]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[1] 
@@ -12879,7 +12975,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_15 ),
         .Q(rfifo_counter_reg[1]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[2] 
@@ -12887,7 +12983,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_14 ),
         .Q(rfifo_counter_reg[2]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[3] 
@@ -12895,7 +12991,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_13 ),
         .Q(rfifo_counter_reg[3]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[4] 
@@ -12903,7 +12999,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_12 ),
         .Q(rfifo_counter_reg[4]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[5] 
@@ -12911,7 +13007,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_11 ),
         .Q(rfifo_counter_reg[5]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[6] 
@@ -12919,7 +13015,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_10 ),
         .Q(rfifo_counter_reg[6]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[7] 
@@ -12927,7 +13023,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_9 ),
         .Q(rfifo_counter_reg[7]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   FDRE #(
     .INIT(1'b0)) 
     \rfifo_counter_reg[8] 
@@ -12935,7 +13031,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(\rfifo_counter_reg[8]_i_1_n_8 ),
         .Q(rfifo_counter_reg[8]),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY8 \rfifo_counter_reg[8]_i_1 
@@ -12949,8 +13045,8 @@ module design_1_axisafety_2_1_axisafety
     .INIT(64'h0000FF80FF80FF80)) 
     rfifo_empty_i_1
        (.I0(rfifo_empty_i_2_n_0),
-        .I1(S_AXI_RVALID_reg_0),
-        .I2(S_AXI_RREADY),
+        .I1(S_AXI_RREADY),
+        .I2(S_AXI_RVALID_reg_0),
         .I3(rfifo_empty_reg_n_0),
         .I4(S_AXI_ARREADY_reg_0),
         .I5(S_AXI_ARVALID),
@@ -12958,12 +13054,20 @@ module design_1_axisafety_2_1_axisafety
   LUT5 #(
     .INIT(32'h00000002)) 
     rfifo_empty_i_2
-       (.I0(rfifo_penultimate_i_3_n_0),
+       (.I0(rfifo_empty_i_3_n_0),
         .I1(rfifo_counter_reg[1]),
-        .I2(rfifo_counter_reg[4]),
-        .I3(rfifo_counter_reg[2]),
-        .I4(rfifo_counter_reg[3]),
+        .I2(rfifo_counter_reg[2]),
+        .I3(rfifo_counter_reg[3]),
+        .I4(rfifo_counter_reg[4]),
         .O(rfifo_empty_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    rfifo_empty_i_3
+       (.I0(rfifo_counter_reg[8]),
+        .I1(rfifo_counter_reg[7]),
+        .I2(rfifo_counter_reg[6]),
+        .I3(rfifo_counter_reg[5]),
+        .O(rfifo_empty_i_3_n_0));
   FDSE #(
     .INIT(1'b1)) 
     rfifo_empty_reg
@@ -12971,50 +13075,52 @@ module design_1_axisafety_2_1_axisafety
         .CE(1'b1),
         .D(rfifo_empty_i_1_n_0),
         .Q(rfifo_empty_reg_n_0),
-        .S(M_AXI_ARESETN_i_1_n_0));
+        .S(r_clear_fault1));
   LUT5 #(
     .INIT(32'hFF080808)) 
     rfifo_last_i_1
-       (.I0(S_AXI_RVALID_reg_0),
-        .I1(S_AXI_RREADY),
+       (.I0(S_AXI_RREADY),
+        .I1(S_AXI_RVALID_reg_0),
         .I2(rfifo_empty_reg_n_0),
         .I3(S_AXI_ARREADY_reg_0),
         .I4(S_AXI_ARVALID),
         .O(rfifo_last_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0F11111100111111)) 
+    .INIT(64'h040004000400FFFF)) 
     rfifo_last_i_2
-       (.I0(rfifo_last_i_3_n_0),
-        .I1(rfifo_counter_reg[4]),
-        .I2(S_AXI_ARLEN[0]),
-        .I3(S_AXI_ARREADY_reg_0),
-        .I4(S_AXI_ARVALID),
-        .I5(rfifo_last_i_4_n_0),
+       (.I0(rfifo_counter_reg[0]),
+        .I1(rfifo_counter_reg[1]),
+        .I2(rfifo_counter_reg[2]),
+        .I3(rfifo_last_i_3_n_0),
+        .I4(rfifo_last_i_4_n_0),
+        .I5(S_AXI_ARLEN[0]),
         .O(rfifo_last_i_2_n_0));
   LUT5 #(
-    .INIT(32'hFFFDFFFF)) 
+    .INIT(32'h00020202)) 
     rfifo_last_i_3
-       (.I0(rfifo_penultimate_i_3_n_0),
-        .I1(rfifo_counter_reg[2]),
-        .I2(rfifo_counter_reg[3]),
-        .I3(rfifo_counter_reg[0]),
-        .I4(rfifo_counter_reg[1]),
+       (.I0(rfifo_empty_i_3_n_0),
+        .I1(rfifo_counter_reg[3]),
+        .I2(rfifo_counter_reg[4]),
+        .I3(S_AXI_ARVALID),
+        .I4(S_AXI_ARREADY_reg_0),
         .O(rfifo_last_i_3_n_0));
   LUT4 #(
-    .INIT(16'h0001)) 
+    .INIT(16'hFFF7)) 
     rfifo_last_i_4
-       (.I0(S_AXI_ARLEN[3]),
-        .I1(S_AXI_ARLEN[6]),
-        .I2(S_AXI_ARLEN[7]),
+       (.I0(S_AXI_ARVALID),
+        .I1(S_AXI_ARREADY_reg_0),
+        .I2(S_AXI_ARLEN[2]),
         .I3(rfifo_last_i_5_n_0),
         .O(rfifo_last_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     rfifo_last_i_5
-       (.I0(S_AXI_ARLEN[4]),
-        .I1(S_AXI_ARLEN[2]),
-        .I2(S_AXI_ARLEN[5]),
-        .I3(S_AXI_ARLEN[1]),
+       (.I0(S_AXI_ARLEN[7]),
+        .I1(S_AXI_ARLEN[4]),
+        .I2(S_AXI_ARLEN[1]),
+        .I3(S_AXI_ARLEN[3]),
+        .I4(S_AXI_ARLEN[5]),
+        .I5(S_AXI_ARLEN[6]),
         .O(rfifo_last_i_5_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -13023,35 +13129,17 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(rfifo_last_i_2_n_0),
         .Q(rfifo_last),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   LUT6 #(
-    .INIT(64'h8000FFFF80008000)) 
+    .INIT(64'h2000FFFF20002000)) 
     rfifo_penultimate_i_1
-       (.I0(S_AXI_ARLEN[0]),
-        .I1(S_AXI_ARREADY_reg_0),
-        .I2(S_AXI_ARVALID),
-        .I3(rfifo_last_i_4_n_0),
-        .I4(rfifo_penultimate_i_2_n_0),
-        .I5(rfifo_penultimate_i_3_n_0),
-        .O(rfifo_penultimate_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFEFFF)) 
-    rfifo_penultimate_i_2
-       (.I0(S_AXI_ARREADY0),
-        .I1(rfifo_counter_reg[4]),
+       (.I0(rfifo_counter_reg[1]),
+        .I1(rfifo_counter_reg[2]),
         .I2(rfifo_counter_reg[0]),
-        .I3(rfifo_counter_reg[1]),
-        .I4(rfifo_counter_reg[2]),
-        .I5(rfifo_counter_reg[3]),
-        .O(rfifo_penultimate_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h0001)) 
-    rfifo_penultimate_i_3
-       (.I0(rfifo_counter_reg[8]),
-        .I1(rfifo_counter_reg[7]),
-        .I2(rfifo_counter_reg[6]),
-        .I3(rfifo_counter_reg[5]),
-        .O(rfifo_penultimate_i_3_n_0));
+        .I3(rfifo_last_i_3_n_0),
+        .I4(rfifo_last_i_4_n_0),
+        .I5(S_AXI_ARLEN[0]),
+        .O(rfifo_penultimate_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
     rfifo_penultimate_reg
@@ -13059,7 +13147,7 @@ module design_1_axisafety_2_1_axisafety
         .CE(rfifo_last_i_1_n_0),
         .D(rfifo_penultimate_i_1_n_0),
         .Q(rfifo_penultimate_reg_n_0),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
   LUT6 #(
     .INIT(64'h80FFFFFF80808080)) 
     \s_wbursts[0]_i_1 
@@ -13077,61 +13165,76 @@ module design_1_axisafety_2_1_axisafety
         .CE(1'b1),
         .D(\s_wbursts[0]_i_1_n_0 ),
         .Q(s_wbursts),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
+  LUT1 #(
+    .INIT(2'h1)) 
+    waddr_valid_i_1
+       (.I0(S_AXI_ARESETN),
+        .O(r_clear_fault1));
   LUT5 #(
     .INIT(32'hFF707070)) 
-    waddr_valid_i_1
+    waddr_valid_i_2
        (.I0(S_AXI_BREADY),
         .I1(S_AXI_BVALID_reg_0),
         .I2(waddr_valid),
         .I3(S_AXI_AWREADY_reg_0),
         .I4(S_AXI_AWVALID),
-        .O(waddr_valid_i_1_n_0));
+        .O(waddr_valid_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
     waddr_valid_reg
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(waddr_valid_i_1_n_0),
+        .D(waddr_valid_i_2_n_0),
         .Q(waddr_valid),
-        .R(M_AXI_ARESETN_i_1_n_0));
+        .R(r_clear_fault1));
+  LUT6 #(
+    .INIT(64'h00040000FFFFFFFF)) 
+    write_timeout_i_1
+       (.I0(S_AXI_ARVALID),
+        .I1(r_clear_fault),
+        .I2(S_AXI_AWVALID),
+        .I3(waddr_valid),
+        .I4(rfifo_empty_reg_n_0),
+        .I5(S_AXI_ARESETN),
+        .O(write_timeout_i_1_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFF00400000)) 
-    write_timeout_i_1
-       (.I0(p_39_in),
+    write_timeout_i_2
+       (.I0(p_40_in),
         .I1(write_timer_reg[16]),
         .I2(write_timer_reg[15]),
         .I3(M_AXI_BVALID),
-        .I4(write_timeout_i_2_n_0),
+        .I4(write_timeout_i_3_n_0),
         .I5(write_timeout_reg_n_0),
-        .O(write_timeout_i_1_n_0));
+        .O(write_timeout_i_2_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    write_timeout_i_2
-       (.I0(write_timeout_i_3_n_0),
+    write_timeout_i_3
+       (.I0(write_timeout_i_4_n_0),
         .I1(write_timer_reg[14]),
         .I2(write_timer_reg[13]),
         .I3(write_timer_reg[12]),
         .I4(write_timer_reg[11]),
-        .O(write_timeout_i_2_n_0));
+        .O(write_timeout_i_3_n_0));
   LUT6 #(
     .INIT(64'h8880888088808080)) 
-    write_timeout_i_3
+    write_timeout_i_4
        (.I0(write_timer_reg[9]),
         .I1(write_timer_reg[10]),
         .I2(write_timer_reg[8]),
         .I3(write_timer_reg[7]),
-        .I4(write_timer_reg[5]),
-        .I5(write_timer_reg[6]),
-        .O(write_timeout_i_3_n_0));
+        .I4(write_timer_reg[6]),
+        .I5(write_timer_reg[5]),
+        .O(write_timeout_i_4_n_0));
   FDRE #(
     .INIT(1'b0)) 
     write_timeout_reg
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(write_timeout_i_1_n_0),
+        .D(write_timeout_i_2_n_0),
         .Q(write_timeout_reg_n_0),
-        .R(o_read_fault_i_1_n_0));
+        .R(write_timeout_i_1_n_0));
   LUT5 #(
     .INIT(32'hFF4FFFFF)) 
     \write_timer[0]_i_1 
@@ -13156,7 +13259,7 @@ module design_1_axisafety_2_1_axisafety
     \write_timer[0]_i_4 
        (.I0(write_timer_reg[15]),
         .I1(write_timer_reg[16]),
-        .I2(write_timer_reg[6]),
+        .I2(write_timer_reg[5]),
         .I3(write_timer_reg[7]),
         .I4(write_timer_reg[10]),
         .I5(write_timer_reg[9]),
@@ -13164,10 +13267,10 @@ module design_1_axisafety_2_1_axisafety
   LUT4 #(
     .INIT(16'h7FFF)) 
     \write_timer[0]_i_5 
-       (.I0(write_timer_reg[3]),
+       (.I0(write_timer_reg[4]),
         .I1(write_timer_reg[0]),
         .I2(write_timer_reg[2]),
-        .I3(write_timer_reg[4]),
+        .I3(write_timer_reg[3]),
         .O(\write_timer[0]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
@@ -13175,7 +13278,7 @@ module design_1_axisafety_2_1_axisafety
        (.I0(write_timer_reg[13]),
         .I1(write_timer_reg[14]),
         .I2(write_timer_reg[11]),
-        .I3(write_timer_reg[5]),
+        .I3(write_timer_reg[6]),
         .O(\write_timer[0]_i_6_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -13191,6 +13294,7 @@ module design_1_axisafety_2_1_axisafety
         .Q(write_timer_reg[0]),
         .R(\write_timer[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "16" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY8 \write_timer_reg[0]_i_3 
        (.CI(1'b0),
         .CI_TOP(1'b0),
@@ -13255,6 +13359,7 @@ module design_1_axisafety_2_1_axisafety
         .Q(write_timer_reg[16]),
         .R(\write_timer[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "16" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY8 \write_timer_reg[16]_i_1 
        (.CI(\write_timer_reg[8]_i_1_n_0 ),
         .CI_TOP(1'b0),
@@ -13327,6 +13432,7 @@ module design_1_axisafety_2_1_axisafety
         .Q(write_timer_reg[8]),
         .R(\write_timer[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "16" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY8 \write_timer_reg[8]_i_1 
        (.CI(\write_timer_reg[0]_i_3_n_0 ),
         .CI_TOP(1'b0),

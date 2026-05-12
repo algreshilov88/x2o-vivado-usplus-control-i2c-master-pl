@@ -305,6 +305,7 @@ module axisafety #(
 	localparam	LGTIMEOUT = $clog2(OPT_TIMEOUT+1);
 	localparam [1:0]	OKAY = 2'b00, EXOKAY = 2'b01;
 	localparam	SLAVE_ERROR = 2'b10;
+	localparam [DW-1:0]	DEAD_BASE = 32'hdead0000;
 	//
 	//
 	// Register declarations
@@ -887,7 +888,7 @@ module axisafety #(
 	// Here we do just a bit more:
 	initial	o_write_fault = 0;
 	always @(posedge S_AXI_ACLK)
-	if (!S_AXI_ARESETN || clear_fault)
+	if (!S_AXI_ARESETN || !ext_resetn_r[2] || clear_fault)
 		o_write_fault <= 0;
 	else if ((!M_AXI_ARESETN&&o_read_fault) || write_timeout)
 		o_write_fault <= 1;
@@ -912,23 +913,35 @@ module axisafety #(
 	// return channel based upon the incoming values alone.  Note that
 	// we're overriding the M_AXI_BID below, in order to make certain that
 	// the return goes to the right source.
-	initial	m_slave_error = 0;
+	// Keep upstream BRESP as OKAY even on faults/errors.  On ARM64/Linux,
+	// propagating SLVERR from userspace /dev/mem accesses may wedge the bus.
+	// The diagnostic status is exposed via m_slave_error and 0xdead.... RDATA.
 	always @(*)
 	if (o_write_fault)
 	begin
 		m_bvalid = (s_wbursts > (S_AXI_BVALID ? 1:0));
 		m_bid    = wfifo_id;
-		m_bresp  = 0; // SLAVE_ERROR; // should be replaced with 0 on advice from Dan
-		m_slave_error = SLAVE_ERROR;
+		m_bresp  = OKAY;
 	end else begin
 		m_bvalid = M_AXI_BVALID;
 		if (faulty_write_return)
 			m_bvalid = 0;
 		m_bid    = wfifo_id;
-		m_bresp  = M_AXI_BRESP;
-		if (M_AXI_BVALID && M_AXI_BREADY)
-	        m_slave_error = M_AXI_BRESP;
+		m_bresp  = OKAY;
 	end
+
+	// Registered diagnostic write-status.  This used to be assigned from
+	// combinational logic, which inferred a latch and could stay in DEAD
+	// across a repeated C2C reset.  Clear it on reset, external reset, and
+	// self-reset recovery; update it only from real/fault write events.
+	initial	m_slave_error = OKAY;
+	always @(posedge S_AXI_ACLK)
+	if (!S_AXI_ARESETN || !ext_resetn_r[2] || clear_fault)
+		m_slave_error <= OKAY;
+	else if (o_write_fault || write_timeout || faulty_write_return)
+		m_slave_error <= SLAVE_ERROR;
+	else if (M_AXI_BVALID && M_AXI_BREADY)
+		m_slave_error <= M_AXI_BRESP;
 	// }}}
 
 	// S_AXI_B*
@@ -1178,7 +1191,7 @@ module axisafety #(
 	// {{{
 	initial	o_read_fault = 0;
 	always @(posedge S_AXI_ACLK)
-	if (!S_AXI_ARESETN || clear_fault)
+	if (!S_AXI_ARESETN || !ext_resetn_r[2] || clear_fault)
 		o_read_fault <= 0;
 	else if ((!M_AXI_ARESETN && o_write_fault) || read_timeout)
 		o_read_fault <= 1;
@@ -1378,27 +1391,36 @@ module axisafety #(
 	//
 	// This data set includes all the return values, even though only
 	// RRESP and RVALID are set in this block.
-	initial	r_slave_error = 0;
+	// Keep upstream RRESP as OKAY even on faults/errors.  Read failures are
+	// reported by r_slave_error and the 0xdead.... data bypass below.
 	always @(*)
 	if (o_read_fault || (!M_AXI_ARESETN && OPT_SELF_RESET))
 	begin
 		m_rvalid = !rfifo_empty;
 		if (S_AXI_RVALID && rfifo_last)
 			m_rvalid = 0;
-		m_rresp  = 0; //SLAVE_ERROR;
-		r_slave_error = SLAVE_ERROR;
+		m_rresp  = OKAY;
 	end else if (r_rvalid)
 	begin
 		m_rvalid = r_rvalid;
-		m_rresp  = r_rresp;
-		if (M_AXI_RVALID)
-	        r_slave_error = r_rresp;
+		m_rresp  = OKAY;
 	end else begin
 		m_rvalid = M_AXI_RVALID && raddr_valid && !faulty_read_return;
-		m_rresp  = M_AXI_RRESP;
-		if (M_AXI_RVALID)
-	        r_slave_error = M_AXI_RRESP;
+		m_rresp  = OKAY;
 	end
+
+	// Registered diagnostic read-status.  Clear on reset, external C2C reset,
+	// and self-reset recovery so repeated C2C reset doesn't leave the wrapper
+	// permanently returning 0xdead....
+	initial	r_slave_error = OKAY;
+	always @(posedge S_AXI_ACLK)
+	if (!S_AXI_ARESETN || !ext_resetn_r[2] || clear_fault)
+		r_slave_error <= OKAY;
+	else if (o_read_fault || read_timeout || faulty_read_return
+			|| (!M_AXI_ARESETN && OPT_SELF_RESET))
+		r_slave_error <= SLAVE_ERROR;
+	else if (M_AXI_RVALID && M_AXI_RREADY)
+		r_slave_error <= M_AXI_RRESP;
 	// }}}
 
 	// m_rid
@@ -1458,8 +1480,18 @@ module axisafety #(
 		S_AXI_RRESP  <= m_rresp;
 		S_AXI_RLAST  <= m_rlast;
 		//S_AXI_RDATA  <= m_rdata;
-		if (m_slave_error || r_slave_error)
-		    S_AXI_RDATA <= 32'hdead0000 | m_slave_error | (r_slave_error << 2);  
+		// Userspace-safe error bypass.  Do not propagate SLVERR/DECERR
+		// upstream; encode the diagnostic in RDATA instead.  Include current
+		// one-cycle fault sources so the first faulting read also returns DEAD,
+		// but don't let stale status survive reset/clear_fault.
+		if (o_write_fault || o_read_fault || faulty_write_return
+			|| faulty_read_return || write_timeout || read_timeout
+			|| (m_slave_error != OKAY) || (r_slave_error != OKAY)
+			|| (M_AXI_RVALID && (M_AXI_RRESP != OKAY)))
+			S_AXI_RDATA <= DEAD_BASE
+				| {{(DW-4){1'b0}},
+					((r_slave_error != OKAY) ? r_slave_error : SLAVE_ERROR),
+					((m_slave_error != OKAY) ? m_slave_error : OKAY)};
 		else
 		    S_AXI_RDATA  <= m_rdata;
 	end
@@ -1482,8 +1514,8 @@ module axisafety #(
 	
 	always @(posedge S_AXI_ACLK)
 	begin
-	   ext_resetn_r = {ext_resetn_r[1:0], ext_resetn};
-	   channel_up_r = {channel_up_r[1022:0], ext_resetn};
+	   ext_resetn_r  <= {ext_resetn_r[1:0], ext_resetn};
+	   channel_up_r <= {channel_up_r[1022:0], ext_resetn_r[2]};
 	end
 	
 	assign channel_up = channel_up_r[1023];
@@ -1503,7 +1535,7 @@ module axisafety #(
 		// {{{
 		initial	M_AXI_ARESETN = 0;
 		always @(posedge S_AXI_ACLK)
-		if (S_AXI_ARESETN == 1'b0) 
+		if (S_AXI_ARESETN == 1'b0 || !ext_resetn_r[2]) 
 			M_AXI_ARESETN <= 0;
 		else if (clear_fault)
 			M_AXI_ARESETN <= 1;
@@ -1528,7 +1560,7 @@ module axisafety #(
 		// {{{
 		initial	r_clear_fault <= 1;
 		always @(posedge S_AXI_ACLK)
-		if (!S_AXI_ARESETN)
+		if (!S_AXI_ARESETN || !ext_resetn_r[2])
 			r_clear_fault <= 1;
 		else if (!M_AXI_ARESETN && !reset_timeout)
 			r_clear_fault <= 0;
