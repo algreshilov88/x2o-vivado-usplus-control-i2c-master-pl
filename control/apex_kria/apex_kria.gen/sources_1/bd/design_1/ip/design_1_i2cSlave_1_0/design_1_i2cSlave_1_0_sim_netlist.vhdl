@@ -1,10 +1,10 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Wed Aug  9 18:45:16 2023
+-- Date        : Wed Aug  9 18:45:14 2023
 -- Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2cSlave_1_0/design_1_i2cSlave_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_i2cSlave_1_0 -prefix
+--               design_1_i2cSlave_1_0_ design_1_i2cSlave_1_0_sim_netlist.vhdl
 -- Design      : design_1_i2cSlave_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -40,8 +40,6 @@ entity design_1_i2cSlave_1_0_registerInterface is
     r7 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     reset_reg_w : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_i2cSlave_1_0_registerInterface : entity is "registerInterface";
   attribute keep_hierarchy : string;
   attribute keep_hierarchy of design_1_i2cSlave_1_0_registerInterface : entity is "soft";
   attribute max_reg : integer;
@@ -6320,8 +6318,6 @@ entity design_1_i2cSlave_1_0_serialInterface is
     \startStopDetState_reg[0]\ : in STD_LOGIC;
     hardware_address : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_i2cSlave_1_0_serialInterface : entity is "serialInterface";
 end design_1_i2cSlave_1_0_serialInterface;
 
 architecture STRUCTURE of design_1_i2cSlave_1_0_serialInterface is
@@ -8305,8 +8301,6 @@ entity design_1_i2cSlave_1_0_i2cSlave is
     hardware_address : in STD_LOGIC_VECTOR ( 6 downto 0 );
     rst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_i2cSlave_1_0_i2cSlave : entity is "i2cSlave";
 end design_1_i2cSlave_1_0_i2cSlave;
 
 architecture STRUCTURE of design_1_i2cSlave_1_0_i2cSlave is

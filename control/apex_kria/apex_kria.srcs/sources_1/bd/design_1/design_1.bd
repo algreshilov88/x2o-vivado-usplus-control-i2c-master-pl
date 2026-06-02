@@ -21,13 +21,13 @@
         "axi_bram_ctrl_0": "",
         "axi_bram_ctrl_1": "",
         "axi_gpio_1": "",
-        "i2cSlave_0": "",
-        "i2cSlave_1": "",
         "axi_gpio_0": "",
         "ipmb_watchdog_0": "",
-        "i2c_switch_dual_0": "",
         "system_ila_2": "",
-        "i2c_master_0": ""
+        "i2c_switch_dual_0": "",
+        "i2c_master_0": "",
+        "i2cSlave_0": "",
+        "i2cSlave_1": ""
       },
       "JTAG": {
         "axi_jtag_0": "",
@@ -2777,6 +2777,329 @@
               }
             }
           },
+          "axi_gpio_0": {
+            "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+            "xci_name": "design_1_axi_gpio_0_1",
+            "xci_path": "ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci",
+            "inst_hier_path": "IPMC/axi_gpio_0",
+            "parameters": {
+              "C_ALL_INPUTS": {
+                "value": "1"
+              },
+              "C_ALL_INPUTS_2": {
+                "value": "1"
+              },
+              "C_GPIO_WIDTH": {
+                "value": "30"
+              },
+              "C_IS_DUAL": {
+                "value": "1"
+              }
+            }
+          },
+          "ipmb_watchdog_0": {
+            "vlnv": "xilinx.com:module_ref:ipmb_watchdog:1.0",
+            "xci_name": "design_1_ipmb_watchdog_0_0",
+            "xci_path": "ip/design_1_ipmb_watchdog_0_0/design_1_ipmb_watchdog_0_0.xci",
+            "inst_hier_path": "IPMC/ipmb_watchdog_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ipmb_watchdog",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "99999001",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "gpio_0": {
+                "direction": "O",
+                "left": "29",
+                "right": "0"
+              },
+              "gpio_1": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "scl_i_in": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "scl_t_in": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "sda_i_in": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "sda_t_in": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "sv_scl_o": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "sv_scl_t": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "ms_scl_o": {
+                "direction": "I"
+              },
+              "ms_scl_t": {
+                "direction": "I"
+              },
+              "sv_sda_o": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "sv_sda_t": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "ms_sda_o": {
+                "direction": "I"
+              },
+              "ms_sda_t": {
+                "direction": "I"
+              }
+            }
+          },
+          "system_ila_2": {
+            "vlnv": "xilinx.com:ip:system_ila:1.1",
+            "xci_name": "design_1_system_ila_2_0",
+            "xci_path": "ip/design_1_system_ila_2_0/design_1_system_ila_2_0.xci",
+            "inst_hier_path": "IPMC/system_ila_2",
+            "parameters": {
+              "C_DATA_DEPTH": {
+                "value": "4096"
+              },
+              "C_MON_TYPE": {
+                "value": "NATIVE"
+              },
+              "C_NUM_OF_PROBES": {
+                "value": "12"
+              }
+            }
+          },
+          "i2c_switch_dual_0": {
+            "vlnv": "xilinx.com:module_ref:i2c_switch_dual:1.0",
+            "xci_name": "design_1_i2c_switch_dual_0_0",
+            "xci_path": "ip/design_1_i2c_switch_dual_0_0/design_1_i2c_switch_dual_0_0.xci",
+            "inst_hier_path": "IPMC/i2c_switch_dual_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "i2c_switch_dual",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "TX_MASTER": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+                "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+                "port_maps": {
+                  "SCL_I": {
+                    "physical_name": "tx_scl_i",
+                    "direction": "O"
+                  },
+                  "SCL_O": {
+                    "physical_name": "tx_scl_o",
+                    "direction": "I"
+                  },
+                  "SCL_T": {
+                    "physical_name": "tx_scl_t",
+                    "direction": "I"
+                  },
+                  "SDA_I": {
+                    "physical_name": "tx_sda_i",
+                    "direction": "O"
+                  },
+                  "SDA_O": {
+                    "physical_name": "tx_sda_o",
+                    "direction": "I"
+                  },
+                  "SDA_T": {
+                    "physical_name": "tx_sda_t",
+                    "direction": "I"
+                  }
+                }
+              },
+              "RX0_SLAVE": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+                "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+                "port_maps": {
+                  "SCL_I": {
+                    "physical_name": "rx0_scl_i",
+                    "direction": "O"
+                  },
+                  "SCL_O": {
+                    "physical_name": "rx0_scl_o",
+                    "direction": "I"
+                  },
+                  "SCL_T": {
+                    "physical_name": "rx0_scl_t",
+                    "direction": "I"
+                  },
+                  "SDA_I": {
+                    "physical_name": "rx0_sda_i",
+                    "direction": "O"
+                  },
+                  "SDA_O": {
+                    "physical_name": "rx0_sda_o",
+                    "direction": "I"
+                  },
+                  "SDA_T": {
+                    "physical_name": "rx0_sda_t",
+                    "direction": "I"
+                  }
+                }
+              },
+              "RX1_SLAVE": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+                "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+                "port_maps": {
+                  "SCL_I": {
+                    "physical_name": "rx1_scl_i",
+                    "direction": "O"
+                  },
+                  "SCL_O": {
+                    "physical_name": "rx1_scl_o",
+                    "direction": "I"
+                  },
+                  "SCL_T": {
+                    "physical_name": "rx1_scl_t",
+                    "direction": "I"
+                  },
+                  "SDA_I": {
+                    "physical_name": "rx1_sda_i",
+                    "direction": "O"
+                  },
+                  "SDA_O": {
+                    "physical_name": "rx1_sda_o",
+                    "direction": "I"
+                  },
+                  "SDA_T": {
+                    "physical_name": "rx1_sda_t",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "99999001",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "tx_en": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "scl0": {
+                "direction": "IO"
+              },
+              "sda0": {
+                "direction": "IO"
+              },
+              "scl1": {
+                "direction": "IO"
+              },
+              "sda1": {
+                "direction": "IO"
+              },
+              "scl_i_out": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "scl_t_out": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "sda_i_out": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "sda_t_out": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "sv_scl_o": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "sv_scl_t": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "ms_scl_o": {
+                "direction": "O"
+              },
+              "ms_scl_t": {
+                "direction": "O"
+              },
+              "sv_sda_o": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "sv_sda_t": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "ms_sda_o": {
+                "direction": "O"
+              },
+              "ms_sda_t": {
+                "direction": "O"
+              }
+            }
+          },
+          "i2c_master_0": {
+            "vlnv": "user.org:user:i2c_master:1.0",
+            "xci_name": "design_1_i2c_master_0_4",
+            "xci_path": "ip/design_1_i2c_master_0_4/design_1_i2c_master_0_4.xci",
+            "inst_hier_path": "IPMC/i2c_master_0"
+          },
           "i2cSlave_0": {
             "vlnv": "xilinx.com:module_ref:i2cSlave:1.0",
             "xci_name": "design_1_i2cSlave_0_0",
@@ -3110,329 +3433,6 @@
                 "right": "0"
               }
             }
-          },
-          "axi_gpio_0": {
-            "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-            "xci_name": "design_1_axi_gpio_0_1",
-            "xci_path": "ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci",
-            "inst_hier_path": "IPMC/axi_gpio_0",
-            "parameters": {
-              "C_ALL_INPUTS": {
-                "value": "1"
-              },
-              "C_ALL_INPUTS_2": {
-                "value": "1"
-              },
-              "C_GPIO_WIDTH": {
-                "value": "30"
-              },
-              "C_IS_DUAL": {
-                "value": "1"
-              }
-            }
-          },
-          "ipmb_watchdog_0": {
-            "vlnv": "xilinx.com:module_ref:ipmb_watchdog:1.0",
-            "xci_name": "design_1_ipmb_watchdog_0_0",
-            "xci_path": "ip/design_1_ipmb_watchdog_0_0/design_1_ipmb_watchdog_0_0.xci",
-            "inst_hier_path": "IPMC/ipmb_watchdog_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "ipmb_watchdog",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "FREQ_HZ": {
-                    "value": "99999001",
-                    "value_src": "user_prop"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "gpio_0": {
-                "direction": "O",
-                "left": "29",
-                "right": "0"
-              },
-              "gpio_1": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "scl_i_in": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "scl_t_in": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "sda_i_in": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "sda_t_in": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "sv_scl_o": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "sv_scl_t": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "ms_scl_o": {
-                "direction": "I"
-              },
-              "ms_scl_t": {
-                "direction": "I"
-              },
-              "sv_sda_o": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "sv_sda_t": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "ms_sda_o": {
-                "direction": "I"
-              },
-              "ms_sda_t": {
-                "direction": "I"
-              }
-            }
-          },
-          "i2c_switch_dual_0": {
-            "vlnv": "xilinx.com:module_ref:i2c_switch_dual:1.0",
-            "xci_name": "design_1_i2c_switch_dual_0_0",
-            "xci_path": "ip/design_1_i2c_switch_dual_0_0/design_1_i2c_switch_dual_0_0.xci",
-            "inst_hier_path": "IPMC/i2c_switch_dual_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "i2c_switch_dual",
-              "boundary_crc": "0x0"
-            },
-            "interface_ports": {
-              "TX_MASTER": {
-                "mode": "Slave",
-                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-                "vlnv": "xilinx.com:interface:iic_rtl:1.0",
-                "port_maps": {
-                  "SCL_I": {
-                    "physical_name": "tx_scl_i",
-                    "direction": "O"
-                  },
-                  "SCL_O": {
-                    "physical_name": "tx_scl_o",
-                    "direction": "I"
-                  },
-                  "SCL_T": {
-                    "physical_name": "tx_scl_t",
-                    "direction": "I"
-                  },
-                  "SDA_I": {
-                    "physical_name": "tx_sda_i",
-                    "direction": "O"
-                  },
-                  "SDA_O": {
-                    "physical_name": "tx_sda_o",
-                    "direction": "I"
-                  },
-                  "SDA_T": {
-                    "physical_name": "tx_sda_t",
-                    "direction": "I"
-                  }
-                }
-              },
-              "RX0_SLAVE": {
-                "mode": "Slave",
-                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-                "vlnv": "xilinx.com:interface:iic_rtl:1.0",
-                "port_maps": {
-                  "SCL_I": {
-                    "physical_name": "rx0_scl_i",
-                    "direction": "O"
-                  },
-                  "SCL_O": {
-                    "physical_name": "rx0_scl_o",
-                    "direction": "I"
-                  },
-                  "SCL_T": {
-                    "physical_name": "rx0_scl_t",
-                    "direction": "I"
-                  },
-                  "SDA_I": {
-                    "physical_name": "rx0_sda_i",
-                    "direction": "O"
-                  },
-                  "SDA_O": {
-                    "physical_name": "rx0_sda_o",
-                    "direction": "I"
-                  },
-                  "SDA_T": {
-                    "physical_name": "rx0_sda_t",
-                    "direction": "I"
-                  }
-                }
-              },
-              "RX1_SLAVE": {
-                "mode": "Slave",
-                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-                "vlnv": "xilinx.com:interface:iic_rtl:1.0",
-                "port_maps": {
-                  "SCL_I": {
-                    "physical_name": "rx1_scl_i",
-                    "direction": "O"
-                  },
-                  "SCL_O": {
-                    "physical_name": "rx1_scl_o",
-                    "direction": "I"
-                  },
-                  "SCL_T": {
-                    "physical_name": "rx1_scl_t",
-                    "direction": "I"
-                  },
-                  "SDA_I": {
-                    "physical_name": "rx1_sda_i",
-                    "direction": "O"
-                  },
-                  "SDA_O": {
-                    "physical_name": "rx1_sda_o",
-                    "direction": "I"
-                  },
-                  "SDA_T": {
-                    "physical_name": "rx1_sda_t",
-                    "direction": "I"
-                  }
-                }
-              }
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "FREQ_HZ": {
-                    "value": "99999001",
-                    "value_src": "user_prop"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "tx_en": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "scl0": {
-                "direction": "IO"
-              },
-              "sda0": {
-                "direction": "IO"
-              },
-              "scl1": {
-                "direction": "IO"
-              },
-              "sda1": {
-                "direction": "IO"
-              },
-              "scl_i_out": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "scl_t_out": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "sda_i_out": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "sda_t_out": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "sv_scl_o": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "sv_scl_t": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "ms_scl_o": {
-                "direction": "O"
-              },
-              "ms_scl_t": {
-                "direction": "O"
-              },
-              "sv_sda_o": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "sv_sda_t": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "ms_sda_o": {
-                "direction": "O"
-              },
-              "ms_sda_t": {
-                "direction": "O"
-              }
-            }
-          },
-          "system_ila_2": {
-            "vlnv": "xilinx.com:ip:system_ila:1.1",
-            "xci_name": "design_1_system_ila_2_0",
-            "xci_path": "ip/design_1_system_ila_2_0/design_1_system_ila_2_0.xci",
-            "inst_hier_path": "IPMC/system_ila_2",
-            "parameters": {
-              "C_DATA_DEPTH": {
-                "value": "4096"
-              },
-              "C_MON_TYPE": {
-                "value": "NATIVE"
-              },
-              "C_NUM_OF_PROBES": {
-                "value": "12"
-              }
-            }
-          },
-          "i2c_master_0": {
-            "vlnv": "user.org:user:i2c_master:1.0",
-            "xci_name": "design_1_i2c_master_0_4",
-            "xci_path": "ip/design_1_i2c_master_0_4/design_1_i2c_master_0_4.xci",
-            "inst_hier_path": "IPMC/i2c_master_0"
           }
         },
         "interface_nets": {
@@ -3511,13 +3511,13 @@
               "axi_bram_ctrl_0/s_axi_aclk",
               "axi_bram_ctrl_1/s_axi_aclk",
               "axi_gpio_1/s_axi_aclk",
-              "i2cSlave_0/clk",
-              "i2cSlave_1/clk",
               "axi_gpio_0/s_axi_aclk",
               "ipmb_watchdog_0/clk",
-              "i2c_switch_dual_0/clk",
               "system_ila_2/clk",
-              "i2c_master_0/s00_axi_aclk"
+              "i2c_switch_dual_0/clk",
+              "i2c_master_0/s00_axi_aclk",
+              "i2cSlave_0/clk",
+              "i2cSlave_1/clk"
             ]
           },
           "Net1": {
@@ -3704,10 +3704,10 @@
               "axi_bram_ctrl_0/s_axi_aresetn",
               "axi_bram_ctrl_1/s_axi_aresetn",
               "axi_gpio_1/s_axi_aresetn",
-              "i2cSlave_0/rst",
-              "i2cSlave_1/rst",
               "axi_gpio_0/s_axi_aresetn",
-              "i2c_master_0/s00_axi_aresetn"
+              "i2c_master_0/s00_axi_aresetn",
+              "i2cSlave_0/rst",
+              "i2cSlave_1/rst"
             ]
           }
         }
@@ -5618,8 +5618,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_552",
-                    "xci_path": "ip/design_1_s00_regslice_552/design_1_s00_regslice_552.xci",
+                    "xci_name": "design_1_s00_regslice_560",
+                    "xci_path": "ip/design_1_s00_regslice_560/design_1_s00_regslice_560.xci",
                     "inst_hier_path": "cpu/axi_interconnect_1/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -5633,8 +5633,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_552",
-                    "xci_path": "ip/design_1_s00_data_fifo_552/design_1_s00_data_fifo_552.xci",
+                    "xci_name": "design_1_s00_data_fifo_560",
+                    "xci_path": "ip/design_1_s00_data_fifo_560/design_1_s00_data_fifo_560.xci",
                     "inst_hier_path": "cpu/axi_interconnect_1/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -5865,8 +5865,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_553",
-                    "xci_path": "ip/design_1_s00_regslice_553/design_1_s00_regslice_553.xci",
+                    "xci_name": "design_1_s00_regslice_561",
+                    "xci_path": "ip/design_1_s00_regslice_561/design_1_s00_regslice_561.xci",
                     "inst_hier_path": "cpu/axi_interconnect_2/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -5880,8 +5880,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_553",
-                    "xci_path": "ip/design_1_s00_data_fifo_553/design_1_s00_data_fifo_553.xci",
+                    "xci_name": "design_1_s00_data_fifo_561",
+                    "xci_path": "ip/design_1_s00_data_fifo_561/design_1_s00_data_fifo_561.xci",
                     "inst_hier_path": "cpu/axi_interconnect_2/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -7262,8 +7262,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_554",
-                    "xci_path": "ip/design_1_s00_regslice_554/design_1_s00_regslice_554.xci",
+                    "xci_name": "design_1_s00_regslice_562",
+                    "xci_path": "ip/design_1_s00_regslice_562/design_1_s00_regslice_562.xci",
                     "inst_hier_path": "cpu/axi_interconnect_3/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -7277,8 +7277,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_554",
-                    "xci_path": "ip/design_1_s00_data_fifo_554/design_1_s00_data_fifo_554.xci",
+                    "xci_name": "design_1_s00_data_fifo_562",
+                    "xci_path": "ip/design_1_s00_data_fifo_562/design_1_s00_data_fifo_562.xci",
                     "inst_hier_path": "cpu/axi_interconnect_3/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {
@@ -8151,8 +8151,8 @@
                 "components": {
                   "s00_regslice": {
                     "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-                    "xci_name": "design_1_s00_regslice_555",
-                    "xci_path": "ip/design_1_s00_regslice_555/design_1_s00_regslice_555.xci",
+                    "xci_name": "design_1_s00_regslice_563",
+                    "xci_path": "ip/design_1_s00_regslice_563/design_1_s00_regslice_563.xci",
                     "inst_hier_path": "cpu/ps7_0_axi_periph/s00_couplers/s00_regslice",
                     "interface_ports": {
                       "S_AXI": {
@@ -8166,8 +8166,8 @@
                   },
                   "s00_data_fifo": {
                     "vlnv": "xilinx.com:ip:axi_data_fifo:2.1",
-                    "xci_name": "design_1_s00_data_fifo_555",
-                    "xci_path": "ip/design_1_s00_data_fifo_555/design_1_s00_data_fifo_555.xci",
+                    "xci_name": "design_1_s00_data_fifo_563",
+                    "xci_path": "ip/design_1_s00_data_fifo_563/design_1_s00_data_fifo_563.xci",
                     "inst_hier_path": "cpu/ps7_0_axi_periph/s00_couplers/s00_data_fifo",
                     "interface_ports": {
                       "S_AXI": {

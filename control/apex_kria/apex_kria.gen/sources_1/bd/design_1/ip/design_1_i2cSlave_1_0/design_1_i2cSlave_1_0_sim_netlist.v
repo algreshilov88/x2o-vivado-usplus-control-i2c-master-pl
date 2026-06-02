@@ -1,10 +1,10 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Wed Aug  9 18:45:15 2023
+// Date        : Wed Aug  9 18:45:14 2023
 // Host        : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/agreshil/vivado_projects/fw_i2c_master/apex/control/apex_kria/apex_kria.gen/sources_1/bd/design_1/ip/design_1_i2cSlave_1_0/design_1_i2cSlave_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_i2cSlave_1_0 -prefix
+//               design_1_i2cSlave_1_0_ design_1_i2cSlave_1_0_sim_netlist.v
 // Design      : design_1_i2cSlave_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -115,7 +115,6 @@ module design_1_i2cSlave_1_0
         .sda_out(sda_out));
 endmodule
 
-(* ORIG_REF_NAME = "i2cSlave" *) 
 module design_1_i2cSlave_1_0_i2cSlave
    (irq,
     i2c_addr_received,
@@ -2983,7 +2982,7 @@ module design_1_i2cSlave_1_0_i2cSlave
         .writeEn(writeEn));
 endmodule
 
-(* ORIG_REF_NAME = "registerInterface" *) (* keep_hierarchy = "soft" *) (* max_reg = "64" *) 
+(* keep_hierarchy = "soft" *) (* max_reg = "64" *) 
 module design_1_i2cSlave_1_0_registerInterface
    (clk,
     addr,
@@ -7713,7 +7712,6 @@ module design_1_i2cSlave_1_0_registerInterface
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "serialInterface" *) 
 module design_1_i2cSlave_1_0_serialInterface
    (reg_addr_valid,
     data_valid,
