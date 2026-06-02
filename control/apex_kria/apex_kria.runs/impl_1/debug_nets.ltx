@@ -5355,14 +5355,14 @@
                 "parent_nets": [
                     {
                         "id": 4,
-                        "name": "bdw/design_1_i/IPMC/i2c_master_0/inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/FSM_onehot_state_reg[3]_0[0]",
+                        "name": "bdw/design_1_i/IPMC/i2c_master_0/inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/FSM_onehot_state_reg[1]_0[0]",
                         "state_reg": [
                             {
-                                "name": "bdw/design_1_i/IPMC/i2c_master_0/inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/FSM_onehot_state_reg[3]",
+                                "name": "bdw/design_1_i/IPMC/i2c_master_0/inst/i2c_master_v1_0_S00_AXI_inst/i2c_config_inst/i2c_master_top_m0/FSM_onehot_state_reg[1]",
                                 "states": [
                                     {
                                         "name": "S_ACK",
-                                        "val": "0000000000100"
+                                        "val": "0000000010000"
                                     },
                                     {
                                         "name": "S_WR_DATA",
@@ -5370,27 +5370,27 @@
                                     },
                                     {
                                         "name": "S_WR_REG_ADDR",
-                                        "val": "0000000010000"
-                                    },
-                                    {
-                                        "name": "S_WAIT",
-                                        "val": "0000000001000"
+                                        "val": "0000000100000"
                                     },
                                     {
                                         "name": "S_WR_STOP",
+                                        "val": "0000000001000"
+                                    },
+                                    {
+                                        "name": "S_WAIT",
                                         "val": "0000000000010"
                                     },
                                     {
                                         "name": "S_RD_STOP",
-                                        "val": "0000000100000"
+                                        "val": "0000010000000"
                                     },
                                     {
                                         "name": "S_WR_DEV_ADDR",
-                                        "val": "0000001000000"
+                                        "val": "0000100000000"
                                     },
                                     {
                                         "name": "S_IDLE",
-                                        "val": "0000100000000"
+                                        "val": "0000001000000"
                                     },
                                     {
                                         "name": "S_RD_REG_ADDR",
@@ -5410,7 +5410,7 @@
                                     },
                                     {
                                         "name": "S_WR_ERR_NACK",
-                                        "val": "0000010000000"
+                                        "val": "0000000000100"
                                     }
                                 ]
                             }

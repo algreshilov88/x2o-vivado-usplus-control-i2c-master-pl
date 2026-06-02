@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Tue May 12 14:09:41 2026
+| Date             : Thu May 21 21:10:19 2026
 | Host             : uftrig01 running 64-bit Ubuntu 18.04.6 LTS
 | Command          : report_power -file apex_control_mgt_top_power_routed.rpt -pb apex_control_mgt_top_power_summary_routed.pb -rpx apex_control_mgt_top_power_routed.rpx
 | Design           : apex_control_mgt_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.395        |
+| Total On-Chip Power (W)  | 4.412        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.052        |
+| Dynamic (W)              | 4.069        |
 | Device Static (W)        | 0.343        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 74.8         |
@@ -52,18 +52,18 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.351 |       26 |       --- |             --- |
-| CLB Logic                |     0.101 |   177814 |       --- |             --- |
-|   LUT as Logic           |     0.069 |    57673 |    117120 |           49.24 |
+| Clocks                   |     0.352 |       26 |       --- |             --- |
+| CLB Logic                |     0.105 |   178831 |       --- |             --- |
+|   LUT as Logic           |     0.073 |    58009 |    117120 |           49.53 |
 |   LUT as Distributed RAM |     0.012 |     1250 |     57600 |            2.17 |
-|   Register               |     0.010 |    93055 |    234240 |           39.73 |
+|   Register               |     0.010 |    93500 |    234240 |           39.92 |
 |   LUT as Shift Register  |     0.008 |     2592 |     57600 |            4.50 |
-|   CARRY8                 |     0.002 |     1439 |     14640 |            9.83 |
+|   CARRY8                 |     0.002 |     1440 |     14640 |            9.84 |
 |   BUFG                   |    <0.001 |        5 |        32 |           15.63 |
-|   Others                 |     0.000 |     5902 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |     1176 |    117120 |            1.00 |
-| Signals                  |     0.130 |   135105 |       --- |             --- |
-| Block RAM                |     0.143 |      142 |       144 |           98.61 |
+|   Others                 |     0.000 |     5901 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |     1169 |    117120 |            1.00 |
+| Signals                  |     0.142 |   135635 |       --- |             --- |
+| Block RAM                |     0.142 |      142 |       144 |           98.61 |
 | URAM                     |     0.014 |        2 |        64 |            3.13 |
 | MMCM                     |     0.098 |        0 |       --- |             --- |
 | I/O                      |     0.022 |       50 |       189 |           26.46 |
@@ -73,7 +73,7 @@ Table of Contents
 | Static Power             |     0.343 |          |           |                 |
 |   PS Static              |     0.000 |          |           |                 |
 |   PL Static              |     0.343 |          |           |                 |
-| Total                    |     4.395 |          |           |                 |
+| Total                    |     4.412 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -83,7 +83,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     1.242 |       1.139 |      0.103 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     1.266 |       1.163 |      0.103 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.038 |       0.001 |      0.037 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.020 |       0.018 |      0.002 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.129 |       0.054 |      0.074 |       NA    | Unspecified | NA         |
@@ -187,34 +187,32 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------+-----------+
-| Name                           | Power (W) |
-+--------------------------------+-----------+
-| apex_control_mgt_top           |     4.052 |
-|   bdw                          |     3.685 |
-|     design_1_i                 |     3.684 |
-|       C2C                      |     0.027 |
-|       IPMC                     |     0.019 |
-|       JTAG                     |     0.006 |
-|       axi_dma_0                |     0.023 |
-|       axi_interconnect_0       |     0.009 |
-|       axis_data_fifo_0         |     0.001 |
-|       axis_jtag_0              |     0.003 |
-|       clk_wiz_0                |     0.098 |
-|       cpu                      |     2.674 |
-|       dbg                      |     0.003 |
-|       hier_0                   |     0.335 |
-|       i2c                      |     0.006 |
-|       ila_0                    |     0.018 |
-|       registers                |     0.001 |
-|       system_ila_0             |     0.032 |
-|       system_ila_1             |     0.017 |
-|       xxv_ethernet_0           |     0.411 |
-|   c2c_mgt                      |     0.351 |
-|     c2c_gth                    |     0.347 |
-|       inst                     |     0.347 |
-|     c2c_gth_7p8125g_vio_0_inst |     0.001 |
-|       inst                     |     0.001 |
-+--------------------------------+-----------+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| apex_control_mgt_top     |     4.069 |
+|   bdw                    |     3.702 |
+|     design_1_i           |     3.701 |
+|       C2C                |     0.027 |
+|       IPMC               |     0.020 |
+|       JTAG               |     0.006 |
+|       axi_dma_0          |     0.023 |
+|       axi_interconnect_0 |     0.009 |
+|       axis_data_fifo_0   |     0.001 |
+|       axis_jtag_0        |     0.003 |
+|       clk_wiz_0          |     0.098 |
+|       cpu                |     2.676 |
+|       dbg                |     0.003 |
+|       hier_0             |     0.351 |
+|       i2c                |     0.006 |
+|       ila_0              |     0.018 |
+|       registers          |     0.002 |
+|       system_ila_0       |     0.032 |
+|       system_ila_1       |     0.017 |
+|       xxv_ethernet_0     |     0.410 |
+|   c2c_mgt                |     0.351 |
+|     c2c_gth              |     0.347 |
+|       inst               |     0.347 |
++--------------------------+-----------+
 
 
